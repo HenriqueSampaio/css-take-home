@@ -78,7 +78,7 @@ export default async function SchedulePage(props: PageProps<"/schedule">) {
             <Link href={scheduleHref(thisMonth, null, { showCancelled })} className="btn btn-secondary" aria-current={month === thisMonth ? "true" : undefined}>Today</Link>
           </nav>
 
-          <form action="/schedule" method="get" className="flex items-end gap-1" aria-label="Jump to a month">
+          <form key={month} action="/schedule" method="get" className="flex items-end gap-1" aria-label="Jump to a month">
             <div>
               <label htmlFor="jump-month" className="t-caption field-label">Month</label>
               <select id="jump-month" name="mo" defaultValue={monthNumber} className="input !w-auto">
