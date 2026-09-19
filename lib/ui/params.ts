@@ -38,11 +38,22 @@ export function parseIdParam(value: string | string[] | undefined): string | nul
   return id && /^[A-Za-z0-9_-]{1,80}$/.test(id) ? id : null;
 }
 
-export function scheduleHref(month: YearMonth, reservationId?: string | null): string {
+export function scheduleHref(month: YearMonth, reservationId?: string | null, opts: { showCancelled?: boolean } = {}): string {
   const query = new URLSearchParams({ m: month });
   if (reservationId) query.set("r", reservationId);
+  if (opts.showCancelled) query.set("cancelled", "1");
   return `/schedule?${query.toString()}`;
 }
+
+export const editReservationHref = (id: string): string => `/reservations/${encodeURIComponent(id)}/edit`;
+
+export const vesselsHref = (opts: { q?: string; status?: string } = {}): string => {
+  const query = new URLSearchParams();
+  if (opts.q) query.set("q", opts.q);
+  if (opts.status) query.set("status", opts.status);
+  const qs = query.toString();
+  return qs ? `/vessels?${qs}` : "/vessels";
+};
 
 export function newReservationHref(prefill: { berthId?: string; start?: ISODate; end?: ISODate } = {}): string {
   const query = new URLSearchParams();

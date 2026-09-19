@@ -13,7 +13,8 @@
     "import": "tsx scripts/import-legacy.ts",
     "db:generate": "drizzle-kit generate",
     "db:migrate": "drizzle-kit migrate",
-    "db:seed": "tsx scripts/seed.ts"
+    "db:seed": "tsx scripts/seed.ts",
+    "db:local": "tsx scripts/dev-db.ts"
   },
   "dependencies": {
     "@vercel/functions": "^3.9.8",
@@ -26,6 +27,7 @@
   },
   "devDependencies": {
     "@electric-sql/pglite": "^0.5.8",
+    "@electric-sql/pglite-socket": "^0.2.11",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^24.13.6",
     "@types/pg": "^8.23.1",

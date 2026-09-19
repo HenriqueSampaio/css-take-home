@@ -1,26 +1,208 @@
+/*
+ * DIRECTION CONTRACT: "The Berthing Plan"
+ * THESIS: a dock schedule drawn as a marine engineer's berthing plan. Every borrowed
+ *   drafting device carries data or is cut. Refuses the white-card SaaS dashboard.
+ * OWN-WORLD: cool drafting-film white, blue-black plot ink, three pen weights, one
+ *   Prussian blue; revision red only for what is wrong. Status is hatching plus a glyph
+ *   plus words. Square, flat, no cards. Barlow in two widths.
+ * STORY: the coordinator sees the month at a glance, spots what needs review, and gets
+ *   "where can this vessel go?" answered with lengths drawn to scale.
+ * FIRST VIEWPORT: title block header; below it one sheet: days across the top border,
+ *   berths down the side with to-scale length bars, stays as inked bars in lanes, a key.
+ * FORM: candidate 6 of 7 (pier general-arrangement drawing), month-grid staging, seed 3798d8a4.
+ */
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-sheet: #f3f5f7;
+  --color-sheet-raised: #fcfdfe;
+  --color-sheet-sunk: #e8ecf0;
+  --color-ink: #0f1c2b;
+  --color-ink-2: #43536a;
+  --color-ink-3: #566577;
+  --color-line: #cbd3dc;
+  --color-line-strong: #8a98a8;
+  --color-prussian: #14508f;
+  --color-prussian-deep: #0e3f73;
+  --color-prussian-tone: #dce8f5;
+  --color-revision: #b3261e;
+  --color-revision-tone: #fbe9e7;
+  --color-caution: #855600;
+  --color-caution-line: #b7791f;
+  --color-caution-tone: #fff3d6;
+  --color-clear: #1b6541;
+  --color-clear-tone: #e2f2e9;
+
+  --font-sans: var(--font-barlow), "Helvetica Neue", Arial, sans-serif;
+  --font-data: var(--font-barlow-semi), "Arial Narrow", Arial, sans-serif;
+
+  --radius-control: 2px;
+  --shadow-floating: 0 8px 20px -6px rgb(15 28 43 / 0.22);
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  html {
+    background: var(--color-sheet);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-size: 100%;
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    min-height: 100dvh;
+    font-size: 0.9375rem;
+    line-height: 1.5;
+    font-variant-numeric: lining-nums;
+  }
+  h1, h2, h3 { text-wrap: balance; }
+  p { text-wrap: pretty; }
+  a { color: inherit; }
+  :focus-visible {
+    outline: 2px solid var(--color-prussian);
+    outline-offset: 2px;
+  }
+  ::selection { background: var(--color-prussian-tone); }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+  /* ---- Type roles -------------------------------------------------------- */
+  .t-headline { font-size: 1.4375rem; font-weight: 600; line-height: 1.2; letter-spacing: -0.005em; }
+  .t-title { font-size: 1.0625rem; font-weight: 600; line-height: 1.3; }
+  .t-data { font-family: var(--font-data); font-size: 0.8125rem; font-weight: 500; line-height: 1.25; font-variant-numeric: tabular-nums lining-nums; }
+  /* Title-block captions: table heads and field labels only, never a section eyebrow. */
+  .t-caption { font-family: var(--font-data); font-size: 0.6875rem; font-weight: 600; line-height: 1.2; letter-spacing: 0.07em; text-transform: uppercase; color: var(--color-ink-3); }
+  .t-num { font-variant-numeric: tabular-nums lining-nums; }
+  .prose-measure { max-width: 70ch; }
+
+  /* ---- The sheet: a region bounded by a heavy ink border, not a card ------- */
+  .sheet { background: var(--color-sheet-raised); border: 1.5px solid var(--color-ink); }
+  .rule-thin { border-color: var(--color-line); }
+  .rule-medium { border-color: var(--color-line-strong); }
+
+  /* ---- Controls ---------------------------------------------------------- */
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+    height: 2.25rem; padding: 0 1rem; border-radius: var(--radius-control);
+    font-size: 0.875rem; font-weight: 600; line-height: 1; white-space: nowrap;
+    border: 1px solid transparent; cursor: pointer; text-decoration: none;
+    transition: background-color 150ms var(--ease-out-expo), border-color 150ms var(--ease-out-expo), color 150ms var(--ease-out-expo);
+  }
+  .btn:disabled, .btn[aria-disabled="true"] { opacity: 0.45; cursor: not-allowed; }
+  .btn-primary { background: var(--color-prussian); color: var(--color-sheet-raised); }
+  .btn-primary:hover:not(:disabled) { background: var(--color-prussian-deep); }
+  .btn-primary:active:not(:disabled) { background: var(--color-ink); }
+  .btn-secondary { background: var(--color-sheet-raised); color: var(--color-ink); border-color: var(--color-line-strong); }
+  .btn-secondary:hover:not(:disabled) { background: var(--color-sheet-sunk); border-color: var(--color-ink-2); }
+  .btn-secondary:active:not(:disabled) { background: var(--color-line); }
+  .btn-danger { background: var(--color-sheet-raised); color: var(--color-revision); border-color: var(--color-revision); }
+  .btn-danger:hover:not(:disabled) { background: var(--color-revision-tone); }
+  .btn-danger:active:not(:disabled) { background: var(--color-revision); color: var(--color-sheet-raised); }
+  .btn-sm { height: 1.875rem; padding: 0 0.625rem; font-size: 0.8125rem; }
+
+  .link { color: var(--color-prussian); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 2px; }
+  .link:hover { color: var(--color-prussian-deep); text-decoration-thickness: 2px; }
+
+  .field-label { display: block; margin-bottom: 0.25rem; }
+  .input {
+    display: block; width: 100%; height: 2.25rem; padding: 0 0.625rem;
+    background: var(--color-sheet-raised); color: var(--color-ink);
+    border: 1px solid var(--color-line-strong); border-radius: var(--radius-control);
+    font: inherit; font-size: 0.9375rem;
+    transition: border-color 150ms var(--ease-out-expo);
+  }
+  textarea.input { height: auto; min-height: 4.5rem; padding: 0.5rem 0.625rem; line-height: 1.4; }
+  .input::placeholder { color: var(--color-ink-3); }
+  .input:hover:not(:disabled) { border-color: var(--color-ink-2); }
+  .input:focus-visible { border-color: var(--color-prussian); }
+  .input:disabled { background: var(--color-sheet-sunk); color: var(--color-ink-3); cursor: not-allowed; }
+  .input[aria-invalid="true"] { border-color: var(--color-revision); }
+  .field-hint { margin-top: 0.25rem; font-size: 0.8125rem; color: var(--color-ink-2); }
+  .field-error { margin-top: 0.25rem; font-size: 0.8125rem; color: var(--color-revision); font-weight: 500; }
+
+  /* ---- Notices: a ruled note on the sheet, glyph + words, never colour alone */
+  .notice { display: flex; gap: 0.625rem; padding: 0.625rem 0.75rem; border: 1px solid var(--color-line-strong); background: var(--color-sheet-raised); font-size: 0.875rem; }
+  .notice-danger { border-color: var(--color-revision); background: var(--color-revision-tone); }
+  .notice-caution { border-color: var(--color-caution-line); background: var(--color-caution-tone); }
+  .notice-clear { border-color: var(--color-clear); background: var(--color-clear-tone); }
+
+  /* ---- Tags: small status words with a glyph ------------------------------ */
+  .tag { display: inline-flex; align-items: center; gap: 0.25rem; height: 1.25rem; padding: 0 0.375rem; border: 1px solid var(--color-line-strong); font-family: var(--font-data); font-size: 0.75rem; font-weight: 600; line-height: 1; white-space: nowrap; color: var(--color-ink-2); background: var(--color-sheet-raised); }
+  .tag-danger { color: var(--color-revision); border-color: var(--color-revision); background: var(--color-revision-tone); }
+  .tag-caution { color: var(--color-caution); border-color: var(--color-caution-line); background: var(--color-caution-tone); }
+  .tag-clear { color: var(--color-clear); border-color: var(--color-clear); background: var(--color-clear-tone); }
+  .tag-accent { color: var(--color-prussian); border-color: var(--color-prussian); background: var(--color-prussian-tone); }
+
+  /* ---- Tables: ruled, not boxed ------------------------------------------- */
+  .table { width: 100%; border-collapse: collapse; font-size: 0.875rem; }
+  .table th { text-align: left; padding: 0.5rem 0.75rem; border-bottom: 1.5px solid var(--color-ink); background: var(--color-sheet-sunk); vertical-align: bottom; }
+  .table td { padding: 0.5rem 0.75rem; border-bottom: 1px solid var(--color-line); vertical-align: top; }
+  .table tbody tr:hover td { background: color-mix(in srgb, var(--color-prussian-tone) 45%, transparent); }
+  .table .num { text-align: right; font-variant-numeric: tabular-nums lining-nums; }
+
+  /* ---- Hatch vocabulary: STATUS IS PATTERN ------------------------------- */
+  .fill-vessel { background: var(--color-prussian); color: var(--color-sheet-raised); border: 1px solid var(--color-prussian-deep); }
+  .fill-event {
+    color: var(--color-ink); border: 1px solid var(--color-prussian);
+    background: radial-gradient(circle at 1.5px 1.5px, color-mix(in srgb, var(--color-prussian) 55%, transparent) 1px, transparent 1.3px) 0 0 / 6px 6px, var(--color-prussian-tone);
+  }
+  .fill-closure {
+    color: var(--color-ink); border: 1px solid var(--color-ink);
+    background:
+      repeating-linear-gradient(45deg, color-mix(in srgb, var(--color-ink-2) 45%, transparent) 0 1px, transparent 1px 6px),
+      repeating-linear-gradient(135deg, color-mix(in srgb, var(--color-ink-2) 45%, transparent) 0 1px, transparent 1px 6px),
+      var(--color-sheet-sunk);
+  }
+  /* Overlay for unresolved legacy stays: amber diagonal hatch + dashed border, whatever the kind. */
+  .fill-review {
+    color: var(--color-ink); border: 1px dashed var(--color-caution);
+    background: repeating-linear-gradient(135deg, var(--color-caution-line) 0 1.5px, transparent 1.5px 6px), var(--color-caution-tone);
+  }
+  .fill-cancelled { color: var(--color-ink-3); border: 1px dashed var(--color-line-strong); background: transparent; text-decoration: line-through; }
+  /* Labels sit on a solid chip so text never fights a hatch. */
+  .fill-event .stay-label, .fill-closure .stay-label, .fill-review .stay-label { background: color-mix(in srgb, var(--color-sheet-raised) 88%, transparent); padding: 0 0.1875rem; }
+
+  /* ---- Schedule grid ------------------------------------------------------ */
+  .schedule { --berth-col: 13.5rem; --day-min: 1.6rem; --lane-h: 1.75rem; min-width: calc(var(--berth-col) + var(--days) * var(--day-min)); }
+  .schedule-row { display: grid; grid-template-columns: var(--berth-col) minmax(0, 1fr); }
+  .schedule-days { display: grid; grid-template-columns: repeat(var(--days), minmax(var(--day-min), 1fr)); }
+  /* Lanes are centred in the row; the row is as tall as its berth header or its lanes, whichever is more. */
+  .schedule-lanes { display: grid; grid-template-columns: repeat(var(--days), minmax(var(--day-min), 1fr)); grid-auto-rows: var(--lane-h); row-gap: 3px; padding-block: 6px; align-content: center; position: relative; }
+  .schedule-berth { position: sticky; left: 0; z-index: 3; background: var(--color-sheet-sunk); border-right: 1.5px solid var(--color-ink); }
+  /* Day cells are positioned, not placed in the grid, so their rules run the full height of the row however many lanes it has. */
+  .day-cell { position: absolute; inset-block: 0; left: calc((var(--d) - 1) * 100% / var(--days)); width: calc(100% / var(--days)); border-left: 1px solid var(--color-line); display: block; z-index: 0; }
+  .day-cell:first-child { border-left: 0; }
+  .day-cell.is-weekend { background: color-mix(in srgb, var(--color-sheet-sunk) 60%, transparent); }
+  .day-cell:hover { background: var(--color-prussian-tone); }
+  .day-cell.is-today::after { content: ""; position: absolute; inset-block: 0; left: 50%; width: 1.5px; background: var(--color-prussian); }
+  .stay {
+    position: relative; z-index: 1; display: flex; align-items: center; gap: 0.25rem; min-width: 0; height: var(--lane-h);
+    padding: 0 0.3125rem; font-family: var(--font-data); font-size: 0.8125rem; font-weight: 500; line-height: 1; text-decoration: none; white-space: nowrap; overflow: hidden;
+    transition: filter 150ms var(--ease-out-expo);
+  }
+  .stay:hover { filter: brightness(0.93) saturate(1.1); z-index: 2; }
+  .stay.is-selected { outline: 2px solid var(--color-ink); outline-offset: 1px; z-index: 2; }
+  .stay.continues-before { border-left: 0; padding-left: 0.125rem; }
+  .stay.continues-after { border-right: 0; padding-right: 0.125rem; }
+  .stay-label { overflow: hidden; text-overflow: ellipsis; min-width: 0; }
+
+  /* ---- Dimension bars (Berth Scale, Fit Gauge) ---------------------------- */
+  .dim { position: relative; height: 0.5rem; }
+  .dim-line { position: absolute; top: 50%; height: 1.5px; background: var(--color-ink); transform: translateY(-50%); }
+  .dim-line::before, .dim-line::after { content: ""; position: absolute; top: -3px; width: 1.5px; height: 7.5px; background: inherit; }
+  .dim-line::before { left: 0; }
+  .dim-line::after { right: 0; }
 }
+
+/* The selected stay's panel draws in like a dimension line being struck. */
+@keyframes panel-in {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: none; }
+}
+.panel-in { animation: panel-in 180ms var(--ease-out-expo) both; }
