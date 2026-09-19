@@ -9,7 +9,11 @@
     "lint": "eslint .",
     "import:parity": "tsx scripts/parity-spike.ts",
     "test": "vitest run",
-    "typecheck": "next typegen && tsc --noEmit"
+    "typecheck": "next typegen && tsc --noEmit",
+    "import": "tsx scripts/import-legacy.ts",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
+    "db:seed": "tsx scripts/seed.ts"
   },
   "dependencies": {
     "@vercel/functions": "^3.9.8",
