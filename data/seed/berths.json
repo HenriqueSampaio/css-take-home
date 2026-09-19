@@ -1,8 +1,38 @@
 [
-  { "id": "north-pier-west", "name": "North Pier West", "lengthFt": 410, "sortOrder": 1 },
-  { "id": "north-pier-face", "name": "North Pier Face", "lengthFt": 75, "sortOrder": 2 },
-  { "id": "north-pier-east", "name": "North Pier East", "lengthFt": 240, "sortOrder": 3 },
-  { "id": "inner-channel", "name": "Inner Channel", "lengthFt": 55, "sortOrder": 4 },
-  { "id": "south-float-west", "name": "South Float West", "lengthFt": 90, "sortOrder": 5 },
-  { "id": "south-float-east", "name": "South Float East", "lengthFt": 90, "sortOrder": 6 }
+  {
+    "id": "north-pier-west",
+    "name": "North Pier West",
+    "lengthFt": 410,
+    "sortOrder": 1
+  },
+  {
+    "id": "north-pier-face",
+    "name": "North Pier Face",
+    "lengthFt": 75,
+    "sortOrder": 2
+  },
+  {
+    "id": "north-pier-east",
+    "name": "North Pier East",
+    "lengthFt": 240,
+    "sortOrder": 3
+  },
+  {
+    "id": "inner-channel",
+    "name": "Inner Channel",
+    "lengthFt": 55,
+    "sortOrder": 4
+  },
+  {
+    "id": "south-float-west",
+    "name": "South Float West",
+    "lengthFt": 90,
+    "sortOrder": 5
+  },
+  {
+    "id": "south-float-east",
+    "name": "South Float East",
+    "lengthFt": 90,
+    "sortOrder": 6
+  }
 ]

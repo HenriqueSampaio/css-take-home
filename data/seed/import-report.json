@@ -1,1 +1,2620 @@
-{}
+{
+  "schemaVersion": 1,
+  "source": {
+    "file": "Dock Schedule - Synthetic Sample.xlsx",
+    "sha256": "d51417d0a8305e95dd3286f12e6b24dc9576863b7469975855a5a1a4ae2b9b1f"
+  },
+  "sheets": {
+    "yearSheets": [
+      "1997",
+      "1998",
+      "1999",
+      "2000",
+      "2001",
+      "2002",
+      "2003",
+      "2004",
+      "2005",
+      "2006",
+      "2007",
+      "2008",
+      "2009",
+      "2010",
+      "2011",
+      "2012",
+      "2013",
+      "2014",
+      "2015",
+      "2016",
+      "2017",
+      "2018",
+      "2019"
+    ],
+    "registrySheets": [
+      "Science",
+      "Yachts"
+    ],
+    "ignored": [
+      {
+        "name": "8YR Dock Summary",
+        "reason": "Hand-made yearly totals derived from the grids; importing it would double count."
+      },
+      {
+        "name": "Tours",
+        "reason": "A list of dock tours (visitors, not vessels at a berth); nothing in it is a reservation."
+      }
+    ]
+  },
+  "blocks": {
+    "total": 272,
+    "primary": 269,
+    "carryOver": 3,
+    "weekdayValidated": 267,
+    "weekdayUnverifiable": [
+      "2010 2010-11",
+      "2010 2010-12"
+    ],
+    "defects": [
+      {
+        "sheet": "2008",
+        "month": "2008-06",
+        "kind": "impossible_date",
+        "detail": "AF61 prints day 31, which does not exist in 2008-06; the column carries no date."
+      },
+      {
+        "sheet": "2009",
+        "month": "2009-02",
+        "kind": "impossible_date",
+        "detail": "AD17 prints day 29, which does not exist in 2009-02; the column carries no date."
+      },
+      {
+        "sheet": "2010",
+        "month": "2010-11",
+        "kind": "weekday_row_missing",
+        "detail": "Row 118 should hold the weekday letters but does not; its contents are quarantined, not imported."
+      },
+      {
+        "sheet": "2010",
+        "month": "2010-11",
+        "kind": "displaced_header",
+        "detail": "Day numbers start at 7 in I117; days 1-6 are implied, so day 1 is column C."
+      },
+      {
+        "sheet": "2010",
+        "month": "2010-11",
+        "kind": "title_year_mismatch",
+        "detail": "Title 2010!A117 reads \"NOVEMBER 2018\" but the block sits in sheet 2010; the sheet name wins."
+      },
+      {
+        "sheet": "2010",
+        "month": "2010-11",
+        "kind": "displaced_berth_cells",
+        "detail": "The shift that displaced days 1-6 of the header also pushed the first berth row's cells for those days (North Pier West, row 119) up into 2010!C118:H118; they are imported from there, and what the berth row itself holds under those days (2010!C119:H119, a filler) is not read."
+      },
+      {
+        "sheet": "2010",
+        "month": "2010-12",
+        "kind": "weekday_row_missing",
+        "detail": "Row 129 should hold the weekday letters but does not; its contents are quarantined, not imported."
+      },
+      {
+        "sheet": "2010",
+        "month": "2010-12",
+        "kind": "displaced_header",
+        "detail": "Day numbers start at 7 in H128; days 1-6 are implied, so day 1 is column B."
+      },
+      {
+        "sheet": "2010",
+        "month": "2010-12",
+        "kind": "title_year_mismatch",
+        "detail": "Title 2010!A128 reads \"DECEMBER 2018\" but the block sits in sheet 2010; the sheet name wins."
+      },
+      {
+        "sheet": "2010",
+        "month": "2010-12",
+        "kind": "displaced_berth_cells",
+        "detail": "The shift that displaced days 1-6 of the header also pushed the first berth row's cells for those days (North Pier West, row 130) up into 2010!B129:G129; they are imported from there, and what the berth row itself holds under those days (2010!B130:G130, a filler) is not read."
+      },
+      {
+        "sheet": "2011",
+        "month": "2011-03",
+        "kind": "skipped_day",
+        "detail": "Day numbers jump from 29 to 31 at AF28; the printed numbers are trusted."
+      },
+      {
+        "sheet": "2012",
+        "month": "2012-01",
+        "kind": "missing_days",
+        "detail": "The header stops at day 30 of 31; later days have no column."
+      },
+      {
+        "sheet": "2013",
+        "month": "2013-03",
+        "kind": "skipped_day",
+        "detail": "Day numbers jump from 29 to 31 at AI28; the printed numbers are trusted."
+      }
+    ]
+  },
+  "runs": {
+    "total": 2181,
+    "mergesInYearSheets": 749,
+    "mergesOffBerthRows": 96,
+    "merges": 609,
+    "emptyMergesDropped": 43,
+    "mergesOutsideDayColumns": 1,
+    "mergesPastMonthEnd": 2,
+    "mergesBeforeMonthStart": 15,
+    "fillRuns": 1449,
+    "decorativeColourBars": 40,
+    "labelOnly": 123,
+    "labelOffFirstCell": 42,
+    "repeatedLabelRuns": 55,
+    "sharedBarRuns": 11,
+    "undatedRunsDropped": 0,
+    "bookingFillCellsOutsideDayColumns": 17,
+    "edgeBlobs": {
+      "count": 290,
+      "cells": 677,
+      "touchingBar": 114,
+      "cellsTouchingBar": 263
+    }
+  },
+  "stitching": {
+    "segments": 2193,
+    "stays": 2011,
+    "joins": 140,
+    "crossSheet": 16,
+    "sameRowJoins": 42,
+    "notJoinedDifferentLabels": 18,
+    "notJoinedBothUnlabelled": 2,
+    "notJoinedDifferentFill": 2,
+    "apartByEdgeBlob": 56,
+    "longestChain": {
+      "segments": 14,
+      "sourceRef": "2007!B8:AF8 .. 2008!B19:AD19"
+    }
+  },
+  "imported": {
+    "berths": 6,
+    "vessels": {
+      "fromGrid": 412,
+      "registryOnly": 98
+    },
+    "reservations": {
+      "total": 2011,
+      "confirmed": 1898,
+      "needsReview": 113,
+      "byKind": {
+        "closure": 20,
+        "event": 110,
+        "vessel": 1881
+      },
+      "byBerth": {
+        "inner-channel": 67,
+        "north-pier-east": 517,
+        "north-pier-face": 125,
+        "north-pier-west": 516,
+        "south-float-east": 352,
+        "south-float-west": 434
+      },
+      "byYear": {
+        "1997": 30,
+        "1998": 67,
+        "1999": 66,
+        "2000": 70,
+        "2001": 96,
+        "2002": 135,
+        "2003": 105,
+        "2004": 79,
+        "2005": 62,
+        "2006": 54,
+        "2007": 45,
+        "2008": 47,
+        "2009": 93,
+        "2010": 158,
+        "2011": 157,
+        "2012": 50,
+        "2013": 101,
+        "2014": 109,
+        "2015": 127,
+        "2016": 135,
+        "2017": 109,
+        "2018": 71,
+        "2019": 45
+      }
+    },
+    "dateRange": {
+      "first": "1997-08-01",
+      "last": "2019-12-31"
+    },
+    "busiestMonth": "2010-08",
+    "busiestMonthReservationDays": 114
+  },
+  "issues": {
+    "total": 396,
+    "byType": {
+      "ambiguous_extent": 271,
+      "calendar_defect": 21,
+      "length_conflict": 7,
+      "overlap": 8,
+      "unlabelled": 89
+    },
+    "byReason": {
+      "ambiguous_extent/decorative_colour_edge": 2,
+      "ambiguous_extent/decorative_overpaint": 114,
+      "ambiguous_extent/label_unfilled": 120,
+      "ambiguous_extent/merge_before_month_start": 10,
+      "ambiguous_extent/merge_past_month_end": 2,
+      "ambiguous_extent/shared_bar": 23,
+      "calendar_defect/corrupt_header": 20,
+      "calendar_defect/impossible_date": 1,
+      "length_conflict/registry_conflict": 7,
+      "overlap/duplicate_berth_row": 8,
+      "unlabelled/no_label": 71,
+      "unlabelled/notes_only": 18
+    },
+    "overlapPairs": 4
+  },
+  "vesselLinking": {
+    "registryEntries": 166,
+    "registryColumnAIgnored": 45,
+    "verified": 112,
+    "probable": 44,
+    "conflict": 7,
+    "unknown": 347,
+    "bookingCoveragePct": 24.9,
+    "registryConflicts": [
+      {
+        "vessel": "M/V Deep Reef",
+        "origin": "grid",
+        "candidates": [
+          24,
+          100
+        ],
+        "evidence": "Yachts!A96 M/V Deep Reef 24'; Yachts!A114 M/V Deep Reef 100' (registry lists different lengths for this name)"
+      },
+      {
+        "vessel": "R/V High Reef",
+        "origin": "registry",
+        "candidates": [
+          32,
+          72
+        ],
+        "evidence": "Science!A92 R/V High Reef 32'; Science!A207 R/V High Reef 72' (registry lists different lengths for this name)"
+      },
+      {
+        "vessel": "R/V High Sound",
+        "origin": "registry",
+        "candidates": [
+          32,
+          65
+        ],
+        "evidence": "Science!A33 R/V High Sound 32'; Science!B33 LOA: 65' (an LOA note contradicts the listed length)"
+      },
+      {
+        "vessel": "R/V Iron Ketch",
+        "origin": "grid",
+        "candidates": [
+          46,
+          65
+        ],
+        "evidence": "Science!A68 R/V Iron Ketch 46'; Yachts!A131 F/V Iron Ketch 65' (registry lists different lengths for this name)"
+      },
+      {
+        "vessel": "Barge Northern Marlin",
+        "origin": "registry",
+        "candidates": [
+          24,
+          65
+        ],
+        "evidence": "Science!A136 Barge NORTHERN MARLIN 24'; Science!E136 LOA: 65' (an LOA note contradicts the listed length)"
+      },
+      {
+        "vessel": "M/Y Western Strand",
+        "origin": "grid",
+        "candidates": [
+          52,
+          65,
+          145
+        ],
+        "evidence": "Yachts!A1 M/Y Western Strand 52'; Yachts!B1 LOA: 65'; Yachts!A6 LOA: 145' (an LOA note contradicts the listed length)"
+      },
+      {
+        "vessel": "OSV Wild Star",
+        "origin": "grid",
+        "candidates": [
+          24,
+          145
+        ],
+        "evidence": "Yachts!A81 M/V Wild Star 24'; Yachts!A83 LOA: 145' (an LOA note contradicts the listed length)"
+      }
+    ],
+    "topUnlinked": [
+      {
+        "name": "R/V Long Ketch",
+        "bookings": 267
+      },
+      {
+        "name": "R/V Golden Compass",
+        "bookings": 152
+      },
+      {
+        "name": "OSV Amber Reef",
+        "bookings": 104
+      },
+      {
+        "name": "M/Y Green Lantern",
+        "bookings": 57
+      },
+      {
+        "name": "F/V Salt Fathom",
+        "bookings": 41
+      },
+      {
+        "name": "M/V Quiet Petrel",
+        "bookings": 40
+      },
+      {
+        "name": "M/V Grey Compass",
+        "bookings": 34
+      },
+      {
+        "name": "S/V Golden Heron",
+        "bookings": 34
+      },
+      {
+        "name": "Barge Silver Voyager",
+        "bookings": 30
+      },
+      {
+        "name": "R/V Western Sextant",
+        "bookings": 24
+      },
+      {
+        "name": "R/V Golden Horizon",
+        "bookings": 14
+      },
+      {
+        "name": "Tug Wild Gannet",
+        "bookings": 14
+      },
+      {
+        "name": "Tug Salt Tide",
+        "bookings": 13
+      },
+      {
+        "name": "OSV Silver Tide",
+        "bookings": 10
+      },
+      {
+        "name": "R/V Blue Star",
+        "bookings": 10
+      }
+    ]
+  },
+  "fit": {
+    "resolvableReservations": 469,
+    "unknownLengthReservations": 1412,
+    "violations": 90,
+    "top": [
+      {
+        "vessel": "S/V Far Horizon",
+        "vesselFt": 170,
+        "berth": "South Float East",
+        "berthFt": 90,
+        "count": 46
+      },
+      {
+        "vessel": "R/V Long Anchor",
+        "vesselFt": 170,
+        "berth": "North Pier Face",
+        "berthFt": 75,
+        "count": 14
+      },
+      {
+        "vessel": "M/V Iron Heron",
+        "vesselFt": 100,
+        "berth": "Inner Channel",
+        "berthFt": 55,
+        "count": 4
+      },
+      {
+        "vessel": "S/V Iron Petrel",
+        "vesselFt": 120,
+        "berth": "North Pier Face",
+        "berthFt": 75,
+        "count": 4
+      },
+      {
+        "vessel": "M/V Wild Reef",
+        "vesselFt": 100,
+        "berth": "South Float West",
+        "berthFt": 90,
+        "count": 3
+      },
+      {
+        "vessel": "F/V Long Heron",
+        "vesselFt": 85,
+        "berth": "North Pier Face",
+        "berthFt": 75,
+        "count": 2
+      },
+      {
+        "vessel": "R/V Clear Tern",
+        "vesselFt": 120,
+        "berth": "North Pier Face",
+        "berthFt": 75,
+        "count": 2
+      },
+      {
+        "vessel": "Barge Salt Dory",
+        "vesselFt": 85,
+        "berth": "North Pier Face",
+        "berthFt": 75,
+        "count": 1
+      },
+      {
+        "vessel": "M/V Swift Petrel",
+        "vesselFt": 100,
+        "berth": "South Float West",
+        "berthFt": 90,
+        "count": 1
+      },
+      {
+        "vessel": "M/Y Wild Sextant",
+        "vesselFt": 100,
+        "berth": "South Float East",
+        "berthFt": 90,
+        "count": 1
+      },
+      {
+        "vessel": "M/Y Wild Tern",
+        "vesselFt": 145,
+        "berth": "South Float East",
+        "berthFt": 90,
+        "count": 1
+      },
+      {
+        "vessel": "OSV Blue Osprey",
+        "vesselFt": 100,
+        "berth": "South Float East",
+        "berthFt": 90,
+        "count": 1
+      },
+      {
+        "vessel": "OSV Blue Osprey",
+        "vesselFt": 100,
+        "berth": "South Float West",
+        "berthFt": 90,
+        "count": 1
+      },
+      {
+        "vessel": "R/V Iron Harbor",
+        "vesselFt": 100,
+        "berth": "North Pier Face",
+        "berthFt": 75,
+        "count": 1
+      },
+      {
+        "vessel": "R/V Iron Harbor",
+        "vesselFt": 100,
+        "berth": "South Float West",
+        "berthFt": 90,
+        "count": 1
+      }
+    ]
+  },
+  "notImported": {
+    "areas": {
+      "rows": 163,
+      "names": {
+        "North Finger Piers:": 72,
+        "Small craft slips (institution boats)": 91
+      },
+      "bookingFillCells": 130,
+      "entries": [
+        {
+          "ref": "2011!F103",
+          "value": "M/V Amber Skua"
+        },
+        {
+          "ref": "2011!D115",
+          "value": "M/V Amber Skua"
+        },
+        {
+          "ref": "2011!AA115",
+          "value": "Public open house"
+        },
+        {
+          "ref": "2014!R38",
+          "value": "R/V Blue Star"
+        },
+        {
+          "ref": "2014!W39",
+          "value": "R/V Blue Marlin"
+        },
+        {
+          "ref": "2014!J74",
+          "value": "R/V Long Ketch"
+        },
+        {
+          "ref": "2014!Y74",
+          "value": "R/V Quiet Harbor"
+        },
+        {
+          "ref": "2014!AH74",
+          "value": "R/V Long Ketch"
+        },
+        {
+          "ref": "2014!V75",
+          "value": "M/Y WILD VOYAGER"
+        },
+        {
+          "ref": "2014!E76",
+          "value": "M/V Golden Current"
+        },
+        {
+          "ref": "2014!H86",
+          "value": "M/V Bright Beacon"
+        },
+        {
+          "ref": "2014!E88",
+          "value": "M/V Golden Current"
+        },
+        {
+          "ref": "2014!E100",
+          "value": "M/V Golden Current"
+        },
+        {
+          "ref": "2014!E112",
+          "value": "M/V Golden Current"
+        },
+        {
+          "ref": "2014!V112",
+          "value": "Barge Grey Sound"
+        },
+        {
+          "ref": "2014!G124",
+          "value": "Barge Grey Sound"
+        },
+        {
+          "ref": "2014!D125",
+          "value": "M/V Golden Current"
+        },
+        {
+          "ref": "2014!N136",
+          "value": "R/V Western Tide"
+        },
+        {
+          "ref": "2014!D137",
+          "value": "M/V Golden Current"
+        },
+        {
+          "ref": "2014!D149",
+          "value": "M/V Golden Current"
+        },
+        {
+          "ref": "2015!V50",
+          "value": "Provisioning"
+        },
+        {
+          "ref": "2015!U98",
+          "value": "Touch and go"
+        },
+        {
+          "ref": "2016!W51",
+          "value": "F/V Salt Harbor"
+        },
+        {
+          "ref": "2016!I63",
+          "value": "M/V GOLDEN STRAND"
+        },
+        {
+          "ref": "2016!Y63",
+          "value": "Tug Grey Voyager"
+        },
+        {
+          "ref": "2016!P75",
+          "value": "M/V Silver Dory"
+        },
+        {
+          "ref": "2016!S75",
+          "value": "S/V Golden Anchor"
+        },
+        {
+          "ref": "2016!W75",
+          "value": "Fueling"
+        },
+        {
+          "ref": "2016!K87",
+          "value": "S/V High Marlin"
+        },
+        {
+          "ref": "2016!AB87",
+          "value": "R/V Northern Horizon"
+        },
+        {
+          "ref": "2016!C99",
+          "value": "Barge Deep Tern"
+        },
+        {
+          "ref": "2016!R100",
+          "value": "M/Y Green Horizon"
+        },
+        {
+          "ref": "2016!C112",
+          "value": "Barge Deep Tern"
+        },
+        {
+          "ref": "2016!E136",
+          "value": "R/V Grey Lantern"
+        },
+        {
+          "ref": "2017!D65",
+          "value": "Float rebuild - no usage permitted"
+        },
+        {
+          "ref": "2017!I74",
+          "value": "Fueling @0800"
+        },
+        {
+          "ref": "2017!AC74",
+          "value": "Student tour"
+        },
+        {
+          "ref": "2017!K77",
+          "value": "Film crew on dock"
+        },
+        {
+          "ref": "2017!Q77",
+          "value": "R/V Swift Star"
+        },
+        {
+          "ref": "2017!D86",
+          "value": "Arrives AM"
+        },
+        {
+          "ref": "2017!K89",
+          "value": "Safety training (RIBs)"
+        },
+        {
+          "ref": "2017!M89",
+          "value": "Student tour"
+        },
+        {
+          "ref": "2017!S89",
+          "value": "Holiday"
+        },
+        {
+          "ref": "2017!I111",
+          "value": "Bunker barge"
+        },
+        {
+          "ref": "2017!M111",
+          "value": "Donor reception"
+        },
+        {
+          "ref": "2017!AB111",
+          "value": "Wire spooling"
+        },
+        {
+          "ref": "2017!F112",
+          "value": "M/V HIGH COVE"
+        },
+        {
+          "ref": "2017!C114",
+          "value": "R/V Silver Petrel"
+        },
+        {
+          "ref": "2017!R114",
+          "value": "Bunker barge"
+        },
+        {
+          "ref": "2017!S114",
+          "value": "Community sail day"
+        },
+        {
+          "ref": "2017!F123",
+          "value": "Water/slops pumping"
+        },
+        {
+          "ref": "2017!K123",
+          "value": "Load equipment"
+        },
+        {
+          "ref": "2017!L123",
+          "value": "Holiday"
+        },
+        {
+          "ref": "2017!S123",
+          "value": "Barge Bright Osprey"
+        },
+        {
+          "ref": "2017!AF123",
+          "value": "Fueling @0800"
+        },
+        {
+          "ref": "2017!S126",
+          "value": "Fueling"
+        },
+        {
+          "ref": "2017!X138",
+          "value": "Fuel truck"
+        },
+        {
+          "ref": "2018!W51",
+          "value": "Fuel truck"
+        },
+        {
+          "ref": "2018!AF63",
+          "value": "Fueling @0800"
+        },
+        {
+          "ref": "2018!Y77",
+          "value": "Bunkering"
+        },
+        {
+          "ref": "2018!AG77",
+          "value": "Bunkering 1000"
+        }
+      ]
+    },
+    "orphanRows": {
+      "rows": 120,
+      "bookingFillCells": 428,
+      "entries": [
+        {
+          "ref": "1997!P21",
+          "value": "R/V Amber Tide"
+        },
+        {
+          "ref": "2002!F64",
+          "value": "OSV Golden Tern"
+        },
+        {
+          "ref": "2002!F75",
+          "value": "OSV Golden Tern"
+        },
+        {
+          "ref": "2002!H86",
+          "value": "Barge Bright Sound"
+        },
+        {
+          "ref": "2002!L86",
+          "value": "OSV Golden Tern"
+        },
+        {
+          "ref": "2002!U86",
+          "value": "R/V Amber Heron"
+        },
+        {
+          "ref": "2002!AC87",
+          "value": "R/V Golden Meridian"
+        },
+        {
+          "ref": "2002!D97",
+          "value": "OSV Golden Tern"
+        },
+        {
+          "ref": "2002!M97",
+          "value": "M/Y LONG PETREL"
+        },
+        {
+          "ref": "2002!P98",
+          "value": "S/V Golden Heron"
+        },
+        {
+          "ref": "2003!F64",
+          "value": "OSV Golden Tern"
+        },
+        {
+          "ref": "2003!C75",
+          "value": "OSV Golden Tern"
+        },
+        {
+          "ref": "2003!M86",
+          "value": "Barge Bright Sound"
+        },
+        {
+          "ref": "2003!Q86",
+          "value": "OSV Golden Tern"
+        },
+        {
+          "ref": "2003!H97",
+          "value": "OSV Golden Tern"
+        },
+        {
+          "ref": "2005!K103",
+          "value": "S/V Far Current"
+        },
+        {
+          "ref": "2006!AA59",
+          "value": "Campus event"
+        },
+        {
+          "ref": "2006!P70",
+          "value": "M/V Coral Ledge"
+        },
+        {
+          "ref": "2006!D81",
+          "value": "S/V Quiet Gannet"
+        },
+        {
+          "ref": "2008!G91",
+          "value": "Tug Amber Sextant"
+        },
+        {
+          "ref": "2008!G92",
+          "value": "Safety training (RIBs)"
+        },
+        {
+          "ref": "2009!W49",
+          "value": "Tug Wild Strand"
+        },
+        {
+          "ref": "2010!B48",
+          "value": "Utility work on pier face"
+        },
+        {
+          "ref": "2010!L71",
+          "value": "R/V Coral Gannet"
+        },
+        {
+          "ref": "2010!M71",
+          "value": "S/V Coral Fathom"
+        },
+        {
+          "ref": "2010!U71",
+          "value": "Fuel truck"
+        },
+        {
+          "ref": "2010!B81",
+          "value": "F/V Western Sound"
+        },
+        {
+          "ref": "2010!C81",
+          "value": "R/V Long Ketch"
+        },
+        {
+          "ref": "2010!D81",
+          "value": "M/V GREY COMPASS"
+        },
+        {
+          "ref": "2010!F81",
+          "value": "6"
+        },
+        {
+          "ref": "2010!G81",
+          "value": "OSV AMBER REEF"
+        },
+        {
+          "ref": "2010!I81",
+          "value": "OSV Silver Tide"
+        },
+        {
+          "ref": "2010!M81",
+          "value": "R/V GOLDEN COMPASS"
+        },
+        {
+          "ref": "2010!O81",
+          "value": "Departs 0600"
+        },
+        {
+          "ref": "2010!D91",
+          "value": "M/V Deep Marlin"
+        },
+        {
+          "ref": "2010!G91",
+          "value": "Water/slops pumping"
+        },
+        {
+          "ref": "2010!L91",
+          "value": "M/V Grey Compass"
+        },
+        {
+          "ref": "2010!Y91",
+          "value": "M/Y Salt Sound"
+        },
+        {
+          "ref": "2010!AE91",
+          "value": "R/V Northern Strand"
+        },
+        {
+          "ref": "2010!L92",
+          "value": "Touch and go"
+        },
+        {
+          "ref": "2010!N92",
+          "value": "Fueling"
+        },
+        {
+          "ref": "2010!I94",
+          "value": "Delayed due to weather"
+        },
+        {
+          "ref": "2010!C103",
+          "value": "R/V Northern Strand"
+        },
+        {
+          "ref": "2010!G103",
+          "value": "Water/slops pumping"
+        },
+        {
+          "ref": "2010!N105",
+          "value": "Touch and go"
+        },
+        {
+          "ref": "2010!P105",
+          "value": "ETA 1200"
+        },
+        {
+          "ref": "2010!Q105",
+          "value": "Bunkering"
+        },
+        {
+          "ref": "2010!I114",
+          "value": "Fueling @0800"
+        },
+        {
+          "ref": "2010!M114",
+          "value": "Emergency port call"
+        },
+        {
+          "ref": "2010!W114",
+          "value": "Safety training (RIBs)"
+        },
+        {
+          "ref": "2011!T25",
+          "value": "Barge Western Voyager"
+        },
+        {
+          "ref": "2011!C36",
+          "value": "Barge Western Voyager"
+        },
+        {
+          "ref": "2011!C47",
+          "value": "Barge Western Voyager"
+        },
+        {
+          "ref": "2011!J48",
+          "value": "M/Y Blue Skua"
+        },
+        {
+          "ref": "2011!B58",
+          "value": "M/V Grey Petrel"
+        },
+        {
+          "ref": "2011!D58",
+          "value": "Touch and go"
+        },
+        {
+          "ref": "2011!U58",
+          "value": "F/V High Lantern"
+        },
+        {
+          "ref": "2011!B60",
+          "value": "Ultrasonic pier test"
+        },
+        {
+          "ref": "2011!K60",
+          "value": "Barge Quiet Lantern"
+        },
+        {
+          "ref": "2011!T60",
+          "value": "F/V SILVER DRIFT"
+        },
+        {
+          "ref": "2011!H69",
+          "value": "M/Y Western Star"
+        },
+        {
+          "ref": "2011!AB70",
+          "value": "R/V Swift Sound"
+        },
+        {
+          "ref": "2011!B71",
+          "value": "Paving near dock entrance"
+        },
+        {
+          "ref": "2011!J71",
+          "value": "R/V Bright Kestrel"
+        },
+        {
+          "ref": "2011!O71",
+          "value": "F/V Clear Skua"
+        },
+        {
+          "ref": "2011!U71",
+          "value": "Community sail day"
+        },
+        {
+          "ref": "2011!AA71",
+          "value": "Concrete work near test wells"
+        },
+        {
+          "ref": "2011!C80",
+          "value": "M/Y Western Star"
+        },
+        {
+          "ref": "2011!L80",
+          "value": "M/Y Western Beacon"
+        },
+        {
+          "ref": "2011!T80",
+          "value": "R/V Swift Osprey"
+        },
+        {
+          "ref": "2011!Z80",
+          "value": "R/V Long Tide"
+        },
+        {
+          "ref": "2011!O81",
+          "value": "Delayed due to weather"
+        },
+        {
+          "ref": "2011!B82",
+          "value": "F/V Clear Skua"
+        },
+        {
+          "ref": "2011!AD82",
+          "value": "Load equipment"
+        },
+        {
+          "ref": "2011!O91",
+          "value": "R/V High Kestrel"
+        },
+        {
+          "ref": "2011!P91",
+          "value": "Arrival 1400"
+        },
+        {
+          "ref": "2011!T92",
+          "value": "M/V Clear Tide"
+        },
+        {
+          "ref": "2011!H93",
+          "value": "S/V Clear Sound"
+        },
+        {
+          "ref": "2011!M93",
+          "value": "Returns from sea trials"
+        },
+        {
+          "ref": "2011!R93",
+          "value": "Rescue drill"
+        },
+        {
+          "ref": "2011!Y93",
+          "value": "Holiday"
+        },
+        {
+          "ref": "2011!H94",
+          "value": "Student tour"
+        },
+        {
+          "ref": "2011!K94",
+          "value": "Bollard replacement, west face"
+        },
+        {
+          "ref": "2011!Q94",
+          "value": "Delayed due to weather"
+        },
+        {
+          "ref": "2011!R94",
+          "value": "Provisioning"
+        },
+        {
+          "ref": "2011!U94",
+          "value": "OSV Western Skua"
+        },
+        {
+          "ref": "2011!Z94",
+          "value": "Campus event"
+        },
+        {
+          "ref": "2011!Q104",
+          "value": "Tug Grey Ketch"
+        },
+        {
+          "ref": "2011!S105",
+          "value": "Campus event"
+        },
+        {
+          "ref": "2011!R106",
+          "value": "M/V Far Voyager"
+        },
+        {
+          "ref": "2011!S106",
+          "value": "Community sail day"
+        },
+        {
+          "ref": "2011!J117",
+          "value": "Dive training"
+        },
+        {
+          "ref": "2011!L128",
+          "value": "Holiday"
+        },
+        {
+          "ref": "2012!AA27",
+          "value": "F/V GREY ANCHOR"
+        },
+        {
+          "ref": "2012!B36",
+          "value": "M/V Salt Tern"
+        },
+        {
+          "ref": "2012!L60",
+          "value": "Crane access - berth closed"
+        },
+        {
+          "ref": "2012!B71",
+          "value": "Paving near dock entrance"
+        },
+        {
+          "ref": "2012!B81",
+          "value": "F/V Western Sound"
+        },
+        {
+          "ref": "2012!C81",
+          "value": "R/V Long Ketch"
+        },
+        {
+          "ref": "2012!D81",
+          "value": "M/V GREY COMPASS"
+        },
+        {
+          "ref": "2012!F81",
+          "value": "Barge SILVER VOYAGER"
+        },
+        {
+          "ref": "2012!G81",
+          "value": "OSV AMBER REEF"
+        },
+        {
+          "ref": "2012!I81",
+          "value": "OSV Silver Tide"
+        },
+        {
+          "ref": "2012!K81",
+          "value": "M/V NORTHERN HARBOR"
+        },
+        {
+          "ref": "2012!M81",
+          "value": "R/V GOLDEN COMPASS"
+        },
+        {
+          "ref": "2012!O81",
+          "value": "Touch and go"
+        },
+        {
+          "ref": "2012!Q81",
+          "value": "F/V SALT FATHOM"
+        },
+        {
+          "ref": "2012!B83",
+          "value": "Ultrasonic pier test"
+        },
+        {
+          "ref": "2012!N92",
+          "value": "M/Y Silver Compass"
+        },
+        {
+          "ref": "2012!B95",
+          "value": "Float rebuild - no usage permitted"
+        },
+        {
+          "ref": "2012!L104",
+          "value": "S/V Golden Dory"
+        },
+        {
+          "ref": "2012!B106",
+          "value": "Concrete work near test wells"
+        },
+        {
+          "ref": "2013!AD14",
+          "value": "Float rebuild - no usage permitted"
+        },
+        {
+          "ref": "2013!AA15",
+          "value": "Concrete work near test wells"
+        },
+        {
+          "ref": "2013!F16",
+          "value": "R/V Wild Current"
+        },
+        {
+          "ref": "2013!AD16",
+          "value": "Float rebuild - no usage permitted"
+        },
+        {
+          "ref": "2013!F25",
+          "value": "Bollard replacement, west face"
+        },
+        {
+          "ref": "2013!V26",
+          "value": "Float rebuild - no usage permitted"
+        },
+        {
+          "ref": "2013!F27",
+          "value": "Float rebuild - no usage permitted"
+        },
+        {
+          "ref": "2013!AH47",
+          "value": "S/V Silver Star"
+        },
+        {
+          "ref": "2013!W49",
+          "value": "Provisioning"
+        },
+        {
+          "ref": "2013!X49",
+          "value": "Barge Salt Compass"
+        },
+        {
+          "ref": "2013!R59",
+          "value": "Rescue drill"
+        },
+        {
+          "ref": "2013!F60",
+          "value": "Bollard replacement, west face"
+        },
+        {
+          "ref": "2013!U69",
+          "value": "R/V Amber Harbor"
+        },
+        {
+          "ref": "2013!P70",
+          "value": "Rescue drill"
+        },
+        {
+          "ref": "2013!F71",
+          "value": "Utility work on pier face"
+        },
+        {
+          "ref": "2013!G80",
+          "value": "R/V Amber Harbor"
+        },
+        {
+          "ref": "2013!AB80",
+          "value": "R/V Northern Reef"
+        },
+        {
+          "ref": "2013!AC80",
+          "value": "Holiday"
+        },
+        {
+          "ref": "2013!AI80",
+          "value": "Community sail day"
+        },
+        {
+          "ref": "2013!B81",
+          "value": "F/V Western Sound"
+        },
+        {
+          "ref": "2013!C81",
+          "value": "R/V Long Ketch"
+        },
+        {
+          "ref": "2013!D81",
+          "value": "M/V GREY COMPASS"
+        },
+        {
+          "ref": "2013!F81",
+          "value": "Barge SILVER VOYAGER"
+        },
+        {
+          "ref": "2013!G81",
+          "value": "OSV AMBER REEF"
+        },
+        {
+          "ref": "2013!I81",
+          "value": "OSV Silver Tide"
+        },
+        {
+          "ref": "2013!K81",
+          "value": "M/V NORTHERN HARBOR"
+        },
+        {
+          "ref": "2013!M81",
+          "value": "R/V GOLDEN COMPASS"
+        },
+        {
+          "ref": "2013!O81",
+          "value": "Delayed due to weather"
+        },
+        {
+          "ref": "2013!Q81",
+          "value": "OSV Salt Osprey"
+        },
+        {
+          "ref": "2013!AA81",
+          "value": "S/V Long Lantern"
+        },
+        {
+          "ref": "2013!T82",
+          "value": "Campus event"
+        },
+        {
+          "ref": "2013!AE82",
+          "value": "Wire spooling"
+        },
+        {
+          "ref": "2013!O91",
+          "value": "Tug Deep Current"
+        },
+        {
+          "ref": "2013!AB91",
+          "value": "R/V Western Kestrel"
+        },
+        {
+          "ref": "2013!K94",
+          "value": "Public open house"
+        },
+        {
+          "ref": "2013!M94",
+          "value": "Bunker barge"
+        },
+        {
+          "ref": "2013!B103",
+          "value": "R/V Western Kestrel"
+        },
+        {
+          "ref": "2013!O103",
+          "value": "M/V Iron Tern"
+        },
+        {
+          "ref": "2013!R105",
+          "value": "Bunkering"
+        },
+        {
+          "ref": "2013!F116",
+          "value": "Bollard replacement, west face"
+        },
+        {
+          "ref": "2013!M116",
+          "value": "Dock maintenance - restricted access"
+        },
+        {
+          "ref": "2013!AD116",
+          "value": "Donor reception"
+        },
+        {
+          "ref": "2013!AG116",
+          "value": "Concrete work near test wells"
+        },
+        {
+          "ref": "2013!O138",
+          "value": "Barge Iron Kestrel"
+        },
+        {
+          "ref": "2014!G17",
+          "value": "R/V Bright Tide"
+        },
+        {
+          "ref": "2014!U29",
+          "value": "Campus event"
+        },
+        {
+          "ref": "2014!W29",
+          "value": "Load equipment"
+        },
+        {
+          "ref": "2014!AJ29",
+          "value": "Student tour"
+        },
+        {
+          "ref": "2014!J41",
+          "value": "M/Y Green Tide"
+        },
+        {
+          "ref": "2014!M41",
+          "value": "Road race - access limited"
+        },
+        {
+          "ref": "2014!Q41",
+          "value": "Bollard replacement, west face"
+        },
+        {
+          "ref": "2014!G53",
+          "value": "Water/slops pumping"
+        },
+        {
+          "ref": "2014!H65",
+          "value": "Bunkering"
+        },
+        {
+          "ref": "2014!U65",
+          "value": "F/V AMBER BEACON"
+        },
+        {
+          "ref": "2014!V65",
+          "value": "R/V GREEN DRIFT"
+        },
+        {
+          "ref": "2014!Z65",
+          "value": "Bunkering"
+        },
+        {
+          "ref": "2014!AA65",
+          "value": "Bunkering 1000"
+        },
+        {
+          "ref": "2014!AG65",
+          "value": "F/V Quiet Skua"
+        },
+        {
+          "ref": "2014!AI65",
+          "value": "F/V Quiet Skua"
+        },
+        {
+          "ref": "2014!AF77",
+          "value": "Dock inspection"
+        },
+        {
+          "ref": "2014!AA90",
+          "value": "Campus event"
+        },
+        {
+          "ref": "2014!AD90",
+          "value": "Utility work on pier face"
+        },
+        {
+          "ref": "2014!W102",
+          "value": "M/V Far Heron"
+        },
+        {
+          "ref": "2014!AB102",
+          "value": "Tug Northern Beacon"
+        },
+        {
+          "ref": "2014!AB103",
+          "value": "Tug Deep Fathom"
+        },
+        {
+          "ref": "2014!AD103",
+          "value": "M/V Bright Voyager"
+        },
+        {
+          "ref": "2014!AG139",
+          "value": "Bunkering"
+        },
+        {
+          "ref": "2015!AE65",
+          "value": "Road race - access limited"
+        },
+        {
+          "ref": "2015!N76",
+          "value": "Pier repair - no docking"
+        },
+        {
+          "ref": "2015!M77",
+          "value": "Fuel truck"
+        },
+        {
+          "ref": "2015!N77",
+          "value": "Fueling @0800"
+        },
+        {
+          "ref": "2015!AC77",
+          "value": "Fueling @0800"
+        },
+        {
+          "ref": "2015!B88",
+          "value": "F/V Western Sound"
+        },
+        {
+          "ref": "2015!C88",
+          "value": "R/V Long Ketch"
+        },
+        {
+          "ref": "2015!D88",
+          "value": "M/V GREY COMPASS"
+        },
+        {
+          "ref": "2015!F88",
+          "value": "Barge SILVER VOYAGER"
+        },
+        {
+          "ref": "2015!G88",
+          "value": "OSV AMBER REEF"
+        },
+        {
+          "ref": "2015!I88",
+          "value": "OSV Silver Tide"
+        },
+        {
+          "ref": "2015!K88",
+          "value": "M/V NORTHERN HARBOR"
+        },
+        {
+          "ref": "2015!M88",
+          "value": "R/V GOLDEN COMPASS"
+        },
+        {
+          "ref": "2015!O88",
+          "value": "ETA 1200"
+        },
+        {
+          "ref": "2015!Q88",
+          "value": "11"
+        },
+        {
+          "ref": "2015!S88",
+          "value": "S/V Green Skua"
+        },
+        {
+          "ref": "2015!S89",
+          "value": "Community sail day"
+        },
+        {
+          "ref": "2015!V89",
+          "value": "Fuel truck"
+        },
+        {
+          "ref": "2015!AA89",
+          "value": "Road race - access limited"
+        },
+        {
+          "ref": "2015!AG102",
+          "value": "M/Y Quiet Cove"
+        },
+        {
+          "ref": "2015!AA114",
+          "value": "Fueling"
+        },
+        {
+          "ref": "2015!AF114",
+          "value": "1400"
+        },
+        {
+          "ref": "2015!Q126",
+          "value": "S/V SALT KESTREL"
+        },
+        {
+          "ref": "2015!AE126",
+          "value": "Holiday"
+        },
+        {
+          "ref": "2016!S42",
+          "value": "Concrete work near test wells"
+        },
+        {
+          "ref": "2016!C54",
+          "value": "Ultrasonic pier test"
+        },
+        {
+          "ref": "2016!Y54",
+          "value": "Bunkering 1000"
+        },
+        {
+          "ref": "2016!AB54",
+          "value": "Load equipment"
+        },
+        {
+          "ref": "2016!AD54",
+          "value": "Bunker barge"
+        },
+        {
+          "ref": "2016!AF54",
+          "value": "Bunker barge"
+        },
+        {
+          "ref": "2016!AG54",
+          "value": "Fueling @0800"
+        },
+        {
+          "ref": "2016!O65",
+          "value": "M/V Swift Voyager"
+        },
+        {
+          "ref": "2016!G66",
+          "value": "M/V Northern Tide"
+        },
+        {
+          "ref": "2016!S66",
+          "value": "M/V Northern Tide"
+        },
+        {
+          "ref": "2016!L90",
+          "value": "Safety training (RIBs)"
+        },
+        {
+          "ref": "2016!T90",
+          "value": "Film crew on dock"
+        },
+        {
+          "ref": "2016!U90",
+          "value": "Pier repair - no docking"
+        },
+        {
+          "ref": "2016!L102",
+          "value": "Dive training"
+        },
+        {
+          "ref": "2016!W102",
+          "value": "R/V Blue Meridian"
+        },
+        {
+          "ref": "2016!C103",
+          "value": "Bollard replacement, west face"
+        },
+        {
+          "ref": "2016!K103",
+          "value": "R/V Silver Petrel"
+        },
+        {
+          "ref": "2016!P103",
+          "value": "Bollard replacement, west face"
+        },
+        {
+          "ref": "2016!C115",
+          "value": "R/V Silver Petrel"
+        },
+        {
+          "ref": "2016!B151",
+          "value": "F/V Western Sound"
+        },
+        {
+          "ref": "2016!G151",
+          "value": "R/V Long Ketch"
+        },
+        {
+          "ref": "2016!H151",
+          "value": "M/V GREY COMPASS"
+        },
+        {
+          "ref": "2016!J151",
+          "value": "Barge SILVER VOYAGER"
+        },
+        {
+          "ref": "2016!K151",
+          "value": "OSV AMBER REEF"
+        },
+        {
+          "ref": "2016!M151",
+          "value": "OSV Silver Tide"
+        },
+        {
+          "ref": "2016!O151",
+          "value": "M/V NORTHERN HARBOR"
+        },
+        {
+          "ref": "2016!P151",
+          "value": "Tug Salt Tide"
+        },
+        {
+          "ref": "2016!Q151",
+          "value": "R/V GOLDEN COMPASS"
+        },
+        {
+          "ref": "2016!R151",
+          "value": "Tug Coral Reef"
+        },
+        {
+          "ref": "2016!V151",
+          "value": "F/V SALT FATHOM"
+        },
+        {
+          "ref": "2017!Z17",
+          "value": "Dock maintenance - restricted access"
+        },
+        {
+          "ref": "2017!AC29",
+          "value": "Fueling @0800"
+        },
+        {
+          "ref": "2017!D102",
+          "value": "Bunkering"
+        },
+        {
+          "ref": "2017!Q102",
+          "value": "R/V Silver Petrel"
+        },
+        {
+          "ref": "2017!B151",
+          "value": "F/V Western Sound"
+        },
+        {
+          "ref": "2017!G151",
+          "value": "R/V Long Ketch"
+        },
+        {
+          "ref": "2017!H151",
+          "value": "M/V GREY COMPASS"
+        },
+        {
+          "ref": "2017!J151",
+          "value": "Barge SILVER VOYAGER"
+        },
+        {
+          "ref": "2017!K151",
+          "value": "OSV AMBER REEF"
+        },
+        {
+          "ref": "2017!M151",
+          "value": "OSV Silver Tide"
+        },
+        {
+          "ref": "2017!O151",
+          "value": "M/V NORTHERN HARBOR"
+        },
+        {
+          "ref": "2017!Q151",
+          "value": "R/V GOLDEN COMPASS"
+        },
+        {
+          "ref": "2017!S151",
+          "value": "Arrival 1400"
+        },
+        {
+          "ref": "2017!U151",
+          "value": "F/V SALT FATHOM"
+        },
+        {
+          "ref": "2017!W151",
+          "value": "Tug Golden Sound"
+        },
+        {
+          "ref": "2018!H42",
+          "value": "OSV Clear Marlin"
+        },
+        {
+          "ref": "2018!AE42",
+          "value": "Fuel truck"
+        },
+        {
+          "ref": "2018!F54",
+          "value": "Bunker barge"
+        },
+        {
+          "ref": "2018!X54",
+          "value": "ETA 1200"
+        },
+        {
+          "ref": "2018!C66",
+          "value": "Bunker barge"
+        },
+        {
+          "ref": "2018!D66",
+          "value": "Arrival 1400"
+        },
+        {
+          "ref": "2018!J66",
+          "value": "Fuel truck"
+        },
+        {
+          "ref": "2018!L66",
+          "value": "Water/slops pumping"
+        },
+        {
+          "ref": "2018!M66",
+          "value": "OSV Wild Lantern"
+        },
+        {
+          "ref": "2018!Q66",
+          "value": "Provisioning"
+        },
+        {
+          "ref": "2018!AD66",
+          "value": "1030"
+        },
+        {
+          "ref": "2018!D78",
+          "value": "Fueling @0800"
+        },
+        {
+          "ref": "2018!P78",
+          "value": "Bunker barge"
+        },
+        {
+          "ref": "2018!Y78",
+          "value": "Fuel truck"
+        },
+        {
+          "ref": "2018!AF78",
+          "value": "Water/slops pumping"
+        },
+        {
+          "ref": "2018!I90",
+          "value": "Fueling"
+        },
+        {
+          "ref": "2018!J90",
+          "value": "Dive training"
+        },
+        {
+          "ref": "2018!R90",
+          "value": "Donor reception"
+        },
+        {
+          "ref": "2018!U90",
+          "value": "Bunkering 1000"
+        },
+        {
+          "ref": "2018!B151",
+          "value": "F/V Western Sound"
+        },
+        {
+          "ref": "2018!C151",
+          "value": "R/V Long Ketch"
+        },
+        {
+          "ref": "2018!D151",
+          "value": "M/V GREY COMPASS"
+        },
+        {
+          "ref": "2018!F151",
+          "value": "Barge SILVER VOYAGER"
+        },
+        {
+          "ref": "2018!G151",
+          "value": "OSV AMBER REEF"
+        },
+        {
+          "ref": "2018!I151",
+          "value": "OSV Silver Tide"
+        },
+        {
+          "ref": "2018!K151",
+          "value": "M/V NORTHERN HARBOR"
+        },
+        {
+          "ref": "2018!M151",
+          "value": "R/V GOLDEN COMPASS"
+        },
+        {
+          "ref": "2018!O151",
+          "value": "Returns from sea trials"
+        },
+        {
+          "ref": "2019!H42",
+          "value": "OSV Clear Marlin"
+        },
+        {
+          "ref": "2019!AE42",
+          "value": "Fuel truck"
+        },
+        {
+          "ref": "2019!R90",
+          "value": "Community sail day"
+        },
+        {
+          "ref": "2019!B151",
+          "value": "F/V Western Sound"
+        },
+        {
+          "ref": "2019!F151",
+          "value": "R/V Long Ketch"
+        },
+        {
+          "ref": "2019!G151",
+          "value": "M/V GREY COMPASS"
+        },
+        {
+          "ref": "2019!I151",
+          "value": "Barge SILVER VOYAGER"
+        },
+        {
+          "ref": "2019!J151",
+          "value": "OSV AMBER REEF"
+        },
+        {
+          "ref": "2019!L151",
+          "value": "OSV Silver Tide"
+        },
+        {
+          "ref": "2019!N151",
+          "value": "M/V NORTHERN HARBOR"
+        },
+        {
+          "ref": "2019!P151",
+          "value": "R/V GOLDEN COMPASS"
+        },
+        {
+          "ref": "2019!R151",
+          "value": "ETD PM"
+        }
+      ]
+    },
+    "corruptHeaderLabels": {
+      "count": 61,
+      "entries": [
+        {
+          "ref": "2010!C117",
+          "value": "F/V GREY STRAND"
+        },
+        {
+          "ref": "2010!D117",
+          "value": "M/V SILVER HORIZON"
+        },
+        {
+          "ref": "2010!E117",
+          "value": "OSV CLEAR OSPREY"
+        },
+        {
+          "ref": "2010!F117",
+          "value": "OSV CLEAR OSPREY"
+        },
+        {
+          "ref": "2010!G117",
+          "value": "R/V CLEAR HARBOR"
+        },
+        {
+          "ref": "2010!H117",
+          "value": "Barge SWIFT HARBOR"
+        },
+        {
+          "ref": "2010!I118",
+          "value": "S/V FAR LANTERN"
+        },
+        {
+          "ref": "2010!J118",
+          "value": "F/V GREY STRAND"
+        },
+        {
+          "ref": "2010!K118",
+          "value": "M/V SILVER HORIZON"
+        },
+        {
+          "ref": "2010!L118",
+          "value": "OSV CLEAR OSPREY"
+        },
+        {
+          "ref": "2010!M118",
+          "value": "OSV CLEAR OSPREY"
+        },
+        {
+          "ref": "2010!N118",
+          "value": "R/V CLEAR HARBOR"
+        },
+        {
+          "ref": "2010!O118",
+          "value": "Barge SWIFT HARBOR"
+        },
+        {
+          "ref": "2010!P118",
+          "value": "S/V FAR LANTERN"
+        },
+        {
+          "ref": "2010!Q118",
+          "value": "F/V GREY STRAND"
+        },
+        {
+          "ref": "2010!R118",
+          "value": "M/V SILVER HORIZON"
+        },
+        {
+          "ref": "2010!S118",
+          "value": "OSV CLEAR OSPREY"
+        },
+        {
+          "ref": "2010!T118",
+          "value": "OSV CLEAR OSPREY"
+        },
+        {
+          "ref": "2010!U118",
+          "value": "R/V CLEAR HARBOR"
+        },
+        {
+          "ref": "2010!V118",
+          "value": "Barge SWIFT HARBOR"
+        },
+        {
+          "ref": "2010!W118",
+          "value": "S/V FAR LANTERN"
+        },
+        {
+          "ref": "2010!X118",
+          "value": "F/V GREY STRAND"
+        },
+        {
+          "ref": "2010!Y118",
+          "value": "M/V SILVER HORIZON"
+        },
+        {
+          "ref": "2010!Z118",
+          "value": "OSV CLEAR OSPREY"
+        },
+        {
+          "ref": "2010!AA118",
+          "value": "OSV CLEAR OSPREY"
+        },
+        {
+          "ref": "2010!AB118",
+          "value": "R/V CLEAR HARBOR"
+        },
+        {
+          "ref": "2010!AC118",
+          "value": "Barge SWIFT HARBOR"
+        },
+        {
+          "ref": "2010!AD118",
+          "value": "S/V FAR LANTERN"
+        },
+        {
+          "ref": "2010!AE118",
+          "value": "F/V GREY STRAND"
+        },
+        {
+          "ref": "2010!AF118",
+          "value": "M/V SILVER HORIZON"
+        },
+        {
+          "ref": "2010!B128",
+          "value": "OSV CLEAR OSPREY"
+        },
+        {
+          "ref": "2010!C128",
+          "value": "OSV CLEAR OSPREY"
+        },
+        {
+          "ref": "2010!D128",
+          "value": "R/V CLEAR HARBOR"
+        },
+        {
+          "ref": "2010!E128",
+          "value": "Barge SWIFT HARBOR"
+        },
+        {
+          "ref": "2010!F128",
+          "value": "S/V FAR LANTERN"
+        },
+        {
+          "ref": "2010!G128",
+          "value": "F/V GREY STRAND"
+        },
+        {
+          "ref": "2010!H129",
+          "value": "M/V SILVER HORIZON"
+        },
+        {
+          "ref": "2010!I129",
+          "value": "OSV CLEAR OSPREY"
+        },
+        {
+          "ref": "2010!J129",
+          "value": "OSV CLEAR OSPREY"
+        },
+        {
+          "ref": "2010!K129",
+          "value": "R/V CLEAR HARBOR"
+        },
+        {
+          "ref": "2010!L129",
+          "value": "Barge SWIFT HARBOR"
+        },
+        {
+          "ref": "2010!M129",
+          "value": "S/V FAR LANTERN"
+        },
+        {
+          "ref": "2010!N129",
+          "value": "F/V GREY STRAND"
+        },
+        {
+          "ref": "2010!O129",
+          "value": "M/V SILVER HORIZON"
+        },
+        {
+          "ref": "2010!P129",
+          "value": "OSV CLEAR OSPREY"
+        },
+        {
+          "ref": "2010!Q129",
+          "value": "OSV CLEAR OSPREY"
+        },
+        {
+          "ref": "2010!R129",
+          "value": "R/V CLEAR HARBOR"
+        },
+        {
+          "ref": "2010!S129",
+          "value": "Barge SWIFT HARBOR"
+        },
+        {
+          "ref": "2010!T129",
+          "value": "S/V FAR LANTERN"
+        },
+        {
+          "ref": "2010!U129",
+          "value": "F/V GREY STRAND"
+        },
+        {
+          "ref": "2010!V129",
+          "value": "M/V SILVER HORIZON"
+        },
+        {
+          "ref": "2010!W129",
+          "value": "OSV CLEAR OSPREY"
+        },
+        {
+          "ref": "2010!X129",
+          "value": "OSV CLEAR OSPREY"
+        },
+        {
+          "ref": "2010!Y129",
+          "value": "R/V CLEAR HARBOR"
+        },
+        {
+          "ref": "2010!Z129",
+          "value": "Barge SWIFT HARBOR"
+        },
+        {
+          "ref": "2010!AA129",
+          "value": "S/V FAR LANTERN"
+        },
+        {
+          "ref": "2010!AB129",
+          "value": "F/V GREY STRAND"
+        },
+        {
+          "ref": "2010!AC129",
+          "value": "M/V SILVER HORIZON"
+        },
+        {
+          "ref": "2010!AD129",
+          "value": "OSV CLEAR OSPREY"
+        },
+        {
+          "ref": "2010!AE129",
+          "value": "OSV CLEAR OSPREY"
+        },
+        {
+          "ref": "2010!AF129",
+          "value": "R/V CLEAR HARBOR"
+        }
+      ]
+    },
+    "outsideDayColumns": {
+      "count": 55,
+      "entries": [
+        {
+          "ref": "2009!AF65",
+          "value": "R/V CORAL TERN"
+        },
+        {
+          "ref": "2010!AF44",
+          "value": "R/V Grey Kestrel"
+        },
+        {
+          "ref": "2010!B121",
+          "value": "R/V Golden Horizon"
+        },
+        {
+          "ref": "2011!B55",
+          "value": "R/V Golden Horizon"
+        },
+        {
+          "ref": "2011!B65",
+          "value": "M/V GREY COMPASS"
+        },
+        {
+          "ref": "2011!B66",
+          "value": "R/V Golden Horizon"
+        },
+        {
+          "ref": "2011!B77",
+          "value": "R/V Golden Horizon"
+        },
+        {
+          "ref": "2011!B86",
+          "value": "M/V DEEP SOUND"
+        },
+        {
+          "ref": "2011!B112",
+          "value": "R/V Golden Horizon"
+        },
+        {
+          "ref": "2011!B123",
+          "value": "R/V Golden Horizon"
+        },
+        {
+          "ref": "2012!B55",
+          "value": "R/V Golden Horizon"
+        },
+        {
+          "ref": "2012!B66",
+          "value": "R/V Golden Horizon"
+        },
+        {
+          "ref": "2012!B77",
+          "value": "R/V Golden Horizon"
+        },
+        {
+          "ref": "2012!B112",
+          "value": "R/V Golden Horizon"
+        },
+        {
+          "ref": "2012!B123",
+          "value": "R/V Golden Horizon"
+        },
+        {
+          "ref": "2012!B134",
+          "value": "R/V Golden Horizon"
+        },
+        {
+          "ref": "2013!B22",
+          "value": "R/V Long Compass"
+        },
+        {
+          "ref": "2013!B33",
+          "value": "R/V Long Compass"
+        },
+        {
+          "ref": "2013!B44",
+          "value": "R/V Long Compass"
+        },
+        {
+          "ref": "2013!B55",
+          "value": "R/V Long Compass"
+        },
+        {
+          "ref": "2013!B65",
+          "value": "M/V GREY COMPASS"
+        },
+        {
+          "ref": "2013!B66",
+          "value": "R/V Long Compass"
+        },
+        {
+          "ref": "2013!B77",
+          "value": "R/V Long Compass"
+        },
+        {
+          "ref": "2013!B88",
+          "value": "R/V Long Compass"
+        },
+        {
+          "ref": "2013!B100",
+          "value": "Tug Clear Anchor"
+        },
+        {
+          "ref": "2013!B111",
+          "value": "R/V Long Compass"
+        },
+        {
+          "ref": "2013!B122",
+          "value": "Tug Clear Anchor"
+        },
+        {
+          "ref": "2013!B133",
+          "value": "Tug Clear Anchor"
+        },
+        {
+          "ref": "2014!B59",
+          "value": "R/V Golden Horizon"
+        },
+        {
+          "ref": "2014!B70",
+          "value": "M/V GREY COMPASS"
+        },
+        {
+          "ref": "2014!B71",
+          "value": "R/V Golden Horizon"
+        },
+        {
+          "ref": "2014!B83",
+          "value": "R/V Golden Horizon"
+        },
+        {
+          "ref": "2014!B121",
+          "value": "R/V Golden Horizon"
+        },
+        {
+          "ref": "2014!B133",
+          "value": "R/V Golden Horizon"
+        },
+        {
+          "ref": "2014!B145",
+          "value": "R/V Golden Horizon"
+        },
+        {
+          "ref": "2015!B59",
+          "value": "R/V Golden Horizon"
+        },
+        {
+          "ref": "2015!B70",
+          "value": "M/V GREY COMPASS"
+        },
+        {
+          "ref": "2015!B71",
+          "value": "R/V Golden Horizon"
+        },
+        {
+          "ref": "2015!B83",
+          "value": "R/V Golden Horizon"
+        },
+        {
+          "ref": "2015!B120",
+          "value": "R/V Golden Horizon"
+        },
+        {
+          "ref": "2015!B132",
+          "value": "R/V Golden Horizon"
+        },
+        {
+          "ref": "2015!B144",
+          "value": "R/V Golden Horizon"
+        },
+        {
+          "ref": "2016!AF23",
+          "value": "Touch and go"
+        },
+        {
+          "ref": "2016!AH61",
+          "value": "M/V Bright Lantern"
+        },
+        {
+          "ref": "2016!B121",
+          "value": "R/V Golden Horizon"
+        },
+        {
+          "ref": "2017!AG70",
+          "value": "Barge Bright Tern"
+        },
+        {
+          "ref": "2017!B120",
+          "value": "R/V Golden Horizon"
+        },
+        {
+          "ref": "2017!B132",
+          "value": "R/V Golden Horizon"
+        },
+        {
+          "ref": "2017!B144",
+          "value": "R/V Golden Horizon"
+        },
+        {
+          "ref": "2018!B121",
+          "value": "R/V Golden Horizon"
+        },
+        {
+          "ref": "2018!B133",
+          "value": "R/V Golden Horizon"
+        },
+        {
+          "ref": "2018!B145",
+          "value": "R/V Golden Horizon"
+        },
+        {
+          "ref": "2019!B121",
+          "value": "R/V Golden Horizon"
+        },
+        {
+          "ref": "2019!B133",
+          "value": "R/V Golden Horizon"
+        },
+        {
+          "ref": "2019!B145",
+          "value": "R/V Golden Horizon"
+        }
+      ]
+    },
+    "standaloneNotes": {
+      "count": 13,
+      "entries": [
+        {
+          "ref": "2010!Y43",
+          "value": "Delayed due to weather"
+        },
+        {
+          "ref": "2010!AB109",
+          "value": "Arrival 1400"
+        },
+        {
+          "ref": "2010!N120",
+          "value": "Bunker barge"
+        },
+        {
+          "ref": "2010!P120",
+          "value": "Departs 0600"
+        },
+        {
+          "ref": "2010!J122",
+          "value": "ETD PM"
+        },
+        {
+          "ref": "2010!AB122",
+          "value": "Arrival 1400"
+        },
+        {
+          "ref": "2011!U98",
+          "value": "Departs 0600"
+        },
+        {
+          "ref": "2011!V98",
+          "value": "ETA 1200"
+        },
+        {
+          "ref": "2013!Y55",
+          "value": "Load equipment"
+        },
+        {
+          "ref": "2014!AC69",
+          "value": "Bunker barge"
+        },
+        {
+          "ref": "2017!C81",
+          "value": "Bunkering"
+        },
+        {
+          "ref": "2017!E81",
+          "value": "Provisioning"
+        },
+        {
+          "ref": "2017!N93",
+          "value": "Bunker barge"
+        }
+      ]
+    },
+    "junkNumerics": {
+      "count": 1,
+      "entries": [
+        {
+          "ref": "2010!AA120",
+          "value": "1400"
+        }
+      ]
+    },
+    "undatedColumnLabels": {
+      "count": 0,
+      "entries": []
+    },
+    "carryOver": [
+      {
+        "sheet": "2002",
+        "claims": "2001-12",
+        "titleCell": "2002!A1",
+        "weekdayMatchesClaimedMonth": false,
+        "weekdayMatchesSheetYearDecember": true,
+        "segmentsFound": 7,
+        "labelCells": 7,
+        "comparedWith": "2001 sheet, 2001-12",
+        "identicalSegments": 1,
+        "onlyInCarryOver": [
+          "north-pier-west 06-06 LONG ANCHOR",
+          "north-pier-west 08-08 LONG ANCHOR",
+          "north-pier-west 11-11 LONG ANCHOR",
+          "north-pier-west 13-13 LONG ANCHOR",
+          "north-pier-west 17-17 LONG ANCHOR",
+          "north-pier-west 22-22 LONG ANCHOR"
+        ],
+        "onlyInAuthoritative": [
+          "north-pier-west 05-05 LONG ANCHOR",
+          "north-pier-west 07-07 LONG ANCHOR",
+          "north-pier-west 10-10 LONG ANCHOR",
+          "north-pier-west 12-12 LONG ANCHOR",
+          "north-pier-west 16-16 LONG ANCHOR",
+          "north-pier-west 21-21 LONG ANCHOR"
+        ]
+      },
+      {
+        "sheet": "2003",
+        "claims": "2002-12",
+        "titleCell": "2003!A1",
+        "weekdayMatchesClaimedMonth": false,
+        "weekdayMatchesSheetYearDecember": true,
+        "segmentsFound": 4,
+        "labelCells": 4,
+        "comparedWith": "2002 sheet, 2002-12",
+        "identicalSegments": 2,
+        "onlyInCarryOver": [
+          "north-pier-face 31-31 LONG ANCHOR",
+          "north-pier-west 19-30 CLEAR SEXTANT"
+        ],
+        "onlyInAuthoritative": [
+          "north-pier-west 01-01 QUIET PETREL",
+          "north-pier-west 20-30 CLEAR SEXTANT"
+        ]
+      },
+      {
+        "sheet": "2004",
+        "claims": "2003-12",
+        "titleCell": "2004!A5",
+        "weekdayMatchesClaimedMonth": false,
+        "weekdayMatchesSheetYearDecember": true,
+        "segmentsFound": 3,
+        "labelCells": 3,
+        "comparedWith": "2003 sheet, 2003-12",
+        "identicalSegments": 0,
+        "onlyInCarryOver": [
+          "north-pier-east 20-28 CLEAR SEXTANT",
+          "north-pier-face 14-17 GREEN LANTERN",
+          "north-pier-west 01-31 SALT DORY"
+        ],
+        "onlyInAuthoritative": [
+          "north-pier-east 01-31 SALT DORY",
+          "north-pier-west 19-27 CLEAR SEXTANT"
+        ]
+      }
+    ]
+  },
+  "structuralFills": {
+    "rgb:16365C": 181,
+    "rgb:D9D9D9": 2176,
+    "theme:0:-0.15": 1613,
+    "theme:3:-0.25": 499
+  },
+  "reconciliation": {
+    "labelCells": 21297,
+    "imported": 2154,
+    "asNotes": 27,
+    "notImported": 19116,
+    "notImportedByReason": {
+      "areaRow": 61,
+      "carryOverBlock": 14,
+      "corruptHeaderRow": 61,
+      "gridFurniture": 18623,
+      "junkNumeric": 1,
+      "orphanRow": 288,
+      "outsideDayColumns": 55,
+      "standaloneNote": 13
+    },
+    "unaccounted": [],
+    "doubleCounted": [],
+    "balanced": true
+  },
+  "vocab": {
+    "closures": {
+      "Bollard replacement, west face": 9,
+      "Concrete work near test wells": 6,
+      "Crane access - berth closed": 1,
+      "Dock maintenance - restricted access": 7,
+      "Float rebuild - no usage permitted": 8,
+      "Paving near dock entrance": 4,
+      "Pier repair - no docking": 4,
+      "Ultrasonic pier test": 7,
+      "Utility work on pier face": 5,
+      "Wire spooling": 2
+    },
+    "events": {
+      "Campus event": 7,
+      "Community sail day": 10,
+      "Dive training": 3,
+      "Donor reception": 4,
+      "Film crew on dock": 3,
+      "Holiday": 7,
+      "Public open house": 3,
+      "Rescue drill": 5,
+      "Road race - access limited": 6,
+      "Safety training (RIBs)": 5,
+      "Science stroll": 4,
+      "Student tour": 6
+    },
+    "notes": {
+      "Arrival 1400": 6,
+      "Arrives AM": 3,
+      "Bunker barge": 12,
+      "Bunkering": 8,
+      "Bunkering 1000": 4,
+      "Delayed due to weather": 7,
+      "Departs 0600": 6,
+      "Departure 0800": 4,
+      "Dock inspection": 2,
+      "ETA 1200": 10,
+      "ETD PM": 5,
+      "Emergency port call": 4,
+      "Fuel truck": 9,
+      "Fueling": 5,
+      "Fueling @0800": 9,
+      "Load equipment": 5,
+      "Provisioning": 5,
+      "Returns from sea trials": 2,
+      "Touch and go": 7,
+      "Water/slops pumping": 6
+    },
+    "vesselPrefixes": {
+      "Barge": 193,
+      "F/V": 130,
+      "M/V": 341,
+      "M/Y": 137,
+      "OSV": 220,
+      "R/V": 1014,
+      "S/V": 187,
+      "S/Y": 6,
+      "Tug": 131
+    },
+    "unknownLabels": {}
+  }
+}

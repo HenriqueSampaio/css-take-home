@@ -1,1 +1,5946 @@
-[]
+[
+  {
+    "id": "v_amber-anchor",
+    "name": "Amber Anchor",
+    "nameKey": "AMBER ANCHOR",
+    "prefix": "R/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_amber-compass",
+    "name": "Amber Compass",
+    "nameKey": "AMBER COMPASS",
+    "prefix": "R/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_amber-cove",
+    "name": "Amber Cove",
+    "nameKey": "AMBER COVE",
+    "prefix": "OSV",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_amber-current",
+    "name": "Amber Current",
+    "nameKey": "AMBER CURRENT",
+    "prefix": "F/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_amber-dory",
+    "name": "Amber Dory",
+    "nameKey": "AMBER DORY",
+    "prefix": "M/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_amber-drift",
+    "name": "Amber Drift",
+    "nameKey": "AMBER DRIFT",
+    "prefix": "R/V",
+    "lengthFt": 170,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      170
+    ],
+    "lengthEvidence": "Science!A89 R/V Amber Drift 170' (prefix and name match)",
+    "origin": "registry"
+  },
+  {
+    "id": "v_amber-fathom",
+    "name": "Amber Fathom",
+    "nameKey": "AMBER FATHOM",
+    "prefix": "S/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_amber-gannet",
+    "name": "Amber Gannet",
+    "nameKey": "AMBER GANNET",
+    "prefix": "S/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_amber-horizon",
+    "name": "Amber Horizon",
+    "nameKey": "AMBER HORIZON",
+    "prefix": "Tug",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_amber-kestrel",
+    "name": "Amber Kestrel",
+    "nameKey": "AMBER KESTREL",
+    "prefix": "Tug",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_amber-ketch",
+    "name": "Amber Ketch",
+    "nameKey": "AMBER KETCH",
+    "prefix": "M/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_amber-lantern",
+    "name": "Amber Lantern",
+    "nameKey": "AMBER LANTERN",
+    "prefix": "Tug",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_amber-ledge",
+    "name": "Amber Ledge",
+    "nameKey": "AMBER LEDGE",
+    "prefix": "R/V",
+    "lengthFt": 72,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      72
+    ],
+    "lengthEvidence": "Yachts!A75 R/V Amber Ledge 72' (prefix and name match)",
+    "origin": "grid"
+  },
+  {
+    "id": "v_amber-marlin",
+    "name": "Amber Marlin",
+    "nameKey": "AMBER MARLIN",
+    "prefix": "R/V",
+    "lengthFt": 145,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      145
+    ],
+    "lengthEvidence": "Science!A95 R/V Amber Marlin 145' (prefix and name match)",
+    "origin": "registry"
+  },
+  {
+    "id": "v_amber-meridian",
+    "name": "Amber Meridian",
+    "nameKey": "AMBER MERIDIAN",
+    "prefix": "M/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_amber-osprey",
+    "name": "Amber Osprey",
+    "nameKey": "AMBER OSPREY",
+    "prefix": "R/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_amber-petrel",
+    "name": "Amber Petrel",
+    "nameKey": "AMBER PETREL",
+    "prefix": "M/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_amber-reef",
+    "name": "Amber Reef",
+    "nameKey": "AMBER REEF",
+    "prefix": "OSV",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_amber-sound",
+    "name": "Amber Sound",
+    "nameKey": "AMBER SOUND",
+    "prefix": "F/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_amber-star",
+    "name": "Amber Star",
+    "nameKey": "AMBER STAR",
+    "prefix": "S/V",
+    "lengthFt": 32,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      32
+    ],
+    "lengthEvidence": "Yachts!A29 S/V Amber Star 32' (prefix and name match)",
+    "origin": "registry"
+  },
+  {
+    "id": "v_amber-strand",
+    "name": "Amber Strand",
+    "nameKey": "AMBER STRAND",
+    "prefix": "Tug",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_amber-tern",
+    "name": "Amber Tern",
+    "nameKey": "AMBER TERN",
+    "prefix": "M/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_amber-tide",
+    "name": "Amber Tide",
+    "nameKey": "AMBER TIDE",
+    "prefix": "S/V",
+    "lengthFt": 46,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      46
+    ],
+    "lengthEvidence": "Yachts!A68 S/V Amber Tide 46' (prefix and name match)",
+    "origin": "registry"
+  },
+  {
+    "id": "v_amber-voyager",
+    "name": "Amber Voyager",
+    "nameKey": "AMBER VOYAGER",
+    "prefix": "R/V",
+    "lengthFt": 24,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      24
+    ],
+    "lengthEvidence": "Science!A232 R/V Amber Voyager 24' (prefix and name match)",
+    "origin": "registry"
+  },
+  {
+    "id": "v_amber-wind",
+    "name": "Amber Wind",
+    "nameKey": "AMBER WIND",
+    "prefix": "R/V",
+    "lengthFt": 32,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      32
+    ],
+    "lengthEvidence": "Science!A56 R/V Amber Wind 32' (prefix and name match)",
+    "origin": "registry"
+  },
+  {
+    "id": "v_blue-anchor",
+    "name": "Blue Anchor",
+    "nameKey": "BLUE ANCHOR",
+    "prefix": "R/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_blue-beacon",
+    "name": "Blue Beacon",
+    "nameKey": "BLUE BEACON",
+    "prefix": "S/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_blue-compass",
+    "name": "Blue Compass",
+    "nameKey": "BLUE COMPASS",
+    "prefix": "M/Y",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_blue-cove",
+    "name": "Blue Cove",
+    "nameKey": "BLUE COVE",
+    "prefix": "R/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_blue-current",
+    "name": "Blue Current",
+    "nameKey": "BLUE CURRENT",
+    "prefix": "Barge",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_blue-dory",
+    "name": "Blue Dory",
+    "nameKey": "BLUE DORY",
+    "prefix": "M/Y",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_blue-drift",
+    "name": "Blue Drift",
+    "nameKey": "BLUE DRIFT",
+    "prefix": "OSV",
+    "lengthFt": 120,
+    "lengthStatus": "probable",
+    "lengthCandidates": [
+      120
+    ],
+    "lengthEvidence": "Yachts!A135 R/V Blue Drift 120' (name match, registry lists a different type prefix)",
+    "origin": "grid"
+  },
+  {
+    "id": "v_blue-fathom",
+    "name": "Blue Fathom",
+    "nameKey": "BLUE FATHOM",
+    "prefix": "Tug",
+    "lengthFt": 46,
+    "lengthStatus": "probable",
+    "lengthCandidates": [
+      46
+    ],
+    "lengthEvidence": "Yachts!A110 M/Y Blue Fathom 46' (name match, registry lists a different type prefix)",
+    "origin": "grid"
+  },
+  {
+    "id": "v_blue-gannet",
+    "name": "Blue Gannet",
+    "nameKey": "BLUE GANNET",
+    "prefix": "M/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_blue-harbor",
+    "name": "Blue Harbor",
+    "nameKey": "BLUE HARBOR",
+    "prefix": "OSV",
+    "lengthFt": 40,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      40
+    ],
+    "lengthEvidence": "Science!A3 OSV Blue Harbor 40' (prefix and name match)",
+    "origin": "registry"
+  },
+  {
+    "id": "v_blue-heron",
+    "name": "Blue Heron",
+    "nameKey": "BLUE HERON",
+    "prefix": "R/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_blue-horizon",
+    "name": "Blue Horizon",
+    "nameKey": "BLUE HORIZON",
+    "prefix": "Barge",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_blue-kestrel",
+    "name": "Blue Kestrel",
+    "nameKey": "BLUE KESTREL",
+    "prefix": "R/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_blue-ketch",
+    "name": "Blue Ketch",
+    "nameKey": "BLUE KETCH",
+    "prefix": "R/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_blue-lantern",
+    "name": "Blue Lantern",
+    "nameKey": "BLUE LANTERN",
+    "prefix": "M/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_blue-ledge",
+    "name": "Blue Ledge",
+    "nameKey": "BLUE LEDGE",
+    "prefix": "R/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_blue-osprey",
+    "name": "Blue Osprey",
+    "nameKey": "BLUE OSPREY",
+    "prefix": "OSV",
+    "lengthFt": 100,
+    "lengthStatus": "probable",
+    "lengthCandidates": [
+      100
+    ],
+    "lengthEvidence": "Yachts!A118 M/V Blue Osprey 100' (name match, registry lists a different type prefix)",
+    "origin": "grid"
+  },
+  {
+    "id": "v_blue-petrel",
+    "name": "Blue Petrel",
+    "nameKey": "BLUE PETREL",
+    "prefix": "Barge",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_blue-reef",
+    "name": "Blue Reef",
+    "nameKey": "BLUE REEF",
+    "prefix": "R/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_blue-sextant",
+    "name": "Blue Sextant",
+    "nameKey": "BLUE SEXTANT",
+    "prefix": "Barge",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_blue-sound",
+    "name": "Blue Sound",
+    "nameKey": "BLUE SOUND",
+    "prefix": "OSV",
+    "lengthFt": 170,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      170
+    ],
+    "lengthEvidence": "Science!A163 OSV Blue Sound 170' (prefix and name match)",
+    "origin": "registry"
+  },
+  {
+    "id": "v_blue-star",
+    "name": "Blue Star",
+    "nameKey": "BLUE STAR",
+    "prefix": "R/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_blue-strand",
+    "name": "Blue Strand",
+    "nameKey": "BLUE STRAND",
+    "prefix": "M/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_blue-tern",
+    "name": "Blue Tern",
+    "nameKey": "BLUE TERN",
+    "prefix": "M/V",
+    "lengthFt": 52,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      52
+    ],
+    "lengthEvidence": "Yachts!A103 M/V Blue Tern 52' (prefix and name match)",
+    "origin": "grid"
+  },
+  {
+    "id": "v_blue-tide",
+    "name": "Blue Tide",
+    "nameKey": "BLUE TIDE",
+    "prefix": "M/Y",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_blue-voyager",
+    "name": "Blue Voyager",
+    "nameKey": "BLUE VOYAGER",
+    "prefix": "R/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_blue-wind",
+    "name": "Blue Wind",
+    "nameKey": "BLUE WIND",
+    "prefix": "Barge",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_bright-anchor",
+    "name": "Bright Anchor",
+    "nameKey": "BRIGHT ANCHOR",
+    "prefix": "Tug",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_bright-compass",
+    "name": "Bright Compass",
+    "nameKey": "BRIGHT COMPASS",
+    "prefix": "F/V",
+    "lengthFt": 120,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      120
+    ],
+    "lengthEvidence": "Science!A63 F/V Bright Compass 120' (prefix and name match)",
+    "origin": "registry"
+  },
+  {
+    "id": "v_bright-cove",
+    "name": "Bright Cove",
+    "nameKey": "BRIGHT COVE",
+    "prefix": "M/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_bright-current",
+    "name": "Bright Current",
+    "nameKey": "BRIGHT CURRENT",
+    "prefix": "R/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_bright-dory",
+    "name": "Bright Dory",
+    "nameKey": "BRIGHT DORY",
+    "prefix": "R/V",
+    "lengthFt": 52,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      52
+    ],
+    "lengthEvidence": "Science!A13 R/V Bright Dory 52' (prefix and name match)",
+    "origin": "grid"
+  },
+  {
+    "id": "v_bright-drift",
+    "name": "Bright Drift",
+    "nameKey": "BRIGHT DRIFT",
+    "prefix": "M/V",
+    "lengthFt": 32,
+    "lengthStatus": "probable",
+    "lengthCandidates": [
+      32
+    ],
+    "lengthEvidence": "Yachts!A105 S/V Bright Drift 32' (name match, registry lists a different type prefix)",
+    "origin": "grid"
+  },
+  {
+    "id": "v_bright-fathom",
+    "name": "Bright Fathom",
+    "nameKey": "BRIGHT FATHOM",
+    "prefix": "R/V",
+    "lengthFt": 46,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      46
+    ],
+    "lengthEvidence": "Science!A176 R/V Bright Fathom 46' (prefix and name match)",
+    "origin": "registry"
+  },
+  {
+    "id": "v_bright-gannet",
+    "name": "Bright Gannet",
+    "nameKey": "BRIGHT GANNET",
+    "prefix": "M/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_bright-harbor",
+    "name": "Bright Harbor",
+    "nameKey": "BRIGHT HARBOR",
+    "prefix": "R/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_bright-heron",
+    "name": "Bright Heron",
+    "nameKey": "BRIGHT HERON",
+    "prefix": "F/V",
+    "lengthFt": 32,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      32
+    ],
+    "lengthEvidence": "Science!A26 F/V Bright Heron 32' (prefix and name match)",
+    "origin": "registry"
+  },
+  {
+    "id": "v_bright-horizon",
+    "name": "Bright Horizon",
+    "nameKey": "BRIGHT HORIZON",
+    "prefix": "F/V",
+    "lengthFt": 170,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      170
+    ],
+    "lengthEvidence": "Science!A30 F/V Bright Horizon 170' (prefix and name match)",
+    "origin": "registry"
+  },
+  {
+    "id": "v_bright-ketch",
+    "name": "Bright Ketch",
+    "nameKey": "BRIGHT KETCH",
+    "prefix": "F/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_bright-ledge",
+    "name": "Bright Ledge",
+    "nameKey": "BRIGHT LEDGE",
+    "prefix": "OSV",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_bright-marlin",
+    "name": "Bright Marlin",
+    "nameKey": "BRIGHT MARLIN",
+    "prefix": "M/Y",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_bright-meridian",
+    "name": "Bright Meridian",
+    "nameKey": "BRIGHT MERIDIAN",
+    "prefix": "R/V",
+    "lengthFt": 120,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      120
+    ],
+    "lengthEvidence": "Science!A192 R/V Bright Meridian 120' (prefix and name match)",
+    "origin": "registry"
+  },
+  {
+    "id": "v_bright-petrel",
+    "name": "Bright Petrel",
+    "nameKey": "BRIGHT PETREL",
+    "prefix": "Tug",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_bright-reef",
+    "name": "Bright Reef",
+    "nameKey": "BRIGHT REEF",
+    "prefix": "M/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_bright-sextant",
+    "name": "Bright Sextant",
+    "nameKey": "BRIGHT SEXTANT",
+    "prefix": "S/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_bright-skua",
+    "name": "Bright Skua",
+    "nameKey": "BRIGHT SKUA",
+    "prefix": "M/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_bright-star",
+    "name": "Bright Star",
+    "nameKey": "BRIGHT STAR",
+    "prefix": "Barge",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_bright-strand",
+    "name": "Bright Strand",
+    "nameKey": "BRIGHT STRAND",
+    "prefix": "R/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_bright-wind",
+    "name": "Bright Wind",
+    "nameKey": "BRIGHT WIND",
+    "prefix": "S/V",
+    "lengthFt": 72,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      72
+    ],
+    "lengthEvidence": "Science!A45 S/V Bright Wind 72' (prefix and name match)",
+    "origin": "registry"
+  },
+  {
+    "id": "v_clear-beacon",
+    "name": "Clear Beacon",
+    "nameKey": "CLEAR BEACON",
+    "prefix": "S/Y",
+    "lengthFt": 170,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      170
+    ],
+    "lengthEvidence": "Yachts!A62 S/Y Clear Beacon 170' (prefix and name match)",
+    "origin": "grid"
+  },
+  {
+    "id": "v_clear-compass",
+    "name": "Clear Compass",
+    "nameKey": "CLEAR COMPASS",
+    "prefix": "F/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_clear-cove",
+    "name": "Clear Cove",
+    "nameKey": "CLEAR COVE",
+    "prefix": "M/V",
+    "lengthFt": 46,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      46
+    ],
+    "lengthEvidence": "Science!A225 M/V Clear Cove 46' (prefix and name match)",
+    "origin": "registry"
+  },
+  {
+    "id": "v_clear-current",
+    "name": "Clear Current",
+    "nameKey": "CLEAR CURRENT",
+    "prefix": "M/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_clear-dory",
+    "name": "Clear Dory",
+    "nameKey": "CLEAR DORY",
+    "prefix": "OSV",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_clear-drift",
+    "name": "Clear Drift",
+    "nameKey": "CLEAR DRIFT",
+    "prefix": "R/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_clear-fathom",
+    "name": "Clear Fathom",
+    "nameKey": "CLEAR FATHOM",
+    "prefix": "R/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_clear-gannet",
+    "name": "Clear Gannet",
+    "nameKey": "CLEAR GANNET",
+    "prefix": "M/Y",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_clear-heron",
+    "name": "Clear Heron",
+    "nameKey": "CLEAR HERON",
+    "prefix": "S/V",
+    "lengthFt": 85,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      85
+    ],
+    "lengthEvidence": "Science!A183 S/V Clear Heron 85' (prefix and name match)",
+    "origin": "registry"
+  },
+  {
+    "id": "v_clear-horizon",
+    "name": "Clear Horizon",
+    "nameKey": "CLEAR HORIZON",
+    "prefix": "S/V",
+    "lengthFt": 85,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      85
+    ],
+    "lengthEvidence": "Science!A37 S/V Clear Horizon 85' (prefix and name match)",
+    "origin": "registry"
+  },
+  {
+    "id": "v_clear-kestrel",
+    "name": "Clear Kestrel",
+    "nameKey": "CLEAR KESTREL",
+    "prefix": "S/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_clear-ketch",
+    "name": "Clear Ketch",
+    "nameKey": "CLEAR KETCH",
+    "prefix": "F/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_clear-lantern",
+    "name": "Clear Lantern",
+    "nameKey": "CLEAR LANTERN",
+    "prefix": "OSV",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_clear-ledge",
+    "name": "Clear Ledge",
+    "nameKey": "CLEAR LEDGE",
+    "prefix": "Barge",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_clear-meridian",
+    "name": "Clear Meridian",
+    "nameKey": "CLEAR MERIDIAN",
+    "prefix": "F/V",
+    "lengthFt": 24,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      24
+    ],
+    "lengthEvidence": "Science!A132 F/V Clear Meridian 24' (prefix and name match)",
+    "origin": "registry"
+  },
+  {
+    "id": "v_clear-petrel",
+    "name": "Clear Petrel",
+    "nameKey": "CLEAR PETREL",
+    "prefix": "M/V",
+    "lengthFt": 46,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      46
+    ],
+    "lengthEvidence": "Science!A242 M/V Clear Petrel 46' (prefix and name match)",
+    "origin": "registry"
+  },
+  {
+    "id": "v_clear-reef",
+    "name": "Clear Reef",
+    "nameKey": "CLEAR REEF",
+    "prefix": "M/Y",
+    "lengthFt": 46,
+    "lengthStatus": "probable",
+    "lengthCandidates": [
+      46
+    ],
+    "lengthEvidence": "Yachts!A125 OSV Clear Reef 46' (name match, registry lists a different type prefix)",
+    "origin": "grid"
+  },
+  {
+    "id": "v_clear-sextant",
+    "name": "Clear Sextant",
+    "nameKey": "CLEAR SEXTANT",
+    "prefix": "R/V",
+    "lengthFt": 145,
+    "lengthStatus": "probable",
+    "lengthCandidates": [
+      145
+    ],
+    "lengthEvidence": "Yachts!A74 S/Y Clear Sextant 145' (name match, registry lists a different type prefix)",
+    "origin": "grid"
+  },
+  {
+    "id": "v_clear-star",
+    "name": "Clear Star",
+    "nameKey": "CLEAR STAR",
+    "prefix": "R/V",
+    "lengthFt": 120,
+    "lengthStatus": "probable",
+    "lengthCandidates": [
+      120
+    ],
+    "lengthEvidence": "Yachts!A57 M/Y Clear Star 120' (name match, registry lists a different type prefix)",
+    "origin": "grid"
+  },
+  {
+    "id": "v_clear-strand",
+    "name": "Clear Strand",
+    "nameKey": "CLEAR STRAND",
+    "prefix": "R/V",
+    "lengthFt": 145,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      145
+    ],
+    "lengthEvidence": "Science!A110 R/V Clear Strand 145' (prefix and name match)",
+    "origin": "registry"
+  },
+  {
+    "id": "v_clear-tern",
+    "name": "Clear Tern",
+    "nameKey": "CLEAR TERN",
+    "prefix": "R/V",
+    "lengthFt": 120,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      120
+    ],
+    "lengthEvidence": "Science!A81 R/V Clear Tern 120' (prefix and name match)",
+    "origin": "grid"
+  },
+  {
+    "id": "v_clear-voyager",
+    "name": "Clear Voyager",
+    "nameKey": "CLEAR VOYAGER",
+    "prefix": "F/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_clear-wind",
+    "name": "Clear Wind",
+    "nameKey": "CLEAR WIND",
+    "prefix": "M/Y",
+    "lengthFt": 32,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      32
+    ],
+    "lengthEvidence": "Science!A211 M/Y Clear Wind 32' (prefix and name match)",
+    "origin": "registry"
+  },
+  {
+    "id": "v_coral-anchor",
+    "name": "Coral Anchor",
+    "nameKey": "CORAL ANCHOR",
+    "prefix": "R/V",
+    "lengthFt": 120,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      120
+    ],
+    "lengthEvidence": "Science!A41 R/V Coral Anchor 120' (prefix and name match)",
+    "origin": "registry"
+  },
+  {
+    "id": "v_coral-beacon",
+    "name": "Coral Beacon",
+    "nameKey": "CORAL BEACON",
+    "prefix": "M/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_coral-compass",
+    "name": "Coral Compass",
+    "nameKey": "CORAL COMPASS",
+    "prefix": "S/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_coral-cove",
+    "name": "Coral Cove",
+    "nameKey": "CORAL COVE",
+    "prefix": "S/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_coral-current",
+    "name": "Coral Current",
+    "nameKey": "CORAL CURRENT",
+    "prefix": "R/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_coral-dory",
+    "name": "Coral Dory",
+    "nameKey": "CORAL DORY",
+    "prefix": "M/Y",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_coral-drift",
+    "name": "Coral Drift",
+    "nameKey": "CORAL DRIFT",
+    "prefix": "M/V",
+    "lengthFt": 100,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      100
+    ],
+    "lengthEvidence": "Science!A25 M/V CORAL DRIFT 100' (prefix and name match)",
+    "origin": "registry"
+  },
+  {
+    "id": "v_coral-harbor",
+    "name": "Coral Harbor",
+    "nameKey": "CORAL HARBOR",
+    "prefix": "R/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_coral-heron",
+    "name": "Coral Heron",
+    "nameKey": "CORAL HERON",
+    "prefix": "Tug",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_coral-horizon",
+    "name": "Coral Horizon",
+    "nameKey": "CORAL HORIZON",
+    "prefix": "M/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_coral-kestrel",
+    "name": "Coral Kestrel",
+    "nameKey": "CORAL KESTREL",
+    "prefix": "M/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_coral-ketch",
+    "name": "Coral Ketch",
+    "nameKey": "CORAL KETCH",
+    "prefix": "F/V",
+    "lengthFt": 120,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      120
+    ],
+    "lengthEvidence": "Science!A125 F/V Coral Ketch 120' (prefix and name match)",
+    "origin": "registry"
+  },
+  {
+    "id": "v_coral-lantern",
+    "name": "Coral Lantern",
+    "nameKey": "CORAL LANTERN",
+    "prefix": "M/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_coral-marlin",
+    "name": "Coral Marlin",
+    "nameKey": "CORAL MARLIN",
+    "prefix": "F/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_coral-meridian",
+    "name": "Coral Meridian",
+    "nameKey": "CORAL MERIDIAN",
+    "prefix": "R/V",
+    "lengthFt": 24,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      24
+    ],
+    "lengthEvidence": "Science!A113 R/V Coral Meridian 24' (prefix and name match)",
+    "origin": "registry"
+  },
+  {
+    "id": "v_coral-osprey",
+    "name": "Coral Osprey",
+    "nameKey": "CORAL OSPREY",
+    "prefix": "M/Y",
+    "lengthFt": 170,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      170
+    ],
+    "lengthEvidence": "Yachts!A27 M/Y Coral Osprey 170' (prefix and name match)",
+    "origin": "registry"
+  },
+  {
+    "id": "v_coral-petrel",
+    "name": "Coral Petrel",
+    "nameKey": "CORAL PETREL",
+    "prefix": "M/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_coral-reef",
+    "name": "Coral Reef",
+    "nameKey": "CORAL REEF",
+    "prefix": "Tug",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_coral-sextant",
+    "name": "Coral Sextant",
+    "nameKey": "CORAL SEXTANT",
+    "prefix": "F/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_coral-skua",
+    "name": "Coral Skua",
+    "nameKey": "CORAL SKUA",
+    "prefix": "Barge",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_coral-sound",
+    "name": "Coral Sound",
+    "nameKey": "CORAL SOUND",
+    "prefix": "R/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_coral-star",
+    "name": "Coral Star",
+    "nameKey": "CORAL STAR",
+    "prefix": "M/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_coral-strand",
+    "name": "Coral Strand",
+    "nameKey": "CORAL STRAND",
+    "prefix": "R/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_coral-tern",
+    "name": "Coral Tern",
+    "nameKey": "CORAL TERN",
+    "prefix": "R/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_coral-tide",
+    "name": "Coral Tide",
+    "nameKey": "CORAL TIDE",
+    "prefix": "Barge",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_coral-voyager",
+    "name": "Coral Voyager",
+    "nameKey": "CORAL VOYAGER",
+    "prefix": "R/V",
+    "lengthFt": 46,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      46
+    ],
+    "lengthEvidence": "Science!A35 R/V Coral Voyager 46' (prefix and name match)",
+    "origin": "registry"
+  },
+  {
+    "id": "v_coral-wind",
+    "name": "Coral Wind",
+    "nameKey": "CORAL WIND",
+    "prefix": "M/Y",
+    "lengthFt": 40,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      40
+    ],
+    "lengthEvidence": "Yachts!A146 M/Y CORAL WIND 40' (prefix and name match)",
+    "origin": "grid"
+  },
+  {
+    "id": "v_deep-anchor",
+    "name": "Deep Anchor",
+    "nameKey": "DEEP ANCHOR",
+    "prefix": "M/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_deep-beacon",
+    "name": "Deep Beacon",
+    "nameKey": "DEEP BEACON",
+    "prefix": "M/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_deep-compass",
+    "name": "Deep Compass",
+    "nameKey": "DEEP COMPASS",
+    "prefix": "M/Y",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_deep-cove",
+    "name": "Deep Cove",
+    "nameKey": "DEEP COVE",
+    "prefix": "F/V",
+    "lengthFt": 145,
+    "lengthStatus": "probable",
+    "lengthCandidates": [
+      145
+    ],
+    "lengthEvidence": "Yachts!A39 S/Y Deep Cove 145' (name match, registry lists a different type prefix)",
+    "origin": "grid"
+  },
+  {
+    "id": "v_deep-dory",
+    "name": "Deep Dory",
+    "nameKey": "DEEP DORY",
+    "prefix": "S/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_deep-drift",
+    "name": "Deep Drift",
+    "nameKey": "DEEP DRIFT",
+    "prefix": "M/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_deep-gannet",
+    "name": "Deep Gannet",
+    "nameKey": "DEEP GANNET",
+    "prefix": "M/V",
+    "lengthFt": 32,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      32
+    ],
+    "lengthEvidence": "Science!A216 M/V Deep Gannet 32' (prefix and name match)",
+    "origin": "registry"
+  },
+  {
+    "id": "v_deep-harbor",
+    "name": "Deep Harbor",
+    "nameKey": "DEEP HARBOR",
+    "prefix": "OSV",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_deep-heron",
+    "name": "Deep Heron",
+    "nameKey": "DEEP HERON",
+    "prefix": "R/V",
+    "lengthFt": 46,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      46
+    ],
+    "lengthEvidence": "Science!A46 R/V Deep Heron 46' (prefix and name match)",
+    "origin": "registry"
+  },
+  {
+    "id": "v_deep-horizon",
+    "name": "Deep Horizon",
+    "nameKey": "DEEP HORIZON",
+    "prefix": "M/Y",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_deep-kestrel",
+    "name": "Deep Kestrel",
+    "nameKey": "DEEP KESTREL",
+    "prefix": "R/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_deep-ketch",
+    "name": "Deep Ketch",
+    "nameKey": "DEEP KETCH",
+    "prefix": "R/V",
+    "lengthFt": 32,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      32
+    ],
+    "lengthEvidence": "Science!A61 R/V Deep Ketch 32' (prefix and name match)",
+    "origin": "registry"
+  },
+  {
+    "id": "v_deep-lantern",
+    "name": "Deep Lantern",
+    "nameKey": "DEEP LANTERN",
+    "prefix": "Barge",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_deep-ledge",
+    "name": "Deep Ledge",
+    "nameKey": "DEEP LEDGE",
+    "prefix": "M/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_deep-meridian",
+    "name": "Deep Meridian",
+    "nameKey": "DEEP MERIDIAN",
+    "prefix": "M/V",
+    "lengthFt": 145,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      145
+    ],
+    "lengthEvidence": "Science!A214 M/V Deep Meridian 145' (prefix and name match)",
+    "origin": "registry"
+  },
+  {
+    "id": "v_deep-osprey",
+    "name": "Deep Osprey",
+    "nameKey": "DEEP OSPREY",
+    "prefix": "R/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_deep-petrel",
+    "name": "Deep Petrel",
+    "nameKey": "DEEP PETREL",
+    "prefix": "M/Y",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_deep-reef",
+    "name": "Deep Reef",
+    "nameKey": "DEEP REEF",
+    "prefix": "M/V",
+    "lengthFt": null,
+    "lengthStatus": "conflict",
+    "lengthCandidates": [
+      24,
+      100
+    ],
+    "lengthEvidence": "Yachts!A96 M/V Deep Reef 24'; Yachts!A114 M/V Deep Reef 100' (registry lists different lengths for this name)",
+    "origin": "grid"
+  },
+  {
+    "id": "v_deep-sextant",
+    "name": "Deep Sextant",
+    "nameKey": "DEEP SEXTANT",
+    "prefix": "M/V",
+    "lengthFt": 24,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      24
+    ],
+    "lengthEvidence": "Yachts!A15 M/V Deep Sextant 24' (prefix and name match)",
+    "origin": "registry"
+  },
+  {
+    "id": "v_deep-skua",
+    "name": "Deep Skua",
+    "nameKey": "DEEP SKUA",
+    "prefix": "S/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_deep-sound",
+    "name": "Deep Sound",
+    "nameKey": "DEEP SOUND",
+    "prefix": "M/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_deep-star",
+    "name": "Deep Star",
+    "nameKey": "DEEP STAR",
+    "prefix": "R/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_deep-strand",
+    "name": "Deep Strand",
+    "nameKey": "DEEP STRAND",
+    "prefix": "R/V",
+    "lengthFt": 65,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      65
+    ],
+    "lengthEvidence": "Science!A230 R/V Deep Strand 65' (prefix and name match)",
+    "origin": "registry"
+  },
+  {
+    "id": "v_deep-tide",
+    "name": "Deep Tide",
+    "nameKey": "DEEP TIDE",
+    "prefix": "S/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_deep-voyager",
+    "name": "Deep Voyager",
+    "nameKey": "DEEP VOYAGER",
+    "prefix": "R/V",
+    "lengthFt": 120,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      120
+    ],
+    "lengthEvidence": "Science!A66 R/V Deep Voyager 120' (prefix and name match)",
+    "origin": "registry"
+  },
+  {
+    "id": "v_deep-wind",
+    "name": "Deep Wind",
+    "nameKey": "DEEP WIND",
+    "prefix": "S/V",
+    "lengthFt": 120,
+    "lengthStatus": "probable",
+    "lengthCandidates": [
+      120
+    ],
+    "lengthEvidence": "Yachts!A140 Tug Deep Wind 120' (name match, registry lists a different type prefix)",
+    "origin": "grid"
+  },
+  {
+    "id": "v_far-anchor",
+    "name": "Far Anchor",
+    "nameKey": "FAR ANCHOR",
+    "prefix": "M/V",
+    "lengthFt": 120,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      120
+    ],
+    "lengthEvidence": "Science!A72 M/V Far Anchor 120' (prefix and name match)",
+    "origin": "registry"
+  },
+  {
+    "id": "v_far-beacon",
+    "name": "Far Beacon",
+    "nameKey": "FAR BEACON",
+    "prefix": "M/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_far-compass",
+    "name": "Far Compass",
+    "nameKey": "FAR COMPASS",
+    "prefix": "Tug",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_far-cove",
+    "name": "Far Cove",
+    "nameKey": "FAR COVE",
+    "prefix": "Barge",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_far-dory",
+    "name": "Far Dory",
+    "nameKey": "FAR DORY",
+    "prefix": "S/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_far-drift",
+    "name": "Far Drift",
+    "nameKey": "FAR DRIFT",
+    "prefix": "M/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_far-fathom",
+    "name": "Far Fathom",
+    "nameKey": "FAR FATHOM",
+    "prefix": "M/V",
+    "lengthFt": 72,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      72
+    ],
+    "lengthEvidence": "Science!A218 M/V Far Fathom 72' (prefix and name match)",
+    "origin": "registry"
+  },
+  {
+    "id": "v_far-gannet",
+    "name": "Far Gannet",
+    "nameKey": "FAR GANNET",
+    "prefix": "S/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_far-harbor",
+    "name": "Far Harbor",
+    "nameKey": "FAR HARBOR",
+    "prefix": "S/Y",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_far-horizon",
+    "name": "Far Horizon",
+    "nameKey": "FAR HORIZON",
+    "prefix": "S/V",
+    "lengthFt": 170,
+    "lengthStatus": "probable",
+    "lengthCandidates": [
+      170
+    ],
+    "lengthEvidence": "Yachts!A49 M/Y Far Horizon 170' (name match, registry lists a different type prefix)",
+    "origin": "grid"
+  },
+  {
+    "id": "v_far-kestrel",
+    "name": "Far Kestrel",
+    "nameKey": "FAR KESTREL",
+    "prefix": "M/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_far-ketch",
+    "name": "Far Ketch",
+    "nameKey": "FAR KETCH",
+    "prefix": "Tug",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_far-ledge",
+    "name": "Far Ledge",
+    "nameKey": "FAR LEDGE",
+    "prefix": "Tug",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_far-marlin",
+    "name": "Far Marlin",
+    "nameKey": "FAR MARLIN",
+    "prefix": "R/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_far-meridian",
+    "name": "Far Meridian",
+    "nameKey": "FAR MERIDIAN",
+    "prefix": "Tug",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_far-osprey",
+    "name": "Far Osprey",
+    "nameKey": "FAR OSPREY",
+    "prefix": "S/V",
+    "lengthFt": 52,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      52
+    ],
+    "lengthEvidence": "Science!A54 S/V Far Osprey 52' (prefix and name match)",
+    "origin": "registry"
+  },
+  {
+    "id": "v_far-petrel",
+    "name": "Far Petrel",
+    "nameKey": "FAR PETREL",
+    "prefix": "F/V",
+    "lengthFt": 24,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      24
+    ],
+    "lengthEvidence": "Science!A134 F/V Far Petrel 24' (prefix and name match)",
+    "origin": "registry"
+  },
+  {
+    "id": "v_far-reef",
+    "name": "Far Reef",
+    "nameKey": "FAR REEF",
+    "prefix": "Tug",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_far-sextant",
+    "name": "Far Sextant",
+    "nameKey": "FAR SEXTANT",
+    "prefix": "R/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_far-skua",
+    "name": "Far Skua",
+    "nameKey": "FAR SKUA",
+    "prefix": "M/Y",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_far-sound",
+    "name": "Far Sound",
+    "nameKey": "FAR SOUND",
+    "prefix": "F/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_far-star",
+    "name": "Far Star",
+    "nameKey": "FAR STAR",
+    "prefix": "R/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_far-strand",
+    "name": "Far Strand",
+    "nameKey": "FAR STRAND",
+    "prefix": "Tug",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_far-tern",
+    "name": "Far Tern",
+    "nameKey": "FAR TERN",
+    "prefix": "S/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_far-tide",
+    "name": "Far Tide",
+    "nameKey": "FAR TIDE",
+    "prefix": "OSV",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_far-wind",
+    "name": "Far Wind",
+    "nameKey": "FAR WIND",
+    "prefix": "OSV",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_golden-anchor",
+    "name": "Golden Anchor",
+    "nameKey": "GOLDEN ANCHOR",
+    "prefix": "S/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_golden-beacon",
+    "name": "Golden Beacon",
+    "nameKey": "GOLDEN BEACON",
+    "prefix": "S/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_golden-compass",
+    "name": "Golden Compass",
+    "nameKey": "GOLDEN COMPASS",
+    "prefix": "R/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_golden-cove",
+    "name": "Golden Cove",
+    "nameKey": "GOLDEN COVE",
+    "prefix": "S/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_golden-drift",
+    "name": "Golden Drift",
+    "nameKey": "GOLDEN DRIFT",
+    "prefix": "M/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_golden-fathom",
+    "name": "Golden Fathom",
+    "nameKey": "GOLDEN FATHOM",
+    "prefix": "S/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_golden-gannet",
+    "name": "Golden Gannet",
+    "nameKey": "GOLDEN GANNET",
+    "prefix": "M/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_golden-harbor",
+    "name": "Golden Harbor",
+    "nameKey": "GOLDEN HARBOR",
+    "prefix": "M/Y",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_golden-heron",
+    "name": "Golden Heron",
+    "nameKey": "GOLDEN HERON",
+    "prefix": "S/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_golden-horizon",
+    "name": "Golden Horizon",
+    "nameKey": "GOLDEN HORIZON",
+    "prefix": "R/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_golden-kestrel",
+    "name": "Golden Kestrel",
+    "nameKey": "GOLDEN KESTREL",
+    "prefix": "M/Y",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_golden-ketch",
+    "name": "Golden Ketch",
+    "nameKey": "GOLDEN KETCH",
+    "prefix": "OSV",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_golden-lantern",
+    "name": "Golden Lantern",
+    "nameKey": "GOLDEN LANTERN",
+    "prefix": "R/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_golden-ledge",
+    "name": "Golden Ledge",
+    "nameKey": "GOLDEN LEDGE",
+    "prefix": "M/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_golden-marlin",
+    "name": "Golden Marlin",
+    "nameKey": "GOLDEN MARLIN",
+    "prefix": "R/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_golden-osprey",
+    "name": "Golden Osprey",
+    "nameKey": "GOLDEN OSPREY",
+    "prefix": "OSV",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_golden-petrel",
+    "name": "Golden Petrel",
+    "nameKey": "GOLDEN PETREL",
+    "prefix": "F/V",
+    "lengthFt": 145,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      145
+    ],
+    "lengthEvidence": "Science!A185 F/V Golden Petrel 145' (prefix and name match)",
+    "origin": "registry"
+  },
+  {
+    "id": "v_golden-reef",
+    "name": "Golden Reef",
+    "nameKey": "GOLDEN REEF",
+    "prefix": "S/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_golden-sextant",
+    "name": "Golden Sextant",
+    "nameKey": "GOLDEN SEXTANT",
+    "prefix": "F/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_golden-skua",
+    "name": "Golden Skua",
+    "nameKey": "GOLDEN SKUA",
+    "prefix": "M/V",
+    "lengthFt": 52,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      52
+    ],
+    "lengthEvidence": "Yachts!A77 M/V Golden Skua 52' (prefix and name match)",
+    "origin": "grid"
+  },
+  {
+    "id": "v_golden-sound",
+    "name": "Golden Sound",
+    "nameKey": "GOLDEN SOUND",
+    "prefix": "Tug",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_golden-star",
+    "name": "Golden Star",
+    "nameKey": "GOLDEN STAR",
+    "prefix": "Barge",
+    "lengthFt": 40,
+    "lengthStatus": "probable",
+    "lengthCandidates": [
+      40
+    ],
+    "lengthEvidence": "Yachts!A64 S/V Golden Star 40' (name match, registry lists a different type prefix)",
+    "origin": "grid"
+  },
+  {
+    "id": "v_golden-tide",
+    "name": "Golden Tide",
+    "nameKey": "GOLDEN TIDE",
+    "prefix": "S/V",
+    "lengthFt": 40,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      40
+    ],
+    "lengthEvidence": "Science!A130 S/V Golden Tide 40' (prefix and name match)",
+    "origin": "registry"
+  },
+  {
+    "id": "v_golden-voyager",
+    "name": "Golden Voyager",
+    "nameKey": "GOLDEN VOYAGER",
+    "prefix": "R/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_golden-wind",
+    "name": "Golden Wind",
+    "nameKey": "GOLDEN WIND",
+    "prefix": "M/Y",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_green-anchor",
+    "name": "Green Anchor",
+    "nameKey": "GREEN ANCHOR",
+    "prefix": "M/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_green-beacon",
+    "name": "Green Beacon",
+    "nameKey": "GREEN BEACON",
+    "prefix": "M/V",
+    "lengthFt": 145,
+    "lengthStatus": "probable",
+    "lengthCandidates": [
+      145
+    ],
+    "lengthEvidence": "Yachts!A149 M/Y Green Beacon 145' (name match, registry lists a different type prefix)",
+    "origin": "grid"
+  },
+  {
+    "id": "v_green-compass",
+    "name": "Green Compass",
+    "nameKey": "GREEN COMPASS",
+    "prefix": "S/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_green-cove",
+    "name": "Green Cove",
+    "nameKey": "GREEN COVE",
+    "prefix": "OSV",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_green-current",
+    "name": "Green Current",
+    "nameKey": "GREEN CURRENT",
+    "prefix": "OSV",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_green-dory",
+    "name": "Green Dory",
+    "nameKey": "GREEN DORY",
+    "prefix": "F/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_green-fathom",
+    "name": "Green Fathom",
+    "nameKey": "GREEN FATHOM",
+    "prefix": "Tug",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_green-gannet",
+    "name": "Green Gannet",
+    "nameKey": "GREEN GANNET",
+    "prefix": "M/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_green-harbor",
+    "name": "Green Harbor",
+    "nameKey": "GREEN HARBOR",
+    "prefix": "R/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_green-heron",
+    "name": "Green Heron",
+    "nameKey": "GREEN HERON",
+    "prefix": "F/V",
+    "lengthFt": 32,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      32
+    ],
+    "lengthEvidence": "Science!A153 F/V Green Heron 32' (prefix and name match)",
+    "origin": "registry"
+  },
+  {
+    "id": "v_green-kestrel",
+    "name": "Green Kestrel",
+    "nameKey": "GREEN KESTREL",
+    "prefix": "M/V",
+    "lengthFt": 100,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      100
+    ],
+    "lengthEvidence": "Science!A106 M/V Green Kestrel 100' (prefix and name match)",
+    "origin": "registry"
+  },
+  {
+    "id": "v_green-ketch",
+    "name": "Green Ketch",
+    "nameKey": "GREEN KETCH",
+    "prefix": "OSV",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_green-lantern",
+    "name": "Green Lantern",
+    "nameKey": "GREEN LANTERN",
+    "prefix": "M/Y",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_green-ledge",
+    "name": "Green Ledge",
+    "nameKey": "GREEN LEDGE",
+    "prefix": "M/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_green-marlin",
+    "name": "Green Marlin",
+    "nameKey": "GREEN MARLIN",
+    "prefix": "R/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_green-meridian",
+    "name": "Green Meridian",
+    "nameKey": "GREEN MERIDIAN",
+    "prefix": "R/V",
+    "lengthFt": 32,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      32
+    ],
+    "lengthEvidence": "Science!A27 R/V Green Meridian 32' (prefix and name match)",
+    "origin": "registry"
+  },
+  {
+    "id": "v_green-osprey",
+    "name": "Green Osprey",
+    "nameKey": "GREEN OSPREY",
+    "prefix": "S/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_green-petrel",
+    "name": "Green Petrel",
+    "nameKey": "GREEN PETREL",
+    "prefix": "S/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_green-reef",
+    "name": "Green Reef",
+    "nameKey": "GREEN REEF",
+    "prefix": "F/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_green-sextant",
+    "name": "Green Sextant",
+    "nameKey": "GREEN SEXTANT",
+    "prefix": "R/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_green-sound",
+    "name": "Green Sound",
+    "nameKey": "GREEN SOUND",
+    "prefix": "Tug",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_green-star",
+    "name": "Green Star",
+    "nameKey": "GREEN STAR",
+    "prefix": "R/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_green-strand",
+    "name": "Green Strand",
+    "nameKey": "GREEN STRAND",
+    "prefix": "R/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_green-tern",
+    "name": "Green Tern",
+    "nameKey": "GREEN TERN",
+    "prefix": "M/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_green-voyager",
+    "name": "Green Voyager",
+    "nameKey": "GREEN VOYAGER",
+    "prefix": "R/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_green-wind",
+    "name": "Green Wind",
+    "nameKey": "GREEN WIND",
+    "prefix": "R/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_grey-beacon",
+    "name": "Grey Beacon",
+    "nameKey": "GREY BEACON",
+    "prefix": "R/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_grey-compass",
+    "name": "Grey Compass",
+    "nameKey": "GREY COMPASS",
+    "prefix": "M/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_grey-cove",
+    "name": "Grey Cove",
+    "nameKey": "GREY COVE",
+    "prefix": "M/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_grey-current",
+    "name": "Grey Current",
+    "nameKey": "GREY CURRENT",
+    "prefix": "R/V",
+    "lengthFt": 65,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      65
+    ],
+    "lengthEvidence": "Science!A128 R/V Grey Current 65' (prefix and name match)",
+    "origin": "registry"
+  },
+  {
+    "id": "v_grey-dory",
+    "name": "Grey Dory",
+    "nameKey": "GREY DORY",
+    "prefix": "Barge",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_grey-drift",
+    "name": "Grey Drift",
+    "nameKey": "GREY DRIFT",
+    "prefix": "S/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_grey-fathom",
+    "name": "Grey Fathom",
+    "nameKey": "GREY FATHOM",
+    "prefix": "OSV",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_grey-gannet",
+    "name": "Grey Gannet",
+    "nameKey": "GREY GANNET",
+    "prefix": "F/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_grey-harbor",
+    "name": "Grey Harbor",
+    "nameKey": "GREY HARBOR",
+    "prefix": "M/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_grey-heron",
+    "name": "Grey Heron",
+    "nameKey": "GREY HERON",
+    "prefix": "M/Y",
+    "lengthFt": 52,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      52
+    ],
+    "lengthEvidence": "Yachts!A19 M/Y Grey Heron 52' (prefix and name match)",
+    "origin": "grid"
+  },
+  {
+    "id": "v_grey-horizon",
+    "name": "Grey Horizon",
+    "nameKey": "GREY HORIZON",
+    "prefix": "M/Y",
+    "lengthFt": 46,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      46
+    ],
+    "lengthEvidence": "Science!A2 M/Y Grey Horizon 46' (prefix and name match)",
+    "origin": "registry"
+  },
+  {
+    "id": "v_grey-ledge",
+    "name": "Grey Ledge",
+    "nameKey": "GREY LEDGE",
+    "prefix": "R/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_grey-marlin",
+    "name": "Grey Marlin",
+    "nameKey": "GREY MARLIN",
+    "prefix": "R/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_grey-meridian",
+    "name": "Grey Meridian",
+    "nameKey": "GREY MERIDIAN",
+    "prefix": "F/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_grey-osprey",
+    "name": "Grey Osprey",
+    "nameKey": "GREY OSPREY",
+    "prefix": "M/Y",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_grey-reef",
+    "name": "Grey Reef",
+    "nameKey": "GREY REEF",
+    "prefix": "S/V",
+    "lengthFt": 170,
+    "lengthStatus": "probable",
+    "lengthCandidates": [
+      170
+    ],
+    "lengthEvidence": "Yachts!A98 R/V Grey Reef 170' (name match, registry lists a different type prefix)",
+    "origin": "grid"
+  },
+  {
+    "id": "v_grey-sextant",
+    "name": "Grey Sextant",
+    "nameKey": "GREY SEXTANT",
+    "prefix": "R/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_grey-skua",
+    "name": "Grey Skua",
+    "nameKey": "GREY SKUA",
+    "prefix": "S/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_grey-sound",
+    "name": "Grey Sound",
+    "nameKey": "GREY SOUND",
+    "prefix": "Barge",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_grey-star",
+    "name": "Grey Star",
+    "nameKey": "GREY STAR",
+    "prefix": "M/V",
+    "lengthFt": 120,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      120
+    ],
+    "lengthEvidence": "Science!A116 M/V Grey Star 120' (prefix and name match)",
+    "origin": "registry"
+  },
+  {
+    "id": "v_grey-tern",
+    "name": "Grey Tern",
+    "nameKey": "GREY TERN",
+    "prefix": "M/V",
+    "lengthFt": 65,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      65
+    ],
+    "lengthEvidence": "Science!A100 M/V Grey Tern 65' (prefix and name match)",
+    "origin": "registry"
+  },
+  {
+    "id": "v_grey-tide",
+    "name": "Grey Tide",
+    "nameKey": "GREY TIDE",
+    "prefix": "R/V",
+    "lengthFt": 65,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      65
+    ],
+    "lengthEvidence": "Science!A200 R/V Grey Tide 65' (prefix and name match)",
+    "origin": "registry"
+  },
+  {
+    "id": "v_grey-wind",
+    "name": "Grey Wind",
+    "nameKey": "GREY WIND",
+    "prefix": "R/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_high-anchor",
+    "name": "High Anchor",
+    "nameKey": "HIGH ANCHOR",
+    "prefix": "M/Y",
+    "lengthFt": 40,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      40
+    ],
+    "lengthEvidence": "Science!A150 M/Y High Anchor 40' (prefix and name match)",
+    "origin": "registry"
+  },
+  {
+    "id": "v_high-beacon",
+    "name": "High Beacon",
+    "nameKey": "HIGH BEACON",
+    "prefix": "M/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_high-compass",
+    "name": "High Compass",
+    "nameKey": "HIGH COMPASS",
+    "prefix": "R/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_high-current",
+    "name": "High Current",
+    "nameKey": "HIGH CURRENT",
+    "prefix": "M/V",
+    "lengthFt": 170,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      170
+    ],
+    "lengthEvidence": "Science!A48 M/V High Current 170' (prefix and name match)",
+    "origin": "registry"
+  },
+  {
+    "id": "v_high-dory",
+    "name": "High Dory",
+    "nameKey": "HIGH DORY",
+    "prefix": "R/V",
+    "lengthFt": 100,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      100
+    ],
+    "lengthEvidence": "Science!A198 R/V High Dory 100' (prefix and name match)",
+    "origin": "registry"
+  },
+  {
+    "id": "v_high-drift",
+    "name": "High Drift",
+    "nameKey": "HIGH DRIFT",
+    "prefix": "R/V",
+    "lengthFt": 120,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      120
+    ],
+    "lengthEvidence": "Science!A4 R/V High Drift 120' (prefix and name match)",
+    "origin": "registry"
+  },
+  {
+    "id": "v_high-fathom",
+    "name": "High Fathom",
+    "nameKey": "HIGH FATHOM",
+    "prefix": "S/Y",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_high-gannet",
+    "name": "High Gannet",
+    "nameKey": "HIGH GANNET",
+    "prefix": "S/Y",
+    "lengthFt": 100,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      100
+    ],
+    "lengthEvidence": "Yachts!A13 S/Y High Gannet 100' (prefix and name match)",
+    "origin": "grid"
+  },
+  {
+    "id": "v_high-harbor",
+    "name": "High Harbor",
+    "nameKey": "HIGH HARBOR",
+    "prefix": "OSV",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_high-heron",
+    "name": "High Heron",
+    "nameKey": "HIGH HERON",
+    "prefix": "S/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_high-horizon",
+    "name": "High Horizon",
+    "nameKey": "HIGH HORIZON",
+    "prefix": "R/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_high-ketch",
+    "name": "High Ketch",
+    "nameKey": "HIGH KETCH",
+    "prefix": "S/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_high-ledge",
+    "name": "High Ledge",
+    "nameKey": "HIGH LEDGE",
+    "prefix": "M/V",
+    "lengthFt": 40,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      40
+    ],
+    "lengthEvidence": "Science!A118 M/V High Ledge 40' (prefix and name match)",
+    "origin": "registry"
+  },
+  {
+    "id": "v_high-meridian",
+    "name": "High Meridian",
+    "nameKey": "HIGH MERIDIAN",
+    "prefix": "S/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_high-osprey",
+    "name": "High Osprey",
+    "nameKey": "HIGH OSPREY",
+    "prefix": "Barge",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_high-petrel",
+    "name": "High Petrel",
+    "nameKey": "HIGH PETREL",
+    "prefix": "OSV",
+    "lengthFt": 170,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      170
+    ],
+    "lengthEvidence": "Science!A190 OS/V High Petrel 170' (prefix and name match)",
+    "origin": "registry"
+  },
+  {
+    "id": "v_high-reef",
+    "name": "High Reef",
+    "nameKey": "HIGH REEF",
+    "prefix": "R/V",
+    "lengthFt": null,
+    "lengthStatus": "conflict",
+    "lengthCandidates": [
+      32,
+      72
+    ],
+    "lengthEvidence": "Science!A92 R/V High Reef 32'; Science!A207 R/V High Reef 72' (registry lists different lengths for this name)",
+    "origin": "registry"
+  },
+  {
+    "id": "v_high-sextant",
+    "name": "High Sextant",
+    "nameKey": "HIGH SEXTANT",
+    "prefix": "M/Y",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_high-skua",
+    "name": "High Skua",
+    "nameKey": "HIGH SKUA",
+    "prefix": "F/V",
+    "lengthFt": 120,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      120
+    ],
+    "lengthEvidence": "Science!A144 F/V High Skua 120' (prefix and name match)",
+    "origin": "grid"
+  },
+  {
+    "id": "v_high-sound",
+    "name": "High Sound",
+    "nameKey": "HIGH SOUND",
+    "prefix": "R/V",
+    "lengthFt": null,
+    "lengthStatus": "conflict",
+    "lengthCandidates": [
+      32,
+      65
+    ],
+    "lengthEvidence": "Science!A33 R/V High Sound 32'; Science!B33 LOA: 65' (an LOA note contradicts the listed length)",
+    "origin": "registry"
+  },
+  {
+    "id": "v_high-star",
+    "name": "High Star",
+    "nameKey": "HIGH STAR",
+    "prefix": "OSV",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_high-strand",
+    "name": "High Strand",
+    "nameKey": "HIGH STRAND",
+    "prefix": "M/V",
+    "lengthFt": 145,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      145
+    ],
+    "lengthEvidence": "Science!A16 M/V High Strand 145' (prefix and name match)",
+    "origin": "registry"
+  },
+  {
+    "id": "v_high-tern",
+    "name": "High Tern",
+    "nameKey": "HIGH TERN",
+    "prefix": "M/Y",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_high-tide",
+    "name": "High Tide",
+    "nameKey": "HIGH TIDE",
+    "prefix": "S/V",
+    "lengthFt": 24,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      24
+    ],
+    "lengthEvidence": "Science!A181 S/V High Tide 24' (prefix and name match)",
+    "origin": "registry"
+  },
+  {
+    "id": "v_high-voyager",
+    "name": "High Voyager",
+    "nameKey": "HIGH VOYAGER",
+    "prefix": "Barge",
+    "lengthFt": 100,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      100
+    ],
+    "lengthEvidence": "Science!A90 Barge High Voyager 100' (prefix and name match)",
+    "origin": "grid"
+  },
+  {
+    "id": "v_high-wind",
+    "name": "High Wind",
+    "nameKey": "HIGH WIND",
+    "prefix": "M/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_iron-anchor",
+    "name": "Iron Anchor",
+    "nameKey": "IRON ANCHOR",
+    "prefix": "Tug",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_iron-beacon",
+    "name": "Iron Beacon",
+    "nameKey": "IRON BEACON",
+    "prefix": "F/V",
+    "lengthFt": 100,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      100
+    ],
+    "lengthEvidence": "Science!A43 F/V Iron Beacon 100' (prefix and name match)",
+    "origin": "registry"
+  },
+  {
+    "id": "v_iron-compass",
+    "name": "Iron Compass",
+    "nameKey": "IRON COMPASS",
+    "prefix": "R/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_iron-cove",
+    "name": "Iron Cove",
+    "nameKey": "IRON COVE",
+    "prefix": "R/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_iron-current",
+    "name": "Iron Current",
+    "nameKey": "IRON CURRENT",
+    "prefix": "R/V",
+    "lengthFt": 100,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      100
+    ],
+    "lengthEvidence": "Science!A227 R/V Iron Current 100' (prefix and name match)",
+    "origin": "registry"
+  },
+  {
+    "id": "v_iron-dory",
+    "name": "Iron Dory",
+    "nameKey": "IRON DORY",
+    "prefix": "R/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_iron-drift",
+    "name": "Iron Drift",
+    "nameKey": "IRON DRIFT",
+    "prefix": "R/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_iron-fathom",
+    "name": "Iron Fathom",
+    "nameKey": "IRON FATHOM",
+    "prefix": "M/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_iron-gannet",
+    "name": "Iron Gannet",
+    "nameKey": "IRON GANNET",
+    "prefix": "M/Y",
+    "lengthFt": 170,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      170
+    ],
+    "lengthEvidence": "Science!A29 M/Y Iron Gannet 170' (prefix and name match)",
+    "origin": "registry"
+  },
+  {
+    "id": "v_iron-harbor",
+    "name": "Iron Harbor",
+    "nameKey": "IRON HARBOR",
+    "prefix": "R/V",
+    "lengthFt": 100,
+    "lengthStatus": "probable",
+    "lengthCandidates": [
+      100
+    ],
+    "lengthEvidence": "Yachts!A101 M/V Iron Harbor 100' (name match, registry lists a different type prefix)",
+    "origin": "grid"
+  },
+  {
+    "id": "v_iron-heron",
+    "name": "Iron Heron",
+    "nameKey": "IRON HERON",
+    "prefix": "M/V",
+    "lengthFt": 100,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      100
+    ],
+    "lengthEvidence": "Science!A142 M/V IRON HERON 100' (prefix and name match)",
+    "origin": "grid"
+  },
+  {
+    "id": "v_iron-horizon",
+    "name": "Iron Horizon",
+    "nameKey": "IRON HORIZON",
+    "prefix": "M/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_iron-ketch",
+    "name": "Iron Ketch",
+    "nameKey": "IRON KETCH",
+    "prefix": "R/V",
+    "lengthFt": null,
+    "lengthStatus": "conflict",
+    "lengthCandidates": [
+      46,
+      65
+    ],
+    "lengthEvidence": "Science!A68 R/V Iron Ketch 46'; Yachts!A131 F/V Iron Ketch 65' (registry lists different lengths for this name)",
+    "origin": "grid"
+  },
+  {
+    "id": "v_iron-lantern",
+    "name": "Iron Lantern",
+    "nameKey": "IRON LANTERN",
+    "prefix": "R/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_iron-ledge",
+    "name": "Iron Ledge",
+    "nameKey": "IRON LEDGE",
+    "prefix": "F/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_iron-marlin",
+    "name": "Iron Marlin",
+    "nameKey": "IRON MARLIN",
+    "prefix": "S/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_iron-meridian",
+    "name": "Iron Meridian",
+    "nameKey": "IRON MERIDIAN",
+    "prefix": "OSV",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_iron-osprey",
+    "name": "Iron Osprey",
+    "nameKey": "IRON OSPREY",
+    "prefix": "R/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_iron-petrel",
+    "name": "Iron Petrel",
+    "nameKey": "IRON PETREL",
+    "prefix": "S/V",
+    "lengthFt": 120,
+    "lengthStatus": "probable",
+    "lengthCandidates": [
+      120
+    ],
+    "lengthEvidence": "Yachts!A37 M/Y Iron Petrel 120' (name match, registry lists a different type prefix)",
+    "origin": "grid"
+  },
+  {
+    "id": "v_iron-reef",
+    "name": "Iron Reef",
+    "nameKey": "IRON REEF",
+    "prefix": "R/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_iron-sextant",
+    "name": "Iron Sextant",
+    "nameKey": "IRON SEXTANT",
+    "prefix": "F/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_iron-skua",
+    "name": "Iron Skua",
+    "nameKey": "IRON SKUA",
+    "prefix": "R/V",
+    "lengthFt": 72,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      72
+    ],
+    "lengthEvidence": "Science!A10 R/V Iron Skua 72' (prefix and name match)",
+    "origin": "registry"
+  },
+  {
+    "id": "v_iron-sound",
+    "name": "Iron Sound",
+    "nameKey": "IRON SOUND",
+    "prefix": "M/V",
+    "lengthFt": 145,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      145
+    ],
+    "lengthEvidence": "Science!A120 M/V Iron Sound 145' (prefix and name match)",
+    "origin": "registry"
+  },
+  {
+    "id": "v_iron-star",
+    "name": "Iron Star",
+    "nameKey": "IRON STAR",
+    "prefix": "M/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_iron-strand",
+    "name": "Iron Strand",
+    "nameKey": "IRON STRAND",
+    "prefix": "R/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_iron-tide",
+    "name": "Iron Tide",
+    "nameKey": "IRON TIDE",
+    "prefix": "F/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_iron-voyager",
+    "name": "Iron Voyager",
+    "nameKey": "IRON VOYAGER",
+    "prefix": "M/Y",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_iron-wind",
+    "name": "Iron Wind",
+    "nameKey": "IRON WIND",
+    "prefix": "F/V",
+    "lengthFt": 46,
+    "lengthStatus": "probable",
+    "lengthCandidates": [
+      46
+    ],
+    "lengthEvidence": "Yachts!A162 R/V Iron Wind 46' (name match, registry lists a different type prefix)",
+    "origin": "grid"
+  },
+  {
+    "id": "v_long-anchor",
+    "name": "Long Anchor",
+    "nameKey": "LONG ANCHOR",
+    "prefix": "R/V",
+    "lengthFt": 170,
+    "lengthStatus": "probable",
+    "lengthCandidates": [
+      170
+    ],
+    "lengthEvidence": "Yachts!A143 Tug Long Anchor 170' (name match, registry lists a different type prefix)",
+    "origin": "grid"
+  },
+  {
+    "id": "v_long-beacon",
+    "name": "Long Beacon",
+    "nameKey": "LONG BEACON",
+    "prefix": "F/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_long-compass",
+    "name": "Long Compass",
+    "nameKey": "LONG COMPASS",
+    "prefix": "R/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_long-cove",
+    "name": "Long Cove",
+    "nameKey": "LONG COVE",
+    "prefix": "M/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_long-current",
+    "name": "Long Current",
+    "nameKey": "LONG CURRENT",
+    "prefix": "R/V",
+    "lengthFt": 65,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      65
+    ],
+    "lengthEvidence": "Science!A249 R/V Long Current 65' (prefix and name match)",
+    "origin": "registry"
+  },
+  {
+    "id": "v_long-dory",
+    "name": "Long Dory",
+    "nameKey": "LONG DORY",
+    "prefix": "M/Y",
+    "lengthFt": 52,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      52
+    ],
+    "lengthEvidence": "Yachts!A11 M/Y Long Dory 52' (prefix and name match)",
+    "origin": "registry"
+  },
+  {
+    "id": "v_long-drift",
+    "name": "Long Drift",
+    "nameKey": "LONG DRIFT",
+    "prefix": "F/V",
+    "lengthFt": 52,
+    "lengthStatus": "probable",
+    "lengthCandidates": [
+      52
+    ],
+    "lengthEvidence": "Yachts!A53 M/V Long Drift 52' (name match, registry lists a different type prefix)",
+    "origin": "grid"
+  },
+  {
+    "id": "v_long-fathom",
+    "name": "Long Fathom",
+    "nameKey": "LONG FATHOM",
+    "prefix": "R/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_long-gannet",
+    "name": "Long Gannet",
+    "nameKey": "LONG GANNET",
+    "prefix": "S/V",
+    "lengthFt": 24,
+    "lengthStatus": "probable",
+    "lengthCandidates": [
+      24
+    ],
+    "lengthEvidence": "Yachts!A79 S/Y Long Gannet 24' (name match, registry lists a different type prefix)",
+    "origin": "grid"
+  },
+  {
+    "id": "v_long-harbor",
+    "name": "Long Harbor",
+    "nameKey": "LONG HARBOR",
+    "prefix": "OSV",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_long-heron",
+    "name": "Long Heron",
+    "nameKey": "LONG HERON",
+    "prefix": "F/V",
+    "lengthFt": 85,
+    "lengthStatus": "probable",
+    "lengthCandidates": [
+      85
+    ],
+    "lengthEvidence": "Yachts!A111 R/V Long Heron 85' (name match, registry lists a different type prefix)",
+    "origin": "grid"
+  },
+  {
+    "id": "v_long-horizon",
+    "name": "Long Horizon",
+    "nameKey": "LONG HORIZON",
+    "prefix": "R/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_long-kestrel",
+    "name": "Long Kestrel",
+    "nameKey": "LONG KESTREL",
+    "prefix": "Tug",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_long-ketch",
+    "name": "Long Ketch",
+    "nameKey": "LONG KETCH",
+    "prefix": "R/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_long-ledge",
+    "name": "Long Ledge",
+    "nameKey": "LONG LEDGE",
+    "prefix": "Barge",
+    "lengthFt": 40,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      40
+    ],
+    "lengthEvidence": "Science!A73 Barge Long Ledge 40' (prefix and name match)",
+    "origin": "registry"
+  },
+  {
+    "id": "v_long-marlin",
+    "name": "Long Marlin",
+    "nameKey": "LONG MARLIN",
+    "prefix": "R/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_long-meridian",
+    "name": "Long Meridian",
+    "nameKey": "LONG MERIDIAN",
+    "prefix": "M/Y",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_long-osprey",
+    "name": "Long Osprey",
+    "nameKey": "LONG OSPREY",
+    "prefix": "Tug",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_long-reef",
+    "name": "Long Reef",
+    "nameKey": "LONG REEF",
+    "prefix": "Tug",
+    "lengthFt": 120,
+    "lengthStatus": "probable",
+    "lengthCandidates": [
+      120
+    ],
+    "lengthEvidence": "Yachts!A128 OSV Long Reef 120' (name match, registry lists a different type prefix)",
+    "origin": "grid"
+  },
+  {
+    "id": "v_long-sextant",
+    "name": "Long Sextant",
+    "nameKey": "LONG SEXTANT",
+    "prefix": "S/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_long-skua",
+    "name": "Long Skua",
+    "nameKey": "LONG SKUA",
+    "prefix": "Tug",
+    "lengthFt": 170,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      170
+    ],
+    "lengthEvidence": "Science!A28 Tug Long Skua 170' (prefix and name match)",
+    "origin": "registry"
+  },
+  {
+    "id": "v_long-sound",
+    "name": "Long Sound",
+    "nameKey": "LONG SOUND",
+    "prefix": "M/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_long-star",
+    "name": "Long Star",
+    "nameKey": "LONG STAR",
+    "prefix": "R/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_long-strand",
+    "name": "Long Strand",
+    "nameKey": "LONG STRAND",
+    "prefix": "F/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_long-tern",
+    "name": "Long Tern",
+    "nameKey": "LONG TERN",
+    "prefix": "M/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_long-voyager",
+    "name": "Long Voyager",
+    "nameKey": "LONG VOYAGER",
+    "prefix": "Barge",
+    "lengthFt": 100,
+    "lengthStatus": "probable",
+    "lengthCandidates": [
+      100
+    ],
+    "lengthEvidence": "Yachts!A161 R/V Long Voyager 100' (name match, registry lists a different type prefix)",
+    "origin": "grid"
+  },
+  {
+    "id": "v_long-wind",
+    "name": "Long Wind",
+    "nameKey": "LONG WIND",
+    "prefix": "M/V",
+    "lengthFt": 40,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      40
+    ],
+    "lengthEvidence": "Yachts!A150 M/V Long Wind 40' (prefix and name match)",
+    "origin": "grid"
+  },
+  {
+    "id": "v_northern-anchor",
+    "name": "Northern Anchor",
+    "nameKey": "NORTHERN ANCHOR",
+    "prefix": "Barge",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_northern-beacon",
+    "name": "Northern Beacon",
+    "nameKey": "NORTHERN BEACON",
+    "prefix": "Tug",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_northern-compass",
+    "name": "Northern Compass",
+    "nameKey": "NORTHERN COMPASS",
+    "prefix": "M/Y",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_northern-cove",
+    "name": "Northern Cove",
+    "nameKey": "NORTHERN COVE",
+    "prefix": "M/Y",
+    "lengthFt": 32,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      32
+    ],
+    "lengthEvidence": "Yachts!A33 M/Y Northern Cove 32' (prefix and name match)",
+    "origin": "registry"
+  },
+  {
+    "id": "v_northern-current",
+    "name": "Northern Current",
+    "nameKey": "NORTHERN CURRENT",
+    "prefix": "M/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_northern-dory",
+    "name": "Northern Dory",
+    "nameKey": "NORTHERN DORY",
+    "prefix": "F/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_northern-drift",
+    "name": "Northern Drift",
+    "nameKey": "NORTHERN DRIFT",
+    "prefix": "Barge",
+    "lengthFt": 52,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      52
+    ],
+    "lengthEvidence": "Science!A161 Barge Northern Drift 52' (prefix and name match)",
+    "origin": "registry"
+  },
+  {
+    "id": "v_northern-fathom",
+    "name": "Northern Fathom",
+    "nameKey": "NORTHERN FATHOM",
+    "prefix": "S/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_northern-gannet",
+    "name": "Northern Gannet",
+    "nameKey": "NORTHERN GANNET",
+    "prefix": "M/V",
+    "lengthFt": 85,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      85
+    ],
+    "lengthEvidence": "Science!A165 M/V Northern Gannet 85' (prefix and name match)",
+    "origin": "registry"
+  },
+  {
+    "id": "v_northern-harbor",
+    "name": "Northern Harbor",
+    "nameKey": "NORTHERN HARBOR",
+    "prefix": "M/V",
+    "lengthFt": 52,
+    "lengthStatus": "probable",
+    "lengthCandidates": [
+      52
+    ],
+    "lengthEvidence": "Yachts!A70 S/V Northern Harbor 52' (name match, registry lists a different type prefix)",
+    "origin": "grid"
+  },
+  {
+    "id": "v_northern-heron",
+    "name": "Northern Heron",
+    "nameKey": "NORTHERN HERON",
+    "prefix": "M/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_northern-kestrel",
+    "name": "Northern Kestrel",
+    "nameKey": "NORTHERN KESTREL",
+    "prefix": "M/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_northern-ketch",
+    "name": "Northern Ketch",
+    "nameKey": "NORTHERN KETCH",
+    "prefix": "M/V",
+    "lengthFt": 120,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      120
+    ],
+    "lengthEvidence": "Science!A23 M/V Northern Ketch 120' (prefix and name match)",
+    "origin": "registry"
+  },
+  {
+    "id": "v_northern-lantern",
+    "name": "Northern Lantern",
+    "nameKey": "NORTHERN LANTERN",
+    "prefix": "R/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_northern-ledge",
+    "name": "Northern Ledge",
+    "nameKey": "NORTHERN LEDGE",
+    "prefix": "R/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_northern-marlin",
+    "name": "Northern Marlin",
+    "nameKey": "NORTHERN MARLIN",
+    "prefix": "Barge",
+    "lengthFt": null,
+    "lengthStatus": "conflict",
+    "lengthCandidates": [
+      24,
+      65
+    ],
+    "lengthEvidence": "Science!A136 Barge NORTHERN MARLIN 24'; Science!E136 LOA: 65' (an LOA note contradicts the listed length)",
+    "origin": "registry"
+  },
+  {
+    "id": "v_northern-meridian",
+    "name": "Northern Meridian",
+    "nameKey": "NORTHERN MERIDIAN",
+    "prefix": "R/V",
+    "lengthFt": 85,
+    "lengthStatus": "probable",
+    "lengthCandidates": [
+      85
+    ],
+    "lengthEvidence": "Yachts!A51 S/V Northern Meridian 85' (name match, registry lists a different type prefix)",
+    "origin": "grid"
+  },
+  {
+    "id": "v_northern-osprey",
+    "name": "Northern Osprey",
+    "nameKey": "NORTHERN OSPREY",
+    "prefix": "R/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_northern-petrel",
+    "name": "Northern Petrel",
+    "nameKey": "NORTHERN PETREL",
+    "prefix": "M/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_northern-sextant",
+    "name": "Northern Sextant",
+    "nameKey": "NORTHERN SEXTANT",
+    "prefix": "R/V",
+    "lengthFt": 52,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      52
+    ],
+    "lengthEvidence": "Science!A85 R/V Northern Sextant 52' (prefix and name match)",
+    "origin": "registry"
+  },
+  {
+    "id": "v_northern-skua",
+    "name": "Northern Skua",
+    "nameKey": "NORTHERN SKUA",
+    "prefix": "R/V",
+    "lengthFt": 120,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      120
+    ],
+    "lengthEvidence": "Science!A124 R/V Northern Skua 120' (prefix and name match)",
+    "origin": "registry"
+  },
+  {
+    "id": "v_northern-sound",
+    "name": "Northern Sound",
+    "nameKey": "NORTHERN SOUND",
+    "prefix": "R/V",
+    "lengthFt": 46,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      46
+    ],
+    "lengthEvidence": "Science!A194 R/V Northern Sound 46' (prefix and name match)",
+    "origin": "registry"
+  },
+  {
+    "id": "v_northern-star",
+    "name": "Northern Star",
+    "nameKey": "NORTHERN STAR",
+    "prefix": "R/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_northern-tern",
+    "name": "Northern Tern",
+    "nameKey": "NORTHERN TERN",
+    "prefix": "F/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_northern-voyager",
+    "name": "Northern Voyager",
+    "nameKey": "NORTHERN VOYAGER",
+    "prefix": "F/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_northern-wind",
+    "name": "Northern Wind",
+    "nameKey": "NORTHERN WIND",
+    "prefix": "R/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_quiet-anchor",
+    "name": "Quiet Anchor",
+    "nameKey": "QUIET ANCHOR",
+    "prefix": "R/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_quiet-beacon",
+    "name": "Quiet Beacon",
+    "nameKey": "QUIET BEACON",
+    "prefix": "S/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_quiet-compass",
+    "name": "Quiet Compass",
+    "nameKey": "QUIET COMPASS",
+    "prefix": "M/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_quiet-current",
+    "name": "Quiet Current",
+    "nameKey": "QUIET CURRENT",
+    "prefix": "M/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_quiet-dory",
+    "name": "Quiet Dory",
+    "nameKey": "QUIET DORY",
+    "prefix": "R/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_quiet-drift",
+    "name": "Quiet Drift",
+    "nameKey": "QUIET DRIFT",
+    "prefix": "S/V",
+    "lengthFt": 46,
+    "lengthStatus": "probable",
+    "lengthCandidates": [
+      46
+    ],
+    "lengthEvidence": "Yachts!A120 M/V Quiet Drift 46' (name match, registry lists a different type prefix)",
+    "origin": "grid"
+  },
+  {
+    "id": "v_quiet-fathom",
+    "name": "Quiet Fathom",
+    "nameKey": "QUIET FATHOM",
+    "prefix": "R/V",
+    "lengthFt": 40,
+    "lengthStatus": "probable",
+    "lengthCandidates": [
+      40
+    ],
+    "lengthEvidence": "Yachts!A138 S/V Quiet Fathom 40' (name match, registry lists a different type prefix)",
+    "origin": "grid"
+  },
+  {
+    "id": "v_quiet-heron",
+    "name": "Quiet Heron",
+    "nameKey": "QUIET HERON",
+    "prefix": "R/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_quiet-horizon",
+    "name": "Quiet Horizon",
+    "nameKey": "QUIET HORIZON",
+    "prefix": "Barge",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_quiet-kestrel",
+    "name": "Quiet Kestrel",
+    "nameKey": "QUIET KESTREL",
+    "prefix": "R/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_quiet-ketch",
+    "name": "Quiet Ketch",
+    "nameKey": "QUIET KETCH",
+    "prefix": "OSV",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_quiet-ledge",
+    "name": "Quiet Ledge",
+    "nameKey": "QUIET LEDGE",
+    "prefix": "M/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_quiet-marlin",
+    "name": "Quiet Marlin",
+    "nameKey": "QUIET MARLIN",
+    "prefix": "R/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_quiet-meridian",
+    "name": "Quiet Meridian",
+    "nameKey": "QUIET MERIDIAN",
+    "prefix": "R/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_quiet-osprey",
+    "name": "Quiet Osprey",
+    "nameKey": "QUIET OSPREY",
+    "prefix": "R/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_quiet-petrel",
+    "name": "Quiet Petrel",
+    "nameKey": "QUIET PETREL",
+    "prefix": "M/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_quiet-reef",
+    "name": "Quiet Reef",
+    "nameKey": "QUIET REEF",
+    "prefix": "M/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_quiet-sextant",
+    "name": "Quiet Sextant",
+    "nameKey": "QUIET SEXTANT",
+    "prefix": "M/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_quiet-sound",
+    "name": "Quiet Sound",
+    "nameKey": "QUIET SOUND",
+    "prefix": "S/V",
+    "lengthFt": 24,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      24
+    ],
+    "lengthEvidence": "Science!A102 S/V Quiet Sound 24' (prefix and name match)",
+    "origin": "registry"
+  },
+  {
+    "id": "v_quiet-star",
+    "name": "Quiet Star",
+    "nameKey": "QUIET STAR",
+    "prefix": "R/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_quiet-strand",
+    "name": "Quiet Strand",
+    "nameKey": "QUIET STRAND",
+    "prefix": "R/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_quiet-tern",
+    "name": "Quiet Tern",
+    "nameKey": "QUIET TERN",
+    "prefix": "R/V",
+    "lengthFt": 145,
+    "lengthStatus": "probable",
+    "lengthCandidates": [
+      145
+    ],
+    "lengthEvidence": "Yachts!A55 M/V Quiet Tern 145' (name match, registry lists a different type prefix)",
+    "origin": "grid"
+  },
+  {
+    "id": "v_quiet-tide",
+    "name": "Quiet Tide",
+    "nameKey": "QUIET TIDE",
+    "prefix": "S/V",
+    "lengthFt": 52,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      52
+    ],
+    "lengthEvidence": "Science!A122 S/V Quiet Tide 52' (prefix and name match)",
+    "origin": "registry"
+  },
+  {
+    "id": "v_quiet-voyager",
+    "name": "Quiet Voyager",
+    "nameKey": "QUIET VOYAGER",
+    "prefix": "M/Y",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_quiet-wind",
+    "name": "Quiet Wind",
+    "nameKey": "QUIET WIND",
+    "prefix": "Barge",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_salt-anchor",
+    "name": "Salt Anchor",
+    "nameKey": "SALT ANCHOR",
+    "prefix": "S/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_salt-beacon",
+    "name": "Salt Beacon",
+    "nameKey": "SALT BEACON",
+    "prefix": "S/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_salt-cove",
+    "name": "Salt Cove",
+    "nameKey": "SALT COVE",
+    "prefix": "M/Y",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_salt-current",
+    "name": "Salt Current",
+    "nameKey": "SALT CURRENT",
+    "prefix": "R/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_salt-dory",
+    "name": "Salt Dory",
+    "nameKey": "SALT DORY",
+    "prefix": "Barge",
+    "lengthFt": 85,
+    "lengthStatus": "probable",
+    "lengthCandidates": [
+      85
+    ],
+    "lengthEvidence": "Yachts!A59 M/Y Salt Dory 85' (name match, registry lists a different type prefix)",
+    "origin": "grid"
+  },
+  {
+    "id": "v_salt-drift",
+    "name": "Salt Drift",
+    "nameKey": "SALT DRIFT",
+    "prefix": "R/V",
+    "lengthFt": 85,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      85
+    ],
+    "lengthEvidence": "Yachts!A154 R/V Salt Drift 85' (prefix and name match)",
+    "origin": "grid"
+  },
+  {
+    "id": "v_salt-fathom",
+    "name": "Salt Fathom",
+    "nameKey": "SALT FATHOM",
+    "prefix": "F/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_salt-gannet",
+    "name": "Salt Gannet",
+    "nameKey": "SALT GANNET",
+    "prefix": "M/Y",
+    "lengthFt": 145,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      145
+    ],
+    "lengthEvidence": "Yachts!A31 M/Y Salt Gannet 145' (prefix and name match)",
+    "origin": "registry"
+  },
+  {
+    "id": "v_salt-heron",
+    "name": "Salt Heron",
+    "nameKey": "SALT HERON",
+    "prefix": "R/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_salt-horizon",
+    "name": "Salt Horizon",
+    "nameKey": "SALT HORIZON",
+    "prefix": "M/Y",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_salt-ketch",
+    "name": "Salt Ketch",
+    "nameKey": "SALT KETCH",
+    "prefix": "F/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_salt-lantern",
+    "name": "Salt Lantern",
+    "nameKey": "SALT LANTERN",
+    "prefix": "OSV",
+    "lengthFt": 46,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      46
+    ],
+    "lengthEvidence": "Science!A77 OSV Salt Lantern 46' (prefix and name match)",
+    "origin": "registry"
+  },
+  {
+    "id": "v_salt-ledge",
+    "name": "Salt Ledge",
+    "nameKey": "SALT LEDGE",
+    "prefix": "R/V",
+    "lengthFt": 52,
+    "lengthStatus": "probable",
+    "lengthCandidates": [
+      52
+    ],
+    "lengthEvidence": "Yachts!A167 Barge Salt Ledge 52' (name match, registry lists a different type prefix)",
+    "origin": "grid"
+  },
+  {
+    "id": "v_salt-marlin",
+    "name": "Salt Marlin",
+    "nameKey": "SALT MARLIN",
+    "prefix": "OSV",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_salt-meridian",
+    "name": "Salt Meridian",
+    "nameKey": "SALT MERIDIAN",
+    "prefix": "M/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_salt-petrel",
+    "name": "Salt Petrel",
+    "nameKey": "SALT PETREL",
+    "prefix": "M/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_salt-reef",
+    "name": "Salt Reef",
+    "nameKey": "SALT REEF",
+    "prefix": "Barge",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_salt-sextant",
+    "name": "Salt Sextant",
+    "nameKey": "SALT SEXTANT",
+    "prefix": "M/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_salt-skua",
+    "name": "Salt Skua",
+    "nameKey": "SALT SKUA",
+    "prefix": "R/V",
+    "lengthFt": 52,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      52
+    ],
+    "lengthEvidence": "Science!A203 R/V Salt Skua 52' (prefix and name match)",
+    "origin": "registry"
+  },
+  {
+    "id": "v_salt-sound",
+    "name": "Salt Sound",
+    "nameKey": "SALT SOUND",
+    "prefix": "M/Y",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_salt-star",
+    "name": "Salt Star",
+    "nameKey": "SALT STAR",
+    "prefix": "Tug",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_salt-strand",
+    "name": "Salt Strand",
+    "nameKey": "SALT STRAND",
+    "prefix": "Tug",
+    "lengthFt": 85,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      85
+    ],
+    "lengthEvidence": "Science!A138 Tug Salt Strand 85' (prefix and name match)",
+    "origin": "registry"
+  },
+  {
+    "id": "v_salt-tern",
+    "name": "Salt Tern",
+    "nameKey": "SALT TERN",
+    "prefix": "M/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_salt-tide",
+    "name": "Salt Tide",
+    "nameKey": "SALT TIDE",
+    "prefix": "Tug",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_salt-voyager",
+    "name": "Salt Voyager",
+    "nameKey": "SALT VOYAGER",
+    "prefix": "OSV",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_salt-wind",
+    "name": "Salt Wind",
+    "nameKey": "SALT WIND",
+    "prefix": "M/V",
+    "lengthFt": 170,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      170
+    ],
+    "lengthEvidence": "Science!A59 M/V Salt Wind 170' (prefix and name match)",
+    "origin": "registry"
+  },
+  {
+    "id": "v_silver-anchor",
+    "name": "Silver Anchor",
+    "nameKey": "SILVER ANCHOR",
+    "prefix": "R/V",
+    "lengthFt": 170,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      170
+    ],
+    "lengthEvidence": "Science!A87 R/V Silver Anchor 170' (prefix and name match)",
+    "origin": "registry"
+  },
+  {
+    "id": "v_silver-beacon",
+    "name": "Silver Beacon",
+    "nameKey": "SILVER BEACON",
+    "prefix": "Barge",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_silver-cove",
+    "name": "Silver Cove",
+    "nameKey": "SILVER COVE",
+    "prefix": "S/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_silver-current",
+    "name": "Silver Current",
+    "nameKey": "SILVER CURRENT",
+    "prefix": "S/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_silver-drift",
+    "name": "Silver Drift",
+    "nameKey": "SILVER DRIFT",
+    "prefix": "F/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_silver-fathom",
+    "name": "Silver Fathom",
+    "nameKey": "SILVER FATHOM",
+    "prefix": "Tug",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_silver-gannet",
+    "name": "Silver Gannet",
+    "nameKey": "SILVER GANNET",
+    "prefix": "OSV",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_silver-harbor",
+    "name": "Silver Harbor",
+    "nameKey": "SILVER HARBOR",
+    "prefix": "S/V",
+    "lengthFt": 46,
+    "lengthStatus": "probable",
+    "lengthCandidates": [
+      46
+    ],
+    "lengthEvidence": "Yachts!A157 OSV Silver Harbor 46' (name match, registry lists a different type prefix)",
+    "origin": "grid"
+  },
+  {
+    "id": "v_silver-heron",
+    "name": "Silver Heron",
+    "nameKey": "SILVER HERON",
+    "prefix": "R/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_silver-kestrel",
+    "name": "Silver Kestrel",
+    "nameKey": "SILVER KESTREL",
+    "prefix": "M/V",
+    "lengthFt": 46,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      46
+    ],
+    "lengthEvidence": "Science!A115 M/V Silver Kestrel 46' (prefix and name match)",
+    "origin": "registry"
+  },
+  {
+    "id": "v_silver-ketch",
+    "name": "Silver Ketch",
+    "nameKey": "SILVER KETCH",
+    "prefix": "M/Y",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_silver-lantern",
+    "name": "Silver Lantern",
+    "nameKey": "SILVER LANTERN",
+    "prefix": "F/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_silver-ledge",
+    "name": "Silver Ledge",
+    "nameKey": "SILVER LEDGE",
+    "prefix": "M/V",
+    "lengthFt": 72,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      72
+    ],
+    "lengthEvidence": "Science!A155 M/V Silver Ledge 72' (prefix and name match)",
+    "origin": "registry"
+  },
+  {
+    "id": "v_silver-marlin",
+    "name": "Silver Marlin",
+    "nameKey": "SILVER MARLIN",
+    "prefix": "M/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_silver-meridian",
+    "name": "Silver Meridian",
+    "nameKey": "SILVER MERIDIAN",
+    "prefix": "S/Y",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_silver-osprey",
+    "name": "Silver Osprey",
+    "nameKey": "SILVER OSPREY",
+    "prefix": "R/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_silver-reef",
+    "name": "Silver Reef",
+    "nameKey": "SILVER REEF",
+    "prefix": "F/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_silver-sextant",
+    "name": "Silver Sextant",
+    "nameKey": "SILVER SEXTANT",
+    "prefix": "M/Y",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_silver-skua",
+    "name": "Silver Skua",
+    "nameKey": "SILVER SKUA",
+    "prefix": "OSV",
+    "lengthFt": 24,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      24
+    ],
+    "lengthEvidence": "Science!A209 OS/V Silver Skua 24' (prefix and name match)",
+    "origin": "grid"
+  },
+  {
+    "id": "v_silver-sound",
+    "name": "Silver Sound",
+    "nameKey": "SILVER SOUND",
+    "prefix": "M/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_silver-strand",
+    "name": "Silver Strand",
+    "nameKey": "SILVER STRAND",
+    "prefix": "F/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_silver-tern",
+    "name": "Silver Tern",
+    "nameKey": "SILVER TERN",
+    "prefix": "Tug",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_silver-tide",
+    "name": "Silver Tide",
+    "nameKey": "SILVER TIDE",
+    "prefix": "OSV",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_silver-voyager",
+    "name": "Silver Voyager",
+    "nameKey": "SILVER VOYAGER",
+    "prefix": "Barge",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_silver-wind",
+    "name": "Silver Wind",
+    "nameKey": "SILVER WIND",
+    "prefix": "S/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_swift-anchor",
+    "name": "Swift Anchor",
+    "nameKey": "SWIFT ANCHOR",
+    "prefix": "Tug",
+    "lengthFt": 100,
+    "lengthStatus": "probable",
+    "lengthCandidates": [
+      100
+    ],
+    "lengthEvidence": "Yachts!A72 M/Y Swift Anchor 100' (name match, registry lists a different type prefix)",
+    "origin": "grid"
+  },
+  {
+    "id": "v_swift-beacon",
+    "name": "Swift Beacon",
+    "nameKey": "SWIFT BEACON",
+    "prefix": "S/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_swift-compass",
+    "name": "Swift Compass",
+    "nameKey": "SWIFT COMPASS",
+    "prefix": "F/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_swift-cove",
+    "name": "Swift Cove",
+    "nameKey": "SWIFT COVE",
+    "prefix": "M/V",
+    "lengthFt": 145,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      145
+    ],
+    "lengthEvidence": "Science!A157 M/V Swift Cove 145' (prefix and name match)",
+    "origin": "registry"
+  },
+  {
+    "id": "v_swift-current",
+    "name": "Swift Current",
+    "nameKey": "SWIFT CURRENT",
+    "prefix": "R/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_swift-dory",
+    "name": "Swift Dory",
+    "nameKey": "SWIFT DORY",
+    "prefix": "F/V",
+    "lengthFt": 85,
+    "lengthStatus": "probable",
+    "lengthCandidates": [
+      85
+    ],
+    "lengthEvidence": "Yachts!A35 M/Y Swift Dory 85' (name match, registry lists a different type prefix)",
+    "origin": "grid"
+  },
+  {
+    "id": "v_swift-drift",
+    "name": "Swift Drift",
+    "nameKey": "SWIFT DRIFT",
+    "prefix": "M/Y",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_swift-fathom",
+    "name": "Swift Fathom",
+    "nameKey": "SWIFT FATHOM",
+    "prefix": "F/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_swift-gannet",
+    "name": "Swift Gannet",
+    "nameKey": "SWIFT GANNET",
+    "prefix": "R/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_swift-heron",
+    "name": "Swift Heron",
+    "nameKey": "SWIFT HERON",
+    "prefix": "R/V",
+    "lengthFt": 120,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      120
+    ],
+    "lengthEvidence": "Science!A83 R/V Swift Heron 120' (prefix and name match)",
+    "origin": "registry"
+  },
+  {
+    "id": "v_swift-horizon",
+    "name": "Swift Horizon",
+    "nameKey": "SWIFT HORIZON",
+    "prefix": "F/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_swift-kestrel",
+    "name": "Swift Kestrel",
+    "nameKey": "SWIFT KESTREL",
+    "prefix": "M/Y",
+    "lengthFt": 52,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      52
+    ],
+    "lengthEvidence": "Yachts!A25 M/Y Swift Kestrel 52' (prefix and name match)",
+    "origin": "registry"
+  },
+  {
+    "id": "v_swift-ketch",
+    "name": "Swift Ketch",
+    "nameKey": "SWIFT KETCH",
+    "prefix": "R/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_swift-lantern",
+    "name": "Swift Lantern",
+    "nameKey": "SWIFT LANTERN",
+    "prefix": "R/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_swift-ledge",
+    "name": "Swift Ledge",
+    "nameKey": "SWIFT LEDGE",
+    "prefix": "Tug",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_swift-marlin",
+    "name": "Swift Marlin",
+    "nameKey": "SWIFT MARLIN",
+    "prefix": "S/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_swift-meridian",
+    "name": "Swift Meridian",
+    "nameKey": "SWIFT MERIDIAN",
+    "prefix": "F/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_swift-petrel",
+    "name": "Swift Petrel",
+    "nameKey": "SWIFT PETREL",
+    "prefix": "M/V",
+    "lengthFt": 100,
+    "lengthStatus": "probable",
+    "lengthCandidates": [
+      100
+    ],
+    "lengthEvidence": "Yachts!A47 M/Y Swift Petrel 100' (name match, registry lists a different type prefix)",
+    "origin": "grid"
+  },
+  {
+    "id": "v_swift-reef",
+    "name": "Swift Reef",
+    "nameKey": "SWIFT REEF",
+    "prefix": "S/V",
+    "lengthFt": 170,
+    "lengthStatus": "probable",
+    "lengthCandidates": [
+      170
+    ],
+    "lengthEvidence": "Yachts!A151 R/V Swift Reef 170' (name match, registry lists a different type prefix)",
+    "origin": "grid"
+  },
+  {
+    "id": "v_swift-sextant",
+    "name": "Swift Sextant",
+    "nameKey": "SWIFT SEXTANT",
+    "prefix": "R/V",
+    "lengthFt": 72,
+    "lengthStatus": "probable",
+    "lengthCandidates": [
+      72
+    ],
+    "lengthEvidence": "Yachts!A176 M/V Swift Sextant 72' (name match, registry lists a different type prefix)",
+    "origin": "grid"
+  },
+  {
+    "id": "v_swift-skua",
+    "name": "Swift Skua",
+    "nameKey": "SWIFT SKUA",
+    "prefix": "M/Y",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_swift-strand",
+    "name": "Swift Strand",
+    "nameKey": "SWIFT STRAND",
+    "prefix": "M/V",
+    "lengthFt": 40,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      40
+    ],
+    "lengthEvidence": "Science!A79 M/V Swift Strand 40' (prefix and name match)",
+    "origin": "registry"
+  },
+  {
+    "id": "v_swift-tern",
+    "name": "Swift Tern",
+    "nameKey": "SWIFT TERN",
+    "prefix": "Barge",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_swift-tide",
+    "name": "Swift Tide",
+    "nameKey": "SWIFT TIDE",
+    "prefix": "S/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_swift-wind",
+    "name": "Swift Wind",
+    "nameKey": "SWIFT WIND",
+    "prefix": "S/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_western-anchor",
+    "name": "Western Anchor",
+    "nameKey": "WESTERN ANCHOR",
+    "prefix": "M/V",
+    "lengthFt": 65,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      65
+    ],
+    "lengthEvidence": "Science!A234 M/V Western Anchor 65' (prefix and name match)",
+    "origin": "registry"
+  },
+  {
+    "id": "v_western-beacon",
+    "name": "Western Beacon",
+    "nameKey": "WESTERN BEACON",
+    "prefix": "M/Y",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_western-compass",
+    "name": "Western Compass",
+    "nameKey": "WESTERN COMPASS",
+    "prefix": "S/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_western-cove",
+    "name": "Western Cove",
+    "nameKey": "WESTERN COVE",
+    "prefix": "Barge",
+    "lengthFt": 24,
+    "lengthStatus": "probable",
+    "lengthCandidates": [
+      24
+    ],
+    "lengthEvidence": "Yachts!A66 S/V Western Cove 24' (name match, registry lists a different type prefix)",
+    "origin": "grid"
+  },
+  {
+    "id": "v_western-current",
+    "name": "Western Current",
+    "nameKey": "WESTERN CURRENT",
+    "prefix": "Tug",
+    "lengthFt": 85,
+    "lengthStatus": "probable",
+    "lengthCandidates": [
+      85
+    ],
+    "lengthEvidence": "Yachts!A44 M/Y Western Current 85' (name match, registry lists a different type prefix)",
+    "origin": "grid"
+  },
+  {
+    "id": "v_western-dory",
+    "name": "Western Dory",
+    "nameKey": "WESTERN DORY",
+    "prefix": "Barge",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_western-drift",
+    "name": "Western Drift",
+    "nameKey": "WESTERN DRIFT",
+    "prefix": "R/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_western-fathom",
+    "name": "Western Fathom",
+    "nameKey": "WESTERN FATHOM",
+    "prefix": "R/V",
+    "lengthFt": 32,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      32
+    ],
+    "lengthEvidence": "Science!A233 R/V Western Fathom 32' (prefix and name match)",
+    "origin": "registry"
+  },
+  {
+    "id": "v_western-gannet",
+    "name": "Western Gannet",
+    "nameKey": "WESTERN GANNET",
+    "prefix": "F/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_western-harbor",
+    "name": "Western Harbor",
+    "nameKey": "WESTERN HARBOR",
+    "prefix": "M/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_western-heron",
+    "name": "Western Heron",
+    "nameKey": "WESTERN HERON",
+    "prefix": "Tug",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_western-horizon",
+    "name": "Western Horizon",
+    "nameKey": "WESTERN HORIZON",
+    "prefix": "M/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_western-ketch",
+    "name": "Western Ketch",
+    "nameKey": "WESTERN KETCH",
+    "prefix": "M/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_western-lantern",
+    "name": "Western Lantern",
+    "nameKey": "WESTERN LANTERN",
+    "prefix": "Tug",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_western-ledge",
+    "name": "Western Ledge",
+    "nameKey": "WESTERN LEDGE",
+    "prefix": "R/V",
+    "lengthFt": 170,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      170
+    ],
+    "lengthEvidence": "Science!A143 R/V Western Ledge 170' (prefix and name match)",
+    "origin": "registry"
+  },
+  {
+    "id": "v_western-marlin",
+    "name": "Western Marlin",
+    "nameKey": "WESTERN MARLIN",
+    "prefix": "M/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_western-meridian",
+    "name": "Western Meridian",
+    "nameKey": "WESTERN MERIDIAN",
+    "prefix": "F/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_western-osprey",
+    "name": "Western Osprey",
+    "nameKey": "WESTERN OSPREY",
+    "prefix": "F/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_western-petrel",
+    "name": "Western Petrel",
+    "nameKey": "WESTERN PETREL",
+    "prefix": "M/V",
+    "lengthFt": 46,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      46
+    ],
+    "lengthEvidence": "Yachts!A17 M/V Western Petrel 46' (prefix and name match)",
+    "origin": "registry"
+  },
+  {
+    "id": "v_western-reef",
+    "name": "Western Reef",
+    "nameKey": "WESTERN REEF",
+    "prefix": "OSV",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_western-sextant",
+    "name": "Western Sextant",
+    "nameKey": "WESTERN SEXTANT",
+    "prefix": "R/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_western-sound",
+    "name": "Western Sound",
+    "nameKey": "WESTERN SOUND",
+    "prefix": "F/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_western-strand",
+    "name": "Western Strand",
+    "nameKey": "WESTERN STRAND",
+    "prefix": "M/Y",
+    "lengthFt": null,
+    "lengthStatus": "conflict",
+    "lengthCandidates": [
+      52,
+      65,
+      145
+    ],
+    "lengthEvidence": "Yachts!A1 M/Y Western Strand 52'; Yachts!B1 LOA: 65'; Yachts!A6 LOA: 145' (an LOA note contradicts the listed length)",
+    "origin": "grid"
+  },
+  {
+    "id": "v_western-tern",
+    "name": "Western Tern",
+    "nameKey": "WESTERN TERN",
+    "prefix": "OSV",
+    "lengthFt": 100,
+    "lengthStatus": "probable",
+    "lengthCandidates": [
+      100
+    ],
+    "lengthEvidence": "Yachts!A99 Barge Western Tern 100' (name match, registry lists a different type prefix)",
+    "origin": "grid"
+  },
+  {
+    "id": "v_western-wind",
+    "name": "Western Wind",
+    "nameKey": "WESTERN WIND",
+    "prefix": "S/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_wild-anchor",
+    "name": "Wild Anchor",
+    "nameKey": "WILD ANCHOR",
+    "prefix": "M/Y",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_wild-beacon",
+    "name": "Wild Beacon",
+    "nameKey": "WILD BEACON",
+    "prefix": "OSV",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_wild-compass",
+    "name": "Wild Compass",
+    "nameKey": "WILD COMPASS",
+    "prefix": "M/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_wild-cove",
+    "name": "Wild Cove",
+    "nameKey": "WILD COVE",
+    "prefix": "S/V",
+    "lengthFt": 120,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      120
+    ],
+    "lengthEvidence": "Science!A39 S/V Wild Cove 120' (prefix and name match)",
+    "origin": "registry"
+  },
+  {
+    "id": "v_wild-current",
+    "name": "Wild Current",
+    "nameKey": "WILD CURRENT",
+    "prefix": "R/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_wild-dory",
+    "name": "Wild Dory",
+    "nameKey": "WILD DORY",
+    "prefix": "R/V",
+    "lengthFt": 52,
+    "lengthStatus": "probable",
+    "lengthCandidates": [
+      52
+    ],
+    "lengthEvidence": "Yachts!A107 M/V Wild Dory 52' (name match, registry lists a different type prefix)",
+    "origin": "grid"
+  },
+  {
+    "id": "v_wild-drift",
+    "name": "Wild Drift",
+    "nameKey": "WILD DRIFT",
+    "prefix": "S/V",
+    "lengthFt": 24,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      24
+    ],
+    "lengthEvidence": "Science!A18 S/V Wild Drift 24' (prefix and name match)",
+    "origin": "registry"
+  },
+  {
+    "id": "v_wild-fathom",
+    "name": "Wild Fathom",
+    "nameKey": "WILD FATHOM",
+    "prefix": "M/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_wild-gannet",
+    "name": "Wild Gannet",
+    "nameKey": "WILD GANNET",
+    "prefix": "Tug",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_wild-harbor",
+    "name": "Wild Harbor",
+    "nameKey": "WILD HARBOR",
+    "prefix": "R/V",
+    "lengthFt": 65,
+    "lengthStatus": "probable",
+    "lengthCandidates": [
+      65
+    ],
+    "lengthEvidence": "Yachts!A171 S/V Wild Harbor 65' (name match, registry lists a different type prefix)",
+    "origin": "grid"
+  },
+  {
+    "id": "v_wild-heron",
+    "name": "Wild Heron",
+    "nameKey": "WILD HERON",
+    "prefix": "R/V",
+    "lengthFt": 145,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      145
+    ],
+    "lengthEvidence": "Science!A250 R/V Wild Heron 145' (prefix and name match)",
+    "origin": "registry"
+  },
+  {
+    "id": "v_wild-horizon",
+    "name": "Wild Horizon",
+    "nameKey": "WILD HORIZON",
+    "prefix": "S/V",
+    "lengthFt": 52,
+    "lengthStatus": "probable",
+    "lengthCandidates": [
+      52
+    ],
+    "lengthEvidence": "Yachts!A152 Barge Wild Horizon 52' (name match, registry lists a different type prefix)",
+    "origin": "grid"
+  },
+  {
+    "id": "v_wild-kestrel",
+    "name": "Wild Kestrel",
+    "nameKey": "WILD KESTREL",
+    "prefix": "R/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_wild-ketch",
+    "name": "Wild Ketch",
+    "nameKey": "WILD KETCH",
+    "prefix": "M/Y",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_wild-ledge",
+    "name": "Wild Ledge",
+    "nameKey": "WILD LEDGE",
+    "prefix": "R/V",
+    "lengthFt": 120,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      120
+    ],
+    "lengthEvidence": "Science!A98 R/V Wild Ledge 120' (prefix and name match)",
+    "origin": "grid"
+  },
+  {
+    "id": "v_wild-marlin",
+    "name": "Wild Marlin",
+    "nameKey": "WILD MARLIN",
+    "prefix": "R/V",
+    "lengthFt": 32,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      32
+    ],
+    "lengthEvidence": "Science!A14 R/V Wild Marlin 32' (prefix and name match)",
+    "origin": "registry"
+  },
+  {
+    "id": "v_wild-meridian",
+    "name": "Wild Meridian",
+    "nameKey": "WILD MERIDIAN",
+    "prefix": "M/Y",
+    "lengthFt": 72,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      72
+    ],
+    "lengthEvidence": "Yachts!A23 M/Y Wild Meridian 72' (prefix and name match)",
+    "origin": "registry"
+  },
+  {
+    "id": "v_wild-osprey",
+    "name": "Wild Osprey",
+    "nameKey": "WILD OSPREY",
+    "prefix": "Barge",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_wild-petrel",
+    "name": "Wild Petrel",
+    "nameKey": "WILD PETREL",
+    "prefix": "S/Y",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_wild-reef",
+    "name": "Wild Reef",
+    "nameKey": "WILD REEF",
+    "prefix": "M/V",
+    "lengthFt": 100,
+    "lengthStatus": "probable",
+    "lengthCandidates": [
+      100
+    ],
+    "lengthEvidence": "Yachts!A123 S/V Wild Reef 100' (name match, registry lists a different type prefix)",
+    "origin": "grid"
+  },
+  {
+    "id": "v_wild-sextant",
+    "name": "Wild Sextant",
+    "nameKey": "WILD SEXTANT",
+    "prefix": "M/Y",
+    "lengthFt": 100,
+    "lengthStatus": "probable",
+    "lengthCandidates": [
+      100
+    ],
+    "lengthEvidence": "Yachts!A166 M/V Wild Sextant 100' (name match, registry lists a different type prefix)",
+    "origin": "grid"
+  },
+  {
+    "id": "v_wild-skua",
+    "name": "Wild Skua",
+    "nameKey": "WILD SKUA",
+    "prefix": "Barge",
+    "lengthFt": 40,
+    "lengthStatus": "probable",
+    "lengthCandidates": [
+      40
+    ],
+    "lengthEvidence": "Yachts!A172 M/Y Wild Skua 40' (name match, registry lists a different type prefix)",
+    "origin": "grid"
+  },
+  {
+    "id": "v_wild-sound",
+    "name": "Wild Sound",
+    "nameKey": "WILD SOUND",
+    "prefix": "R/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_wild-star",
+    "name": "Wild Star",
+    "nameKey": "WILD STAR",
+    "prefix": "OSV",
+    "lengthFt": null,
+    "lengthStatus": "conflict",
+    "lengthCandidates": [
+      24,
+      145
+    ],
+    "lengthEvidence": "Yachts!A81 M/V Wild Star 24'; Yachts!A83 LOA: 145' (an LOA note contradicts the listed length)",
+    "origin": "grid"
+  },
+  {
+    "id": "v_wild-tern",
+    "name": "Wild Tern",
+    "nameKey": "WILD TERN",
+    "prefix": "M/Y",
+    "lengthFt": 145,
+    "lengthStatus": "verified",
+    "lengthCandidates": [
+      145
+    ],
+    "lengthEvidence": "Yachts!A21 M/Y Wild Tern 145' (prefix and name match)",
+    "origin": "grid"
+  },
+  {
+    "id": "v_wild-tide",
+    "name": "Wild Tide",
+    "nameKey": "WILD TIDE",
+    "prefix": "R/V",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  },
+  {
+    "id": "v_wild-wind",
+    "name": "Wild Wind",
+    "nameKey": "WILD WIND",
+    "prefix": "M/Y",
+    "lengthFt": null,
+    "lengthStatus": "unknown",
+    "lengthCandidates": [],
+    "lengthEvidence": null,
+    "origin": "grid"
+  }
+]

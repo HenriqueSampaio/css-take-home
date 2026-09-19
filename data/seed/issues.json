@@ -1,1 +1,4508 @@
-[]
+[
+  {
+    "id": "i_005d089766",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_78ab876edd",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The bar at 2014!AI106 runs straight into 1 banner-coloured cell at the end of the month (2014!AJ106, 2014-09-30). Bare cells of that colour are decoration and were not counted, but they may be painted over the last day of this stay.",
+    "sourceRef": "2014!AI106"
+  },
+  {
+    "id": "i_009d401092",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_23ccbcd230",
+    "vesselId": null,
+    "relatedReservationIds": [
+      "r_919a905fc5"
+    ],
+    "detail": "The bar at 2011!E68:O68 runs straight into 2 banner-coloured cells at the start of the month (2011!C68:D68, 2011-06-01 to 2011-06-02). Bare cells of that colour are decoration and were not counted, but they may be painted over the first 2 days of this stay. On the other side of them the same berth is held by OSV Amber Reef (2011-05-19 to 2011-05-28, 2011!U57:AD57), so the two may be one stay.",
+    "sourceRef": "2011!E68:O68"
+  },
+  {
+    "id": "i_00ae1363b6",
+    "type": "unlabelled",
+    "severity": "blocking",
+    "reason": "no_label",
+    "reservationId": "r_681d42e06f",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The coloured bar at 2017!Q110:V110 (2017-09-15 to 2017-09-20) names no vessel or event; identify the occupant or delete the row.",
+    "sourceRef": "2017!Q110:V110"
+  },
+  {
+    "id": "i_016bcd4fa3",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_27b4c95ee5",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The bar at 2011!AA66:AC66 runs straight into 3 banner-coloured cells at the end of the month (2011!AD66:AF66, 2011-06-28 to 2011-06-30). Bare cells of that colour are decoration and were not counted, but they may be painted over the last 3 days of this stay.",
+    "sourceRef": "2011!AA66:AC66"
+  },
+  {
+    "id": "i_0251879d22",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_526b411cc4",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"Science stroll\" is written at 2011!AA132 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2011!AA132"
+  },
+  {
+    "id": "i_03240d1a7d",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "shared_bar",
+    "reservationId": "r_8ad4a8b456",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The bar 2009!AD68:AE68 names more than one occupant: possible double-booking or handover; imported as back-to-back stays split at the second name.",
+    "sourceRef": "2009!AD68"
+  },
+  {
+    "id": "i_037cd789d8",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_b65710d13c",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"Barge Silver Voyager\" is written at 2008!AA32 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2008!AA32"
+  },
+  {
+    "id": "i_04557e4292",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_808564c2ea",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The bar at 2013!AF124:AG124 runs straight into 2 banner-coloured cells at the end of the month (2013!AH124:AI124, 2013-11-29 to 2013-11-30). Bare cells of that colour are decoration and were not counted, but they may be painted over the last 2 days of this stay.",
+    "sourceRef": "2013!AF124:AG124"
+  },
+  {
+    "id": "i_046541e25f",
+    "type": "unlabelled",
+    "severity": "blocking",
+    "reason": "no_label",
+    "reservationId": "r_6f8a66e91d",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The coloured bar at 2015!S93 (2015-08-12 to 2015-08-12) names no vessel or event; identify the occupant or delete the row.",
+    "sourceRef": "2015!S93"
+  },
+  {
+    "id": "i_0515df57d1",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_58db418385",
+    "vesselId": null,
+    "relatedReservationIds": [
+      "r_51dab4d3a4"
+    ],
+    "detail": "The bar at 2007!AB76:AE76 runs straight into 1 banner-coloured cell at the end of the month (2007!AF76, 2007-07-31). Bare cells of that colour are decoration and were not counted, but they may be painted over the last day of this stay. On the other side of them the same berth is held by M/V Northern Harbor (2007-08-01 to 2007-08-05, 2007!B87:F87), so the two may be one stay.",
+    "sourceRef": "2007!AB76:AE76"
+  },
+  {
+    "id": "i_0602c83664",
+    "type": "unlabelled",
+    "severity": "blocking",
+    "reason": "no_label",
+    "reservationId": "r_21da07fe37",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The coloured bar at 2014!K20:N20 (2014-02-05 to 2014-02-08) names no vessel or event; identify the occupant or delete the row.",
+    "sourceRef": "2014!K20:N20"
+  },
+  {
+    "id": "i_06401da00f",
+    "type": "unlabelled",
+    "severity": "blocking",
+    "reason": "no_label",
+    "reservationId": "r_1ee1532038",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The coloured bar at 2016!V98 (2016-08-20 to 2016-08-20) names no vessel or event; identify the occupant or delete the row.",
+    "sourceRef": "2016!V98"
+  },
+  {
+    "id": "i_0737227079",
+    "type": "unlabelled",
+    "severity": "blocking",
+    "reason": "no_label",
+    "reservationId": "r_48f6120b30",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The coloured bar at 2017!AA20:AB20 (2017-02-25 to 2017-02-26) names no vessel or event; identify the occupant or delete the row.",
+    "sourceRef": "2017!AA20:AB20"
+  },
+  {
+    "id": "i_076245db28",
+    "type": "unlabelled",
+    "severity": "blocking",
+    "reason": "no_label",
+    "reservationId": "r_d9e424bc02",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The coloured bar at 2009!V110:AD110 (2009-10-21 to 2009-10-29) names no vessel or event; identify the occupant or delete the row.",
+    "sourceRef": "2009!V110:AD110"
+  },
+  {
+    "id": "i_090717b819",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_3a53b910d3",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"F/V Western Meridian\" is written at 2015!S120 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2015!S120"
+  },
+  {
+    "id": "i_0ab02538e7",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "shared_bar",
+    "reservationId": "r_dbed357a1a",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The bar 2001!B63:L63 names more than one occupant: possible double-booking or handover; imported as back-to-back stays split at the second name.",
+    "sourceRef": "2001!L63"
+  },
+  {
+    "id": "i_0ad8158196",
+    "type": "unlabelled",
+    "severity": "blocking",
+    "reason": "no_label",
+    "reservationId": "r_600d4a7f54",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The coloured bar at 2008!B46:AE46 (2008-04-01 to 2008-04-30) names no vessel or event; identify the occupant or delete the row.",
+    "sourceRef": "2008!B46:AE46"
+  },
+  {
+    "id": "i_0b5412eac7",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_0098b0ca92",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The bar at 2014!J84 runs straight into 3 banner-coloured cells at the start of the month (2014!G84:I84, 2014-07-01 to 2014-07-03). Bare cells of that colour are decoration and were not counted, but they may be painted over the first 3 days of this stay.",
+    "sourceRef": "2014!J84"
+  },
+  {
+    "id": "i_0b59f2e9c5",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_a8a70f5fef",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The bar at 2015!I96 runs straight into 1 banner-coloured cell at the start of the month (2015!H96, 2015-08-01). Bare cells of that colour are decoration and were not counted, but they may be painted over the first day of this stay.",
+    "sourceRef": "2015!I96"
+  },
+  {
+    "id": "i_0b7afe9cbd",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_b82e8aa3ac",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"R/V Long Ketch\" is written at 2015!W60 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2015!W60"
+  },
+  {
+    "id": "i_0c11b8f078",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_e5cfba9624",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The bar at 2011!AA45:AB45 runs straight into 4 banner-coloured cells at the end of the month (2011!AC45:AF45, 2011-04-27 to 2011-04-30). Bare cells of that colour are decoration and were not counted, but they may be painted over the last 4 days of this stay.",
+    "sourceRef": "2011!AA45:AB45"
+  },
+  {
+    "id": "i_0c6cb6bed9",
+    "type": "unlabelled",
+    "severity": "blocking",
+    "reason": "no_label",
+    "reservationId": "r_ecf371ce07",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The coloured bar at 2011!H98 (2011-09-06 to 2011-09-06) names no vessel or event; identify the occupant or delete the row.",
+    "sourceRef": "2011!H98"
+  },
+  {
+    "id": "i_0d83571155",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_ea5aad9f35",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"R/V Quiet Anchor\" is written at 2010!R75 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2010!R75"
+  },
+  {
+    "id": "i_0e5b5fe54d",
+    "type": "overlap",
+    "severity": "blocking",
+    "reason": "duplicate_berth_row",
+    "reservationId": "r_b51d32d34b",
+    "vesselId": null,
+    "relatedReservationIds": [
+      "r_502c0d0d00"
+    ],
+    "detail": "Overlaps OSV Wild Star (1998-09-16 to 1998-09-21, 1998!Q92:V92) on the same berth; both were in the legacy grid, so neither was dropped. Decide which stay is real.",
+    "sourceRef": "1998!O93:U93"
+  },
+  {
+    "id": "i_0e6681a288",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_aa9d8ffb81",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"Science stroll\" is written at 2012!AF20 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2012!AF20"
+  },
+  {
+    "id": "i_0e7dcb7ef2",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_79b8f8e279",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"M/Y Deep Compass\" is written at 2014!AJ85 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2014!AJ85"
+  },
+  {
+    "id": "i_1116f4b4af",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_1a523e4cfb",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"Barge Grey Dory\" is written at 2015!AH120 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2015!AH120"
+  },
+  {
+    "id": "i_12f1f815c3",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_0d0a71b9d9",
+    "vesselId": null,
+    "relatedReservationIds": [
+      "r_cf71ee84a4"
+    ],
+    "detail": "The bar at 2008!D119:G119 runs straight into 2 banner-coloured cells at the start of the month (2008!B119:C119, 2008-11-01 to 2008-11-02). Bare cells of that colour are decoration and were not counted, but they may be painted over the first 2 days of this stay. On the other side of them the same berth is held by R/V Golden Compass (2008-10-23 to 2008-10-31, 2008!X108:AF108), so the two may be one stay.",
+    "sourceRef": "2008!D119:G119"
+  },
+  {
+    "id": "i_136fe5b133",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_3de8a5636d",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"R/V Golden Horizon\" is written at 2009!D66 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2009!D66"
+  },
+  {
+    "id": "i_1379832831",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "shared_bar",
+    "reservationId": "r_8c7d7cdfb3",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The bar 2001!R94:AB94 names more than one occupant: possible double-booking or handover; imported as back-to-back stays split at the second name.",
+    "sourceRef": "2001!V94:AB94"
+  },
+  {
+    "id": "i_13a2d14f12",
+    "type": "unlabelled",
+    "severity": "blocking",
+    "reason": "no_label",
+    "reservationId": "r_8dd88474dd",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The coloured bar at 2015!P97 (2015-08-09 to 2015-08-09) names no vessel or event; identify the occupant or delete the row.",
+    "sourceRef": "2015!P97"
+  },
+  {
+    "id": "i_13f9e9ddd5",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_7f5c350ec7",
+    "vesselId": null,
+    "relatedReservationIds": [
+      "r_6f0dcbdeff"
+    ],
+    "detail": "The bar at 2004!F53:G53 runs straight into 4 banner-coloured cells at the start of the month (2004!B53:E53, 2004-04-01 to 2004-04-04). Bare cells of that colour are decoration and were not counted, but they may be painted over the first 4 days of this stay. On the other side of them the same berth is held by F/V Long Strand (2004-03-28 to 2004-03-30, 2004!AC42:AE42), so the two may be one stay.",
+    "sourceRef": "2004!F53:G53"
+  },
+  {
+    "id": "i_16dfbf5499",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_22cfad5f1a",
+    "vesselId": null,
+    "relatedReservationIds": [
+      "r_7d25be4dc7"
+    ],
+    "detail": "The bar at 2014!I82:M82 runs straight into 2 banner-coloured cells at the start of the month (2014!G82:H82, 2014-07-01 to 2014-07-02). Bare cells of that colour are decoration and were not counted, but they may be painted over the first 2 days of this stay. On the other side of them the same berth is held by M/V Northern Harbor (2014-06-21 to 2014-06-30, 2014!AA70:AJ70), so the two may be one stay.",
+    "sourceRef": "2014!I82:M82"
+  },
+  {
+    "id": "i_18a16a1cd1",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_008f79cf58",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The bar at 2010!F112:S112 runs straight into 4 banner-coloured cells at the start of the month (2010!B112:E112, 2010-10-01 to 2010-10-04). Bare cells of that colour are decoration and were not counted, but they may be painted over the first 4 days of this stay.",
+    "sourceRef": "2010!F112:S112"
+  },
+  {
+    "id": "i_18c5b30720",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_4b979ee2f1",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"R/V Long Ketch\" is written at 2017!S60 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2017!S60"
+  },
+  {
+    "id": "i_198de64454",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "shared_bar",
+    "reservationId": "r_613823cf88",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The bar 2015!S92:AL92 names more than one occupant: possible double-booking or handover; imported as back-to-back stays split at the second name.",
+    "sourceRef": "2015!S92:Z92"
+  },
+  {
+    "id": "i_1aa25704f9",
+    "type": "unlabelled",
+    "severity": "blocking",
+    "reason": "no_label",
+    "reservationId": "r_fe0d667146",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The coloured bar at 2003!U47 (2003-04-20 to 2003-04-20) names no vessel or event; identify the occupant or delete the row.",
+    "sourceRef": "2003!U47"
+  },
+  {
+    "id": "i_1b083d1bc8",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_e45df17917",
+    "vesselId": null,
+    "relatedReservationIds": [
+      "r_67bce48180"
+    ],
+    "detail": "The bar at 2006!O130:AD130 runs straight into 2 banner-coloured cells at the end of the month (2006!AE130:AF130, 2006-12-30 to 2006-12-31). Bare cells of that colour are decoration and were not counted, but they may be painted over the last 2 days of this stay. On the other side of them the same berth is held by R/V Clear Sextant (2007-01-01 to 2008-02-29, 2007!B8:AF8), so the two may be one stay.",
+    "sourceRef": "2006!O130:AD130"
+  },
+  {
+    "id": "i_1bb7c7ec38",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_516a1c2c0f",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"R/V LONG ANCHOR\" is written at 2002!L59 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2002!L59"
+  },
+  {
+    "id": "i_1be7d70892",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_dcb86ddb05",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"R/V Long Ketch\" is written at 2012!L78 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2012!L78"
+  },
+  {
+    "id": "i_1c57ab073a",
+    "type": "length_conflict",
+    "severity": "warning",
+    "reason": "registry_conflict",
+    "reservationId": null,
+    "vesselId": "v_deep-reef",
+    "relatedReservationIds": [],
+    "detail": "M/V Deep Reef has more than one length on file (24 ft, 100 ft); fit checks are off for this vessel until one is confirmed.",
+    "sourceRef": null
+  },
+  {
+    "id": "i_1c868641d9",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_1afdb8149b",
+    "vesselId": null,
+    "relatedReservationIds": [
+      "r_fd84af4915"
+    ],
+    "detail": "The bar at 2004!P40:AD40 runs straight into 2 banner-coloured cells at the end of the month (2004!AE40:AF40, 2004-03-30 to 2004-03-31). Bare cells of that colour are decoration and were not counted, but they may be painted over the last 2 days of this stay. On the other side of them the same berth is held by R/V Clear Sextant (2004-04-01 to 2004-04-10, 2004!B51:K51), so the two may be one stay.",
+    "sourceRef": "2004!P40:AD40"
+  },
+  {
+    "id": "i_1cb6e52810",
+    "type": "unlabelled",
+    "severity": "blocking",
+    "reason": "no_label",
+    "reservationId": "r_dbbfa61aa0",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The coloured bar at 2012!G103 (2012-09-03 to 2012-09-03) names no vessel or event; identify the occupant or delete the row.",
+    "sourceRef": "2012!G103"
+  },
+  {
+    "id": "i_1ec8c3ed43",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_2bc9c0b98c",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The bar at 2009!E76:I76 runs straight into 3 banner-coloured cells at the start of the month (2009!B76:D76, 2009-07-01 to 2009-07-03). Bare cells of that colour are decoration and were not counted, but they may be painted over the first 3 days of this stay.",
+    "sourceRef": "2009!E76:I76"
+  },
+  {
+    "id": "i_1f139843de",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_5abb05530b",
+    "vesselId": null,
+    "relatedReservationIds": [
+      "r_fb915e72b6"
+    ],
+    "detail": "The bar at 2009!O130:AC130 runs straight into 3 banner-coloured cells at the end of the month (2009!AD130:AF130, 2009-12-29 to 2009-12-31). Bare cells of that colour are decoration and were not counted, but they may be painted over the last 3 days of this stay. On the other side of them the same berth is held by R/V Golden Compass (2010-01-01 to 2010-01-08, 2010!E8:L8), so the two may be one stay.",
+    "sourceRef": "2009!O130:AC130"
+  },
+  {
+    "id": "i_1f735c0a7c",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_af5810c6da",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"OSV Bright Ledge\" is written at 2015!L132 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2015!L132"
+  },
+  {
+    "id": "i_1fc57a657d",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_48f6120b30",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The bar at 2017!AA20:AB20 runs straight into 2 banner-coloured cells at the end of the month (2017!AC20:AD20, 2017-02-27 to 2017-02-28). Bare cells of that colour are decoration and were not counted, but they may be painted over the last 2 days of this stay.",
+    "sourceRef": "2017!AA20:AB20"
+  },
+  {
+    "id": "i_22b726b258",
+    "type": "unlabelled",
+    "severity": "blocking",
+    "reason": "notes_only",
+    "reservationId": "r_34fa2dec38",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The coloured bar at 2017!P110 (2017-09-14 to 2017-09-14) names no vessel or event; identify the occupant or delete the row.",
+    "sourceRef": "2017!P110"
+  },
+  {
+    "id": "i_235bde8a51",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_50c7d94ba4",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"M/V Bright Cove\" is written at 2016!R73 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2016!R73"
+  },
+  {
+    "id": "i_25a761a9d7",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_b240ac7d1e",
+    "vesselId": null,
+    "relatedReservationIds": [
+      "r_a6345aeb51"
+    ],
+    "detail": "The bar at 2013!AF119:AH119 runs straight into 1 banner-coloured cell at the end of the month (2013!AI119, 2013-11-30). Bare cells of that colour are decoration and were not counted, but they may be painted over the last day of this stay. On the other side of them the same berth is held by R/V Golden Compass (2013-12-01 to 2014-02-04, 2013!D130:AJ130), so the two may be one stay.",
+    "sourceRef": "2013!AF119:AH119"
+  },
+  {
+    "id": "i_25e467110a",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_86d0e3fb70",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"R/V Golden Horizon\" is written at 2009!F122 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2009!F122"
+  },
+  {
+    "id": "i_25e8ee1a47",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "shared_bar",
+    "reservationId": "r_57f73021d0",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The bar 2011!AF76:AG76 names more than one occupant: possible double-booking or handover; imported as back-to-back stays split at the second name.",
+    "sourceRef": "2011!AG76"
+  },
+  {
+    "id": "i_262c291c50",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_8ad3a718d2",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"S/V Green Petrel\" is written at 2001!V86 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2001!V86"
+  },
+  {
+    "id": "i_265957a27e",
+    "type": "unlabelled",
+    "severity": "blocking",
+    "reason": "no_label",
+    "reservationId": "r_f9810bf10a",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The coloured bar at 2013!F113:P113 (2013-10-01 to 2013-10-11) names no vessel or event; identify the occupant or delete the row.",
+    "sourceRef": "2013!F113:P113"
+  },
+  {
+    "id": "i_265a07bf83",
+    "type": "unlabelled",
+    "severity": "blocking",
+    "reason": "no_label",
+    "reservationId": "r_922f3c58f2",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The coloured bar at 1999!F82:G82 (1999-08-05 to 1999-08-06) names no vessel or event; identify the occupant or delete the row.",
+    "sourceRef": "1999!F82:G82"
+  },
+  {
+    "id": "i_26ce898d94",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "shared_bar",
+    "reservationId": "r_63b48f7260",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The bar 2010!B85:T85 names more than one occupant: possible double-booking or handover; imported as back-to-back stays split at the second name.",
+    "sourceRef": "2010!H85:T85"
+  },
+  {
+    "id": "i_277e9d5d52",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_f01cd74f45",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"M/V Green Tern\" is written at 2011!J44 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2011!J44"
+  },
+  {
+    "id": "i_283db41ba3",
+    "type": "unlabelled",
+    "severity": "blocking",
+    "reason": "no_label",
+    "reservationId": "r_1a4d5ac4d5",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The coloured bar at 2016!T94 (2016-08-18 to 2016-08-18) names no vessel or event; identify the occupant or delete the row.",
+    "sourceRef": "2016!T94"
+  },
+  {
+    "id": "i_2911595189",
+    "type": "unlabelled",
+    "severity": "blocking",
+    "reason": "no_label",
+    "reservationId": "r_e9e2d98538",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The coloured bar at 2011!F101 (2011-09-04 to 2011-09-04) names no vessel or event; identify the occupant or delete the row.",
+    "sourceRef": "2011!F101"
+  },
+  {
+    "id": "i_291ea52efd",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_37435896c3",
+    "vesselId": null,
+    "relatedReservationIds": [
+      "r_f31e2e24a2"
+    ],
+    "detail": "The bar at 2008!N97:AD97 runs straight into 1 banner-coloured cell at the end of the month (2008!AE97, 2008-09-30). Bare cells of that colour are decoration and were not counted, but they may be painted over the last day of this stay. On the other side of them the same berth is held by R/V Golden Compass (2008-10-01, 2008!B108), so the two may be one stay.",
+    "sourceRef": "2008!N97:AD97"
+  },
+  {
+    "id": "i_2a0899f838",
+    "type": "overlap",
+    "severity": "blocking",
+    "reason": "duplicate_berth_row",
+    "reservationId": "r_3815f4c0fe",
+    "vesselId": null,
+    "relatedReservationIds": [
+      "r_7bd2fee188"
+    ],
+    "detail": "Overlaps \"Utility work on pier face\" (2017-07-11 to 2017-07-15, 2017!M88:Q88) on the same berth; both were in the legacy grid, so neither was dropped. Decide which stay is real.",
+    "sourceRef": "2017!K85:T85"
+  },
+  {
+    "id": "i_2a09d708ec",
+    "type": "calendar_defect",
+    "severity": "blocking",
+    "reason": "impossible_date",
+    "reservationId": "r_26b602293b",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The bar reaches 2008!AF61 (printed day 31), which is not a real date; those cells were left out, check the true end of the stay.",
+    "sourceRef": "2008!AD68:AF68"
+  },
+  {
+    "id": "i_2b813770fa",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_9e796ebc49",
+    "vesselId": null,
+    "relatedReservationIds": [
+      "r_3e384f09c7"
+    ],
+    "detail": "The bar at 2012!H63:N63 runs straight into 3 banner-coloured cells at the start of the month (2012!E63:G63, 2012-06-01 to 2012-06-03). Bare cells of that colour are decoration and were not counted, but they may be painted over the first 3 days of this stay. On the other side of them the same berth is held by R/V Golden Compass (2012-04-02 to 2012-05-31, 2012!E52:AI52), so the two may be one stay.",
+    "sourceRef": "2012!H63:N63"
+  },
+  {
+    "id": "i_2d45763eaf",
+    "type": "calendar_defect",
+    "severity": "blocking",
+    "reason": "corrupt_header",
+    "reservationId": "r_be4b98ce86",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "This stay comes from the NOVEMBER 2018 block of sheet 2010, whose header rows are corrupted (day numbers displaced, vessel names where the weekdays belong); its dates are anchored on the printed 7..N and need a human check.",
+    "sourceRef": "2010!P119:Q119"
+  },
+  {
+    "id": "i_2d60417bd1",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_8faf6cd12f",
+    "vesselId": null,
+    "relatedReservationIds": [
+      "r_4ad69729c9"
+    ],
+    "detail": "The bar at 2013!G108:V108 runs straight into 1 banner-coloured cell at the start of the month (2013!F108, 2013-10-01). Bare cells of that colour are decoration and were not counted, but they may be painted over the first day of this stay. On the other side of them the same berth is held by M/Y Blue Tide (2013-06-25 to 2013-09-30, 2013!F97:AI97), so the two may be one stay.",
+    "sourceRef": "2013!G108:V108"
+  },
+  {
+    "id": "i_2d84794920",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_5c85418b58",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"M/V Coral Petrel\" is written at 2011!F122 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2011!F122"
+  },
+  {
+    "id": "i_30cf1be976",
+    "type": "unlabelled",
+    "severity": "blocking",
+    "reason": "no_label",
+    "reservationId": "r_a94db7a027",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The coloured bar at 2011!J85 (2011-08-08 to 2011-08-08) names no vessel or event; identify the occupant or delete the row.",
+    "sourceRef": "2011!J85"
+  },
+  {
+    "id": "i_30f41c66d7",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_bdde9998db",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"R/V Golden Horizon\" is written at 2009!F88 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2009!F88"
+  },
+  {
+    "id": "i_3142769ce6",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_7a02995b3e",
+    "vesselId": null,
+    "relatedReservationIds": [
+      "r_2e687d75c1"
+    ],
+    "detail": "The bar at 2004!Z86:AD86 runs straight into 2 banner-coloured cells at the end of the month (2004!AE86:AF86, 2004-07-30 to 2004-07-31). Bare cells of that colour are decoration and were not counted, but they may be painted over the last 2 days of this stay. On the other side of them the same berth is held by R/V Clear Sextant (2004-08-01 to 2004-08-15, 2004!B97:P97), so the two may be one stay.",
+    "sourceRef": "2004!Z86:AD86"
+  },
+  {
+    "id": "i_316d6b8e65",
+    "type": "unlabelled",
+    "severity": "blocking",
+    "reason": "notes_only",
+    "reservationId": "r_37b7b3d777",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The coloured bar at 2001!J74 (2001-07-09 to 2001-07-09) names no vessel or event; identify the occupant or delete the row.",
+    "sourceRef": "2001!J74"
+  },
+  {
+    "id": "i_317bb387a0",
+    "type": "unlabelled",
+    "severity": "blocking",
+    "reason": "no_label",
+    "reservationId": "r_e767b9f1d9",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The coloured bar at 2010!T130:AB130 (2010-12-19 to 2010-12-27) names no vessel or event; identify the occupant or delete the row.",
+    "sourceRef": "2010!T130:AB130"
+  },
+  {
+    "id": "i_3184a156eb",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_dedea69ae0",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"R/V Golden Horizon\" is written at 2010!C55 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2010!C55"
+  },
+  {
+    "id": "i_32305a8584",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_d492f8309a",
+    "vesselId": null,
+    "relatedReservationIds": [
+      "r_96c47f7638"
+    ],
+    "detail": "The bar at 2015!J110:AG110 runs straight into 4 banner-coloured cells at the end of the month (2015!AH110:AK110, 2015-09-27 to 2015-09-30). Bare cells of that colour are decoration and were not counted, but they may be painted over the last 4 days of this stay. On the other side of them the same berth is held by OSV Amber Reef (2015-10-03 to 2015-10-05, 2015!J122:L122), so the two may be one stay.",
+    "sourceRef": "2015!J110:AG110"
+  },
+  {
+    "id": "i_32f4a9287e",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_d7d915f1d4",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"Student tour\" is written at 2010!S75 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2010!S75"
+  },
+  {
+    "id": "i_33130ef13c",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "shared_bar",
+    "reservationId": "r_22dc6cf73a",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The bar 2010!B85:T85 names more than one occupant: possible double-booking or handover; imported as back-to-back stays split at the second name.",
+    "sourceRef": "2010!D85:G85"
+  },
+  {
+    "id": "i_33a52ab3f7",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "shared_bar",
+    "reservationId": "r_9102c9626a",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The bar 2001!B28:Y28 names more than one occupant: possible double-booking or handover; imported as back-to-back stays split at the second name.",
+    "sourceRef": "2001!D28:Y28"
+  },
+  {
+    "id": "i_340555bfad",
+    "type": "unlabelled",
+    "severity": "blocking",
+    "reason": "notes_only",
+    "reservationId": "r_078f0f818d",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The coloured bar at 1999!V70:Y70 (1999-07-21 to 1999-07-24) names no vessel or event; identify the occupant or delete the row.",
+    "sourceRef": "1999!V70:Y70"
+  },
+  {
+    "id": "i_3462b59a57",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_18bed1308d",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The bar at 2010!AA44 runs straight into 4 banner-coloured cells at the end of the month (2010!AB44:AE44, 2010-04-27 to 2010-04-30). Bare cells of that colour are decoration and were not counted, but they may be painted over the last 4 days of this stay.",
+    "sourceRef": "2010!AA44"
+  },
+  {
+    "id": "i_34b163bdf4",
+    "type": "unlabelled",
+    "severity": "blocking",
+    "reason": "no_label",
+    "reservationId": "r_7410de38c5",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The coloured bar at 2017!N119:T119 (2017-10-12 to 2017-10-18) names no vessel or event; identify the occupant or delete the row.",
+    "sourceRef": "2017!N119:T119"
+  },
+  {
+    "id": "i_35185e9f1e",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_073f3215c0",
+    "vesselId": null,
+    "relatedReservationIds": [
+      "r_846e4511fa"
+    ],
+    "detail": "The bar at 2011!G63:AB63 runs straight into 4 banner-coloured cells at the end of the month (2011!AC63:AF63, 2011-06-27 to 2011-06-30). Bare cells of that colour are decoration and were not counted, but they may be painted over the last 4 days of this stay. On the other side of them the same berth is held by R/V Wild Ledge (2011-07-01 to 2011-07-05, 2011!C74:G74), so the two may be one stay.",
+    "sourceRef": "2011!G63:AB63"
+  },
+  {
+    "id": "i_35644b1449",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_e804174d7b",
+    "vesselId": null,
+    "relatedReservationIds": [
+      "r_315f6d91ee"
+    ],
+    "detail": "The bar at 2007!E65:J65 runs straight into 3 banner-coloured cells at the start of the month (2007!B65:D65, 2007-06-01 to 2007-06-03). Bare cells of that colour are decoration and were not counted, but they may be painted over the first 3 days of this stay. On the other side of them the same berth is held by M/V Northern Harbor (2007-05-14 to 2007-05-31, 2007!O54:AF54), so the two may be one stay.",
+    "sourceRef": "2007!E65:J65"
+  },
+  {
+    "id": "i_35665b4161",
+    "type": "unlabelled",
+    "severity": "blocking",
+    "reason": "no_label",
+    "reservationId": "r_103f63c9a8",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The coloured bar at 1999!H82 (1999-08-07 to 1999-08-07) names no vessel or event; identify the occupant or delete the row.",
+    "sourceRef": "1999!H82"
+  },
+  {
+    "id": "i_36beabb480",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_be00ce9275",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"R/V Long Ketch\" is written at 2019!Z61 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2019!Z61"
+  },
+  {
+    "id": "i_3707e5e7cc",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_2d02dc5f8f",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The bar at 2011!AC65:AE65 runs straight into 1 banner-coloured cell at the end of the month (2011!AF65, 2011-06-30). Bare cells of that colour are decoration and were not counted, but they may be painted over the last day of this stay.",
+    "sourceRef": "2011!AC65:AE65"
+  },
+  {
+    "id": "i_3726e2d211",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_e04dca81fc",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"Tug Far Ledge\" is written at 2013!U131 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2013!U131"
+  },
+  {
+    "id": "i_37bd0b6956",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "shared_bar",
+    "reservationId": "r_cbabf48c23",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The bar 2001!P59:T59 names more than one occupant: possible double-booking or handover; imported as back-to-back stays split at the second name.",
+    "sourceRef": "2001!P59"
+  },
+  {
+    "id": "i_37dc2d88cb",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_4d77900eb4",
+    "vesselId": null,
+    "relatedReservationIds": [
+      "r_b6fc8f33c2"
+    ],
+    "detail": "The bar at 2010!AC63 runs straight into 2 banner-coloured cells at the end of the month (2010!AD63:AE63, 2010-06-29 to 2010-06-30). Bare cells of that colour are decoration and were not counted, but they may be painted over the last 2 days of this stay. On the other side of them the same berth is held by R/V Blue Voyager (2010-07-01 to 2010-07-02, 2010!B74:C74), so the two may be one stay.",
+    "sourceRef": "2010!AC63"
+  },
+  {
+    "id": "i_3881086da6",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_407eab4806",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"R/V Golden Horizon\" is written at 2010!B66 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2010!B66"
+  },
+  {
+    "id": "i_395f431e1b",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_2f3095a5f2",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"S/V Western Compass\" is written at 2011!O76 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2011!O76"
+  },
+  {
+    "id": "i_3a060f02bc",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_d701d3842c",
+    "vesselId": null,
+    "relatedReservationIds": [
+      "r_96e6af24db"
+    ],
+    "detail": "The bar at 2007!AC110 runs straight into 3 banner-coloured cells at the end of the month (2007!AD110:AF110, 2007-10-29 to 2007-10-31). Bare cells of that colour are decoration and were not counted, but they may be painted over the last 3 days of this stay. On the other side of them the same berth is held by M/V Northern Harbor (2007-11-05 to 2007-11-10, 2007!F121:K121), so the two may be one stay.",
+    "sourceRef": "2007!AC110"
+  },
+  {
+    "id": "i_3a6cee4076",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "merge_before_month_start",
+    "reservationId": "r_c6edf12c59",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The merged bar 2012!D43:P43 starts left of the day-1 column of its month; it was cut at day 1.",
+    "sourceRef": "2012!D43:P43"
+  },
+  {
+    "id": "i_3ac871f6f6",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_5347ea3c35",
+    "vesselId": null,
+    "relatedReservationIds": [
+      "r_a7828191d5"
+    ],
+    "detail": "The bar at 2015!K117:U117 runs straight into 3 banner-coloured cells at the start of the month (2015!H117:J117, 2015-10-01 to 2015-10-03). Bare cells of that colour are decoration and were not counted, but they may be painted over the first 3 days of this stay. On the other side of them the same berth is held by R/V Golden Compass (2015-09-21 to 2015-09-30, 2015!AB105:AK105), so the two may be one stay.",
+    "sourceRef": "2015!K117:U117"
+  },
+  {
+    "id": "i_3accc69584",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_9310d09408",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"Barge Silver Voyager\" is written at 2009!AB32 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2009!AB32"
+  },
+  {
+    "id": "i_3b4e71e205",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_ed15a41ec5",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"M/Y Salt Horizon\" is written at 2011!H87 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2011!H87"
+  },
+  {
+    "id": "i_3d33fca079",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_e8384032ae",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"Barge Silver Voyager\" is written at 2011!Y32 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2011!Y32"
+  },
+  {
+    "id": "i_3de596b92e",
+    "type": "unlabelled",
+    "severity": "blocking",
+    "reason": "notes_only",
+    "reservationId": "r_c48dff28b9",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The coloured bar at 2001!D61:E61 (2001-06-03 to 2001-06-04) names no vessel or event; identify the occupant or delete the row.",
+    "sourceRef": "2001!D61:E61"
+  },
+  {
+    "id": "i_3e0325e2ca",
+    "type": "unlabelled",
+    "severity": "blocking",
+    "reason": "no_label",
+    "reservationId": "r_33fd693514",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The coloured bar at 2016!W95 (2016-08-21 to 2016-08-21) names no vessel or event; identify the occupant or delete the row.",
+    "sourceRef": "2016!W95"
+  },
+  {
+    "id": "i_3f43a9bf4d",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_140d5677fc",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"R/V Grey Wind\" is written at 2015!K120 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2015!K120"
+  },
+  {
+    "id": "i_3f52709626",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_c8181fe605",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"Barge Silver Voyager\" is written at 2010!AA32 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2010!AA32"
+  },
+  {
+    "id": "i_4079f65f84",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_d9e424bc02",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The bar at 2009!V110:AD110 runs straight into 2 banner-coloured cells at the end of the month (2009!AE110:AF110, 2009-10-30 to 2009-10-31). Bare cells of that colour are decoration and were not counted, but they may be painted over the last 2 days of this stay.",
+    "sourceRef": "2009!V110:AD110"
+  },
+  {
+    "id": "i_40e7dfd768",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_2edc61e111",
+    "vesselId": null,
+    "relatedReservationIds": [
+      "r_5688277834"
+    ],
+    "detail": "The bar at 2009!D108:E108 runs straight into 2 banner-coloured cells at the start of the month (2009!B108:C108, 2009-10-01 to 2009-10-02). Bare cells of that colour are decoration and were not counted, but they may be painted over the first 2 days of this stay. On the other side of them the same berth is held by M/V Northern Harbor (2009-09-24 to 2009-09-30, 2009!Y97:AE97), so the two may be one stay.",
+    "sourceRef": "2009!D108:E108"
+  },
+  {
+    "id": "i_410552e6e7",
+    "type": "calendar_defect",
+    "severity": "blocking",
+    "reason": "corrupt_header",
+    "reservationId": "r_9ce23bd3db",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "This stay comes from the NOVEMBER 2018 block of sheet 2010, whose header rows are corrupted (day numbers displaced, vessel names where the weekdays belong); its dates are anchored on the printed 7..N and need a human check.",
+    "sourceRef": "2010!AD119:AF119"
+  },
+  {
+    "id": "i_414095fa89",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_7aa6187a90",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"R/V Deep Star\" is written at 2011!P97 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2011!P97"
+  },
+  {
+    "id": "i_41be45905c",
+    "type": "calendar_defect",
+    "severity": "blocking",
+    "reason": "corrupt_header",
+    "reservationId": "r_7725b8cf55",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "This stay comes from the DECEMBER 2018 block of sheet 2010, whose header rows are corrupted (day numbers displaced, vessel names where the weekdays belong); its dates are anchored on the printed 7..N and need a human check. The same corruption pushed this berth row's cells for days 1-6 up one row: 2010!B129:G129 was read as part of this stay.",
+    "sourceRef": "2010!B129:G129;2010!H130:R130"
+  },
+  {
+    "id": "i_41f9be8af4",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_76d152f045",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"R/V Long Ketch\" is written at 2019!N85 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2019!N85"
+  },
+  {
+    "id": "i_421e1cb0ba",
+    "type": "unlabelled",
+    "severity": "blocking",
+    "reason": "no_label",
+    "reservationId": "r_bc9955cfe5",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The coloured bar at 2014!AH73:AJ73 (2014-06-28 to 2014-06-30) names no vessel or event; identify the occupant or delete the row.",
+    "sourceRef": "2014!AH73:AJ73"
+  },
+  {
+    "id": "i_426c05d331",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_d87f7af19a",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The bar at 2010!AC78 runs straight into 3 banner-coloured cells at the end of the month (2010!AD78:AF78, 2010-07-29 to 2010-07-31). Bare cells of that colour are decoration and were not counted, but they may be painted over the last 3 days of this stay.",
+    "sourceRef": "2010!AC78"
+  },
+  {
+    "id": "i_43637cdcde",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_0827950d68",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"M/Y Silver Sextant\" is written at 2011!AG56 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2011!AG56"
+  },
+  {
+    "id": "i_436e9d925b",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_130fd22da8",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"Barge Silver Voyager\" is written at 2018!Y35 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2018!Y35"
+  },
+  {
+    "id": "i_4402f56618",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_0a10583156",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The bar at 2010!AB21 runs straight into 1 banner-coloured cell at the end of the month (2010!AC21, 2010-02-28). Bare cells of that colour are decoration and were not counted, but they may be painted over the last day of this stay.",
+    "sourceRef": "2010!AB21"
+  },
+  {
+    "id": "i_4413485922",
+    "type": "unlabelled",
+    "severity": "blocking",
+    "reason": "notes_only",
+    "reservationId": "r_c85c801d1e",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The coloured bar at 2017!P105 (2017-09-14 to 2017-09-14) names no vessel or event; identify the occupant or delete the row.",
+    "sourceRef": "2017!P105"
+  },
+  {
+    "id": "i_44d7b0504a",
+    "type": "unlabelled",
+    "severity": "blocking",
+    "reason": "notes_only",
+    "reservationId": "r_5a47cb68ee",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The coloured bar at 2017!K113:L113 (2017-09-09 to 2017-09-10) names no vessel or event; identify the occupant or delete the row.",
+    "sourceRef": "2017!K113:L113"
+  },
+  {
+    "id": "i_45a46894fb",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "shared_bar",
+    "reservationId": "r_df69c93085",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The bar 2010!B85:T85 names more than one occupant: possible double-booking or handover; imported as back-to-back stays split at the second name.",
+    "sourceRef": "2010!B85:C85"
+  },
+  {
+    "id": "i_45ab01336e",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_ae26de22e2",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The bar at 2014!AE110:AG110 runs straight into 3 banner-coloured cells at the end of the month (2014!AH110:AJ110, 2014-09-28 to 2014-09-30). Bare cells of that colour are decoration and were not counted, but they may be painted over the last 3 days of this stay.",
+    "sourceRef": "2014!AE110:AG110"
+  },
+  {
+    "id": "i_4603e90a7c",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "shared_bar",
+    "reservationId": "r_4edb010e67",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The bar 2001!Q83:S83 names more than one occupant: possible double-booking or handover; imported as back-to-back stays split at the second name.",
+    "sourceRef": "2001!S83"
+  },
+  {
+    "id": "i_46566b98db",
+    "type": "unlabelled",
+    "severity": "blocking",
+    "reason": "notes_only",
+    "reservationId": "r_f5dce0aab7",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The coloured bar at 2010!S87:X87 (2010-08-18 to 2010-08-23) names no vessel or event; identify the occupant or delete the row.",
+    "sourceRef": "2010!S87:X87"
+  },
+  {
+    "id": "i_46c8d74eb2",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_dca1cf2ed3",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"OSV DEEP HARBOR\" is written at 2001!AC94 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2001!AC94"
+  },
+  {
+    "id": "i_46feeb794f",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_f2148474d4",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"R/V Long Ketch\" is written at 2014!Z60 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2014!Z60"
+  },
+  {
+    "id": "i_4709470b40",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "shared_bar",
+    "reservationId": "r_cf543481be",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The bar 2001!Q83:S83 names more than one occupant: possible double-booking or handover; imported as back-to-back stays split at the second name.",
+    "sourceRef": "2001!Q83:R83"
+  },
+  {
+    "id": "i_4876934a62",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_047a1789ff",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"F/V Silver Strand\" is written at 2010!C98 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2010!C98"
+  },
+  {
+    "id": "i_49f54e75f9",
+    "type": "unlabelled",
+    "severity": "blocking",
+    "reason": "no_label",
+    "reservationId": "r_c04a971b73",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The coloured bar at 1999!I82 (1999-08-08 to 1999-08-08) names no vessel or event; identify the occupant or delete the row.",
+    "sourceRef": "1999!I82"
+  },
+  {
+    "id": "i_49f77ca957",
+    "type": "unlabelled",
+    "severity": "blocking",
+    "reason": "no_label",
+    "reservationId": "r_32e77dcdd3",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The coloured bar at 2015!AJ81 (2015-07-29 to 2015-07-29) names no vessel or event; identify the occupant or delete the row.",
+    "sourceRef": "2015!AJ81"
+  },
+  {
+    "id": "i_4e2004f8db",
+    "type": "unlabelled",
+    "severity": "blocking",
+    "reason": "no_label",
+    "reservationId": "r_ff19f49084",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The coloured bar at 2003!X47:AC47 (2003-04-23 to 2003-04-28) names no vessel or event; identify the occupant or delete the row.",
+    "sourceRef": "2003!X47:AC47"
+  },
+  {
+    "id": "i_4e2f3c8741",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_a80600ba85",
+    "vesselId": null,
+    "relatedReservationIds": [
+      "r_52f73f362b"
+    ],
+    "detail": "The bar at 2015!AK82 runs straight into 1 banner-coloured cell at the end of the month (2015!AL82, 2015-07-31). Bare cells of that colour are decoration and were not counted, but they may be painted over the last day of this stay. On the other side of them the same berth is held by M/Y High Sextant (2015-08-02, 2015!I94), so the two may be one stay.",
+    "sourceRef": "2015!AK82"
+  },
+  {
+    "id": "i_4e60087a6d",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_eda787235f",
+    "vesselId": null,
+    "relatedReservationIds": [
+      "r_a34487eb12"
+    ],
+    "detail": "The bar at 2017!D122 runs straight into 1 banner-coloured cell at the start of the month (2017!C122, 2017-10-01). Bare cells of that colour are decoration and were not counted, but they may be painted over the first day of this stay. On the other side of them the same berth is held by OSV Amber Reef (2017-09-22 to 2017-09-29, 2017!X110:AE110), so the two may be one stay.",
+    "sourceRef": "2017!D122"
+  },
+  {
+    "id": "i_4e82192e16",
+    "type": "unlabelled",
+    "severity": "blocking",
+    "reason": "no_label",
+    "reservationId": "r_ef354e883f",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The coloured bar at 2013!K89 (2013-08-06 to 2013-08-06) names no vessel or event; identify the occupant or delete the row.",
+    "sourceRef": "2013!K89"
+  },
+  {
+    "id": "i_4ede3b99f1",
+    "type": "unlabelled",
+    "severity": "blocking",
+    "reason": "no_label",
+    "reservationId": "r_12c43075f3",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The coloured bar at 2011!H100 (2011-09-06 to 2011-09-06) names no vessel or event; identify the occupant or delete the row.",
+    "sourceRef": "2011!H100"
+  },
+  {
+    "id": "i_4ee93ec4c8",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_77ec829a34",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"M/V NORTHERN HARBOR\" is written at 2006!D30 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2006!D30"
+  },
+  {
+    "id": "i_4f585dc061",
+    "type": "calendar_defect",
+    "severity": "blocking",
+    "reason": "corrupt_header",
+    "reservationId": "r_b651bd37cf",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "This stay comes from the NOVEMBER 2018 block of sheet 2010, whose header rows are corrupted (day numbers displaced, vessel names where the weekdays belong); its dates are anchored on the printed 7..N and need a human check.",
+    "sourceRef": "2010!K119:N119"
+  },
+  {
+    "id": "i_50ca803e59",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_e62d04f161",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"M/Y GREEN LANTERN\" is written at 2006!I10 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2006!I10"
+  },
+  {
+    "id": "i_5198ebec94",
+    "type": "unlabelled",
+    "severity": "blocking",
+    "reason": "no_label",
+    "reservationId": "r_4a26e13ccd",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The coloured bar at 2006!Q100:AE100 (2006-09-16 to 2006-09-30) names no vessel or event; identify the occupant or delete the row.",
+    "sourceRef": "2006!Q100:AE100"
+  },
+  {
+    "id": "i_519aecbfbb",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "merge_past_month_end",
+    "reservationId": "r_a6345aeb51",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The merged bar 2014!B8:AJ8 runs past the last day column of its month; it was cut at the last day.",
+    "sourceRef": "2014!B8:AJ8"
+  },
+  {
+    "id": "i_52230678d8",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_ef171aaefe",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"S/V Western Compass\" is written at 2011!M76 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2011!M76"
+  },
+  {
+    "id": "i_53092c0ac8",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_d75ab285ca",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The bar at 2010!AF10 runs straight into 3 banner-coloured cells at the end of the month (2010!AG10:AI10, 2010-01-29 to 2010-01-31). Bare cells of that colour are decoration and were not counted, but they may be painted over the last 3 days of this stay.",
+    "sourceRef": "2010!AF10"
+  },
+  {
+    "id": "i_536bf8f994",
+    "type": "overlap",
+    "severity": "blocking",
+    "reason": "duplicate_berth_row",
+    "reservationId": "r_e121a93c3e",
+    "vesselId": null,
+    "relatedReservationIds": [
+      "r_5a47cb68ee"
+    ],
+    "detail": "Overlaps an unlabelled bar (2017-09-09 to 2017-09-10, 2017!K113:L113) on the same berth; both were in the legacy grid, so neither was dropped. Decide which stay is real.",
+    "sourceRef": "2017!I110:N110"
+  },
+  {
+    "id": "i_5395144566",
+    "type": "calendar_defect",
+    "severity": "blocking",
+    "reason": "corrupt_header",
+    "reservationId": "r_5178ae7fab",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "This stay comes from the DECEMBER 2018 block of sheet 2010, whose header rows are corrupted (day numbers displaced, vessel names where the weekdays belong); its dates are anchored on the printed 7..N and need a human check.",
+    "sourceRef": "2010!R131"
+  },
+  {
+    "id": "i_53eaf8c88c",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_615ddd4d8e",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"F/V Grey Meridian\" is written at 2009!Y75 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2009!Y75"
+  },
+  {
+    "id": "i_55168ea954",
+    "type": "unlabelled",
+    "severity": "blocking",
+    "reason": "notes_only",
+    "reservationId": "r_7166a7f54f",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The coloured bar at 2011!O74:P74 (2011-07-13 to 2011-07-14) names no vessel or event; identify the occupant or delete the row.",
+    "sourceRef": "2011!O74:P74"
+  },
+  {
+    "id": "i_5542529196",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "merge_before_month_start",
+    "reservationId": "r_b79c50d2fd",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The merged bar 2012!B68:P68 starts left of the day-1 column of its month; it was cut at day 1.",
+    "sourceRef": "2012!B68:P68"
+  },
+  {
+    "id": "i_560f95f0e0",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_2049a4d5b1",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"R/V Grey Wind\" is written at 2015!M120 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2015!M120"
+  },
+  {
+    "id": "i_56ae4557c5",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_2ce061bc12",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"Paving near dock entrance\" is written at 2011!F121 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2011!F121"
+  },
+  {
+    "id": "i_57a7288730",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_b5579660a8",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The bar at 2014!AE46:AI46 runs straight into 1 banner-coloured cell at the end of the month (2014!AJ46, 2014-04-30). Bare cells of that colour are decoration and were not counted, but they may be painted over the last day of this stay.",
+    "sourceRef": "2014!AE46:AI46"
+  },
+  {
+    "id": "i_58978c2c67",
+    "type": "unlabelled",
+    "severity": "blocking",
+    "reason": "no_label",
+    "reservationId": "r_a792c33d10",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The coloured bar at 2008!B13:AF13 (2008-01-01 to 2008-01-31) names no vessel or event; identify the occupant or delete the row.",
+    "sourceRef": "2008!B13:AF13"
+  },
+  {
+    "id": "i_58e007819e",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_60b883943d",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"Rescue drill\" is written at 2013!L102 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2013!L102"
+  },
+  {
+    "id": "i_593fd25a19",
+    "type": "unlabelled",
+    "severity": "blocking",
+    "reason": "no_label",
+    "reservationId": "r_cbe69d3edb",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The coloured bar at 2016!L93 (2016-08-10 to 2016-08-10) names no vessel or event; identify the occupant or delete the row.",
+    "sourceRef": "2016!L93"
+  },
+  {
+    "id": "i_5a5da947bb",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_00b5fa130b",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"M/Y GREEN LANTERN\" is written at 2006!O34 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2006!O34"
+  },
+  {
+    "id": "i_5a655341a8",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_3c705e1442",
+    "vesselId": null,
+    "relatedReservationIds": [
+      "r_f8ad7ed90e"
+    ],
+    "detail": "The bar at 2007!D21:W21 runs straight into 2 banner-coloured cells at the start of the month (2007!B21:C21, 2007-02-01 to 2007-02-02). Bare cells of that colour are decoration and were not counted, but they may be painted over the first 2 days of this stay. On the other side of them the same berth is held by M/V Coral Lantern (2007-01-01 to 2007-01-31, 2007!B10:AF10), so the two may be one stay.",
+    "sourceRef": "2007!D21:W21"
+  },
+  {
+    "id": "i_5abf2865ed",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_96e6af24db",
+    "vesselId": null,
+    "relatedReservationIds": [
+      "r_d701d3842c"
+    ],
+    "detail": "The bar at 2007!F121:K121 runs straight into 4 banner-coloured cells at the start of the month (2007!B121:E121, 2007-11-01 to 2007-11-04). Bare cells of that colour are decoration and were not counted, but they may be painted over the first 4 days of this stay. On the other side of them the same berth is held by M/V Northern Harbor (2007-10-28, 2007!AC110), so the two may be one stay.",
+    "sourceRef": "2007!F121:K121"
+  },
+  {
+    "id": "i_5b137287ed",
+    "type": "unlabelled",
+    "severity": "blocking",
+    "reason": "no_label",
+    "reservationId": "r_5efb130808",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The coloured bar at 2001!AB28 (2001-03-27 to 2001-03-27) names no vessel or event; identify the occupant or delete the row.",
+    "sourceRef": "2001!AB28"
+  },
+  {
+    "id": "i_5c314100eb",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_bce765b339",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"R/V Long Ketch\" is written at 2018!Z61 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2018!Z61"
+  },
+  {
+    "id": "i_5d129ddb6e",
+    "type": "unlabelled",
+    "severity": "blocking",
+    "reason": "notes_only",
+    "reservationId": "r_4e1c66b1ba",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The coloured bar at 2016!V57:W57 (2016-05-20 to 2016-05-21) names no vessel or event; identify the occupant or delete the row.",
+    "sourceRef": "2016!V57:W57"
+  },
+  {
+    "id": "i_5d8170eb11",
+    "type": "length_conflict",
+    "severity": "warning",
+    "reason": "registry_conflict",
+    "reservationId": null,
+    "vesselId": "v_high-reef",
+    "relatedReservationIds": [],
+    "detail": "R/V High Reef has more than one length on file (32 ft, 72 ft); fit checks are off for this vessel until one is confirmed.",
+    "sourceRef": null
+  },
+  {
+    "id": "i_5da46bbb91",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_6b1268fd6a",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"M/V Western Harbor\" is written at 2012!H103 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2012!H103"
+  },
+  {
+    "id": "i_5dbee27d75",
+    "type": "unlabelled",
+    "severity": "blocking",
+    "reason": "notes_only",
+    "reservationId": "r_740dbebbf6",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The coloured bar at 2011!V99 (2011-09-20 to 2011-09-20) names no vessel or event; identify the occupant or delete the row.",
+    "sourceRef": "2011!V99"
+  },
+  {
+    "id": "i_5dd13225a4",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_dcd3a5df90",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"R/V WESTERN DRIFT\" is written at 2009!N75 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2009!N75"
+  },
+  {
+    "id": "i_5e2e6d7077",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_2da8d2aee2",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"Tug Silver Tern\" is written at 2015!T120 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2015!T120"
+  },
+  {
+    "id": "i_5e4cb277ab",
+    "type": "unlabelled",
+    "severity": "blocking",
+    "reason": "no_label",
+    "reservationId": "r_4e2a9aa08e",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The coloured bar at 2015!U95 (2015-08-14 to 2015-08-14) names no vessel or event; identify the occupant or delete the row.",
+    "sourceRef": "2015!U95"
+  },
+  {
+    "id": "i_5e4cdc805b",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_36f32292bd",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"F/V SALT FATHOM\" is written at 2010!AB120 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2010!AB120"
+  },
+  {
+    "id": "i_611e1127fd",
+    "type": "calendar_defect",
+    "severity": "blocking",
+    "reason": "corrupt_header",
+    "reservationId": "r_8f67f2d23f",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "This stay comes from the NOVEMBER 2018 block of sheet 2010, whose header rows are corrupted (day numbers displaced, vessel names where the weekdays belong); its dates are anchored on the printed 7..N and need a human check.",
+    "sourceRef": "2010!AA121:AE121"
+  },
+  {
+    "id": "i_6174028bf4",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_a83564ba2c",
+    "vesselId": null,
+    "relatedReservationIds": [
+      "r_b2acc0cf5a"
+    ],
+    "detail": "The bar at 2014!Y144:AH144 runs straight into 3 banner-coloured cells at the end of the month (2014!AI144:AK144, 2014-12-29 to 2014-12-31). Bare cells of that colour are decoration and were not counted, but they may be painted over the last 3 days of this stay. On the other side of them the same berth is held by Tug Golden Sound (2015-01-03 to 2015-01-04, 2015!F10:G10), so the two may be one stay.",
+    "sourceRef": "2014!Y144:AH144"
+  },
+  {
+    "id": "i_61a992c8ed",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "shared_bar",
+    "reservationId": "r_64a359305b",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The bar 2001!P59:T59 names more than one occupant: possible double-booking or handover; imported as back-to-back stays split at the second name.",
+    "sourceRef": "2001!Q59:T59"
+  },
+  {
+    "id": "i_61b4ef9749",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_ab30ac48c1",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"Barge Grey Dory\" is written at 2015!U120 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2015!U120"
+  },
+  {
+    "id": "i_61bcb1d4ff",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_9cf38e290f",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"R/V Golden Horizon\" is written at 2009!C111 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2009!C111"
+  },
+  {
+    "id": "i_6374919c82",
+    "type": "unlabelled",
+    "severity": "blocking",
+    "reason": "no_label",
+    "reservationId": "r_37cd7e7d23",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The coloured bar at 2015!AL85 (2015-07-31 to 2015-07-31) names no vessel or event; identify the occupant or delete the row.",
+    "sourceRef": "2015!AL85"
+  },
+  {
+    "id": "i_63a17736fb",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_aeb41d1e3d",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"R/V Long Ketch\" is written at 2017!L60 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2017!L60"
+  },
+  {
+    "id": "i_649eca07f4",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_de079a2afb",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"R/V LONG ANCHOR\" is written at 2002!I59 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2002!I59"
+  },
+  {
+    "id": "i_65a36a9f3c",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_8b80f02e7d",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The bar at 2012!K101:AE101 runs straight into 3 banner-coloured cells at the end of the month (2012!AF101:AH101, 2012-09-28 to 2012-09-30). Bare cells of that colour are decoration and were not counted, but they may be painted over the last 3 days of this stay.",
+    "sourceRef": "2012!K101:AE101"
+  },
+  {
+    "id": "i_65da035a2b",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "shared_bar",
+    "reservationId": "r_975d152666",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The bar 2012!AE86:AI86 names more than one occupant: possible double-booking or handover; imported as back-to-back stays split at the second name.",
+    "sourceRef": "2012!AE86"
+  },
+  {
+    "id": "i_65fc1d2499",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_23c58dc514",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"R/V Long Ketch\" is written at 2017!M84 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2017!M84"
+  },
+  {
+    "id": "i_676eb56a8f",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "shared_bar",
+    "reservationId": "r_cc0442c51c",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The bar 2001!R94:AB94 names more than one occupant: possible double-booking or handover; imported as back-to-back stays split at the second name.",
+    "sourceRef": "2001!R94:U94"
+  },
+  {
+    "id": "i_6794911528",
+    "type": "overlap",
+    "severity": "blocking",
+    "reason": "duplicate_berth_row",
+    "reservationId": "r_b4fc18fea1",
+    "vesselId": null,
+    "relatedReservationIds": [
+      "r_8408139144"
+    ],
+    "detail": "Overlaps OSV Wild Star (1998-09-25 to 1998-09-27, 1998!Z92:AB92) on the same berth; both were in the legacy grid, so neither was dropped. Decide which stay is real.",
+    "sourceRef": "1998!Y93:AA93"
+  },
+  {
+    "id": "i_67cee34486",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_33d9e063fb",
+    "vesselId": null,
+    "relatedReservationIds": [
+      "r_8d61419ba3"
+    ],
+    "detail": "The bar at 2012!AD74:AH74 runs straight into 1 banner-coloured cell at the end of the month (2012!AI74, 2012-07-31). Bare cells of that colour are decoration and were not counted, but they may be painted over the last day of this stay. On the other side of them the same berth is held by R/V Golden Compass (2012-08-01 to 2012-08-08, 2012!E86:L86), so the two may be one stay.",
+    "sourceRef": "2012!AD74:AH74"
+  },
+  {
+    "id": "i_68fec3e4ee",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_e736682878",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"R/V Long Ketch\" is written at 2014!R60 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2014!R60"
+  },
+  {
+    "id": "i_69ac743855",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_e37a194a7b",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"R/V Golden Horizon\" is written at 2009!D133 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2009!D133"
+  },
+  {
+    "id": "i_6a8700f60d",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "shared_bar",
+    "reservationId": "r_f128d10a52",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The bar 2012!AE86:AI86 names more than one occupant: possible double-booking or handover; imported as back-to-back stays split at the second name.",
+    "sourceRef": "2012!AF86:AI86"
+  },
+  {
+    "id": "i_6aad659f09",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_94a609f4d9",
+    "vesselId": null,
+    "relatedReservationIds": [
+      "r_7a806b54a1"
+    ],
+    "detail": "The bar at 2010!AD75:AE75 runs straight into 1 banner-coloured cell at the end of the month (2010!AF75, 2010-07-31). Bare cells of that colour are decoration and were not counted, but they may be painted over the last day of this stay. On the other side of them the same berth is held by R/V Clear Tern (2010-08-01 to 2010-08-03, 2010!B86:D86), so the two may be one stay.",
+    "sourceRef": "2010!AD75:AE75"
+  },
+  {
+    "id": "i_6b4f7d78e7",
+    "type": "unlabelled",
+    "severity": "blocking",
+    "reason": "no_label",
+    "reservationId": "r_9c62524532",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The coloured bar at 2010!L43 (2010-04-11 to 2010-04-11) names no vessel or event; identify the occupant or delete the row.",
+    "sourceRef": "2010!L43"
+  },
+  {
+    "id": "i_6b9518baea",
+    "type": "unlabelled",
+    "severity": "blocking",
+    "reason": "no_label",
+    "reservationId": "r_8ea752ecdf",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The coloured bar at 2016!L94 (2016-08-10 to 2016-08-10) names no vessel or event; identify the occupant or delete the row.",
+    "sourceRef": "2016!L94"
+  },
+  {
+    "id": "i_6c2f00d81b",
+    "type": "unlabelled",
+    "severity": "blocking",
+    "reason": "no_label",
+    "reservationId": "r_b751453991",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The coloured bar at 2000!AE60 (2000-06-30 to 2000-06-30) names no vessel or event; identify the occupant or delete the row.",
+    "sourceRef": "2000!AE60"
+  },
+  {
+    "id": "i_6c93411c8e",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_d47d1198aa",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"Barge Silver Voyager\" is written at 2014!Y34 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2014!Y34"
+  },
+  {
+    "id": "i_6cbd948b34",
+    "type": "length_conflict",
+    "severity": "warning",
+    "reason": "registry_conflict",
+    "reservationId": null,
+    "vesselId": "v_iron-ketch",
+    "relatedReservationIds": [],
+    "detail": "R/V Iron Ketch has more than one length on file (46 ft, 65 ft); fit checks are off for this vessel until one is confirmed.",
+    "sourceRef": null
+  },
+  {
+    "id": "i_6cf39f10ab",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_31a978b869",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The bar at 2015!AK60 runs straight into 1 banner-coloured cell at the end of the month (2015!AL60, 2015-05-31). Bare cells of that colour are decoration and were not counted, but they may be painted over the last day of this stay.",
+    "sourceRef": "2015!AK60"
+  },
+  {
+    "id": "i_6dcfad7667",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_b05d356051",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The bar at 2007!D132:H132 runs straight into 2 banner-coloured cells at the start of the month (2007!B132:C132, 2007-12-01 to 2007-12-02). Bare cells of that colour are decoration and were not counted, but they may be painted over the first 2 days of this stay.",
+    "sourceRef": "2007!D132:H132"
+  },
+  {
+    "id": "i_6ee51095f0",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_3e384f09c7",
+    "vesselId": null,
+    "relatedReservationIds": [
+      "r_a330ec139f"
+    ],
+    "detail": "The bar at 2012!F41:AE41 runs straight into 1 banner-coloured cell at the start of the month (2012!E41, 2012-04-01). Bare cells of that colour are decoration and were not counted, but they may be painted over the first day of this stay. On the other side of them the same berth is held by R/V Golden Compass (2012-03-15 to 2012-03-30, 2012!S30:AH30), so the two may be one stay.",
+    "sourceRef": "2012!F41:AE41"
+  },
+  {
+    "id": "i_6eef7bdccb",
+    "type": "unlabelled",
+    "severity": "blocking",
+    "reason": "no_label",
+    "reservationId": "r_38077530a8",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The coloured bar at 2010!T64:U64 (2010-06-19 to 2010-06-20) names no vessel or event; identify the occupant or delete the row.",
+    "sourceRef": "2010!T64:U64"
+  },
+  {
+    "id": "i_6f2b4c1d25",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "shared_bar",
+    "reservationId": "r_e7d9bd6126",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The bar 2015!S92:AL92 names more than one occupant: possible double-booking or handover; imported as back-to-back stays split at the second name.",
+    "sourceRef": "2015!AA92:AL92"
+  },
+  {
+    "id": "i_6f2ed144e5",
+    "type": "calendar_defect",
+    "severity": "blocking",
+    "reason": "corrupt_header",
+    "reservationId": "r_2e7c2139ec",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "This stay comes from the DECEMBER 2018 block of sheet 2010, whose header rows are corrupted (day numbers displaced, vessel names where the weekdays belong); its dates are anchored on the printed 7..N and need a human check.",
+    "sourceRef": "2010!B132"
+  },
+  {
+    "id": "i_6f5d0eabd9",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_82dca7100d",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"F/V Western Meridian\" is written at 2015!AA120 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2015!AA120"
+  },
+  {
+    "id": "i_70847e304b",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_f318c1d74a",
+    "vesselId": null,
+    "relatedReservationIds": [
+      "r_3f930dfb5c"
+    ],
+    "detail": "The bar at 2007!C68:F68 runs straight into 1 banner-coloured cell at the start of the month (2007!B68, 2007-06-01). Bare cells of that colour are decoration and were not counted, but they may be painted over the first day of this stay. On the other side of them the same berth is held by OSV Amber Reef (2007-05-23 to 2007-05-28, 2007!X57:AC57), so the two may be one stay.",
+    "sourceRef": "2007!C68:F68"
+  },
+  {
+    "id": "i_71598a367e",
+    "type": "unlabelled",
+    "severity": "blocking",
+    "reason": "notes_only",
+    "reservationId": "r_cc7c55df74",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The coloured bar at 2010!G41:I41 (2010-04-06 to 2010-04-08) names no vessel or event; identify the occupant or delete the row.",
+    "sourceRef": "2010!G41:I41"
+  },
+  {
+    "id": "i_7220fe8f32",
+    "type": "unlabelled",
+    "severity": "blocking",
+    "reason": "no_label",
+    "reservationId": "r_8ae97d78ae",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The coloured bar at 2007!B135:AF135 (2007-12-01 to 2007-12-31) names no vessel or event; identify the occupant or delete the row.",
+    "sourceRef": "2007!B135:AF135"
+  },
+  {
+    "id": "i_732c352721",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_56d5a76da6",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"Barge Silver Voyager\" is written at 2016!Y35 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2016!Y35"
+  },
+  {
+    "id": "i_7648b3e278",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_c6859d7f33",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"R/V Deep Star\" is written at 2011!W97 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2011!W97"
+  },
+  {
+    "id": "i_76573b3e7c",
+    "type": "unlabelled",
+    "severity": "blocking",
+    "reason": "no_label",
+    "reservationId": "r_4d62f066c2",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The coloured bar at 2006!O110 (2006-10-14 to 2006-10-14) names no vessel or event; identify the occupant or delete the row.",
+    "sourceRef": "2006!O110"
+  },
+  {
+    "id": "i_76f2f9c7a8",
+    "type": "unlabelled",
+    "severity": "blocking",
+    "reason": "no_label",
+    "reservationId": "r_042ffeb2da",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The coloured bar at 2003!L69:P69 (2003-06-11 to 2003-06-15) names no vessel or event; identify the occupant or delete the row.",
+    "sourceRef": "2003!L69:P69"
+  },
+  {
+    "id": "i_77615f04b2",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_4c0f2248bb",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"M/V NORTHERN HARBOR\" is written at 2014!K35 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2014!K35"
+  },
+  {
+    "id": "i_7798edba98",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_75216c75ad",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The bar at 2011!D79:E79 runs straight into 1 banner-coloured cell at the start of the month (2011!C79, 2011-07-01). Bare cells of that colour are decoration and were not counted, but they may be painted over the first day of this stay.",
+    "sourceRef": "2011!D79:E79"
+  },
+  {
+    "id": "i_783204947a",
+    "type": "unlabelled",
+    "severity": "blocking",
+    "reason": "no_label",
+    "reservationId": "r_145fe59a25",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The coloured bar at 2016!N96 (2016-08-12 to 2016-08-12) names no vessel or event; identify the occupant or delete the row.",
+    "sourceRef": "2016!N96"
+  },
+  {
+    "id": "i_783243bbe3",
+    "type": "unlabelled",
+    "severity": "blocking",
+    "reason": "no_label",
+    "reservationId": "r_f0f76b1d6b",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The coloured bar at 2016!V69 (2016-06-20 to 2016-06-20) names no vessel or event; identify the occupant or delete the row.",
+    "sourceRef": "2016!V69"
+  },
+  {
+    "id": "i_790b948c4f",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_b09ef48d4d",
+    "vesselId": null,
+    "relatedReservationIds": [
+      "r_9c194ab2aa"
+    ],
+    "detail": "The bar at 2004!Z84:AC84 runs straight into 3 banner-coloured cells at the end of the month (2004!AD84:AF84, 2004-07-29 to 2004-07-31). Bare cells of that colour are decoration and were not counted, but they may be painted over the last 3 days of this stay. On the other side of them the same berth is held by R/V Deep Osprey (2004-08-01 to 2004-08-06, 2004!B95:G95), so the two may be one stay.",
+    "sourceRef": "2004!Z84:AC84"
+  },
+  {
+    "id": "i_7b6373a7dd",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "merge_before_month_start",
+    "reservationId": "r_cf77f233ba",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The merged bar 2011!B85:G85 starts left of the day-1 column of its month; it was cut at day 1.",
+    "sourceRef": "2011!B85:G85"
+  },
+  {
+    "id": "i_7bfc19f338",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_1ed019b4ee",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"R/V Long Compass\" is written at 2013!C11 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2013!C11"
+  },
+  {
+    "id": "i_7d03ab97c3",
+    "type": "unlabelled",
+    "severity": "blocking",
+    "reason": "no_label",
+    "reservationId": "r_d3795cd119",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The coloured bar at 2016!V96 (2016-08-20 to 2016-08-20) names no vessel or event; identify the occupant or delete the row.",
+    "sourceRef": "2016!V96"
+  },
+  {
+    "id": "i_7d9cf30c9c",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_3f930dfb5c",
+    "vesselId": null,
+    "relatedReservationIds": [
+      "r_f318c1d74a"
+    ],
+    "detail": "The bar at 2007!X57:AC57 runs straight into 3 banner-coloured cells at the end of the month (2007!AD57:AF57, 2007-05-29 to 2007-05-31). Bare cells of that colour are decoration and were not counted, but they may be painted over the last 3 days of this stay. On the other side of them the same berth is held by OSV Amber Reef (2007-06-02 to 2007-06-05, 2007!C68:F68), so the two may be one stay.",
+    "sourceRef": "2007!X57:AC57"
+  },
+  {
+    "id": "i_7e4b1bd81b",
+    "type": "unlabelled",
+    "severity": "blocking",
+    "reason": "no_label",
+    "reservationId": "r_a0d895087f",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The coloured bar at 2016!J69 (2016-06-08 to 2016-06-08) names no vessel or event; identify the occupant or delete the row.",
+    "sourceRef": "2016!J69"
+  },
+  {
+    "id": "i_7f96b1fd85",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_434bc391e8",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The bar at 2015!AF46:AJ46 runs straight into 1 banner-coloured cell at the end of the month (2015!AK46, 2015-04-30). Bare cells of that colour are decoration and were not counted, but they may be painted over the last day of this stay.",
+    "sourceRef": "2015!AF46:AJ46"
+  },
+  {
+    "id": "i_7fe9786668",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_26d1d736e0",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The bar at 2012!I90:AA90 runs straight into 4 banner-coloured cells at the start of the month (2012!E90:H90, 2012-08-01 to 2012-08-04). Bare cells of that colour are decoration and were not counted, but they may be painted over the first 4 days of this stay.",
+    "sourceRef": "2012!I90:AA90"
+  },
+  {
+    "id": "i_7fee62d47f",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_619c131890",
+    "vesselId": null,
+    "relatedReservationIds": [
+      "r_684ca19a56"
+    ],
+    "detail": "The bar at 2017!D80:J80 runs straight into 1 banner-coloured cell at the start of the month (2017!C80, 2017-07-01). Bare cells of that colour are decoration and were not counted, but they may be painted over the first day of this stay. On the other side of them the same berth is held by R/V Golden Compass (2017-06-30, 2017!AF68), so the two may be one stay.",
+    "sourceRef": "2017!D80:J80"
+  },
+  {
+    "id": "i_802ecff71d",
+    "type": "overlap",
+    "severity": "blocking",
+    "reason": "duplicate_berth_row",
+    "reservationId": "r_8408139144",
+    "vesselId": null,
+    "relatedReservationIds": [
+      "r_b4fc18fea1"
+    ],
+    "detail": "Overlaps Tug Blue Fathom (1998-09-24 to 1998-09-26, 1998!Y93:AA93) on the same berth; both were in the legacy grid, so neither was dropped. Decide which stay is real.",
+    "sourceRef": "1998!Z92:AB92"
+  },
+  {
+    "id": "i_80416fb59d",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_2e7c2139ec",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"R/V Golden Horizon\" is written at 2010!B132 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2010!B132"
+  },
+  {
+    "id": "i_80a65accd2",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_62b4bf004d",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"M/Y Salt Horizon\" is written at 2011!K65 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2011!K65"
+  },
+  {
+    "id": "i_80a871bbc2",
+    "type": "unlabelled",
+    "severity": "blocking",
+    "reason": "no_label",
+    "reservationId": "r_68dde0eedc",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The coloured bar at 2001!AD28:AF28 (2001-03-29 to 2001-03-31) names no vessel or event; identify the occupant or delete the row.",
+    "sourceRef": "2001!AD28:AF28"
+  },
+  {
+    "id": "i_80ca9d524e",
+    "type": "calendar_defect",
+    "severity": "blocking",
+    "reason": "corrupt_header",
+    "reservationId": "r_23ab98c2ba",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "This stay comes from the DECEMBER 2018 block of sheet 2010, whose header rows are corrupted (day numbers displaced, vessel names where the weekdays belong); its dates are anchored on the printed 7..N and need a human check.",
+    "sourceRef": "2010!F131"
+  },
+  {
+    "id": "i_80d70935f2",
+    "type": "overlap",
+    "severity": "blocking",
+    "reason": "duplicate_berth_row",
+    "reservationId": "r_502c0d0d00",
+    "vesselId": null,
+    "relatedReservationIds": [
+      "r_b51d32d34b"
+    ],
+    "detail": "Overlaps Barge Salt Dory (1998-09-14 to 1998-09-20, 1998!O93:U93) on the same berth; both were in the legacy grid, so neither was dropped. Decide which stay is real.",
+    "sourceRef": "1998!Q92:V92"
+  },
+  {
+    "id": "i_8232cc6ae2",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_e9831897ea",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"R/V Long Ketch\" is written at 2013!F56 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2013!F56"
+  },
+  {
+    "id": "i_8365ea6404",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_8386c327ee",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"M/Y Golden Kestrel\" is written at 2015!AF120 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2015!AF120"
+  },
+  {
+    "id": "i_8374fa0dc3",
+    "type": "unlabelled",
+    "severity": "blocking",
+    "reason": "no_label",
+    "reservationId": "r_80e14f02af",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The coloured bar at 2016!T97 (2016-08-18 to 2016-08-18) names no vessel or event; identify the occupant or delete the row.",
+    "sourceRef": "2016!T97"
+  },
+  {
+    "id": "i_84c4be7617",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_34218beb6b",
+    "vesselId": null,
+    "relatedReservationIds": [
+      "r_e0c395d884"
+    ],
+    "detail": "The bar at 2017!F60:H60 runs straight into 3 banner-coloured cells at the start of the month (2017!C60:E60, 2017-05-01 to 2017-05-03). Bare cells of that colour are decoration and were not counted, but they may be painted over the first 3 days of this stay. On the other side of them the same berth is held by R/V Long Ketch (2017-04-28 to 2017-04-29, 2017!AD48:AE48), so the two may be one stay.",
+    "sourceRef": "2017!F60:H60"
+  },
+  {
+    "id": "i_852a096d89",
+    "type": "unlabelled",
+    "severity": "blocking",
+    "reason": "no_label",
+    "reservationId": "r_ecfd3871bf",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The coloured bar at 2012!T64:U64 (2012-06-16 to 2012-06-17) names no vessel or event; identify the occupant or delete the row.",
+    "sourceRef": "2012!T64:U64"
+  },
+  {
+    "id": "i_854e16a165",
+    "type": "unlabelled",
+    "severity": "blocking",
+    "reason": "notes_only",
+    "reservationId": "r_f31ef9fe26",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The coloured bar at 2011!S102:T102 (2011-09-17 to 2011-09-18) names no vessel or event; identify the occupant or delete the row.",
+    "sourceRef": "2011!S102:T102"
+  },
+  {
+    "id": "i_85c62005de",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_1b557f22a2",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"Community sail day\" is written at 2011!P87 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2011!P87"
+  },
+  {
+    "id": "i_85caaf718b",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_colour_edge",
+    "reservationId": "r_2c6a07c28c",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"M/Y GREEN LANTERN\" at 2004!AD64:AF64 is a named bar in the sheet's banner colour that reaches the end of the month. Bare blobs of that colour sit at month edges all over the workbook, so its last 2 days (2004!AE64:AF64, 2004-05-30 to 2004-05-31) may be decoration; they were kept, check the true end of the stay.",
+    "sourceRef": "2004!AD64:AF64"
+  },
+  {
+    "id": "i_860ba66d37",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_43008e6e48",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"Tug CORAL HERON\" is written at 2011!E100 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2011!E100"
+  },
+  {
+    "id": "i_8674745738",
+    "type": "unlabelled",
+    "severity": "blocking",
+    "reason": "no_label",
+    "reservationId": "r_589bc39937",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The coloured bar at 2016!T93 (2016-08-18 to 2016-08-18) names no vessel or event; identify the occupant or delete the row.",
+    "sourceRef": "2016!T93"
+  },
+  {
+    "id": "i_8776992616",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_5e496b3624",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"R/V Wild Sound\" is written at 2011!L133 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2011!L133"
+  },
+  {
+    "id": "i_87c474a3a8",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_4a5cc2c2a2",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The bar at 2017!E8:N8 runs straight into 2 banner-coloured cells at the start of the month (2017!C8:D8, 2017-01-01 to 2017-01-02). Bare cells of that colour are decoration and were not counted, but they may be painted over the first 2 days of this stay.",
+    "sourceRef": "2017!E8:N8"
+  },
+  {
+    "id": "i_883a88c90f",
+    "type": "unlabelled",
+    "severity": "blocking",
+    "reason": "notes_only",
+    "reservationId": "r_d41d4abfff",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The coloured bar at 2013!W54:AA54 (2013-05-18 to 2013-05-22) names no vessel or event; identify the occupant or delete the row.",
+    "sourceRef": "2013!W54:AA54"
+  },
+  {
+    "id": "i_88e61a5c74",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_5deaea9af0",
+    "vesselId": null,
+    "relatedReservationIds": [
+      "r_c35dd2eadf"
+    ],
+    "detail": "The bar at 2015!AH61:AJ61 runs straight into 2 banner-coloured cells at the end of the month (2015!AK61:AL61, 2015-05-30 to 2015-05-31). Bare cells of that colour are decoration and were not counted, but they may be painted over the last 2 days of this stay. On the other side of them the same berth is held by OSV Amber Reef (2015-06-01 to 2015-06-15, 2015!H73:V73), so the two may be one stay.",
+    "sourceRef": "2015!AH61:AJ61"
+  },
+  {
+    "id": "i_89be52476e",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_a34487eb12",
+    "vesselId": null,
+    "relatedReservationIds": [
+      "r_eda787235f"
+    ],
+    "detail": "The bar at 2017!X110:AE110 runs straight into 1 banner-coloured cell at the end of the month (2017!AF110, 2017-09-30). Bare cells of that colour are decoration and were not counted, but they may be painted over the last day of this stay. On the other side of them the same berth is held by OSV Amber Reef (2017-10-02, 2017!D122), so the two may be one stay.",
+    "sourceRef": "2017!X110:AE110"
+  },
+  {
+    "id": "i_8a0e8b431d",
+    "type": "calendar_defect",
+    "severity": "blocking",
+    "reason": "corrupt_header",
+    "reservationId": "r_fb72ae280e",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "This stay comes from the NOVEMBER 2018 block of sheet 2010, whose header rows are corrupted (day numbers displaced, vessel names where the weekdays belong); its dates are anchored on the printed 7..N and need a human check.",
+    "sourceRef": "2010!AF121"
+  },
+  {
+    "id": "i_8a400a7453",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_dc30d16345",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"Science stroll\" is written at 2011!C101 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2011!C101"
+  },
+  {
+    "id": "i_8a9427dc0e",
+    "type": "calendar_defect",
+    "severity": "blocking",
+    "reason": "corrupt_header",
+    "reservationId": "r_f57d5cb384",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "This stay comes from the NOVEMBER 2018 block of sheet 2010, whose header rows are corrupted (day numbers displaced, vessel names where the weekdays belong); its dates are anchored on the printed 7..N and need a human check.",
+    "sourceRef": "2010!F123"
+  },
+  {
+    "id": "i_8aab02d774",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_52f73f362b",
+    "vesselId": null,
+    "relatedReservationIds": [
+      "r_a80600ba85"
+    ],
+    "detail": "The bar at 2015!I94 runs straight into 1 banner-coloured cell at the start of the month (2015!H94, 2015-08-01). Bare cells of that colour are decoration and were not counted, but they may be painted over the first day of this stay. On the other side of them the same berth is held by M/Y High Sextant (2015-07-30, 2015!AK82), so the two may be one stay.",
+    "sourceRef": "2015!I94"
+  },
+  {
+    "id": "i_8b0bfe4bec",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_919a905fc5",
+    "vesselId": null,
+    "relatedReservationIds": [
+      "r_23ccbcd230"
+    ],
+    "detail": "The bar at 2011!U57:AD57 runs straight into 3 banner-coloured cells at the end of the month (2011!AE57:AG57, 2011-05-29 to 2011-05-31). Bare cells of that colour are decoration and were not counted, but they may be painted over the last 3 days of this stay. On the other side of them the same berth is held by OSV Amber Reef (2011-06-03 to 2011-06-30, 2011!E68:O68), so the two may be one stay.",
+    "sourceRef": "2011!U57:AD57"
+  },
+  {
+    "id": "i_8b60263e0a",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_ebda3e2eb8",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"Safety training (RIBs)\" is written at 2011!J121 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2011!J121"
+  },
+  {
+    "id": "i_8c126426a6",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "merge_before_month_start",
+    "reservationId": "r_9f7ff09807",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The merged bar 2011!B8:AJ8 starts left of the day-1 column of its month; it was cut at day 1.",
+    "sourceRef": "2011!B8:AJ8"
+  },
+  {
+    "id": "i_8c1a9b2c97",
+    "type": "overlap",
+    "severity": "blocking",
+    "reason": "duplicate_berth_row",
+    "reservationId": "r_5a47cb68ee",
+    "vesselId": null,
+    "relatedReservationIds": [
+      "r_e121a93c3e"
+    ],
+    "detail": "Overlaps R/V Blue Star (2017-09-07 to 2017-09-12, 2017!I110:N110) on the same berth; both were in the legacy grid, so neither was dropped. Decide which stay is real.",
+    "sourceRef": "2017!K113:L113"
+  },
+  {
+    "id": "i_8d34198e81",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_21221a35b6",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"M/Y Deep Compass\" is written at 2014!W97 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2014!W97"
+  },
+  {
+    "id": "i_8d37a3356c",
+    "type": "unlabelled",
+    "severity": "blocking",
+    "reason": "no_label",
+    "reservationId": "r_94e8f33020",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The coloured bar at 2011!H99 (2011-09-06 to 2011-09-06) names no vessel or event; identify the occupant or delete the row.",
+    "sourceRef": "2011!H99"
+  },
+  {
+    "id": "i_8ea5aca8c1",
+    "type": "unlabelled",
+    "severity": "blocking",
+    "reason": "no_label",
+    "reservationId": "r_abed5a556b",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The coloured bar at 2016!G70 (2016-06-05 to 2016-06-05) names no vessel or event; identify the occupant or delete the row.",
+    "sourceRef": "2016!G70"
+  },
+  {
+    "id": "i_8f566800f2",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_411915e810",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The bar at 2009!D65:E65 runs straight into 2 banner-coloured cells at the start of the month (2009!B65:C65, 2009-06-01 to 2009-06-02). Bare cells of that colour are decoration and were not counted, but they may be painted over the first 2 days of this stay.",
+    "sourceRef": "2009!D65:E65"
+  },
+  {
+    "id": "i_915d36b733",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_cfb1592487",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"M/V GREY COMPASS\" is written at 2015!W56 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2015!W56"
+  },
+  {
+    "id": "i_924dcc5393",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_08730a224b",
+    "vesselId": null,
+    "relatedReservationIds": [
+      "r_896d678108"
+    ],
+    "detail": "The bar at 2017!G58:M58 runs straight into 4 banner-coloured cells at the start of the month (2017!C58:F58, 2017-05-01 to 2017-05-04). Bare cells of that colour are decoration and were not counted, but they may be painted over the first 4 days of this stay. On the other side of them the same berth is held by R/V Golden Compass (2017-04-29 to 2017-04-30, 2017!AE46:AF46), so the two may be one stay.",
+    "sourceRef": "2017!G58:M58"
+  },
+  {
+    "id": "i_92d131dd9a",
+    "type": "calendar_defect",
+    "severity": "blocking",
+    "reason": "corrupt_header",
+    "reservationId": "r_045544efef",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "This stay comes from the NOVEMBER 2018 block of sheet 2010, whose header rows are corrupted (day numbers displaced, vessel names where the weekdays belong); its dates are anchored on the printed 7..N and need a human check.",
+    "sourceRef": "2010!S119"
+  },
+  {
+    "id": "i_9382729234",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_31c5c3c320",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"M/V QUIET PETREL\" is written at 2006!I11 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2006!I11"
+  },
+  {
+    "id": "i_93ba6401c4",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_4d4c0cbb26",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The bar at 2005!F90:G90 runs straight into 4 banner-coloured cells at the start of the month (2005!B90:E90, 2005-08-01 to 2005-08-04). Bare cells of that colour are decoration and were not counted, but they may be painted over the first 4 days of this stay.",
+    "sourceRef": "2005!F90:G90"
+  },
+  {
+    "id": "i_949d40fd94",
+    "type": "unlabelled",
+    "severity": "blocking",
+    "reason": "no_label",
+    "reservationId": "r_e6a38659c0",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The coloured bar at 2015!AH69:AI69 (2015-06-27 to 2015-06-28) names no vessel or event; identify the occupant or delete the row.",
+    "sourceRef": "2015!AH69:AI69"
+  },
+  {
+    "id": "i_974000c70f",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_3aec70d16d",
+    "vesselId": null,
+    "relatedReservationIds": [
+      "r_73030dafc7"
+    ],
+    "detail": "The bar at 2011!U120:AC120 runs straight into 3 banner-coloured cells at the end of the month (2011!AD120:AF120, 2011-11-28 to 2011-11-30). Bare cells of that colour are decoration and were not counted, but they may be painted over the last 3 days of this stay. On the other side of them the same berth is held by R/V Golden Compass (2011-12-01 to 2012-01-07, 2011!B131:AG131), so the two may be one stay.",
+    "sourceRef": "2011!U120:AC120"
+  },
+  {
+    "id": "i_99184e8992",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_27db31c023",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The bar at 2015!AJ83 runs straight into 2 banner-coloured cells at the end of the month (2015!AK83:AL83, 2015-07-30 to 2015-07-31). Bare cells of that colour are decoration and were not counted, but they may be painted over the last 2 days of this stay.",
+    "sourceRef": "2015!AJ83"
+  },
+  {
+    "id": "i_994e84be6c",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_331ec2718a",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"Public open house\" is written at 2011!P76 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2011!P76"
+  },
+  {
+    "id": "i_9a7b840972",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_c78b0db878",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The bar at 2011!F89 runs straight into 3 banner-coloured cells at the start of the month (2011!C89:E89, 2011-08-01 to 2011-08-03). Bare cells of that colour are decoration and were not counted, but they may be painted over the first 3 days of this stay.",
+    "sourceRef": "2011!F89"
+  },
+  {
+    "id": "i_9aa5571bf8",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_2813edc6f8",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"Paving near dock entrance\" is written at 2010!K75 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2010!K75"
+  },
+  {
+    "id": "i_9ae26de874",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_6c69052551",
+    "vesselId": null,
+    "relatedReservationIds": [
+      "r_c6edf12c59"
+    ],
+    "detail": "The bar at 2012!Y32:AG32 runs straight into 2 banner-coloured cells at the end of the month (2012!AH32:AI32, 2012-03-30 to 2012-03-31). Bare cells of that colour are decoration and were not counted, but they may be painted over the last 2 days of this stay. On the other side of them the same berth is held by M/V Northern Harbor (2012-04-01 to 2012-04-16, 2012!D43:P43), so the two may be one stay.",
+    "sourceRef": "2012!Y32:AG32"
+  },
+  {
+    "id": "i_9b35c1a68e",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_53fb1e4c07",
+    "vesselId": null,
+    "relatedReservationIds": [
+      "r_e2003c6ec0"
+    ],
+    "detail": "The bar at 2017!D82:H82 runs straight into 1 banner-coloured cell at the start of the month (2017!C82, 2017-07-01). Bare cells of that colour are decoration and were not counted, but they may be painted over the first day of this stay. On the other side of them the same berth is held by M/V Long Cove (2017-06-22 to 2017-06-30, 2017!X70:AF70), so the two may be one stay.",
+    "sourceRef": "2017!D82:H82"
+  },
+  {
+    "id": "i_9b9c1b9466",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "shared_bar",
+    "reservationId": "r_7926611a64",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The bar 2009!AD68:AE68 names more than one occupant: possible double-booking or handover; imported as back-to-back stays split at the second name.",
+    "sourceRef": "2009!AE68"
+  },
+  {
+    "id": "i_9c62204e42",
+    "type": "unlabelled",
+    "severity": "blocking",
+    "reason": "no_label",
+    "reservationId": "r_ab9f5a6c50",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The coloured bar at 2017!X20:Z20 (2017-02-22 to 2017-02-24) names no vessel or event; identify the occupant or delete the row.",
+    "sourceRef": "2017!X20:Z20"
+  },
+  {
+    "id": "i_9de13d857f",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_4854a6e5e2",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"R/V Long Ketch\" is written at 2014!K60 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2014!K60"
+  },
+  {
+    "id": "i_9e1ceb8a9a",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_6cdd5a87a9",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The bar at 2010!F111:G111 runs straight into 4 banner-coloured cells at the start of the month (2010!B111:E111, 2010-10-01 to 2010-10-04). Bare cells of that colour are decoration and were not counted, but they may be painted over the first 4 days of this stay.",
+    "sourceRef": "2010!F111:G111"
+  },
+  {
+    "id": "i_9e5b40761b",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_6a62b02169",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"M/Y Salt Horizon\" is written at 2011!K76 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2011!K76"
+  },
+  {
+    "id": "i_9e871eb7fb",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_74f916ab4a",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"Barge Silver Voyager\" is written at 2019!AC35 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2019!AC35"
+  },
+  {
+    "id": "i_9eaf4d6a3b",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_d059ae9cb8",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The bar at 2005!C79:E79 runs straight into 1 banner-coloured cell at the start of the month (2005!B79, 2005-07-01). Bare cells of that colour are decoration and were not counted, but they may be painted over the first day of this stay.",
+    "sourceRef": "2005!C79:E79"
+  },
+  {
+    "id": "i_9f057ad6d0",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_8447b88df1",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The bar at 2009!AA57:AB57 runs straight into 4 banner-coloured cells at the end of the month (2009!AC57:AF57, 2009-05-28 to 2009-05-31). Bare cells of that colour are decoration and were not counted, but they may be painted over the last 4 days of this stay.",
+    "sourceRef": "2009!AA57:AB57"
+  },
+  {
+    "id": "i_9f2dab0586",
+    "type": "calendar_defect",
+    "severity": "blocking",
+    "reason": "corrupt_header",
+    "reservationId": "r_58fb3d99e2",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "This stay comes from the NOVEMBER 2018 block of sheet 2010, whose header rows are corrupted (day numbers displaced, vessel names where the weekdays belong); its dates are anchored on the printed 7..N and need a human check.",
+    "sourceRef": "2010!Y120"
+  },
+  {
+    "id": "i_9ff4f13173",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "merge_before_month_start",
+    "reservationId": "r_359505806f",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The merged bar 2015!B8:F8 starts left of the day-1 column of its month; it was cut at day 1.",
+    "sourceRef": "2015!B8:F8"
+  },
+  {
+    "id": "i_a17b6809ed",
+    "type": "calendar_defect",
+    "severity": "blocking",
+    "reason": "corrupt_header",
+    "reservationId": "r_e767b9f1d9",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "This stay comes from the DECEMBER 2018 block of sheet 2010, whose header rows are corrupted (day numbers displaced, vessel names where the weekdays belong); its dates are anchored on the printed 7..N and need a human check.",
+    "sourceRef": "2010!T130:AB130"
+  },
+  {
+    "id": "i_a1af34b882",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_dbe70f46b8",
+    "vesselId": null,
+    "relatedReservationIds": [
+      "r_f44d2e28e0"
+    ],
+    "detail": "The bar at 2015!I141:X141 runs straight into 1 banner-coloured cell at the start of the month (2015!H141, 2015-12-01). Bare cells of that colour are decoration and were not counted, but they may be painted over the first day of this stay. On the other side of them the same berth is held by R/V Golden Compass (2015-11-19 to 2015-11-30, 2015!Z129:AK129), so the two may be one stay.",
+    "sourceRef": "2015!I141:X141"
+  },
+  {
+    "id": "i_a1c50cfc33",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_2bbfb9e796",
+    "vesselId": null,
+    "relatedReservationIds": [
+      "r_3010d773d5"
+    ],
+    "detail": "The bar at 2004!E120:F120 runs straight into 3 banner-coloured cells at the start of the month (2004!B120:D120, 2004-10-01 to 2004-10-03). Bare cells of that colour are decoration and were not counted, but they may be painted over the first 3 days of this stay. On the other side of them the same berth is held by Tug Wild Gannet (2004-09-25 to 2004-09-30, 2004!Z109:AE109), so the two may be one stay.",
+    "sourceRef": "2004!E120:F120"
+  },
+  {
+    "id": "i_a1fae13da1",
+    "type": "calendar_defect",
+    "severity": "blocking",
+    "reason": "corrupt_header",
+    "reservationId": "r_a8d366685e",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "This stay comes from the NOVEMBER 2018 block of sheet 2010, whose header rows are corrupted (day numbers displaced, vessel names where the weekdays belong); its dates are anchored on the printed 7..N and need a human check. The same corruption pushed this berth row's cells for days 1-6 up one row: 2010!C118 was read as part of this stay.",
+    "sourceRef": "2010!C118"
+  },
+  {
+    "id": "i_a219444a3e",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_486785364d",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"R/V Quiet Star\" is written at 2011!AB31 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2011!AB31"
+  },
+  {
+    "id": "i_a45c59dc07",
+    "type": "unlabelled",
+    "severity": "blocking",
+    "reason": "no_label",
+    "reservationId": "r_04003d3ebd",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The coloured bar at 2003!S110:X110 (2003-09-18 to 2003-09-23) names no vessel or event; identify the occupant or delete the row.",
+    "sourceRef": "2003!S110:X110"
+  },
+  {
+    "id": "i_a461f713c0",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_6ed8342eeb",
+    "vesselId": null,
+    "relatedReservationIds": [
+      "r_f8af05b2fa"
+    ],
+    "detail": "The bar at 2014!H68:J68 runs straight into 1 banner-coloured cell at the start of the month (2014!G68, 2014-06-01). Bare cells of that colour are decoration and were not counted, but they may be painted over the first day of this stay. On the other side of them the same berth is held by M/V Northern Harbor (2014-05-30 to 2014-05-31, 2014!AJ56:AK56), so the two may be one stay.",
+    "sourceRef": "2014!H68:J68"
+  },
+  {
+    "id": "i_a5ba9a5286",
+    "type": "unlabelled",
+    "severity": "blocking",
+    "reason": "no_label",
+    "reservationId": "r_e74bab6a1e",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The coloured bar at 2011!J90 (2011-08-08 to 2011-08-08) names no vessel or event; identify the occupant or delete the row.",
+    "sourceRef": "2011!J90"
+  },
+  {
+    "id": "i_a5cf1ca01d",
+    "type": "unlabelled",
+    "severity": "blocking",
+    "reason": "notes_only",
+    "reservationId": "r_9fbfa2639c",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The coloured bar at 2018!G73 (2018-06-05 to 2018-06-05) names no vessel or event; identify the occupant or delete the row.",
+    "sourceRef": "2018!G73"
+  },
+  {
+    "id": "i_a880b40c15",
+    "type": "unlabelled",
+    "severity": "blocking",
+    "reason": "notes_only",
+    "reservationId": "r_6d1d29dde4",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The coloured bar at 2009!B121:U121 (2009-11-01 to 2009-11-20) names no vessel or event; identify the occupant or delete the row.",
+    "sourceRef": "2009!B121:U121"
+  },
+  {
+    "id": "i_a89b761889",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_8ce146bbac",
+    "vesselId": null,
+    "relatedReservationIds": [
+      "r_40a5131f1b"
+    ],
+    "detail": "The bar at 2010!E30:L30 runs straight into 3 banner-coloured cells at the start of the month (2010!B30:D30, 2010-03-01 to 2010-03-03). Bare cells of that colour are decoration and were not counted, but they may be painted over the first 3 days of this stay. On the other side of them the same berth is held by R/V Golden Compass (2010-01-21 to 2010-02-28, 2010!J19:AC19), so the two may be one stay.",
+    "sourceRef": "2010!E30:L30"
+  },
+  {
+    "id": "i_a9343630a9",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_409d6cfc34",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"R/V Golden Horizon\" is written at 2010!C77 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2010!C77"
+  },
+  {
+    "id": "i_a9370832d5",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_0e007ea3f4",
+    "vesselId": null,
+    "relatedReservationIds": [
+      "r_7a83ff6edb"
+    ],
+    "detail": "The bar at 2015!J44:O44 runs straight into 2 banner-coloured cells at the start of the month (2015!H44:I44, 2015-04-01 to 2015-04-02). Bare cells of that colour are decoration and were not counted, but they may be painted over the first 2 days of this stay. On the other side of them the same berth is held by R/V Golden Compass (2015-03-30 to 2015-03-31, 2015!AK32:AL32), so the two may be one stay.",
+    "sourceRef": "2015!J44:O44"
+  },
+  {
+    "id": "i_a99df606ab",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_2649ebb4ac",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"M/Y Salt Horizon\" is written at 2011!W76 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2011!W76"
+  },
+  {
+    "id": "i_aa13c9a4fc",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_3ff52e3533",
+    "vesselId": null,
+    "relatedReservationIds": [
+      "r_2ab6f05b22"
+    ],
+    "detail": "The bar at 2017!S129:AD129 runs straight into 2 banner-coloured cells at the end of the month (2017!AE129:AF129, 2017-11-29 to 2017-11-30). Bare cells of that colour are decoration and were not counted, but they may be painted over the last 2 days of this stay. On the other side of them the same berth is held by R/V Golden Compass (2017-12-01 to 2018-01-13, 2017!C141:AG141), so the two may be one stay.",
+    "sourceRef": "2017!S129:AD129"
+  },
+  {
+    "id": "i_aa96e518fa",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_139bfdcfc5",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The bar at 2014!AG58:AH58 runs straight into 3 banner-coloured cells at the end of the month (2014!AI58:AK58, 2014-05-29 to 2014-05-31). Bare cells of that colour are decoration and were not counted, but they may be painted over the last 3 days of this stay.",
+    "sourceRef": "2014!AG58:AH58"
+  },
+  {
+    "id": "i_aaf5c20009",
+    "type": "unlabelled",
+    "severity": "blocking",
+    "reason": "no_label",
+    "reservationId": "r_c013782580",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The coloured bar at 2010!R119 (2010-11-16 to 2010-11-16) names no vessel or event; identify the occupant or delete the row.",
+    "sourceRef": "2010!R119"
+  },
+  {
+    "id": "i_ab1bb9989e",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_4fe7510083",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"R/V High Compass\" is written at 2012!X20 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2012!X20"
+  },
+  {
+    "id": "i_ac250f5b2c",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_cd2141cc06",
+    "vesselId": null,
+    "relatedReservationIds": [
+      "r_e0f0d9e65b"
+    ],
+    "detail": "The bar at 2012!M120:AF120 runs straight into 2 banner-coloured cells at the end of the month (2012!AG120:AH120, 2012-11-29 to 2012-11-30). Bare cells of that colour are decoration and were not counted, but they may be painted over the last 2 days of this stay. On the other side of them the same berth is held by R/V Golden Compass (2012-12-01 to 2012-12-04, 2012!E131:H131), so the two may be one stay.",
+    "sourceRef": "2012!M120:AF120"
+  },
+  {
+    "id": "i_ac2bf62e3c",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_9116623125",
+    "vesselId": null,
+    "relatedReservationIds": [
+      "r_77cc4c9bed"
+    ],
+    "detail": "The bar at 2013!G68:AG68 runs straight into 2 banner-coloured cells at the end of the month (2013!AH68:AI68, 2013-06-29 to 2013-06-30). Bare cells of that colour are decoration and were not counted, but they may be painted over the last 2 days of this stay. On the other side of them the same berth is held by OSV Amber Reef (2013-07-01 to 2013-07-05, 2013!F79:J79), so the two may be one stay.",
+    "sourceRef": "2013!G68:AG68"
+  },
+  {
+    "id": "i_ad05faf6e7",
+    "type": "unlabelled",
+    "severity": "blocking",
+    "reason": "no_label",
+    "reservationId": "r_7c4f9cac6f",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The coloured bar at 2015!T96 (2015-08-13 to 2015-08-13) names no vessel or event; identify the occupant or delete the row.",
+    "sourceRef": "2015!T96"
+  },
+  {
+    "id": "i_ad2231a4f5",
+    "type": "length_conflict",
+    "severity": "warning",
+    "reason": "registry_conflict",
+    "reservationId": null,
+    "vesselId": "v_high-sound",
+    "relatedReservationIds": [],
+    "detail": "R/V High Sound has more than one length on file (32 ft, 65 ft); fit checks are off for this vessel until one is confirmed.",
+    "sourceRef": null
+  },
+  {
+    "id": "i_ae76d98e5d",
+    "type": "length_conflict",
+    "severity": "warning",
+    "reason": "registry_conflict",
+    "reservationId": null,
+    "vesselId": "v_northern-marlin",
+    "relatedReservationIds": [],
+    "detail": "Barge Northern Marlin has more than one length on file (24 ft, 65 ft); fit checks are off for this vessel until one is confirmed.",
+    "sourceRef": null
+  },
+  {
+    "id": "i_aead02dbcf",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_cda662c710",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"R/V Long Ketch\" is written at 2015!O60 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2015!O60"
+  },
+  {
+    "id": "i_af2226d88c",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_7d436cb62a",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"R/V Long Ketch\" is written at 2013!M56 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2013!M56"
+  },
+  {
+    "id": "i_af6b68c0b9",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "shared_bar",
+    "reservationId": "r_f43f70ff93",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The bar 2001!R84:V84 names more than one occupant: possible double-booking or handover; imported as back-to-back stays split at the second name.",
+    "sourceRef": "2001!R84:S84"
+  },
+  {
+    "id": "i_af874839ce",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_90cc124406",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"R/V GOLDEN VOYAGER\" is written at 2006!B34 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2006!B34"
+  },
+  {
+    "id": "i_b025758086",
+    "type": "unlabelled",
+    "severity": "blocking",
+    "reason": "no_label",
+    "reservationId": "r_4dd7e5edbb",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The coloured bar at 2013!AI79:AJ79 (2013-07-30 to 2013-07-31) names no vessel or event; identify the occupant or delete the row.",
+    "sourceRef": "2013!AI79:AJ79"
+  },
+  {
+    "id": "i_b06219bba3",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_7890f59f50",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The bar at 2004!D66:G66 runs straight into 2 banner-coloured cells at the start of the month (2004!B66:C66, 2004-05-01 to 2004-05-02). Bare cells of that colour are decoration and were not counted, but they may be painted over the first 2 days of this stay.",
+    "sourceRef": "2004!D66:G66"
+  },
+  {
+    "id": "i_b0af5299d3",
+    "type": "unlabelled",
+    "severity": "blocking",
+    "reason": "notes_only",
+    "reservationId": "r_ad306bc8bc",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The coloured bar at 2017!N109 (2017-09-12 to 2017-09-12) names no vessel or event; identify the occupant or delete the row.",
+    "sourceRef": "2017!N109"
+  },
+  {
+    "id": "i_b1e81070ad",
+    "type": "unlabelled",
+    "severity": "blocking",
+    "reason": "no_label",
+    "reservationId": "r_a08117fb05",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The coloured bar at 2011!H102 (2011-09-06 to 2011-09-06) names no vessel or event; identify the occupant or delete the row.",
+    "sourceRef": "2011!H102"
+  },
+  {
+    "id": "i_b2473a29c3",
+    "type": "length_conflict",
+    "severity": "warning",
+    "reason": "registry_conflict",
+    "reservationId": null,
+    "vesselId": "v_western-strand",
+    "relatedReservationIds": [],
+    "detail": "M/Y Western Strand has more than one length on file (52 ft, 65 ft, 145 ft); fit checks are off for this vessel until one is confirmed.",
+    "sourceRef": null
+  },
+  {
+    "id": "i_b2d84894b2",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_89408406ee",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"M/V Amber Meridian\" is written at 2009!S78 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2009!S78"
+  },
+  {
+    "id": "i_b3d45cea04",
+    "type": "unlabelled",
+    "severity": "blocking",
+    "reason": "no_label",
+    "reservationId": "r_b232b24f12",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The coloured bar at 2017!V22:Z22 (2017-02-20 to 2017-02-24) names no vessel or event; identify the occupant or delete the row.",
+    "sourceRef": "2017!V22:Z22"
+  },
+  {
+    "id": "i_b45c7707e4",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_3ef0eb6994",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The bar at 2012!AF76 runs straight into 3 banner-coloured cells at the end of the month (2012!AG76:AI76, 2012-07-29 to 2012-07-31). Bare cells of that colour are decoration and were not counted, but they may be painted over the last 3 days of this stay.",
+    "sourceRef": "2012!AF76"
+  },
+  {
+    "id": "i_b4a3c5170b",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_5afc24600b",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The bar at 2014!J122:W122 runs straight into 3 banner-coloured cells at the start of the month (2014!G122:I122, 2014-10-01 to 2014-10-03). Bare cells of that colour are decoration and were not counted, but they may be painted over the first 3 days of this stay.",
+    "sourceRef": "2014!J122:W122"
+  },
+  {
+    "id": "i_b4abcd4d84",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_42d067233d",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"OSV Wild Beacon\" is written at 2012!AE63 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2012!AE63"
+  },
+  {
+    "id": "i_b5269e6e4d",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_35275b0e98",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The bar at 2014!I93:Y93 runs straight into 2 banner-coloured cells at the start of the month (2014!G93:H93, 2014-08-01 to 2014-08-02). Bare cells of that colour are decoration and were not counted, but they may be painted over the first 2 days of this stay.",
+    "sourceRef": "2014!I93:Y93"
+  },
+  {
+    "id": "i_b64ca4533f",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "shared_bar",
+    "reservationId": "r_f75d7832f1",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The bar 2011!AF76:AG76 names more than one occupant: possible double-booking or handover; imported as back-to-back stays split at the second name.",
+    "sourceRef": "2011!AF76"
+  },
+  {
+    "id": "i_b6de9d404f",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_353702c172",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The bar at 2015!AK84 runs straight into 1 banner-coloured cell at the end of the month (2015!AL84, 2015-07-31). Bare cells of that colour are decoration and were not counted, but they may be painted over the last day of this stay.",
+    "sourceRef": "2015!AK84"
+  },
+  {
+    "id": "i_b74b927c25",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_c840d66570",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"R/V Amber Compass\" is written at 2011!AD99 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2011!AD99"
+  },
+  {
+    "id": "i_b7d19b63b2",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_fcd2cbc086",
+    "vesselId": null,
+    "relatedReservationIds": [
+      "r_26f6093170"
+    ],
+    "detail": "The bar at 2017!E56:M56 runs straight into 2 banner-coloured cells at the start of the month (2017!C56:D56, 2017-05-01 to 2017-05-02). Bare cells of that colour are decoration and were not counted, but they may be painted over the first 2 days of this stay. On the other side of them the same berth is held by Tug Salt Tide (2017-04-27 to 2017-04-28, 2017!AC44:AD44), so the two may be one stay.",
+    "sourceRef": "2017!E56:M56"
+  },
+  {
+    "id": "i_b84f5487bd",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "merge_before_month_start",
+    "reservationId": "r_7c2dc54503",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The merged bar 2011!B134:AG134 starts left of the day-1 column of its month; it was cut at day 1.",
+    "sourceRef": "2011!B134:AG134"
+  },
+  {
+    "id": "i_b87b747785",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_a330ec139f",
+    "vesselId": null,
+    "relatedReservationIds": [
+      "r_3e384f09c7"
+    ],
+    "detail": "The bar at 2012!S30:AH30 runs straight into 1 banner-coloured cell at the end of the month (2012!AI30, 2012-03-31). Bare cells of that colour are decoration and were not counted, but they may be painted over the last day of this stay. On the other side of them the same berth is held by R/V Golden Compass (2012-04-02 to 2012-05-31, 2012!F41:AE41), so the two may be one stay.",
+    "sourceRef": "2012!S30:AH30"
+  },
+  {
+    "id": "i_baa213a7e2",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_623d246cc8",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"R/V Golden Horizon\" is written at 2010!B88 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2010!B88"
+  },
+  {
+    "id": "i_bac2fecf6f",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_084852abae",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"R/V Long Ketch\" is written at 2018!L85 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2018!L85"
+  },
+  {
+    "id": "i_bb48c92e16",
+    "type": "unlabelled",
+    "severity": "blocking",
+    "reason": "no_label",
+    "reservationId": "r_8e46a85d1a",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The coloured bar at 1999!J82:L82 (1999-08-09 to 1999-08-11) names no vessel or event; identify the occupant or delete the row.",
+    "sourceRef": "1999!J82:L82"
+  },
+  {
+    "id": "i_bb62803758",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_6f0dcbdeff",
+    "vesselId": null,
+    "relatedReservationIds": [
+      "r_7f5c350ec7"
+    ],
+    "detail": "The bar at 2004!AC42:AE42 runs straight into 1 banner-coloured cell at the end of the month (2004!AF42, 2004-03-31). Bare cells of that colour are decoration and were not counted, but they may be painted over the last day of this stay. On the other side of them the same berth is held by F/V Long Strand (2004-04-05 to 2004-04-06, 2004!F53:G53), so the two may be one stay.",
+    "sourceRef": "2004!AC42:AE42"
+  },
+  {
+    "id": "i_bcca18cbc9",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_b98284e65f",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"Road race - access limited\" is written at 2011!AD121 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2011!AD121"
+  },
+  {
+    "id": "i_bdae894a12",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_37ca860a0d",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"R/V Long Ketch\" is written at 2012!K56 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2012!K56"
+  },
+  {
+    "id": "i_bea4a48b6f",
+    "type": "calendar_defect",
+    "severity": "blocking",
+    "reason": "corrupt_header",
+    "reservationId": "r_9f0912e79a",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "This stay comes from the NOVEMBER 2018 block of sheet 2010, whose header rows are corrupted (day numbers displaced, vessel names where the weekdays belong); its dates are anchored on the printed 7..N and need a human check.",
+    "sourceRef": "2010!U119:V119"
+  },
+  {
+    "id": "i_bf1a0fc68f",
+    "type": "unlabelled",
+    "severity": "blocking",
+    "reason": "no_label",
+    "reservationId": "r_09840f87b7",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The coloured bar at 2013!U112 (2013-10-16 to 2013-10-16) names no vessel or event; identify the occupant or delete the row.",
+    "sourceRef": "2013!U112"
+  },
+  {
+    "id": "i_c0c1e9198d",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_26f6093170",
+    "vesselId": null,
+    "relatedReservationIds": [
+      "r_fcd2cbc086"
+    ],
+    "detail": "The bar at 2017!AC44:AD44 runs straight into 2 banner-coloured cells at the end of the month (2017!AE44:AF44, 2017-04-29 to 2017-04-30). Bare cells of that colour are decoration and were not counted, but they may be painted over the last 2 days of this stay. On the other side of them the same berth is held by Tug Salt Tide (2017-05-03 to 2017-05-11, 2017!E56:M56), so the two may be one stay.",
+    "sourceRef": "2017!AC44:AD44"
+  },
+  {
+    "id": "i_c13f1002a6",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_f42651574c",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"Campus event\" is written at 2009!T109 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2009!T109"
+  },
+  {
+    "id": "i_c1bd5abdf5",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_b2acc0cf5a",
+    "vesselId": null,
+    "relatedReservationIds": [
+      "r_a83564ba2c"
+    ],
+    "detail": "The bar at 2015!F10:G10 runs straight into 2 banner-coloured cells at the start of the month (2015!D10:E10, 2015-01-01 to 2015-01-02). Bare cells of that colour are decoration and were not counted, but they may be painted over the first 2 days of this stay. On the other side of them the same berth is held by Tug Golden Sound (2014-12-19 to 2014-12-28, 2014!Y144:AH144), so the two may be one stay.",
+    "sourceRef": "2015!F10:G10"
+  },
+  {
+    "id": "i_c258d900bf",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_44661abfaa",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The bar at 2009!F124:S124 runs straight into 4 banner-coloured cells at the start of the month (2009!B124:E124, 2009-11-01 to 2009-11-04). Bare cells of that colour are decoration and were not counted, but they may be painted over the first 4 days of this stay.",
+    "sourceRef": "2009!F124:S124"
+  },
+  {
+    "id": "i_c4975c890d",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_96c47f7638",
+    "vesselId": null,
+    "relatedReservationIds": [
+      "r_d492f8309a"
+    ],
+    "detail": "The bar at 2015!J122:L122 runs straight into 2 banner-coloured cells at the start of the month (2015!H122:I122, 2015-10-01 to 2015-10-02). Bare cells of that colour are decoration and were not counted, but they may be painted over the first 2 days of this stay. On the other side of them the same berth is held by OSV Amber Reef (2015-09-03 to 2015-09-26, 2015!J110:AG110), so the two may be one stay.",
+    "sourceRef": "2015!J122:L122"
+  },
+  {
+    "id": "i_c8686366f3",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_83adfdf1ae",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"M/V Coral Horizon\" is written at 2015!AL96 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2015!AL96"
+  },
+  {
+    "id": "i_c8770ec7c0",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_15a7a927b9",
+    "vesselId": null,
+    "relatedReservationIds": [
+      "r_97332451be"
+    ],
+    "detail": "The bar at 2006!C108:E108 runs straight into 1 banner-coloured cell at the start of the month (2006!B108, 2006-10-01). Bare cells of that colour are decoration and were not counted, but they may be painted over the first day of this stay. On the other side of them the same berth is held by R/V Clear Sextant (2006-09-28 to 2006-09-30, 2006!AC97:AE97), so the two may be one stay.",
+    "sourceRef": "2006!C108:E108"
+  },
+  {
+    "id": "i_c99844053f",
+    "type": "unlabelled",
+    "severity": "blocking",
+    "reason": "no_label",
+    "reservationId": "r_b71e0d3387",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The coloured bar at 2003!K49:L49 (2003-04-10 to 2003-04-11) names no vessel or event; identify the occupant or delete the row.",
+    "sourceRef": "2003!K49:L49"
+  },
+  {
+    "id": "i_c9aac77e25",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "shared_bar",
+    "reservationId": "r_3cd91f9e50",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The bar 2001!B63:L63 names more than one occupant: possible double-booking or handover; imported as back-to-back stays split at the second name.",
+    "sourceRef": "2001!B63:K63"
+  },
+  {
+    "id": "i_cae293d661",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_296e3d74c5",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"R/V Long Ketch\" is written at 2012!R56 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2012!R56"
+  },
+  {
+    "id": "i_cb37bf63b8",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_66caa8e927",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The bar at 2013!I112 runs straight into 3 banner-coloured cells at the start of the month (2013!F112:H112, 2013-10-01 to 2013-10-03). Bare cells of that colour are decoration and were not counted, but they may be painted over the first 3 days of this stay.",
+    "sourceRef": "2013!I112"
+  },
+  {
+    "id": "i_cd1e03c06a",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_c9653b54c1",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"M/V DEEP SOUND\" is written at 2011!AE64 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2011!AE64"
+  },
+  {
+    "id": "i_ce0e6b8e65",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_a8018dae43",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"R/V Far Marlin\" is written at 2011!T78 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2011!T78"
+  },
+  {
+    "id": "i_cef76d32d2",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_150305e4af",
+    "vesselId": null,
+    "relatedReservationIds": [
+      "r_86cfe1a621"
+    ],
+    "detail": "The bar at 2017!F97:J97 runs straight into 3 banner-coloured cells at the start of the month (2017!C97:E97, 2017-08-01 to 2017-08-03). Bare cells of that colour are decoration and were not counted, but they may be painted over the first 3 days of this stay. On the other side of them the same berth is held by OSV Amber Reef (2017-07-26 to 2017-07-31, 2017!AB85:AG85), so the two may be one stay.",
+    "sourceRef": "2017!F97:J97"
+  },
+  {
+    "id": "i_d0a5cd2150",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_b25d2ee836",
+    "vesselId": null,
+    "relatedReservationIds": [
+      "r_e5599331f3"
+    ],
+    "detail": "The bar at 2010!C101 runs straight into 1 banner-coloured cell at the start of the month (2010!B101, 2010-09-01). Bare cells of that colour are decoration and were not counted, but they may be painted over the first day of this stay. On the other side of them the same berth is held by M/Y Salt Sound (2010-08-31, 2010!AF89), so the two may be one stay.",
+    "sourceRef": "2010!C101"
+  },
+  {
+    "id": "i_d1306beddd",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_5c91b7f5b4",
+    "vesselId": null,
+    "relatedReservationIds": [
+      "r_67bce48180"
+    ],
+    "detail": "The bar at 2008!E30:S30 runs straight into 3 banner-coloured cells at the start of the month (2008!B30:D30, 2008-03-01 to 2008-03-03). Bare cells of that colour are decoration and were not counted, but they may be painted over the first 3 days of this stay. On the other side of them the same berth is held by R/V Clear Sextant (2007-01-01 to 2008-02-29, 2008!B19:AD19), so the two may be one stay.",
+    "sourceRef": "2008!E30:S30"
+  },
+  {
+    "id": "i_d5114f8a2d",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_17c24b56e9",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"S/V Deep Tide\" is written at 2014!Y98 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2014!Y98"
+  },
+  {
+    "id": "i_d5115b5a6d",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_3b8795fcc7",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The bar at 2010!F110:G110 runs straight into 4 banner-coloured cells at the start of the month (2010!B110:E110, 2010-10-01 to 2010-10-04). Bare cells of that colour are decoration and were not counted, but they may be painted over the first 4 days of this stay.",
+    "sourceRef": "2010!F110:G110"
+  },
+  {
+    "id": "i_d52c1fb0b6",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_9e17a97609",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"R/V Long Ketch\" is written at 2017!AA60 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2017!AA60"
+  },
+  {
+    "id": "i_d602a6c571",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_6c4b68b2c6",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The bar at 2014!N109:AF109 runs straight into 4 banner-coloured cells at the end of the month (2014!AG109:AJ109, 2014-09-27 to 2014-09-30). Bare cells of that colour are decoration and were not counted, but they may be painted over the last 4 days of this stay.",
+    "sourceRef": "2014!N109:AF109"
+  },
+  {
+    "id": "i_d6ad6929a4",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "shared_bar",
+    "reservationId": "r_48cfcac616",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The bar 2001!B28:Y28 names more than one occupant: possible double-booking or handover; imported as back-to-back stays split at the second name.",
+    "sourceRef": "2001!B28:C28"
+  },
+  {
+    "id": "i_d82723401f",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_6e35482840",
+    "vesselId": null,
+    "relatedReservationIds": [
+      "r_f9810bf10a"
+    ],
+    "detail": "The bar at 2013!AH102 runs straight into 1 banner-coloured cell at the end of the month (2013!AI102, 2013-09-30). Bare cells of that colour are decoration and were not counted, but they may be painted over the last day of this stay. On the other side of them the same berth is held by an unlabelled bar (2013-10-01 to 2013-10-11, 2013!F113:P113), so the two may be one stay.",
+    "sourceRef": "2013!AH102"
+  },
+  {
+    "id": "i_d9fe3102e9",
+    "type": "unlabelled",
+    "severity": "blocking",
+    "reason": "no_label",
+    "reservationId": "r_6fbe306660",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The coloured bar at 2013!AF41:AH41 (2013-04-27 to 2013-04-29) names no vessel or event; identify the occupant or delete the row.",
+    "sourceRef": "2013!AF41:AH41"
+  },
+  {
+    "id": "i_da93a8fb77",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_9fe0726374",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"R/V Long Ketch\" is written at 2013!U56 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2013!U56"
+  },
+  {
+    "id": "i_da9aeadeb0",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_51e49e9b28",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"F/V Northern Dory\" is written at 2009!S75 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2009!S75"
+  },
+  {
+    "id": "i_dbad1aa28e",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "merge_past_month_end",
+    "reservationId": "r_4befd9710b",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The merged bar 2009!AD63:AF63 runs past the last day column of its month; it was cut at the last day.",
+    "sourceRef": "2009!AD63:AF63"
+  },
+  {
+    "id": "i_de5ccec3de",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "merge_before_month_start",
+    "reservationId": "r_51af4ef274",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The merged bar 2012!B21:T21 starts left of the day-1 column of its month; it was cut at day 1.",
+    "sourceRef": "2012!B21:T21"
+  },
+  {
+    "id": "i_dffea21bd9",
+    "type": "unlabelled",
+    "severity": "blocking",
+    "reason": "notes_only",
+    "reservationId": "r_fffd5aa4b0",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The coloured bar at 2011!T99:U99 (2011-09-18 to 2011-09-19) names no vessel or event; identify the occupant or delete the row.",
+    "sourceRef": "2011!T99:U99"
+  },
+  {
+    "id": "i_e13ea5fb36",
+    "type": "unlabelled",
+    "severity": "blocking",
+    "reason": "no_label",
+    "reservationId": "r_2ee67f36e3",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The coloured bar at 1998!B128:C128 (1998-12-01 to 1998-12-02) names no vessel or event; identify the occupant or delete the row.",
+    "sourceRef": "1998!B128:C128"
+  },
+  {
+    "id": "i_e1bd35754e",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_colour_edge",
+    "reservationId": "r_af54f8a90f",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"Barge Silver Voyager\" at 2005!AB54:AF54 is a named bar in the sheet's banner colour that reaches the end of the month. Bare blobs of that colour sit at month edges all over the workbook, so its last 4 days (2005!AC54:AF54, 2005-05-28 to 2005-05-31) may be decoration; they were kept, check the true end of the stay.",
+    "sourceRef": "2005!AB54:AF54"
+  },
+  {
+    "id": "i_e2301280cc",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_0f45c91e12",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The bar at 2015!K143:L143 runs straight into 3 banner-coloured cells at the start of the month (2015!H143:J143, 2015-12-01 to 2015-12-03). Bare cells of that colour are decoration and were not counted, but they may be painted over the first 3 days of this stay.",
+    "sourceRef": "2015!K143:L143"
+  },
+  {
+    "id": "i_e2c577a75b",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_ed8f7ebe58",
+    "vesselId": null,
+    "relatedReservationIds": [
+      "r_059c5d9f76"
+    ],
+    "detail": "The bar at 2017!E61:AC61 runs straight into 2 banner-coloured cells at the start of the month (2017!C61:D61, 2017-05-01 to 2017-05-02). Bare cells of that colour are decoration and were not counted, but they may be painted over the first 2 days of this stay. On the other side of them the same berth is held by OSV Amber Reef (2017-04-15 to 2017-04-30, 2017!Q49:AF49), so the two may be one stay.",
+    "sourceRef": "2017!E61:AC61"
+  },
+  {
+    "id": "i_e3a82c8910",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_e75c3eadc2",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"R/V Swift Gannet\" is written at 2011!D101 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2011!D101"
+  },
+  {
+    "id": "i_e4913dfaef",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_4ae16e4b2e",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"Barge Coral Skua\" is written at 2011!P88 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2011!P88"
+  },
+  {
+    "id": "i_e4bd7cc64b",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_f55433f7d6",
+    "vesselId": null,
+    "relatedReservationIds": [
+      "r_2472e1e618"
+    ],
+    "detail": "The bar at 2004!AA89:AB89 runs straight into 4 banner-coloured cells at the end of the month (2004!AC89:AF89, 2004-07-28 to 2004-07-31). Bare cells of that colour are decoration and were not counted, but they may be painted over the last 4 days of this stay. On the other side of them the same berth is held by OSV Amber Reef (2004-08-01 to 2004-08-02, 2004!B100:C100), so the two may be one stay.",
+    "sourceRef": "2004!AA89:AB89"
+  },
+  {
+    "id": "i_e4e8f3a324",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_29f90333b9",
+    "vesselId": null,
+    "relatedReservationIds": [
+      "r_049fd6829f"
+    ],
+    "detail": "The bar at 2004!E31:Z31 runs straight into 3 banner-coloured cells at the start of the month (2004!B31:D31, 2004-02-01 to 2004-02-03). Bare cells of that colour are decoration and were not counted, but they may be painted over the first 3 days of this stay. On the other side of them the same berth is held by R/V Clear Sextant (2004-01-01 to 2004-01-31, 2004!B20:AF20), so the two may be one stay.",
+    "sourceRef": "2004!E31:Z31"
+  },
+  {
+    "id": "i_e523303b13",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_6568c2f3ca",
+    "vesselId": null,
+    "relatedReservationIds": [
+      "r_2bfe25bc04"
+    ],
+    "detail": "The bar at 2006!D121:AA121 runs straight into 4 banner-coloured cells at the end of the month (2006!AB121:AE121, 2006-11-27 to 2006-11-30). Bare cells of that colour are decoration and were not counted, but they may be painted over the last 4 days of this stay. On the other side of them the same berth is held by R/V Bright Harbor (2006-12-01 to 2006-12-31, 2006!B132:AF132), so the two may be one stay.",
+    "sourceRef": "2006!D121:AA121"
+  },
+  {
+    "id": "i_e56c8392dc",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_32e77dcdd3",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The bar at 2015!AJ81 runs straight into 2 banner-coloured cells at the end of the month (2015!AK81:AL81, 2015-07-30 to 2015-07-31). Bare cells of that colour are decoration and were not counted, but they may be painted over the last 2 days of this stay.",
+    "sourceRef": "2015!AJ81"
+  },
+  {
+    "id": "i_e5901cb1d8",
+    "type": "unlabelled",
+    "severity": "blocking",
+    "reason": "no_label",
+    "reservationId": "r_088bf7f358",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The coloured bar at 2003!J69 (2003-06-09 to 2003-06-09) names no vessel or event; identify the occupant or delete the row.",
+    "sourceRef": "2003!J69"
+  },
+  {
+    "id": "i_e5e9cd0f56",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_e0c395d884",
+    "vesselId": null,
+    "relatedReservationIds": [
+      "r_34218beb6b"
+    ],
+    "detail": "The bar at 2017!AD48:AE48 runs straight into 1 banner-coloured cell at the end of the month (2017!AF48, 2017-04-30). Bare cells of that colour are decoration and were not counted, but they may be painted over the last day of this stay. On the other side of them the same berth is held by R/V Long Ketch (2017-05-04 to 2017-05-06, 2017!F60:H60), so the two may be one stay.",
+    "sourceRef": "2017!AD48:AE48"
+  },
+  {
+    "id": "i_e6211fa6f2",
+    "type": "unlabelled",
+    "severity": "blocking",
+    "reason": "no_label",
+    "reservationId": "r_fb55dbe201",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The coloured bar at 2010!S130 (2010-12-18 to 2010-12-18) names no vessel or event; identify the occupant or delete the row.",
+    "sourceRef": "2010!S130"
+  },
+  {
+    "id": "i_e6321da38f",
+    "type": "calendar_defect",
+    "severity": "blocking",
+    "reason": "corrupt_header",
+    "reservationId": "r_c013782580",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "This stay comes from the NOVEMBER 2018 block of sheet 2010, whose header rows are corrupted (day numbers displaced, vessel names where the weekdays belong); its dates are anchored on the printed 7..N and need a human check.",
+    "sourceRef": "2010!R119"
+  },
+  {
+    "id": "i_e69ca5141c",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_08330d5d19",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"R/V Golden Horizon\" is written at 2009!D77 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2009!D77"
+  },
+  {
+    "id": "i_e879d901b7",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_6fbe306660",
+    "vesselId": null,
+    "relatedReservationIds": [
+      "r_be87a280ac"
+    ],
+    "detail": "The bar at 2013!AF41:AH41 runs straight into 1 banner-coloured cell at the end of the month (2013!AI41, 2013-04-30). Bare cells of that colour are decoration and were not counted, but they may be painted over the last day of this stay. On the other side of them the same berth is held by R/V Golden Compass (2013-05-01, 2013!F52), so the two may be one stay.",
+    "sourceRef": "2013!AF41:AH41"
+  },
+  {
+    "id": "i_e883dd8182",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_393f61e700",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"R/V Golden Horizon\" is written at 2010!F100 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2010!F100"
+  },
+  {
+    "id": "i_eab43a43e0",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_11fe4d969b",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The bar at 2004!D18:AB18 runs straight into 2 banner-coloured cells at the start of the month (2004!B18:C18, 2004-01-01 to 2004-01-02). Bare cells of that colour are decoration and were not counted, but they may be painted over the first 2 days of this stay.",
+    "sourceRef": "2004!D18:AB18"
+  },
+  {
+    "id": "i_eae9ab74b2",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_a5b990285a",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"F/V Clear Compass\" is written at 2014!AB72 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2014!AB72"
+  },
+  {
+    "id": "i_eb2ab339c9",
+    "type": "unlabelled",
+    "severity": "blocking",
+    "reason": "no_label",
+    "reservationId": "r_f9bfccc5fc",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The coloured bar at 2016!J110:N110 (2016-09-08 to 2016-09-12) names no vessel or event; identify the occupant or delete the row.",
+    "sourceRef": "2016!J110:N110"
+  },
+  {
+    "id": "i_ec4cb513f9",
+    "type": "unlabelled",
+    "severity": "blocking",
+    "reason": "no_label",
+    "reservationId": "r_cc11297aab",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The coloured bar at 1999!F39:M39 (1999-04-05 to 1999-04-12) names no vessel or event; identify the occupant or delete the row.",
+    "sourceRef": "1999!F39:M39"
+  },
+  {
+    "id": "i_edc4c47c42",
+    "type": "calendar_defect",
+    "severity": "blocking",
+    "reason": "corrupt_header",
+    "reservationId": "r_9f7ff09807",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "This stay comes from the DECEMBER 2018 block of sheet 2010, whose header rows are corrupted (day numbers displaced, vessel names where the weekdays belong); its dates are anchored on the printed 7..N and need a human check.",
+    "sourceRef": "2010!AC130:AF130"
+  },
+  {
+    "id": "i_eee0d09b0f",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "merge_before_month_start",
+    "reservationId": "r_73030dafc7",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The merged bar 2011!B131:AG131 starts left of the day-1 column of its month; it was cut at day 1.",
+    "sourceRef": "2011!B131:AG131"
+  },
+  {
+    "id": "i_effba69e08",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_a54bf5ef06",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The bar at 2015!Z107:AH107 runs straight into 3 banner-coloured cells at the end of the month (2015!AI107:AK107, 2015-09-28 to 2015-09-30). Bare cells of that colour are decoration and were not counted, but they may be painted over the last 3 days of this stay.",
+    "sourceRef": "2015!Z107:AH107"
+  },
+  {
+    "id": "i_f11e726a87",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_df30f8b98b",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"R/V Long Ketch\" is written at 2012!Z56 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2012!Z56"
+  },
+  {
+    "id": "i_f1375a4a73",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_9a75b1b00d",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"M/V GREY COMPASS\" is written at 2014!Y56 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2014!Y56"
+  },
+  {
+    "id": "i_f33ec4c0a6",
+    "type": "calendar_defect",
+    "severity": "blocking",
+    "reason": "corrupt_header",
+    "reservationId": "r_fb55dbe201",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "This stay comes from the DECEMBER 2018 block of sheet 2010, whose header rows are corrupted (day numbers displaced, vessel names where the weekdays belong); its dates are anchored on the printed 7..N and need a human check.",
+    "sourceRef": "2010!S130"
+  },
+  {
+    "id": "i_f429851d99",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_2a61a7d5b3",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"R/V Salt Current\" is written at 2015!L120 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2015!L120"
+  },
+  {
+    "id": "i_f542824139",
+    "type": "unlabelled",
+    "severity": "blocking",
+    "reason": "no_label",
+    "reservationId": "r_2f887ac38c",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The coloured bar at 2013!T64:U64 (2013-06-15 to 2013-06-16) names no vessel or event; identify the occupant or delete the row.",
+    "sourceRef": "2013!T64:U64"
+  },
+  {
+    "id": "i_f57dd97774",
+    "type": "unlabelled",
+    "severity": "blocking",
+    "reason": "notes_only",
+    "reservationId": "r_a6f6465c14",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The coloured bar at 2017!O110 (2017-09-13 to 2017-09-13) names no vessel or event; identify the occupant or delete the row.",
+    "sourceRef": "2017!O110"
+  },
+  {
+    "id": "i_f5c6ff9224",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_b232b24f12",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The bar at 2017!V22:Z22 runs straight into 4 banner-coloured cells at the end of the month (2017!AA22:AD22, 2017-02-25 to 2017-02-28). Bare cells of that colour are decoration and were not counted, but they may be painted over the last 4 days of this stay.",
+    "sourceRef": "2017!V22:Z22"
+  },
+  {
+    "id": "i_f5d4aea6cf",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_f322f53ccd",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The bar at 2010!D65:O65 runs straight into 2 banner-coloured cells at the start of the month (2010!B65:C65, 2010-06-01 to 2010-06-02). Bare cells of that colour are decoration and were not counted, but they may be painted over the first 2 days of this stay.",
+    "sourceRef": "2010!D65:O65"
+  },
+  {
+    "id": "i_f5da6df751",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_b703d3a380",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"R/V GOLDEN COMPASS\" is written at 2013!V30 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2013!V30"
+  },
+  {
+    "id": "i_f6283c7fab",
+    "type": "unlabelled",
+    "severity": "blocking",
+    "reason": "no_label",
+    "reservationId": "r_db349b7be1",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The coloured bar at 2017!Z21:AD21 (2017-02-24 to 2017-02-28) names no vessel or event; identify the occupant or delete the row.",
+    "sourceRef": "2017!Z21:AD21"
+  },
+  {
+    "id": "i_f768dce721",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_df322eda35",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"Barge Blue Current\" is written at 2010!P79 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2010!P79"
+  },
+  {
+    "id": "i_f805e7d06a",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_eff36b8321",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"F/V SALT FATHOM\" is written at 2010!B131 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2010!B131"
+  },
+  {
+    "id": "i_f8125f83db",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_b3d5f6e208",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"M/V GREY COMPASS\" is written at 2017!AA56 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2017!AA56"
+  },
+  {
+    "id": "i_f897de94c2",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_e08328911f",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"M/V HIGH BEACON\" is written at 2011!F100 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2011!F100"
+  },
+  {
+    "id": "i_f89ed108be",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "merge_before_month_start",
+    "reservationId": "r_b703d3a380",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The merged bar 2013!B30:I30 starts left of the day-1 column of its month; it was cut at day 1.",
+    "sourceRef": "2013!B30:I30"
+  },
+  {
+    "id": "i_f8b18c86e2",
+    "type": "overlap",
+    "severity": "blocking",
+    "reason": "duplicate_berth_row",
+    "reservationId": "r_7bd2fee188",
+    "vesselId": null,
+    "relatedReservationIds": [
+      "r_3815f4c0fe"
+    ],
+    "detail": "Overlaps OSV Amber Reef (2017-07-09 to 2017-07-18, 2017!K85:T85) on the same berth; both were in the legacy grid, so neither was dropped. Decide which stay is real.",
+    "sourceRef": "2017!M88:Q88"
+  },
+  {
+    "id": "i_f968ea553b",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_841d9d38ec",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"R/V Golden Horizon\" is written at 2009!E55 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2009!E55"
+  },
+  {
+    "id": "i_f9c9352ded",
+    "type": "length_conflict",
+    "severity": "warning",
+    "reason": "registry_conflict",
+    "reservationId": null,
+    "vesselId": "v_wild-star",
+    "relatedReservationIds": [],
+    "detail": "OSV Wild Star has more than one length on file (24 ft, 145 ft); fit checks are off for this vessel until one is confirmed.",
+    "sourceRef": null
+  },
+  {
+    "id": "i_fb259b3da9",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "shared_bar",
+    "reservationId": "r_a69717dbfa",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The bar 2001!R84:V84 names more than one occupant: possible double-booking or handover; imported as back-to-back stays split at the second name.",
+    "sourceRef": "2001!T84:V84"
+  },
+  {
+    "id": "i_fc64bccf09",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_3c0af7ec6b",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"Barge Silver Voyager\" is written at 2015!U34 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2015!U34"
+  },
+  {
+    "id": "i_fcb74c9be9",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "decorative_overpaint",
+    "reservationId": "r_ff8c23b205",
+    "vesselId": null,
+    "relatedReservationIds": [
+      "r_b693656309"
+    ],
+    "detail": "The bar at 2008!C41:AA41 runs straight into 4 banner-coloured cells at the end of the month (2008!AB41:AE41, 2008-04-27 to 2008-04-30). Bare cells of that colour are decoration and were not counted, but they may be painted over the last 4 days of this stay. On the other side of them the same berth is held by R/V Golden Compass (2008-05-01 to 2008-05-02, 2008!B52:C52), so the two may be one stay.",
+    "sourceRef": "2008!C41:AA41"
+  },
+  {
+    "id": "i_fd5cc3428f",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "merge_before_month_start",
+    "reservationId": "r_a6345aeb51",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The merged bar 2013!D130:AJ130 starts left of the day-1 column of its month; it was cut at day 1.",
+    "sourceRef": "2013!D130:AJ130"
+  },
+  {
+    "id": "i_fd8ccb8c36",
+    "type": "unlabelled",
+    "severity": "blocking",
+    "reason": "no_label",
+    "reservationId": "r_7725b8cf55",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The coloured bar at 2010!B129:G129;2010!H130:R130 (2010-12-01 to 2010-12-17) names no vessel or event; identify the occupant or delete the row.",
+    "sourceRef": "2010!B129:G129;2010!H130:R130"
+  },
+  {
+    "id": "i_fdfcc65b77",
+    "type": "unlabelled",
+    "severity": "blocking",
+    "reason": "no_label",
+    "reservationId": "r_4b00d5a626",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "The coloured bar at 2008!B35:AF35 (2008-03-01 to 2008-03-31) names no vessel or event; identify the occupant or delete the row.",
+    "sourceRef": "2008!B35:AF35"
+  },
+  {
+    "id": "i_fe96af9227",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_e3751bed0f",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"Film crew on dock\" is written at 2011!AG132 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2011!AG132"
+  },
+  {
+    "id": "i_ff25e0d829",
+    "type": "calendar_defect",
+    "severity": "blocking",
+    "reason": "corrupt_header",
+    "reservationId": "r_eff36b8321",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "This stay comes from the DECEMBER 2018 block of sheet 2010, whose header rows are corrupted (day numbers displaced, vessel names where the weekdays belong); its dates are anchored on the printed 7..N and need a human check.",
+    "sourceRef": "2010!B131"
+  },
+  {
+    "id": "i_ff3643d727",
+    "type": "ambiguous_extent",
+    "severity": "warning",
+    "reason": "label_unfilled",
+    "reservationId": "r_802db9970c",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "\"R/V Golden Horizon\" is written at 2009!F100 with no booking colour; imported as a one-day stay, the real extent is unknown.",
+    "sourceRef": "2009!F100"
+  },
+  {
+    "id": "i_ffed0f69c9",
+    "type": "calendar_defect",
+    "severity": "blocking",
+    "reason": "corrupt_header",
+    "reservationId": "r_36f32292bd",
+    "vesselId": null,
+    "relatedReservationIds": [],
+    "detail": "This stay comes from the NOVEMBER 2018 block of sheet 2010, whose header rows are corrupted (day numbers displaced, vessel names where the weekdays belong); its dates are anchored on the printed 7..N and need a human check.",
+    "sourceRef": "2010!AB120"
+  }
+]

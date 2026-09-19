@@ -39,16 +39,24 @@ const BACKGROUND: ReadonlySet<FillKey> = new Set([
 ]);
 
 /**
- * Fills that decorate the sheet rather than mark a booking:
- * - `rgb:D9D9D9` / `theme:0:-0.15`: the full-month grey band on the North Pier Face row (2009-2019)
- * - `theme:3:-0.25` / `rgb:16365C`: the sheet banner colour, plus stray unlabelled 1-4 cell blobs
+ * The sheet banner colour. On a berth row it turns up as stray unlabelled blobs,
+ * always 1-4 cells and (but for two of some 290) against the first or last day of a month block.
  */
-const STRUCTURAL: ReadonlySet<FillKey> = new Set([
-  "rgb:D9D9D9",
-  "theme:0:-0.15",
-  "theme:3:-0.25",
-  "rgb:16365C",
-]);
+const BANNER: ReadonlySet<FillKey> = new Set(["theme:3:-0.25", "rgb:16365C"]);
+
+/** The grey of the full-month band painted along the North Pier Face row (2009-2019). */
+const BAND_GREY: ReadonlySet<FillKey> = new Set(["rgb:D9D9D9", "theme:0:-0.15"]);
+
+/**
+ * Fills that decorate the sheet WHERE NOTHING IS WRITTEN ON THEM. The colour
+ * alone does not settle it: 2001-2008 paint real, named bars in these same
+ * colours, so `runs.ts` lets a stretch of them be a booking when it carries a
+ * name (and is not the Face band). Bare, they never count as occupancy.
+ */
+const STRUCTURAL: ReadonlySet<FillKey> = new Set([...BAND_GREY, ...BANNER]);
+
+export const isBannerFill = (key: FillKey | null): boolean => key !== null && BANNER.has(key);
+export const isBandGrey = (key: FillKey | null): boolean => key !== null && BAND_GREY.has(key);
 
 export function fillClass(key: FillKey | null): FillClass {
   if (key === null || BACKGROUND.has(key)) return "background";
