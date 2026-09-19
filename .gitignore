@@ -39,3 +39,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# impeccable design skill: local session state (decision-page pids/ports), not project content
+.impeccable/questions/
