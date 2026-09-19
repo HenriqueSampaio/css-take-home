@@ -2,27 +2,24 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import type { ReactNode } from "react";
 
-export type NavItem = { href: string; label: string; match: string; matchPrefix?: boolean; badge?: ReactNode };
+export type NavItem = { href: string; label: string; match: string[] };
 
-/** The title block's navigation field. Current page: ink text and a Prussian underline. */
+/** Top-bar destinations as pills. Current: tinted blue. */
 export function NavLinks({ items }: { items: NavItem[] }) {
   const pathname = usePathname();
   return (
-    <ul className="flex h-full flex-wrap items-stretch gap-x-1">
+    <ul className="flex items-center gap-1">
       {items.map((item) => {
-        const current = pathname === item.match || (item.matchPrefix !== false && pathname.startsWith(item.match + "/"));
+        const current = item.match.some((m) => pathname === m || pathname.startsWith(m + "/"));
         return (
-          <li key={item.href} className="flex shrink-0">
+          <li key={item.href}>
             <Link
               href={item.href}
               aria-current={current ? "page" : undefined}
-              className={`relative flex min-h-11 items-center gap-1.5 px-3 text-[0.9375rem] font-medium transition-colors duration-150 hover:text-ink ${current ? "text-ink" : "text-ink-2"}`}
+              className={`flex h-9 items-center rounded-full px-3.5 text-[0.9375rem] font-semibold transition-colors duration-150 ${current ? "bg-brand-tint text-brand-deep" : "text-ink-2 hover:bg-fill hover:text-ink"}`}
             >
               {item.label}
-              {item.badge}
-              <span aria-hidden className={`absolute inset-x-3 bottom-0 h-0.5 transition-colors duration-150 ${current ? "bg-prussian" : "bg-transparent"}`} />
             </Link>
           </li>
         );

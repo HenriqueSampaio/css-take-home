@@ -1,7 +1,8 @@
 /**
- * `npm run db:seed`: loads data/seed/*.json into the database named by
- * DATABASE_URL_UNPOOLED (falling back to DATABASE_URL). `--fixture` loads the
- * small hand-written fixture instead, for a local demo without the workbook.
+ * `npm run db:seed`: loads data/seed/*.json (the berths and the vessel registry;
+ * the schedule starts empty) into the database named by DATABASE_URL_UNPOOLED
+ * (falling back to DATABASE_URL). `--fixture` loads the small hand-written
+ * fixture instead: the same six berths and a handful of vessels.
  *
  * Goes through the same resetFromSeed() as the in-app "Reset demo data" button,
  * so the CLI and the app cannot drift apart. Builds its own connection instead
@@ -39,10 +40,6 @@ async function main(): Promise<number> {
     if (problems.length > 25) console.error("  ...");
     return 1;
   }
-  if (!useFixture && seed.reservations.length === 0) {
-    console.warn("Warning: data/seed/reservations.json is empty. Run `npm run import` first, or pass --fixture.");
-  }
-
   const connectionString = process.env.DATABASE_URL_UNPOOLED ?? process.env.DATABASE_URL;
   if (!connectionString) {
     console.error("DATABASE_URL_UNPOOLED (or DATABASE_URL) is not set. Run `npx vercel env pull .env.local`.");
@@ -58,12 +55,10 @@ async function main(): Promise<number> {
       console.error(`Seeding failed (${result.code}): ${result.message}`);
       return 1;
     }
-    const { berths, vessels, reservations, issues, seedVersion } = result.data;
-    console.log(`Seeded from ${source} in ${Date.now() - started} ms (seed version ${seedVersion}):`);
-    console.log(`  berths        ${berths}`);
-    console.log(`  vessels       ${vessels}`);
-    console.log(`  reservations  ${reservations}`);
-    console.log(`  issues        ${issues}`);
+    const { berths, vessels } = result.data;
+    console.log(`Seeded from ${source} in ${Date.now() - started} ms. The schedule is empty.`);
+    console.log(`  berths   ${berths}`);
+    console.log(`  vessels  ${vessels}`);
     return 0;
   } finally {
     await pool.end();

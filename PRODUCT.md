@@ -8,62 +8,63 @@ web
 
 ## Users
 
-One **dock coordinator** in Marine Operations at a marine research facility. They own the waterfront schedule, plan weeks to months ahead, and work at a desk on a desktop monitor. Berth requests reach them by email or phone from captains, scientists and event organisers, who never log in themselves. The coordinator is fluent in the domain (berths, LOA, vessel type prefixes such as R/V and M/Y) and has used a colour-coded spreadsheet grid for this job for decades.
+One **dock coordinator** in Marine Operations at a marine research facility. They own the waterfront schedule, plan weeks to months ahead, and work at a desk on a desktop monitor. Berth requests reach them by email or phone from captains, scientists and event organisers, who never log in themselves. They are fluent in the domain (berths, vessel length, type prefixes such as R/V and M/Y).
 
-A secondary, temporary audience: reviewers of a take-home project who open the public URL cold and need to see within a couple of minutes that the system works and why it was built this way.
+A secondary, temporary audience: reviewers of a take-home project who open the public URL cold and should understand the product within seconds.
 
 ## Product Purpose
 
-Harborview Dock Schedule manages reservations of six berths of different lengths. Vessels, non-vessel events (community sail days, tours) and closures (pier repair) each occupy a berth for an inclusive range of whole days.
+Harborview Dock Schedule manages reservations of the facility's berths, which have different lengths. Vessels, non-vessel events (community sail days, tours) and closures (pier repair) each occupy a berth for an inclusive range of whole days.
 
-It exists to remove two manual checks the spreadsheet forced on the coordinator:
+It removes two manual checks the old spreadsheet forced on the coordinator:
 
 1. **Double-bookings**, previously found by eyeballing a grid.
 2. **Fit**, previously verified by hand: is the vessel longer than the berth it was given?
 
-Success: a double-booking of a confirmed berth-day is impossible, a vessel that is too long cannot be booked, and the coordinator can answer "where can this vessel go on these dates?" in one step.
+Success: a double-booking is impossible, a vessel that is too long cannot be booked, and "where can this vessel go on these dates?" is answered in one step. A reservation is either valid and confirmed, or refused on the spot with the reason. Nothing waits in a review queue.
 
 ## Positioning
 
-The guarantees are structural, not procedural. Double-booking is prevented by a database exclusion constraint, so no code path, race or future script can create one. The 23 years of legacy spreadsheet data are imported honestly: what could not be interpreted with certainty is counted, flagged and queued for a person to resolve, never silently guessed or dropped.
+The guarantees are structural, not procedural. Double-booking is prevented by a database exclusion constraint, so no code path, race or future script can create one. The fit rule holds on every write path, not only booking: a vessel's length or a berth's length cannot be changed in a way that would break an upcoming stay.
 
 ## Operating Context
 
-- Source of truth before this system: an Excel workbook, one sheet per year (1997 to 2019), months as blocks, berths as rows, days as columns, bookings as coloured cell runs labelled with a vessel or event name. Vessel lengths lived in separate, messy contact sheets.
-- The coordinator's mental model is that grid: berths down the side, days across the top, a month at a time.
-- Whole-day granularity. One occupant per berth per day; a departure and an arrival on the same berth on the same day was never representable.
-- The deployed instance is an open, shared demo with no sign-in and a "Reset demo data" action.
+- **Forward-only.** The system books from today onwards and starts with an empty schedule. The sample workbook supplied with the brief was used only to learn how the dock works and which berths and vessels exist; none of its historical bookings are loaded.
+- The system knows the facility's current date and time (US Eastern) and shows it. A reservation cannot start before today; a stay that has ended is history and cannot be changed.
+- The coordinator's mental model is a month grid: berths down the side, days across the top.
+- Whole-day granularity. One occupant per berth per day; a stay ending on a day and another starting that same day on the same berth collide.
+- The deployed instance is an open, shared demo with no sign-in and a quiet "Reset demo data" action.
 
 ## Capabilities and Constraints
 
-- Six berths: North Pier West 410 ft, North Pier Face 75 ft, North Pier East 240 ft, Inner Channel 55 ft, South Float West 90 ft, South Float East 90 ft.
-- Reservation kinds: vessel, event, closure. Statuses: confirmed, needs review (unresolved legacy data), cancelled.
-- Fit is length only (vessel LOA against berth length, whole feet). Beam, draft and rafting alongside are out of scope.
-- A vessel's length is one of four states: verified, probable (registry name match under a different type prefix), conflict (the registry lists two lengths), unknown. Most legacy vessels are unknown. A vessel with no usable length cannot be booked until a length is entered.
-- Imported data carries issues for review: genuine overlaps, unlabelled bookings, calendar defects in the source, ambiguous extents, conflicting registry lengths.
-- Terminology to keep: berth, vessel, stay, LOA, needs review, closure. Type prefixes are written as in the source (R/V, M/V, M/Y, S/V, S/Y, F/V, OSV, Tug, Barge).
+- Starting berths: North Pier West 410 ft, North Pier Face 75 ft, North Pier East 240 ft, Inner Channel 55 ft, South Float West 90 ft, South Float East 90 ft. The coordinator can add a berth, correct its name or length, and retire one that is no longer used.
+- Reservation kinds: vessel, event, closure. Statuses: confirmed, cancelled (a cancelled stay can be restored if its days are still free).
+- Fit is length only (vessel length against berth length, whole feet). Beam, draft and rafting alongside are out of scope.
+- Every vessel has a length; registering a vessel requires one. The starting registry is the 156 vessels the sample lists with a single unambiguous length.
+- Terminology: berth, vessel, stay, reservation, closure, retired (berth). Type prefixes as written in the trade (R/V, M/V, M/Y, S/V, S/Y, F/V, OSV, Tug, Barge).
 - Stack: Next.js on Vercel, Postgres on Neon. No authentication.
 
 ## Brand Commitments
 
-- Name: **Harborview Dock Schedule** (facility: Harborview Marine Research Center, the synthetic name printed in the source workbook). No affiliation with, or branding of, any real institution.
-- Voice: plain, specific, written for a working coordinator. Errors name the berth, the vessel, the dates and the number of feet. No jargon, no exclamation, no marketing tone.
+- Name: **Harborview Dock Schedule** (facility: Harborview Marine Research Center, the placeholder name printed in the sample workbook). No affiliation with, or branding of, any real institution.
+- **Look: the modern calendar, played straight.** The owner rejected an earlier engineering-drawing look as legacy-feeling and too dense, and chose a light, colourful, calendar-style interface that sits alongside Notion Calendar and Google Calendar, with clean purposeful animation. That is a standing preference, and those products set the craft bar.
+- Voice: plain, specific, friendly without being chatty. Refusals name the berth, the vessel, the dates and the number of feet. No jargon, no exclamation marks, no marketing tone.
 
 ## Evidence on Hand
 
-- `data/source/Dock Schedule - Synthetic Sample.xlsx`: the synthetic 23-year legacy workbook.
-- `data/seed/*.json`: the imported berths, vessels, reservations, issues and an import report with real counts.
+- `data/source/Dock Schedule - Synthetic Sample.xlsx`: the sample workbook from the brief (reference only).
+- `data/seed/berths.json`, `data/seed/vessels.json`: the starting berths and vessel registry.
 - No logo, photography or brand assets exist. None should be invented as if official.
 - No real customers, usage numbers or testimonials exist; none may be claimed.
 
 ## Product Principles
 
-1. **Trustworthy and fast to scan wins every trade-off.** A calm, dense, familiar working tool. Nothing decorative.
-2. **A conflict or a misfit is impossible to miss**, and never signalled by colour alone.
-3. **Never invent certainty.** Unknown lengths, ambiguous legacy rows and probable matches are shown as what they are.
-4. **Say exactly what is wrong and what to do.** Name the berth, the vessel, the dates, the feet.
-5. **The grid is the home screen.** Respect the coordinator's existing mental model; improve it rather than replace it.
+1. **Glanceable first.** One thing per screen is obvious at a glance; the rest is one click away. When in doubt, show less.
+2. **Bold what matters.** Names, dates, numbers and verdicts carry weight; everything else recedes.
+3. **A refusal is a sentence, not a colour.** Say exactly what is in the way and what to do. Status is never carried by colour alone.
+4. **The month grid is home.** Familiar calendar behaviour beats invention.
+5. **Motion explains.** Animation shows where something came from, what changed, or that the system heard you. Never decoration, never a wait.
 
 ## Accessibility & Inclusion
 
-Keyboard-operable throughout; status conveyed by shape, pattern or text as well as colour (colour-blind safe); WCAG AA contrast; respects reduced-motion preferences.
+Keyboard-operable throughout; status conveyed by shape, icon or text as well as colour; WCAG AA contrast; reduced-motion preferences fully respected.

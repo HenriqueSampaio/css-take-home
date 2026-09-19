@@ -6,7 +6,7 @@
  * Actions RETURN their ServiceResult and never redirect: the form that called
  * them decides what to do next (close a dialog, show the conflict inline,
  * navigate). On success the whole app is revalidated, because one booking
- * changes the month grid, the berth finder, the issue counts and the vessel
+ * changes the month grid, the berth finder, the dock summary and the vessel
  * pages at once, and Next then ships the re-rendered route in the same response.
  */
 import { revalidatePath } from "next/cache";

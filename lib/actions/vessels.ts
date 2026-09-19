@@ -2,12 +2,12 @@
 
 import { runAction } from "./internal/run";
 import type { ServiceResult } from "../services/result";
-import { createVessel, setVesselLength, type CreateVesselInput, type SetVesselLengthInput } from "../services/vessels";
-
-export async function setVesselLengthAction(input: SetVesselLengthInput): Promise<ServiceResult<{ misfitsBefore: number; misfitsAfter: number }>> {
-  return runAction("setVesselLengthAction", (db) => setVesselLength(db, input));
-}
+import { createVessel, updateVessel, type CreateVesselInput, type UpdateVesselInput } from "../services/vessels";
 
 export async function createVesselAction(input: CreateVesselInput): Promise<ServiceResult<{ id: string }>> {
   return runAction("createVesselAction", (db) => createVessel(db, input));
+}
+
+export async function updateVesselAction(input: UpdateVesselInput): Promise<ServiceResult<{ id: string; version: number }>> {
+  return runAction("updateVesselAction", (db) => updateVessel(db, input));
 }

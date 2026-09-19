@@ -2,12 +2,12 @@
  * Zero-setup local database:  npm run db:local
  *
  * Starts PGlite (real Postgres compiled to WASM, with btree_gist) in memory, applies the
- * same migrations that run against Neon, loads data/seed, and serves it over the Postgres
- * wire protocol. The app then connects with its normal `pg` driver:
+ * same migrations that run against Neon, loads data/seed (`--fixture` loads the small test
+ * fixture instead), and serves it over the Postgres wire protocol. The app then connects with its normal `pg` driver:
  *
  *   DATABASE_URL=postgres://postgres:postgres@127.0.0.1:5433/postgres npm run dev
  *
- * Nothing is persisted; restarting the script restores the imported archive.
+ * Nothing is persisted; restarting the script brings back the seeded berths and vessels and an empty schedule.
  */
 import { PGlite } from "@electric-sql/pglite";
 import { btree_gist } from "@electric-sql/pglite/contrib/btree_gist";
@@ -29,9 +29,9 @@ async function main() {
 
   const useFixture = process.argv.includes("--fixture");
   const seed = useFixture ? fixtureSeed : loadSeed();
-  const result = await resetFromSeed(db, seed, { cooldownSeconds: 0, seedVersion: useFixture ? "fixture" : "local" });
+  const result = await resetFromSeed(db, seed, { cooldownSeconds: 0 });
   if (!result.ok) throw new Error(`Seeding failed: ${result.message}`);
-  console.log(`seeded ${seed.reservations.length} reservations, ${seed.vessels.length} vessels, ${seed.issues.length} issues`);
+  console.log(`seeded ${result.data.berths} berths and ${result.data.vessels} vessels from ${useFixture ? "the fixture" : "data/seed"}; the schedule is empty`);
 
   const server = new PGLiteSocketServer({ db: pg, port: PORT, host: "127.0.0.1", maxConnections: 20 });
   await server.start();

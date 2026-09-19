@@ -2,7 +2,7 @@
 
 import { runAction } from "./internal/run";
 import {
-  cancelReservation, confirmReservation, createReservation, updateReservation,
+  cancelReservation, createReservation, restoreReservation, updateReservation,
   type CreateReservationInput, type ReservationRef, type UpdateReservationInput,
 } from "../services/reservations";
 import type { ServiceResult } from "../services/result";
@@ -19,6 +19,6 @@ export async function cancelReservationAction(input: ReservationRef): Promise<Se
   return runAction("cancelReservationAction", (db) => cancelReservation(db, input));
 }
 
-export async function confirmReservationAction(input: ReservationRef): Promise<ServiceResult<ReservationRef>> {
-  return runAction("confirmReservationAction", (db) => confirmReservation(db, input));
+export async function restoreReservationAction(input: ReservationRef): Promise<ServiceResult<ReservationRef>> {
+  return runAction("restoreReservationAction", (db) => restoreReservation(db, input));
 }

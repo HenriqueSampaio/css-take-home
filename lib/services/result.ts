@@ -8,13 +8,18 @@
  */
 import type { ISODate } from "../domain/dates";
 
-/** A booking that is in the way. `confirmed` blocks; `needs_review` is only a caution. */
+/**
+ * A confirmed stay that is in the way: of a booking (it holds the berth on those days), or of a
+ * change to a vessel or a berth (it would stop fitting). `berthName` is there because the second
+ * kind of refusal can name stays on several berths.
+ */
 export type ConflictInfo = {
   id: string;
+  /** The vessel's display name, or the title of an event or closure. */
   label: string;
+  berthName: string;
   startDate: ISODate;
   endDate: ISODate;
-  status: "confirmed" | "needs_review";
 };
 
 export type FitFailure = { vesselFt: number; berthFt: number; overByFt: number };
@@ -24,7 +29,6 @@ export type ServiceErrorCode =
   | "NOT_FOUND"
   | "CONFLICT"
   | "TOO_LONG"
-  | "LENGTH_REQUIRED"
   | "STALE"
   | "INVALID_STATE"
   | "COOLDOWN"
@@ -37,9 +41,9 @@ export type ServiceFailure = {
   message: string;
   /** Keyed by input field (nested fields use dots: `newVessel.lengthFt`); `_form` when no field applies. */
   fieldErrors?: Record<string, string[]>;
-  /** CONFLICT only: the confirmed bookings in the way. */
+  /** CONFLICT: the confirmed stays holding the berth. TOO_LONG from a vessel or berth change: the stays that would stop fitting. */
   conflicts?: ConflictInfo[];
-  /** TOO_LONG only. */
+  /** TOO_LONG only. When several stays are in the way, the one that is over by the most. */
   fit?: FitFailure;
   /** COOLDOWN only: whole seconds until a reset is allowed again. */
   retryAfterSeconds?: number;
@@ -48,7 +52,7 @@ export type ServiceFailure = {
 export type ServiceSuccess<T> = {
   ok: true;
   data: T;
-  /** The change was saved, but the coordinator should know something (an unresolved legacy overlap, a misfit). */
+  /** The change was saved, but the coordinator should know something (the length on file was used, not the one typed). */
   warning?: string;
 };
 

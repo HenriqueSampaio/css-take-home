@@ -3,27 +3,26 @@
  * and how driver-specific values become plain serialisable ones (query results
  * cross the server/client boundary as props, so no Date objects leave this layer).
  */
+import type { ISODate } from "../../domain/dates";
 import { displayVesselName } from "../../domain/names";
 
-export type ReservationStatus = "confirmed" | "needs_review" | "cancelled";
+export type ReservationKind = "vessel" | "event" | "closure";
+export type ReservationStatus = "confirmed" | "cancelled";
+
+/** A stay reduced to what a list or a status line needs. */
+export type StayRef = { id: string; label: string; kind: ReservationKind; startDate: ISODate; endDate: ISODate };
 
 /** What to call a vessel in a sentence or a list: `R/V Golden Compass`. */
 export const vesselLabel = (vessel: { prefix: string | null; name: string }): string => displayVesselName(vessel.prefix, vessel.name);
 
 /**
  * The one display name for a reservation: the vessel for vessel stays, the title
- * for events and closures. The legacy label is only a last resort, for rows whose
- * subject went missing, so the UI never renders an empty bar.
+ * for events and closures. The database guarantees one or the other; the fallback
+ * only exists so the UI can never render an empty bar.
  */
-export function reservationLabel(row: {
-  kind: "vessel" | "event" | "closure";
-  title: string | null;
-  rawLabel?: string | null;
-  vesselName: string | null;
-  vesselPrefix: string | null;
-}): string {
+export function reservationLabel(row: { kind: ReservationKind; title: string | null; vesselName: string | null; vesselPrefix: string | null }): string {
   if (row.kind === "vessel" && row.vesselName) return displayVesselName(row.vesselPrefix, row.vesselName);
-  return row.title?.trim() || row.rawLabel?.trim() || (row.kind === "closure" ? "Closure" : row.kind === "event" ? "Event" : "Unnamed vessel");
+  return row.title?.trim() || (row.kind === "closure" ? "Closure" : row.kind === "event" ? "Event" : "Unnamed vessel");
 }
 
 /** Timestamps leave as ISO strings. Drizzle hands back Date objects; raw `execute()` rows differ by driver. */
@@ -44,11 +43,3 @@ export function rowsOf<T>(result: unknown): T[] {
 
 /** Escapes `%`, `_` and `\` so user text is matched literally inside an ILIKE pattern. */
 export const escapeLike = (text: string): string => text.replace(/[\\%_]/g, (ch) => "\\" + ch);
-
-export type Page = { limit?: number; offset?: number };
-
-export function pageOf(opts: Page | undefined, defaultLimit: number, maxLimit = 500): { limit: number; offset: number } {
-  const limit = Math.min(Math.max(Math.trunc(opts?.limit ?? defaultLimit) || defaultLimit, 1), maxLimit);
-  const offset = Math.max(Math.trunc(opts?.offset ?? 0) || 0, 0);
-  return { limit, offset };
-}

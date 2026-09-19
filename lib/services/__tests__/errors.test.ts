@@ -4,7 +4,7 @@ import { reservations, vessels } from "../../db/schema";
 import type { Db } from "../../db/types";
 import { isConnectionError, pgErrorOf, resultFromError, rootCauseMessage, runService, WAKING_UP_MESSAGE } from "../errors";
 import { failure } from "../result";
-import { createTestDb, seedFixture } from "./helpers";
+import { createTestDb, seedFixture, stay } from "./helpers";
 
 let db: Db;
 
@@ -17,8 +17,9 @@ const caught = async (work: () => Promise<unknown>): Promise<unknown> => work().
 
 describe("pgErrorOf", () => {
   it("finds the SQLSTATE and constraint under Drizzle's wrapper, on a real exclusion violation", async () => {
+    await stay(db, "south-float-east", "v_amber-reef", "2026-09-21", "2026-09-30");
     const error = await caught(() =>
-      db.insert(reservations).values({ id: "x1", berthId: "south-float-east", kind: "vessel", vesselId: "v_tidewater", startDate: "2017-07-18", endDate: "2017-07-19" }),
+      db.insert(reservations).values({ id: "x1", berthId: "south-float-east", kind: "vessel", vesselId: "v_tidewater", startDate: "2026-09-30", endDate: "2026-10-01" }),
     );
     // The thing we catch carries no code itself: that is the whole reason pgErrorOf exists.
     expect((error as { code?: string }).code).toBeUndefined();
@@ -32,7 +33,7 @@ describe("pgErrorOf", () => {
   });
 
   it("reads unique, foreign key and check violations the same way", async () => {
-    const unique = await caught(() => db.insert(vessels).values({ id: "v_dupe", name: "Tidewater", nameKey: "TIDEWATER" }));
+    const unique = await caught(() => db.insert(vessels).values({ id: "v_dupe", name: "Tidewater", nameKey: "TIDEWATER", lengthFt: 60 }));
     expect(pgErrorOf(unique)).toMatchObject({ code: "23505", constraint: "vessels_name_key_unique" });
 
     const foreignKey = await caught(() => db.insert(reservations).values({ id: "x2", berthId: "nowhere", kind: "event", title: "T", startDate: "2020-01-01", endDate: "2020-01-02" }));
@@ -65,6 +66,7 @@ describe("resultFromError", () => {
     const pg = (code: string, constraint?: string) => new Error("Failed query: ...", { cause: Object.assign(new Error("db says no"), { code, constraint }) });
     expect(resultFromError(pg("23P01"), "t")).toMatchObject({ code: "CONFLICT", conflicts: [] });
     expect(resultFromError(pg("23505", "vessels_name_key_unique"), "t")).toMatchObject({ code: "VALIDATION", message: "A vessel with that name already exists." });
+    expect(resultFromError(pg("23505", "berths_name_unique"), "t")).toMatchObject({ code: "VALIDATION", message: "A berth with that name already exists." });
     expect(resultFromError(pg("23503"), "t").code).toBe("NOT_FOUND");
     expect(resultFromError(pg("23514"), "t").code).toBe("VALIDATION");
     expect(resultFromError(new Error("boom"), "t").code).toBe("INTERNAL");

@@ -3,29 +3,25 @@
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useRef, useState, useTransition } from "react";
-import { cancelReservationAction, confirmReservationAction } from "@/lib/actions/reservations";
+import { cancelReservationAction, restoreReservationAction } from "@/lib/actions/reservations";
 import { formatDate, yearMonthOf } from "@/lib/domain/dates";
 import type { ServiceResult } from "@/lib/services/result";
 import { editReservationHref, scheduleHref } from "@/lib/ui/params";
+import { Pencil, Undo } from "./icons";
 
-type Status = "confirmed" | "needs_review" | "cancelled";
-
-/** Confirm, close findings, cancel, restore. Results come back as values and are shown in place, with the blocking stays named. */
-export function ReservationActions({ id, version, status, openFindings, showCancelled }: { id: string; version: number; status: Status; openFindings: number; showCancelled: boolean }) {
+/** Edit, cancel, restore. A refusal comes back as a sentence and is shown in place, naming what is in the way. */
+export function ReservationActions({ id, version, status, ended, showCancelled }: { id: string; version: number; status: "confirmed" | "cancelled"; ended: boolean; showCancelled: boolean }) {
   const router = useRouter();
   const [pending, startTransition] = useTransition();
-  const [busy, setBusy] = useState<"confirm" | "cancel" | null>(null);
   const [confirmingCancel, setConfirmingCancel] = useState(false);
   const [result, setResult] = useState<ServiceResult<unknown> | null>(null);
   const [done, setDone] = useState<string | null>(null);
   const cancelTrigger = useRef<HTMLButtonElement>(null);
 
-  const run = (which: "confirm" | "cancel", action: typeof confirmReservationAction, success: string) =>
+  const run = (action: typeof cancelReservationAction, success: string) =>
     startTransition(async () => {
-      setBusy(which);
       setDone(null);
       const outcome = await action({ id, version });
-      setBusy(null);
       setConfirmingCancel(false);
       setResult(outcome);
       if (outcome.ok) {
@@ -34,43 +30,29 @@ export function ReservationActions({ id, version, status, openFindings, showCanc
       }
     });
 
-  const backOut = () => {
-    setConfirmingCancel(false);
-    requestAnimationFrame(() => cancelTrigger.current?.focus());
-  };
+  if (ended) return <p className="t-small text-ink-3">This stay has ended, so it can no longer be changed.</p>;
 
   return (
     <div className="flex flex-col gap-3">
       <div className="flex flex-wrap items-center gap-2">
-        {status !== "cancelled" && <Link href={editReservationHref(id)} className="btn btn-secondary">{status === "needs_review" ? "Edit and confirm" : "Edit"}</Link>}
-        {status === "needs_review" && (
-          <button type="button" className="btn btn-primary" disabled={pending} onClick={() => run("confirm", confirmReservationAction, "Confirmed. Its review findings are closed.")}>
-            {busy === "confirm" ? "Confirming..." : "Confirm as is"}
-          </button>
+        {status === "confirmed" && !confirmingCancel && (
+          <>
+            <Link href={editReservationHref(id)} className="btn btn-secondary"><Pencil size={16} />Edit</Link>
+            <button ref={cancelTrigger} type="button" className="btn btn-danger" disabled={pending} onClick={() => { setResult(null); setDone(null); setConfirmingCancel(true); }}>Cancel reservation</button>
+          </>
         )}
-        {status === "confirmed" && openFindings > 0 && (
-          <button type="button" className="btn btn-primary" disabled={pending} onClick={() => run("confirm", confirmReservationAction, openFindings === 1 ? "Finding closed." : "Findings closed.")}>
-            {busy === "confirm" ? "Closing..." : openFindings === 1 ? "Looks right, close the finding" : `Looks right, close ${openFindings} findings`}
-          </button>
+        {status === "confirmed" && confirmingCancel && (
+          <div className="rise-in flex w-full flex-col gap-2 rounded-xl bg-danger-tint p-3">
+            <p className="text-[0.875rem] font-semibold text-danger-ink">Cancel this reservation? Its days become free to book.</p>
+            <div className="flex gap-2">
+              <button type="button" className="btn btn-danger-solid btn-sm" disabled={pending} onClick={() => run(cancelReservationAction, "Cancelled. Turn on Show cancelled to find and restore it.")}>{pending ? "Cancelling..." : "Yes, cancel it"}</button>
+              <button type="button" className="btn btn-secondary btn-sm" disabled={pending} autoFocus onClick={() => { setConfirmingCancel(false); requestAnimationFrame(() => cancelTrigger.current?.focus()); }}>Keep it</button>
+            </div>
+          </div>
         )}
         {status === "cancelled" && (
-          <button type="button" className="btn btn-primary" disabled={pending} onClick={() => run("confirm", confirmReservationAction, "Reservation restored.")}>
-            {busy === "confirm" ? "Restoring..." : "Restore reservation"}
-          </button>
+          <button type="button" className="btn btn-primary" disabled={pending} onClick={() => run(restoreReservationAction, "Restored.")}><Undo size={16} />{pending ? "Restoring..." : "Restore reservation"}</button>
         )}
-        {status !== "cancelled" &&
-          (confirmingCancel ? (
-            <span className="flex flex-wrap items-center gap-2">
-              <span className="text-[0.875rem] font-medium">Cancel this reservation?</span>
-              <button type="button" className="btn btn-danger" disabled={pending} onClick={() => run("cancel", cancelReservationAction, "Reservation cancelled. Use Show cancelled stays to find and restore it.")}>
-                {busy === "cancel" ? "Cancelling..." : "Yes, cancel it"}
-              </button>
-              {/* Focus lands on the safe choice; the trigger it replaced is gone from the page. */}
-              <button type="button" className="btn btn-secondary" disabled={pending} autoFocus onClick={backOut}>Keep it</button>
-            </span>
-          ) : (
-            <button ref={cancelTrigger} type="button" className="btn btn-danger" disabled={pending} onClick={() => { setResult(null); setDone(null); setConfirmingCancel(true); }}>Cancel reservation</button>
-          ))}
       </div>
 
       {result && !result.ok && (
@@ -80,9 +62,7 @@ export function ReservationActions({ id, version, status, openFindings, showCanc
             {result.conflicts && result.conflicts.length > 0 && (
               <ul className="mt-1 list-disc pl-5">
                 {result.conflicts.map((c) => (
-                  <li key={c.id}>
-                    <Link className="link" scroll={false} href={scheduleHref(yearMonthOf(c.startDate), c.id, { showCancelled })}>{c.label}</Link>, {formatDate(c.startDate)} to {formatDate(c.endDate)}
-                  </li>
+                  <li key={c.id}><Link className="font-semibold underline underline-offset-2" scroll={false} href={scheduleHref(yearMonthOf(c.startDate), c.id, { showCancelled })}>{c.label}</Link>, {formatDate(c.startDate)} to {formatDate(c.endDate)}</li>
                 ))}
               </ul>
             )}
@@ -90,11 +70,7 @@ export function ReservationActions({ id, version, status, openFindings, showCanc
           </div>
         </div>
       )}
-      {result?.ok && (
-        <div className={`notice ${result.warning ? "notice-caution" : "notice-clear"}`} role="status">
-          <p>{done}{result.warning ? ` ${result.warning}` : ""}</p>
-        </div>
-      )}
+      {result?.ok && done && <p className="notice notice-ok font-semibold" role="status">{done}</p>}
     </div>
   );
 }

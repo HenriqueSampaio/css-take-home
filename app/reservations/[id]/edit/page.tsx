@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { BerthOptions } from "@/components/berth-options";
+import { BerthResults } from "@/components/berth-results";
 import { BookBerthButton } from "@/components/book-berth-button";
+import { ChevronLeft } from "@/components/icons";
 import { ReservationForm, type StayDraft } from "@/components/reservation-form";
-import { ReservationStatusTag } from "@/components/status-tags";
 import { getBerths } from "@/lib/db/queries/berths";
 import { getOccupancy, getReservationDetail } from "@/lib/db/queries/reservations";
 import { classifyBerths } from "@/lib/domain/availability";
-import { formatDate, yearMonthOf } from "@/lib/domain/dates";
+import { formatDate, todayIn, yearMonthOf } from "@/lib/domain/dates";
 import type { UpdateReservationInput } from "@/lib/services/reservations";
 import { requestDb } from "@/lib/ui/data";
 import { editReservationHref, parseIdParam, scheduleHref } from "@/lib/ui/params";
@@ -20,106 +20,69 @@ export default async function EditReservationPage(props: PageProps<"/reservation
   const id = parseIdParam((await props.params).id);
   if (!id) notFound();
   const sp = await props.searchParams;
+  const today = todayIn();
   const db = await requestDb();
   const [detail, berths] = await Promise.all([getReservationDetail(db, id), getBerths(db)]);
   if (!detail) notFound();
 
-  const backHref = scheduleHref(yearMonthOf(detail.startDate), detail.id);
-  if (detail.status === "cancelled") {
+  const backHref = scheduleHref(yearMonthOf(detail.startDate < today ? today : detail.startDate), detail.id);
+  const locked = detail.status === "cancelled" ? "This reservation is cancelled. Restore it from the schedule before editing it." : detail.endDate < today ? `This stay ended on ${formatDate(detail.endDate)}, so it can no longer be changed.` : null;
+  if (locked) {
     return (
-      <div className="mx-auto max-w-[72rem]">
-        <h1 className="t-headline">{detail.label}</h1>
-        <p className="mt-2 text-ink-2">This reservation is cancelled. Restore it from the schedule before editing it.</p>
-        <Link href={backHref} className="btn btn-secondary mt-4">Back to the schedule</Link>
+      <div className="mx-auto max-w-[64rem]">
+        <h1 className="t-display">{detail.label}</h1>
+        <p className="mt-2 text-ink-2">{locked}</p>
+        <Link href={backHref} className="btn btn-secondary mt-5"><ChevronLeft size={16} />Back to the schedule</Link>
       </div>
     );
   }
 
+  const started = detail.startDate < today;
   const edits = parseStayParams(sp);
-  const start = edits.start ?? detail.startDate;
-  const end = edits.start ? edits.end ?? edits.start : detail.endDate;
+  const submitted = edits.start !== null || (started && edits.end !== null);
+  const start = started ? detail.startDate : edits.start && edits.start >= today ? edits.start : detail.startDate;
+  const end = submitted && edits.end && edits.end >= today && edits.end >= start ? edits.end : detail.endDate < start ? start : detail.endDate;
   const range = { start, end };
-  const title = detail.kind === "vessel" ? null : edits.title ?? detail.title;
-  // Only a real submission (it always carries a valid first day) may replace the saved notes; a mangled URL must not blank them.
-  const notes = edits.start !== null ? edits.notes : detail.notes;
-  const vesselLengthFt = detail.kind === "vessel" ? detail.vessel?.lengthFt ?? edits.lengthFt : null;
+  const title = detail.kind === "vessel" ? null : submitted ? edits.title ?? detail.title : detail.title;
+  // Only a real submission may replace the saved notes; a mangled URL must not blank them.
+  const notes = submitted ? edits.notes : detail.notes;
+  const vesselLengthFt = detail.vessel?.lengthFt ?? null;
 
-  const occupancy = await getOccupancy(db, range);
-  const options = classifyBerths(berths, occupancy, { range, vesselLengthFt, requiresFit: detail.kind === "vessel", excludeReservationId: detail.id });
+  const options = classifyBerths(berths, await getOccupancy(db, range), { range, vesselLengthFt, excludeReservationId: detail.id });
   const scaleFt = Math.max(...berths.map((b) => b.lengthFt), vesselLengthFt ?? 0);
-  const changedDates = start !== detail.startDate || end !== detail.endDate;
+  const changed = start !== detail.startDate || end !== detail.endDate;
 
-  const initial: StayDraft = {
-    kind: detail.kind,
-    vesselId: detail.vessel?.id ?? null,
-    newVessel: false,
-    vesselName: "",
-    vesselPrefix: "",
-    lengthFt: edits.lengthFt !== null ? String(edits.lengthFt) : "",
-    title: title ?? "",
-    start,
-    end,
-    notes,
-    berthId: detail.berth.id,
-  };
-
-  const inputFor = (berthId: string): UpdateReservationInput => ({
-    id: detail.id,
-    version: detail.version,
-    berthId,
-    startDate: start,
-    endDate: end,
-    title: detail.kind === "vessel" ? undefined : title,
-    notes,
-    vesselLengthFt: detail.vessel && detail.vessel.lengthFt === null ? edits.lengthFt : null,
-  });
-
-  const vesselOption = detail.vessel ? [{ id: detail.vessel.id, displayName: detail.vessel.displayName, name: detail.vessel.name, prefix: detail.vessel.prefix, lengthFt: detail.vessel.lengthFt, lengthStatus: detail.vessel.lengthStatus }] : [];
+  const initial: StayDraft = { kind: detail.kind, vesselId: detail.vessel?.id ?? null, newVessel: false, vesselName: "", vesselPrefix: "", vesselLengthFt: "", title: title ?? "", start, end, notes, berthId: detail.berth.id };
+  const inputFor = (berthId: string): UpdateReservationInput => ({ id: detail.id, version: detail.version, berthId, startDate: start, endDate: end, title: detail.kind === "vessel" ? undefined : title, notes });
 
   return (
-    <div className="mx-auto flex max-w-[72rem] flex-col gap-6">
+    <div className="mx-auto flex max-w-[64rem] flex-col gap-6">
       <div>
-        <h1 className="t-headline">Edit {detail.label}</h1>
-        <p className="mt-1 flex flex-wrap items-center gap-2 text-ink-2">
-          <ReservationStatusTag status={detail.status} />
-          <span>Currently {detail.berth.name}, <span className="t-num">{formatDate(detail.startDate)} to {formatDate(detail.endDate)}</span>.</span>
-          <Link className="link" href={backHref}>Back to the schedule</Link>
-        </p>
-        {detail.status === "needs_review" && <p className="prose-measure mt-2 text-ink-2">Saving confirms this stay and closes its review findings. It can only be saved where no confirmed stay is in the way.</p>}
+        <Link href={backHref} className="link inline-flex items-center gap-1 text-[0.875rem]"><ChevronLeft size={14} />Back to the schedule</Link>
+        <h1 className="t-display mt-2">Edit {detail.label}</h1>
+        <p className="mt-1.5 text-ink-2">Now at <strong>{detail.berth.name}</strong>, <strong className="t-num">{formatDate(detail.startDate)}</strong> to <strong className="t-num">{formatDate(detail.endDate)}</strong>.</p>
       </div>
 
-      <div className="grid items-start gap-x-10 gap-y-8 lg:grid-cols-[22rem_minmax(0,1fr)]">
-        <section aria-labelledby="stay-heading" className="sheet px-4 py-4">
-          <h2 id="stay-heading" className="t-title mb-3">Dates and details</h2>
-          <ReservationForm key={JSON.stringify(initial)} basePath={editReservationHref(detail.id)} vessels={vesselOption} initial={initial} fixedSubject={detail.label} hasResults />
+      <div className="grid items-start gap-6 lg:grid-cols-[22rem_minmax(0,1fr)] lg:gap-8">
+        <section aria-label="Dates and details" className="surface p-5 lg:sticky lg:top-24">
+          <ReservationForm key={JSON.stringify(initial)} basePath={editReservationHref(detail.id)} vessels={[]} initial={initial} today={today} fixedSubject={detail.label} lockStart={started} hasResults />
         </section>
 
-        <section aria-labelledby="berths-heading">
-          <h2 id="berths-heading" className="t-title">Where it can go</h2>
-          <p className="mb-3 mt-1 text-ink-2">
-            <span className="t-num">{formatDate(start)}{end !== start && <> to {formatDate(end)}</>}</span>
-            {changedDates ? " (new dates, not saved yet)." : "."} Choose a berth to save.
-          </p>
-          <BerthOptions
+        <section aria-labelledby="results-heading" className="flex min-w-0 flex-col gap-4">
+          <div role="status">
+            <h2 id="results-heading" className="t-heading">Choose where to save it</h2>
+            <p className="mt-1 text-ink-2">
+              <strong className="t-num">{formatDate(start)}</strong>{end !== start && <> to <strong className="t-num">{formatDate(end)}</strong></>}
+              {changed && <span className="pill pill-warn ml-2">New dates, not saved yet</span>}
+            </p>
+          </div>
+          <BerthResults
             options={options}
             scaleFt={scaleFt}
-            vesselLabel={detail.vessel?.displayName ?? null}
             pickedBerthId={detail.berth.id}
-            renderAction={(option, isFirstUsable) => {
-              const current = option.berth.id === detail.berth.id;
-              const label = `${detail.status === "needs_review" ? "Save and confirm" : "Save"} on ${option.berth.name}`;
-              if (option.verdict === "available") return <BookBerthButton mode="update" input={inputFor(option.berth.id)} label={label} primary={isFirstUsable} />;
-              // A legacy stay may keep a berth it never fitted: fixing its dates must not require fixing history first.
-              if (option.verdict === "too_short" && current && detail.source === "legacy" && option.conflicts.length === 0) {
-                return <BookBerthButton mode="update" input={inputFor(option.berth.id)} label={`Keep on ${option.berth.name} (known misfit)`} />;
-              }
-              // Most legacy vessels have no length on file. Their dates and notes must still be fixable without inventing
-              // one: the service lets a legacy stay keep its berth and vessel with the fit left unchecked.
-              if (option.verdict === "length_needed" && current && detail.source === "legacy" && option.conflicts.length === 0) {
-                return <BookBerthButton mode="update" input={inputFor(option.berth.id)} label={`${detail.status === "needs_review" ? "Save and confirm" : "Save"} on ${option.berth.name} (length not checked)`} primary />;
-              }
-              return null;
-            }}
+            renderAction={(option, isBest) =>
+              option.verdict === "available" ? <BookBerthButton mode="update" input={inputFor(option.berth.id)} label={option.berth.id === detail.berth.id ? "Save here" : "Move here"} primary={isBest} /> : null
+            }
           />
         </section>
       </div>

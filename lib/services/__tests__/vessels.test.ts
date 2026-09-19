@@ -1,9 +1,10 @@
 import { eq } from "drizzle-orm";
 import { beforeAll, beforeEach, describe, expect, it } from "vitest";
-import { appMeta, issues, vessels } from "../../db/schema";
+import { appMeta, vessels } from "../../db/schema";
 import type { Db } from "../../db/types";
-import { createVessel, resolveVesselIdentity, setVesselLength } from "../vessels";
-import { createTestDb, expectFail, expectOk, seedFixture } from "./helpers";
+import { cancelReservation } from "../reservations";
+import { createVessel, resolveVesselIdentity, updateVessel, type CreateVesselInput } from "../vessels";
+import { AT, book, createTestDb, expectFail, expectOk, seedFixture, stay } from "./helpers";
 
 let db: Db;
 
@@ -14,76 +15,133 @@ beforeAll(async () => {
 beforeEach(() => seedFixture(db));
 
 const vesselById = async (id: string) => (await db.select().from(vessels).where(eq(vessels.id, id)))[0];
-
-describe("setVesselLength", () => {
-  it("reports misfits before and after, and never blocks on them", async () => {
-    // Far Horizon (170 ft, probable) is twice on South Float East (90 ft) and once on North Pier West (410 ft).
-    const shorter = expectOk(await setVesselLength(db, { vesselId: "v_far-horizon", version: 1, lengthFt: 88 }));
-    expect(shorter.data).toEqual({ misfitsBefore: 2, misfitsAfter: 0 });
-    expect(shorter.warning).toBeUndefined();
-    expect(await vesselById("v_far-horizon")).toMatchObject({ lengthFt: 88, lengthStatus: "verified", version: 2 });
-
-    const longer = expectOk(await setVesselLength(db, { vesselId: "v_far-horizon", version: 2, lengthFt: 420 }));
-    expect(longer.data).toEqual({ misfitsBefore: 0, misfitsAfter: 3 });
-    expect(longer.warning).toContain("too long for the berth in 3 of its bookings");
-    expect((await db.select().from(appMeta))[0].mutationsSinceReset).toBe(2);
-  });
-
-  it("counts from zero for a vessel that had no length, and leaves cancelled stays out", async () => {
-    // Long Ketch: Inner Channel (55 ft) twice, South Float West and East (90 ft) once each.
-    const result = expectOk(await setVesselLength(db, { vesselId: "v_long-ketch", version: 1, lengthFt: 60 }));
-    expect(result.data).toEqual({ misfitsBefore: 0, misfitsAfter: 2 });
-  });
-
-  it("resolves the vessel's open length_conflict issue and keeps a trace of the old value", async () => {
-    expectOk(await setVesselLength(db, { vesselId: "v_iron-petrel", version: 1, lengthFt: 135 }));
-    const vessel = await vesselById("v_iron-petrel");
-    expect(vessel).toMatchObject({ lengthFt: 135, lengthStatus: "verified", lengthCandidates: [120, 135] });
-    expect(vessel.lengthEvidence).toContain("was: no length, conflict");
-    const [finding] = await db.select().from(issues).where(eq(issues.id, "i_fx_length_ironpetrel"));
-    expect(finding.resolution).toBe("edited");
-    expect(finding.resolvedAt).toBeInstanceOf(Date);
-  });
-
-  it("checks the version, the id and the value", async () => {
-    expect(expectFail(await setVesselLength(db, { vesselId: "v_tidewater", version: 5, lengthFt: 61 })).code).toBe("STALE");
-    expect(expectFail(await setVesselLength(db, { vesselId: "v_ghost", version: 1, lengthFt: 61 })).code).toBe("NOT_FOUND");
-    for (const lengthFt of [0, -4, 61.5, 1501]) {
-      const failed = expectFail(await setVesselLength(db, { vesselId: "v_tidewater", version: 1, lengthFt }));
-      expect(failed.code).toBe("VALIDATION");
-      expect(failed.fieldErrors?.lengthFt).toBeDefined();
-    }
-    expect((await vesselById("v_tidewater")).lengthFt).toBe(60);
-  });
-});
+const mutations = async () => (await db.select().from(appMeta))[0].mutationsSinceReset;
 
 describe("createVessel", () => {
-  it("creates a verified vessel when a length is given and an unknown one otherwise", async () => {
-    const withLength = expectOk(await createVessel(db, { name: "OS/V NORTHERN LIGHT", lengthFt: 140 }));
-    expect(withLength.data.id).toBe("v_northern-light");
-    expect(await vesselById("v_northern-light")).toMatchObject({ name: "Northern Light", nameKey: "NORTHERN LIGHT", prefix: "OSV", lengthFt: 140, lengthStatus: "verified", origin: "app" });
-
-    const without = expectOk(await createVessel(db, { name: "Petrel II", prefix: "S/V" }));
-    expect(await vesselById(without.data.id)).toMatchObject({ name: "Petrel II", prefix: "S/V", lengthFt: null, lengthStatus: "unknown" });
+  it("registers a vessel with its length", async () => {
+    const created = expectOk(await createVessel(db, { name: "OS/V NORTHERN LIGHT", lengthFt: 140 }));
+    expect(created.data.id).toBe("v_northern-light");
+    expect(await vesselById("v_northern-light")).toMatchObject({ name: "Northern Light", nameKey: "NORTHERN LIGHT", prefix: "OSV", lengthFt: 140, version: 1 });
+    expect(await mutations()).toBe(1);
   });
 
-  it("refuses a second vessel with the same name, whatever the prefix or casing", async () => {
-    const failed = expectFail(await createVessel(db, { name: "m/y golden compass", lengthFt: 70 }));
+  it("requires the length: a vessel without one could never be checked against a berth", async () => {
+    const missing = expectFail(await createVessel(db, { name: "Petrel II", prefix: "S/V" } as CreateVesselInput));
+    expect(missing.code).toBe("VALIDATION");
+    expect(missing.fieldErrors).toEqual({ lengthFt: ["Enter the length in whole feet."] });
+    for (const lengthFt of [0, -4, 61.5, 1501, Number.NaN]) {
+      expect(expectFail(await createVessel(db, { name: "Petrel II", lengthFt })).fieldErrors?.lengthFt).toBeDefined();
+    }
+    expect(await db.select().from(vessels).where(eq(vessels.nameKey, "PETREL II"))).toHaveLength(0);
+  });
+
+  it("refuses a second vessel with the same name, whatever the prefix or casing, and says what is on file", async () => {
+    const failed = expectFail(await createVessel(db, { name: "r/v far horizon", lengthFt: 70 }));
     expect(failed.code).toBe("VALIDATION");
-    expect(failed.message).toBe("A vessel named R/V Golden Compass already exists.");
+    expect(failed.message).toBe("A vessel named Far Horizon is already registered (M/Y Far Horizon, 170 ft).");
     expect(failed.fieldErrors?.name).toEqual([failed.message]);
+    expect(await mutations()).toBe(0);
   });
 
   it("still finds a unique id when two names reduce to the same slug", async () => {
-    const first = expectOk(await createVessel(db, { name: "Sea-Fox" }));
-    const second = expectOk(await createVessel(db, { name: "Sea Fox" }));
+    const first = expectOk(await createVessel(db, { name: "Sea-Fox", lengthFt: 30 }));
+    const second = expectOk(await createVessel(db, { name: "Sea Fox", lengthFt: 31 }));
     expect(first.data.id).toBe("v_sea-fox");
     expect(second.data.id).toMatch(/^v_sea-fox-[0-9a-f]{6}$/);
   });
 
   it("rejects an empty name", async () => {
-    expect(expectFail(await createVessel(db, { name: "  " })).fieldErrors?.name).toBeDefined();
-    expect(expectFail(await createVessel(db, { name: "---" })).code).toBe("VALIDATION");
+    expect(expectFail(await createVessel(db, { name: "  ", lengthFt: 30 })).fieldErrors?.name).toBeDefined();
+    expect(expectFail(await createVessel(db, { name: "---", lengthFt: 30 })).code).toBe("VALIDATION");
+  });
+});
+
+describe("updateVessel", () => {
+  it("refuses a length that an upcoming stay would stop fitting, naming the stay", async () => {
+    // Tidewater is 60 ft. North Pier Face is 75 ft, South Float East 90 ft, North Pier West 410 ft.
+    const onFace = await stay(db, "north-pier-face", "v_tidewater", "2026-10-05", "2026-10-09");
+    await stay(db, "north-pier-west", "v_tidewater", "2026-09-21", "2026-09-25");
+
+    const failed = expectFail(await updateVessel(db, { vesselId: "v_tidewater", version: 1, lengthFt: 80 }, AT));
+    expect(failed.code).toBe("TOO_LONG");
+    expect(failed.message).toBe(
+      "R/V Tidewater cannot be recorded as 80 ft. It is booked on North Pier Face (75 ft) Oct 5 to Oct 9, 2026, where it would be 5 ft too long. Move or cancel that stay first.",
+    );
+    expect(failed.conflicts).toEqual([{ id: onFace, label: "R/V Tidewater", berthName: "North Pier Face", startDate: "2026-10-05", endDate: "2026-10-09" }]);
+    expect(failed.fit).toEqual({ vesselFt: 80, berthFt: 75, overByFt: 5 });
+    expect(failed.fieldErrors?.lengthFt).toEqual([failed.message]);
+    expect(await vesselById("v_tidewater")).toMatchObject({ lengthFt: 60, version: 1 });
+
+    // Up to the shortest berth it is booked on is fine.
+    expectOk(await updateVessel(db, { vesselId: "v_tidewater", version: 1, lengthFt: 75 }, AT));
+  });
+
+  it("names every stay in the way, in date order, and leads with the worst", async () => {
+    const onFloat = await stay(db, "south-float-east", "v_tidewater", "2026-09-21", "2026-09-25");
+    const onFace = await stay(db, "north-pier-face", "v_tidewater", "2026-10-05", "2026-10-09");
+    const failed = expectFail(await updateVessel(db, { vesselId: "v_tidewater", version: 1, lengthFt: 100 }, AT));
+    expect(failed.conflicts?.map((c) => [c.id, c.berthName])).toEqual([[onFloat, "South Float East"], [onFace, "North Pier Face"]]);
+    expect(failed.fit).toEqual({ vesselFt: 100, berthFt: 75, overByFt: 25 });
+    expect(failed.message).toContain("booked on North Pier Face (75 ft) Oct 5 to Oct 9, 2026, where it would be 25 ft too long, and 1 other stay would no longer fit either. Move or cancel them first.");
+  });
+
+  it("is held only by stays that have not ended: history and cancelled stays do not count", async () => {
+    await stay(db, "north-pier-face", "v_tidewater", "2026-09-08", "2026-09-12", "2026-09-01"); // ended by TODAY
+    const cancelled = await stay(db, "north-pier-face", "v_tidewater", "2026-10-05", "2026-10-09");
+    expectOk(await cancelReservation(db, { id: cancelled, version: 1 }, AT));
+
+    const updated = expectOk(await updateVessel(db, { vesselId: "v_tidewater", version: 1, lengthFt: 80 }, AT));
+    expect(updated.data).toEqual({ id: "v_tidewater", version: 2 });
+    expect(await vesselById("v_tidewater")).toMatchObject({ lengthFt: 80, version: 2 });
+  });
+
+  it("counts a stay that ends today as not ended", async () => {
+    await stay(db, "north-pier-face", "v_tidewater", "2026-09-15", "2026-09-19", "2026-09-10");
+    expect(expectFail(await updateVessel(db, { vesselId: "v_tidewater", version: 1, lengthFt: 80 }, AT)).code).toBe("TOO_LONG");
+    expectOk(await updateVessel(db, { vesselId: "v_tidewater", version: 1, lengthFt: 80 }, { today: "2026-09-20" }));
+  });
+
+  it("ignores events and closures on a short berth", async () => {
+    await book(db, { kind: "closure", berthId: "inner-channel", title: "Dredging", startDate: "2026-09-21", endDate: "2026-09-25" });
+    expectOk(await updateVessel(db, { vesselId: "v_tidewater", version: 1, lengthFt: 300 }, AT));
+  });
+
+  it("always allows a shorter length", async () => {
+    await stay(db, "south-float-east", "v_amber-reef", "2026-09-21", "2026-09-25");
+    expectOk(await updateVessel(db, { vesselId: "v_amber-reef", version: 1, lengthFt: 60 }, AT));
+    expect((await vesselById("v_amber-reef")).lengthFt).toBe(60);
+  });
+
+  it("renames without changing the id, keeps what was not sent, and clears a prefix on request", async () => {
+    expectOk(await updateVessel(db, { vesselId: "v_tidewater", version: 1, lengthFt: 60, name: "tidewater north" }, AT));
+    expect(await vesselById("v_tidewater")).toMatchObject({ id: "v_tidewater", name: "Tidewater North", nameKey: "TIDEWATER NORTH", prefix: "R/V", version: 2 });
+
+    expectOk(await updateVessel(db, { vesselId: "v_tidewater", version: 2, lengthFt: 60, name: "M/V Tidewater North" }, AT));
+    expect(await vesselById("v_tidewater")).toMatchObject({ name: "Tidewater North", prefix: "M/V" });
+
+    expectOk(await updateVessel(db, { vesselId: "v_tidewater", version: 3, lengthFt: 61, prefix: null }, AT));
+    expect(await vesselById("v_tidewater")).toMatchObject({ name: "Tidewater North", prefix: null, lengthFt: 61, version: 4 });
+    expect(await mutations()).toBe(3);
+  });
+
+  it("refuses a rename onto another vessel's name", async () => {
+    const failed = expectFail(await updateVessel(db, { vesselId: "v_tidewater", version: 1, lengthFt: 60, name: "S/V far horizon" }, AT));
+    expect(failed.code).toBe("VALIDATION");
+    expect(failed.message).toBe("A vessel named Far Horizon is already registered (M/Y Far Horizon, 170 ft).");
+    expect(failed.fieldErrors?.name).toBeDefined();
+    // Re-spelling its own name is not a clash.
+    expectOk(await updateVessel(db, { vesselId: "v_tidewater", version: 1, lengthFt: 60, name: "TIDEWATER" }, AT));
+  });
+
+  it("checks the version, the id and the value", async () => {
+    expect(expectFail(await updateVessel(db, { vesselId: "v_tidewater", version: 5, lengthFt: 61 }, AT)).code).toBe("STALE");
+    expect(expectFail(await updateVessel(db, { vesselId: "v_ghost", version: 1, lengthFt: 61 }, AT)).code).toBe("NOT_FOUND");
+    for (const lengthFt of [0, -4, 61.5, 1501]) {
+      const failed = expectFail(await updateVessel(db, { vesselId: "v_tidewater", version: 1, lengthFt }, AT));
+      expect(failed.code).toBe("VALIDATION");
+      expect(failed.fieldErrors?.lengthFt).toBeDefined();
+    }
+    expect(await vesselById("v_tidewater")).toMatchObject({ lengthFt: 60, version: 1 });
   });
 });
 

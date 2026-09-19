@@ -1,8 +1,8 @@
 /**
  * GET /api/health: is the deployment actually wired up? Answers with row
  * counts, whether btree_gist and the double-booking constraint exist (i.e. the
- * hand-written migration ran), and which seed is loaded. 200 when the database
- * answers, 503 when it does not.
+ * hand-written migration ran), and when the demo data was last reset. 200 when
+ * the database answers, 503 when it does not.
  */
 import { connection } from "next/server";
 import { getDb } from "@/lib/db/client";

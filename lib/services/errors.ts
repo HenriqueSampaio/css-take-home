@@ -6,7 +6,7 @@
  * sometimes nests once more), never on the error a service actually catches.
  * Second, giving services a way to abandon a transaction with a friendly result:
  * returning from `db.transaction()` COMMITS, so a failure found halfway through
- * (after a vessel length was already updated, say) must be thrown to roll back,
+ * (after a new vessel was already registered, say) must be thrown to roll back,
  * then unwrapped into a value again at the service boundary.
  */
 import { ZodError } from "zod";
@@ -137,12 +137,14 @@ export function resultFromError(error: unknown, context: string): ServiceFailure
     case UNIQUE_VIOLATION:
       return failure(
         "VALIDATION",
-        pg.constraint === "vessels_name_key_unique" ? "A vessel with that name already exists." : "That record already exists.",
+        pg.constraint === "vessels_name_key_unique" ? "A vessel with that name already exists."
+        : pg.constraint === "berths_name_unique" ? "A berth with that name already exists."
+        : "That record already exists.",
       );
     case FOREIGN_KEY_VIOLATION:
       return failure("NOT_FOUND", "Something this booking refers to no longer exists. The demo data may have been reset.");
     case CHECK_VIOLATION:
-      return failure("VALIDATION", "Those details are not allowed. Check the dates and the vessel length, then try again.");
+      return failure("VALIDATION", "Those details are not allowed. Check the dates and the lengths, then try again.");
   }
 
   console.error(`[${context}] unexpected error`, error);

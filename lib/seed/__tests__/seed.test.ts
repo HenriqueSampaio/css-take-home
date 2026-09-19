@@ -1,7 +1,6 @@
 import { describe, expect, it } from "vitest";
-import { BERTH_IDS } from "../contract";
 import { cloneFixtureSeed, fixtureSeed } from "../fixture";
-import { importReport, loadSeed } from "../load";
+import { loadSeed } from "../load";
 import { validateSeed } from "../validate";
 
 describe("fixture seed", () => {
@@ -9,26 +8,39 @@ describe("fixture seed", () => {
     expect(validateSeed(fixtureSeed)).toEqual([]);
   });
 
-  it("contains the situations the tests and demos rely on", () => {
-    const { vessels, reservations, issues } = fixtureSeed;
-    expect(reservations.length).toBeGreaterThanOrEqual(25);
-    expect(vessels.find((v) => v.nameKey === "FAR HORIZON")).toMatchObject({ lengthFt: 170, lengthStatus: "probable" });
-    expect(vessels.find((v) => v.nameKey === "LONG KETCH")).toMatchObject({ lengthFt: null, lengthStatus: "unknown" });
-    expect(vessels.find((v) => v.lengthStatus === "conflict")?.lengthCandidates).toHaveLength(2);
-    expect(reservations.filter((r) => r.vesselId === "v_far-horizon" && r.berthId === "south-float-east").length).toBeGreaterThan(0);
-    expect(reservations.some((r) => r.kind === "event" && r.title === "Community sail day")).toBe(true);
-    expect(reservations.some((r) => r.kind === "closure" && r.title === "Pier repair - no docking")).toBe(true);
-    expect(reservations.some((r) => r.startDate.slice(0, 7) !== r.endDate.slice(0, 7))).toBe(true);
-    expect(issues.filter((i) => i.type === "overlap")).toHaveLength(2);
-    expect(issues.some((i) => i.type === "length_conflict" && i.vesselId !== null && i.reservationId === null)).toBe(true);
-    const warned = issues.find((i) => i.type === "ambiguous_extent");
-    expect(reservations.find((r) => r.id === warned?.reservationId)?.status).toBe("confirmed");
+  it("contains what the tests rely on: the six real berths, a 170 ft vessel and a 40 ft one", () => {
+    expect(fixtureSeed.berths).toEqual(loadSeed().berths);
+    expect(fixtureSeed.vessels.find((v) => v.nameKey === "FAR HORIZON")).toMatchObject({ id: "v_far-horizon", prefix: "M/Y", lengthFt: 170 });
+    expect(fixtureSeed.vessels.find((v) => v.nameKey === "SILVER GULL")).toMatchObject({ lengthFt: 40 });
+    // One vessel too long for every berth but the two big piers, one short enough for all of them.
+    const shortest = Math.min(...fixtureSeed.berths.map((b) => b.lengthFt));
+    expect(fixtureSeed.berths.filter((b) => b.lengthFt >= 170).map((b) => b.id)).toEqual(["north-pier-west", "north-pier-east"]);
+    expect(shortest).toBeGreaterThanOrEqual(40);
   });
 
   it("hands out independent copies", () => {
     const copy = cloneFixtureSeed();
-    copy.reservations[0].berthId = "inner-channel";
-    expect(fixtureSeed.reservations[0].berthId).not.toBe("inner-channel");
+    copy.vessels[0].lengthFt = 999;
+    copy.berths.pop();
+    expect(fixtureSeed.vessels[0].lengthFt).toBe(60);
+    expect(fixtureSeed.berths).toHaveLength(6);
+  });
+});
+
+describe("validateSeed", () => {
+  it("reports each kind of problem", () => {
+    const broken = cloneFixtureSeed();
+    broken.berths[1].id = broken.berths[0].id;
+    broken.berths[2].name = "north pier west";
+    broken.berths[3].lengthFt = 0;
+    broken.vessels[0].lengthFt = 1501;
+    broken.vessels[1].nameKey = "SOMETHING ELSE";
+    broken.vessels[2].id = broken.vessels[3].id;
+    const errors = validateSeed(broken).join("\n");
+    for (const expected of ["duplicate berth id", "duplicate berth name", "bad length 0", "bad length 1501", "nameKey does not match", "duplicate vessel id", "id is not the slug of its name"]) {
+      expect(errors).toContain(expected);
+    }
+    expect(validateSeed({ berths: [], vessels: [] })).toEqual(["at least one berth is required"]);
   });
 });
 
@@ -37,8 +49,11 @@ describe("committed seed (data/seed/*.json)", () => {
     expect(validateSeed(loadSeed())).toEqual([]);
   });
 
-  it("has the six berths and an import report object", () => {
-    expect(loadSeed().berths.map((b) => b.id).sort()).toEqual([...BERTH_IDS].sort());
-    expect(typeof importReport).toBe("object");
+  it("has the six berths in dock order and a registry in which every vessel has a length", () => {
+    const seed = loadSeed();
+    expect(seed.berths.map((b) => b.id)).toEqual(["north-pier-west", "north-pier-face", "north-pier-east", "inner-channel", "south-float-west", "south-float-east"]);
+    expect(seed.berths.map((b) => b.sortOrder)).toEqual([1, 2, 3, 4, 5, 6]);
+    expect(seed.vessels.length).toBeGreaterThan(100);
+    expect(seed.vessels.every((v) => Number.isInteger(v.lengthFt) && v.lengthFt >= 1)).toBe(true);
   });
 });

@@ -1,18 +1,19 @@
 /**
- * Reservation reads. Fit verdicts and overlaps are COMPUTED here on every read
- * (from the vessel's current length and the berth's current neighbours), never
- * stored, so correcting a length or cancelling a stay updates every screen with
- * no bookkeeping to go stale.
+ * Reservation reads. The fit verdict is COMPUTED here on every read, from the
+ * vessel's and the berth's current lengths, never stored, so there is no
+ * bookkeeping to go stale. For a confirmed stay that has not ended it always
+ * says "fits" (every write path keeps that true); for history and for cancelled
+ * rows it reports honestly against today's lengths.
  */
-import { and, asc, desc, eq, gte, lte, ne, sql } from "drizzle-orm";
+import { and, asc, eq, gt, gte, isNull, lte, ne, sql } from "drizzle-orm";
 import type { Occupancy } from "../../domain/availability";
 import { isISODate, monthBounds, yearMonthOf, type ISODate, type YearMonth } from "../../domain/dates";
-import { fitVerdict, type FitVerdict, type LengthStatus } from "../../domain/fit";
-import type { ConflictInfo } from "../../services/result";
-import { berths, issues, reservations, vessels } from "../schema";
+import { fitVerdict, type FitVerdict } from "../../domain/fit";
+import { berths, reservations, vessels } from "../schema";
 import type { Db } from "../types";
-import { findOverlapping } from "./overlaps";
-import { isoTimestamp, reservationLabel, vesselLabel, type ReservationStatus } from "./shared";
+import { isoTimestamp, reservationLabel, vesselLabel, type ReservationKind, type ReservationStatus, type StayRef } from "./shared";
+
+export type { ReservationKind, ReservationStatus, StayRef };
 
 export type VesselRef = {
   id: string;
@@ -21,8 +22,7 @@ export type VesselRef = {
   prefix: string | null;
   /** With prefix: `R/V Golden Compass`. */
   displayName: string;
-  lengthFt: number | null;
-  lengthStatus: LengthStatus;
+  lengthFt: number;
 };
 
 export type MonthReservation = {
@@ -30,7 +30,7 @@ export type MonthReservation = {
   berthId: string;
   berthName: string;
   berthLengthFt: number;
-  kind: "vessel" | "event" | "closure";
+  kind: ReservationKind;
   status: ReservationStatus;
   startDate: ISODate;
   /** Inclusive. */
@@ -42,56 +42,49 @@ export type MonthReservation = {
   label: string;
   title: string | null;
   notes: string;
-  source: "legacy" | "app";
+  /** Pass back to updateReservation, cancelReservation or restoreReservation. */
   version: number;
   vessel: VesselRef | null;
-  openIssueCount: number;
   /** null for events and closures, which have no length to check. */
   fit: FitVerdict | null;
 };
 
-export type IssueRow = {
-  id: string;
-  type: string;
-  severity: string;
-  reason: string | null;
-  detail: string;
-  relatedReservationIds: string[];
-  sourceRef: string | null;
-  /** ISO timestamp; null while the issue is open. */
-  resolvedAt: string | null;
-  resolution: string | null;
-};
-
-export type ReservationDetail = Omit<MonthReservation, "berthName" | "berthLengthFt" | "openIssueCount" | "vessel"> & {
-  berth: { id: string; name: string; lengthFt: number };
-  vessel: (VesselRef & { version: number; lengthCandidates: number[]; lengthEvidence: string | null }) | null;
-  /** Legacy rows: the workbook cells this came from, and the label as written there. */
-  sourceRef: string | null;
-  rawLabel: string | null;
+export type ReservationDetail = Omit<MonthReservation, "berthName" | "berthLengthFt"> & {
+  berth: { id: string; name: string; lengthFt: number; retiredAt: string | null };
   createdAt: string;
   updatedAt: string;
   cancelledAt: string | null;
-  /** Import findings for this row, open first. */
-  issues: IssueRow[];
-  /** Other live reservations on the same berth whose dates meet this one's, computed now. `confirmed` ones would block a confirm. */
-  overlaps: ConflictInfo[];
 };
 
-const openIssueCount = sql<number>`(select count(*) from ${issues} where ${issues.reservationId} = ${reservations.id} and ${issues.resolvedAt} is null)`.mapWith(Number);
+export type DockToday = {
+  today: ISODate;
+  /** Berths in use (not retired). */
+  berthsTotal: number;
+  /** Of those, the ones with a confirmed stay covering today. */
+  berthsOccupied: number;
+  arrivingToday: StayRef[];
+  departingToday: StayRef[];
+  /** The earliest confirmed stay starting after today. */
+  nextArrival: (StayRef & { berthName: string }) | null;
+};
 
-const vesselRefColumns = { id: vessels.id, name: vessels.name, prefix: vessels.prefix, lengthFt: vessels.lengthFt, lengthStatus: vessels.lengthStatus };
+const vesselRefColumns = { id: vessels.id, name: vessels.name, prefix: vessels.prefix, lengthFt: vessels.lengthFt };
 
-const toVesselRef = (v: { id: string; name: string; prefix: string | null; lengthFt: number | null; lengthStatus: LengthStatus }): VesselRef => ({
-  id: v.id,
-  name: v.name,
-  prefix: v.prefix,
-  displayName: vesselLabel(v),
-  lengthFt: v.lengthFt,
-  lengthStatus: v.lengthStatus,
-});
+type VesselColumns = { id: string; name: string; prefix: string | null; lengthFt: number };
 
-/** Reservations that touch the month, including stays that began earlier or run past its end. Throws RangeError on a malformed `ym`. */
+const toVesselRef = (v: VesselColumns): VesselRef => ({ ...v, displayName: vesselLabel(v) });
+
+const labelOf = (row: { kind: ReservationKind; title: string | null }, vessel: VesselColumns | null): string =>
+  reservationLabel({ kind: row.kind, title: row.title, vesselName: vessel?.name ?? null, vesselPrefix: vessel?.prefix ?? null });
+
+const fitOf = (kind: ReservationKind, vessel: VesselColumns | null, berthLengthFt: number): FitVerdict | null =>
+  kind === "vessel" && vessel ? fitVerdict(vessel.lengthFt, berthLengthFt) : null;
+
+/**
+ * Reservations that touch the month, including stays that began earlier or run
+ * past its end. Only berths in use: a retired berth has no row on the schedule
+ * to draw them in. Throws RangeError on a malformed `ym`.
+ */
 export async function getMonthReservations(db: Db, ym: YearMonth, opts: { includeCancelled?: boolean } = {}): Promise<MonthReservation[]> {
   const month = monthBounds(ym);
   const rows = await db
@@ -105,18 +98,16 @@ export async function getMonthReservations(db: Db, ym: YearMonth, opts: { includ
       startDate: reservations.startDate,
       endDate: reservations.endDate,
       title: reservations.title,
-      rawLabel: reservations.rawLabel,
       notes: reservations.notes,
-      source: reservations.source,
       version: reservations.version,
       vessel: vesselRefColumns,
-      openIssueCount,
     })
     .from(reservations)
     .innerJoin(berths, eq(berths.id, reservations.berthId))
     .leftJoin(vessels, eq(vessels.id, reservations.vesselId))
     .where(
       and(
+        isNull(berths.retiredAt),
         lte(reservations.startDate, month.end),
         gte(reservations.endDate, month.start),
         opts.includeCancelled ? undefined : ne(reservations.status, "cancelled"),
@@ -124,22 +115,23 @@ export async function getMonthReservations(db: Db, ym: YearMonth, opts: { includ
     )
     .orderBy(asc(berths.sortOrder), asc(reservations.startDate), asc(reservations.id));
 
-  return rows.map(({ rawLabel, vessel, ...row }) => ({
+  return rows.map(({ vessel, ...row }) => ({
     ...row,
     start: row.startDate,
     end: row.endDate,
-    label: reservationLabel({ kind: row.kind, title: row.title, rawLabel, vesselName: vessel?.name ?? null, vesselPrefix: vessel?.prefix ?? null }),
+    label: labelOf(row, vessel),
     vessel: vessel ? toVesselRef(vessel) : null,
-    fit: row.kind === "vessel" ? fitVerdict(vessel?.lengthFt, row.berthLengthFt) : null,
+    fit: fitOf(row.kind, vessel, row.berthLengthFt),
   }));
 }
 
+/** One reservation, whatever its status and whether or not its berth has since been retired. */
 export async function getReservationDetail(db: Db, id: string): Promise<ReservationDetail | null> {
   const [found] = await db
     .select({
       row: reservations,
-      berth: { id: berths.id, name: berths.name, lengthFt: berths.lengthFt },
-      vessel: { ...vesselRefColumns, version: vessels.version, lengthCandidates: vessels.lengthCandidates, lengthEvidence: vessels.lengthEvidence },
+      berth: { id: berths.id, name: berths.name, lengthFt: berths.lengthFt, retiredAt: berths.retiredAt },
+      vessel: vesselRefColumns,
     })
     .from(reservations)
     .innerJoin(berths, eq(berths.id, reservations.berthId))
@@ -148,17 +140,6 @@ export async function getReservationDetail(db: Db, id: string): Promise<Reservat
     .limit(1);
   if (!found) return null;
   const { row, berth, vessel } = found;
-
-  const [issueRows, overlaps] = await Promise.all([
-    db
-      .select()
-      .from(issues)
-      .where(eq(issues.reservationId, id))
-      // Open first (NULLS FIRST is the default for DESC), then the most recently resolved.
-      .orderBy(desc(issues.resolvedAt), asc(issues.type), asc(issues.id)),
-    // A cancelled row occupies nothing, so nothing overlaps it; what WOULD block restoring it is still worth showing.
-    findOverlapping(db, { berthId: row.berthId, startDate: row.startDate, endDate: row.endDate, excludeId: row.id }),
-  ]);
 
   return {
     id: row.id,
@@ -169,35 +150,20 @@ export async function getReservationDetail(db: Db, id: string): Promise<Reservat
     endDate: row.endDate,
     start: row.startDate,
     end: row.endDate,
-    label: reservationLabel({ kind: row.kind, title: row.title, rawLabel: row.rawLabel, vesselName: vessel?.name ?? null, vesselPrefix: vessel?.prefix ?? null }),
+    label: labelOf(row, vessel),
     title: row.title,
     notes: row.notes,
-    source: row.source,
-    sourceRef: row.sourceRef,
-    rawLabel: row.rawLabel,
     version: row.version,
+    vessel: vessel ? toVesselRef(vessel) : null,
+    fit: fitOf(row.kind, vessel, berth.lengthFt),
+    berth: { ...berth, retiredAt: isoTimestamp(berth.retiredAt) },
     createdAt: row.createdAt.toISOString(),
     updatedAt: row.updatedAt.toISOString(),
     cancelledAt: isoTimestamp(row.cancelledAt),
-    berth,
-    vessel: vessel ? { ...toVesselRef(vessel), version: vessel.version, lengthCandidates: vessel.lengthCandidates, lengthEvidence: vessel.lengthEvidence } : null,
-    issues: issueRows.map((i) => ({
-      id: i.id,
-      type: i.type,
-      severity: i.severity,
-      reason: i.reason,
-      detail: i.detail,
-      relatedReservationIds: i.relatedReservationIds,
-      sourceRef: i.sourceRef,
-      resolvedAt: isoTimestamp(i.resolvedAt),
-      resolution: i.resolution,
-    })),
-    overlaps,
-    fit: row.kind === "vessel" ? fitVerdict(vessel?.lengthFt, berth.lengthFt) : null,
   };
 }
 
-/** Everything occupying any berth during the range, shaped for classifyBerths(). Throws RangeError on malformed dates. */
+/** Every confirmed stay occupying any berth during the range, shaped for classifyBerths(). Throws RangeError on malformed dates. */
 export async function getOccupancy(db: Db, range: { start: ISODate; end: ISODate }): Promise<Occupancy[]> {
   if (!isISODate(range.start) || !isISODate(range.end)) throw new RangeError(`Invalid date range: ${range.start}..${range.end}`);
   const rows = await db
@@ -206,8 +172,6 @@ export async function getOccupancy(db: Db, range: { start: ISODate; end: ISODate
       berthId: reservations.berthId,
       kind: reservations.kind,
       title: reservations.title,
-      rawLabel: reservations.rawLabel,
-      status: reservations.status,
       start: reservations.startDate,
       end: reservations.endDate,
       vesselName: vessels.name,
@@ -215,30 +179,66 @@ export async function getOccupancy(db: Db, range: { start: ISODate; end: ISODate
     })
     .from(reservations)
     .leftJoin(vessels, eq(vessels.id, reservations.vesselId))
-    .where(and(ne(reservations.status, "cancelled"), lte(reservations.startDate, range.end), gte(reservations.endDate, range.start)))
+    .where(and(eq(reservations.status, "confirmed"), lte(reservations.startDate, range.end), gte(reservations.endDate, range.start)))
     .orderBy(asc(reservations.startDate), asc(reservations.id));
 
-  return rows.map((row) => ({
-    id: row.id,
-    berthId: row.berthId,
-    status: row.status as Occupancy["status"],
-    label: reservationLabel(row),
-    start: row.start,
-    end: row.end,
-  }));
+  return rows.map((row) => ({ id: row.id, berthId: row.berthId, label: reservationLabel(row), start: row.start, end: row.end }));
+}
+
+/** The dock at a glance: how full it is today, who arrives and leaves today, and who is next. Berths in use only. */
+export async function getDockToday(db: Db, today: ISODate): Promise<DockToday> {
+  if (!isISODate(today)) throw new RangeError(`Invalid date: ${today}`);
+  const stayColumns = {
+    id: reservations.id,
+    berthId: reservations.berthId,
+    berthName: berths.name,
+    kind: reservations.kind,
+    title: reservations.title,
+    startDate: reservations.startDate,
+    endDate: reservations.endDate,
+    vesselName: vessels.name,
+    vesselPrefix: vessels.prefix,
+  };
+  const confirmedOnActiveBerths = () =>
+    db
+      .select(stayColumns)
+      .from(reservations)
+      .innerJoin(berths, eq(berths.id, reservations.berthId))
+      .leftJoin(vessels, eq(vessels.id, reservations.vesselId));
+
+  const [[active], here, [upcoming]] = await Promise.all([
+    db.select({ n: sql<number>`count(*)`.mapWith(Number) }).from(berths).where(isNull(berths.retiredAt)),
+    confirmedOnActiveBerths()
+      .where(and(isNull(berths.retiredAt), eq(reservations.status, "confirmed"), lte(reservations.startDate, today), gte(reservations.endDate, today)))
+      .orderBy(asc(berths.sortOrder), asc(reservations.id)),
+    confirmedOnActiveBerths()
+      .where(and(isNull(berths.retiredAt), eq(reservations.status, "confirmed"), gt(reservations.startDate, today)))
+      .orderBy(asc(reservations.startDate), asc(berths.sortOrder), asc(reservations.id))
+      .limit(1),
+  ]);
+
+  const toStayRef = (r: (typeof here)[number]): StayRef => ({ id: r.id, label: reservationLabel(r), kind: r.kind, startDate: r.startDate, endDate: r.endDate });
+  return {
+    today,
+    berthsTotal: active?.n ?? 0,
+    // One confirmed stay per berth-day is the database's rule, so the stays covering today ARE the occupied berths.
+    berthsOccupied: new Set(here.map((r) => r.berthId)).size,
+    arrivingToday: here.filter((r) => r.startDate === today).map(toStayRef),
+    departingToday: here.filter((r) => r.endDate === today).map(toStayRef),
+    nextArrival: upcoming ? { ...toStayRef(upcoming), berthName: upcoming.berthName } : null,
+  };
 }
 
 /**
- * Where the schedule opens. The legacy data stops years before today, and an
- * empty current month would make the app look broken, so: the latest month, not
- * after today's, in which something is booked. A stay that started earlier but
- * is still running counts for every month it covers.
+ * How far back the schedule can be browsed: the month of the earliest
+ * reservation of any status, or today's month when that is earlier (or when
+ * nothing has been booked yet). Bookings only start today or later, so this
+ * only moves into the past as time passes.
  */
-export async function getDefaultMonth(db: Db, today: ISODate): Promise<YearMonth> {
-  const thisMonth = monthBounds(yearMonthOf(today));
-  const [row] = await db
-    .select({ latest: sql<ISODate | null>`max(least(${reservations.endDate}, ${thisMonth.end}::date))::text` })
-    .from(reservations)
-    .where(and(ne(reservations.status, "cancelled"), lte(reservations.startDate, thisMonth.end)));
-  return row?.latest ? yearMonthOf(row.latest) : yearMonthOf(today);
+export async function getFirstMonth(db: Db, today: ISODate): Promise<YearMonth> {
+  // Cast to text in SQL: an aggregate has no column type for Drizzle to apply its string date mode to.
+  const [row] = await db.select({ earliest: sql<ISODate | null>`min(${reservations.startDate})::text` }).from(reservations);
+  const thisMonth = yearMonthOf(today);
+  const earliest = row?.earliest ? yearMonthOf(row.earliest) : thisMonth;
+  return earliest < thisMonth ? earliest : thisMonth;
 }

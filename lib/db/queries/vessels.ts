@@ -1,9 +1,9 @@
-import { and, asc, desc, eq, ilike, isNull, ne, or, sql } from "drizzle-orm";
-import type { ISODate } from "../../domain/dates";
-import { fitVerdict, type FitVerdict, type LengthStatus } from "../../domain/fit";
-import { berths, issues, reservations, vessels } from "../schema";
+/** Vessel reads: the picker on the booking form, and the registry list with how busy each vessel is. */
+import { and, asc, eq, ilike, or, sql } from "drizzle-orm";
+import { isISODate, type ISODate } from "../../domain/dates";
+import { reservations, vessels } from "../schema";
 import type { Db } from "../types";
-import { escapeLike, isoTimestamp, vesselLabel, type ReservationStatus } from "./shared";
+import { escapeLike, vesselLabel } from "./shared";
 
 export type VesselOption = {
   id: string;
@@ -11,129 +11,47 @@ export type VesselOption = {
   displayName: string;
   name: string;
   prefix: string | null;
-  lengthFt: number | null;
-  lengthStatus: LengthStatus;
+  lengthFt: number;
 };
 
 export type VesselListItem = VesselOption & {
-  lengthCandidates: number[];
-  lengthEvidence: string | null;
-  origin: "grid" | "registry" | "app";
-  /** Pass back to setVesselLength. */
+  /** Pass back to updateVessel. */
   version: number;
-  /** Non-cancelled reservations. */
-  bookingCount: number;
-  /** Of those, the ones on a berth shorter than the vessel's current length. Computed, never stored. */
-  misfitCount: number;
-};
-
-export type VesselBooking = {
-  id: string;
-  berthId: string;
-  berthName: string;
-  berthLengthFt: number;
-  startDate: ISODate;
-  endDate: ISODate;
-  status: ReservationStatus;
-  fit: FitVerdict;
-};
-
-export type VesselDetail = VesselListItem & {
-  createdAt: string;
-  updatedAt: string;
-  /** Every reservation, newest first, cancelled included. */
-  bookings: VesselBooking[];
-  openIssues: { id: string; type: string; reason: string | null; detail: string; sourceRef: string | null }[];
+  /** Confirmed stays that have not ended. These are what hold the vessel's length in place. */
+  upcomingCount: number;
+  /** Every stay that was not cancelled, history included. */
+  totalCount: number;
 };
 
 /** Every vessel, small enough (a few hundred rows) to ship whole to a client-side searchable picker. */
 export async function getVesselOptions(db: Db): Promise<VesselOption[]> {
   const rows = await db
-    .select({ id: vessels.id, name: vessels.name, prefix: vessels.prefix, lengthFt: vessels.lengthFt, lengthStatus: vessels.lengthStatus })
+    .select({ id: vessels.id, name: vessels.name, prefix: vessels.prefix, lengthFt: vessels.lengthFt })
     .from(vessels)
     .orderBy(asc(vessels.nameKey));
   return rows.map((v) => ({ ...v, displayName: vesselLabel(v) }));
-}
-
-const bookingCount = sql<number>`count(${reservations.id})`.mapWith(Number);
-const misfitCount = sql<number>`count(${reservations.id}) filter (where ${berths.lengthFt} < ${vessels.lengthFt})`.mapWith(Number);
-
-function listColumns() {
-  return {
-    id: vessels.id,
-    name: vessels.name,
-    prefix: vessels.prefix,
-    lengthFt: vessels.lengthFt,
-    lengthStatus: vessels.lengthStatus,
-    lengthCandidates: vessels.lengthCandidates,
-    lengthEvidence: vessels.lengthEvidence,
-    origin: vessels.origin,
-    version: vessels.version,
-    bookingCount,
-    misfitCount,
-  };
 }
 
 /** `q` matches anywhere in the name, with or without its prefix, ignoring case. */
-export async function getVessels(db: Db, opts: { q?: string; status?: LengthStatus } = {}): Promise<VesselListItem[]> {
+export async function getVessels(db: Db, today: ISODate, opts: { q?: string } = {}): Promise<VesselListItem[]> {
+  if (!isISODate(today)) throw new RangeError(`Invalid date: ${today}`);
   const q = opts.q?.trim();
   const pattern = q ? `%${escapeLike(q)}%` : null;
   const rows = await db
-    .select(listColumns())
+    .select({
+      id: vessels.id,
+      name: vessels.name,
+      prefix: vessels.prefix,
+      lengthFt: vessels.lengthFt,
+      version: vessels.version,
+      upcomingCount: sql<number>`count(${reservations.id}) filter (where ${reservations.endDate} >= ${today}::date)`.mapWith(Number),
+      totalCount: sql<number>`count(${reservations.id})`.mapWith(Number),
+    })
     .from(vessels)
     // Cancelled stays are filtered in the join, not in WHERE, so a vessel with only cancelled bookings still lists (with 0).
-    .leftJoin(reservations, and(eq(reservations.vesselId, vessels.id), ne(reservations.status, "cancelled")))
-    .leftJoin(berths, eq(berths.id, reservations.berthId))
-    .where(
-      and(
-        opts.status ? eq(vessels.lengthStatus, opts.status) : undefined,
-        pattern ? or(ilike(vessels.name, pattern), ilike(sql`coalesce(${vessels.prefix} || ' ', '') || ${vessels.name}`, pattern)) : undefined,
-      ),
-    )
+    .leftJoin(reservations, and(eq(reservations.vesselId, vessels.id), eq(reservations.status, "confirmed")))
+    .where(pattern ? or(ilike(vessels.name, pattern), ilike(sql`coalesce(${vessels.prefix} || ' ', '') || ${vessels.name}`, pattern)) : undefined)
     .groupBy(vessels.id)
     .orderBy(asc(vessels.nameKey));
   return rows.map((v) => ({ ...v, displayName: vesselLabel(v) }));
-}
-
-export async function getVesselDetail(db: Db, vesselId: string): Promise<VesselDetail | null> {
-  const [vessel] = await db
-    .select({ ...listColumns(), createdAt: vessels.createdAt, updatedAt: vessels.updatedAt })
-    .from(vessels)
-    .leftJoin(reservations, and(eq(reservations.vesselId, vessels.id), ne(reservations.status, "cancelled")))
-    .leftJoin(berths, eq(berths.id, reservations.berthId))
-    .where(eq(vessels.id, vesselId))
-    .groupBy(vessels.id)
-    .limit(1);
-  if (!vessel) return null;
-
-  const [bookings, openIssues] = await Promise.all([
-    db
-      .select({
-        id: reservations.id,
-        berthId: reservations.berthId,
-        berthName: berths.name,
-        berthLengthFt: berths.lengthFt,
-        startDate: reservations.startDate,
-        endDate: reservations.endDate,
-        status: reservations.status,
-      })
-      .from(reservations)
-      .innerJoin(berths, eq(berths.id, reservations.berthId))
-      .where(eq(reservations.vesselId, vesselId))
-      .orderBy(desc(reservations.startDate), asc(reservations.id)),
-    db
-      .select({ id: issues.id, type: issues.type, reason: issues.reason, detail: issues.detail, sourceRef: issues.sourceRef })
-      .from(issues)
-      .where(and(eq(issues.vesselId, vesselId), isNull(issues.resolvedAt)))
-      .orderBy(asc(issues.id)),
-  ]);
-
-  return {
-    ...vessel,
-    displayName: vesselLabel(vessel),
-    createdAt: isoTimestamp(vessel.createdAt)!,
-    updatedAt: isoTimestamp(vessel.updatedAt)!,
-    bookings: bookings.map((b) => ({ ...b, fit: fitVerdict(vessel.lengthFt, b.berthLengthFt) })),
-    openIssues,
-  };
 }

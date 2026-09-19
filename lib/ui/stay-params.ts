@@ -6,7 +6,7 @@ export type StayParams = {
   vesselId: string | null;
   newVesselName: string | null;
   newVesselPrefix: string | null;
-  lengthFt: number | null;
+  newVesselLengthFt: number | null;
   title: string | null;
   start: ISODate | null;
   end: ISODate | null;
@@ -30,7 +30,7 @@ export function parseStayParams(sp: SearchParams): StayParams {
     vesselId: parseIdParam(sp.vessel),
     newVesselName: text(sp.vname, 80),
     newVesselPrefix: text(sp.vprefix, 8),
-    lengthFt: Number.isInteger(len) && len >= 1 && len <= 1500 ? len : null,
+    newVesselLengthFt: Number.isInteger(len) && len >= 1 && len <= 1500 ? len : null,
     title: text(sp.title, 120),
     start,
     // A last day before the first day is dropped, so the page asks again instead of listing berths for a negative stay.
