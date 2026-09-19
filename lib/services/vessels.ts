@@ -139,7 +139,7 @@ export function setVesselLength(db: Db, input: SetVesselLengthInput): Promise<Se
       const name = displayVesselName(vessel.prefix, vessel.name);
       const warning =
         misfitsAfter > 0
-          ? `At ${parsed.lengthFt} ft, ${name} is too long for the berth in ${misfitsAfter} of its bookings. They are listed under fit problems.`
+          ? `At ${parsed.lengthFt} ft, ${name} is too long for the berth in ${misfitsAfter} of its bookings. They are listed on the Review page under vessels too long for their berth.`
           : undefined;
       return ok({ misfitsBefore, misfitsAfter }, warning);
     });

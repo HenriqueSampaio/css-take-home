@@ -37,8 +37,7 @@ export default async function AboutPage() {
 
   return (
     <article className="mx-auto max-w-[72rem]">
-      <p className="t-caption">About</p>
-      <h1 className="t-headline">What this is, and why it is built this way</h1>
+      <h1 className="t-headline">About: what this is, and why it is built this way</h1>
       <p className="prose-measure mt-2 text-[1.0625rem] leading-relaxed text-ink-2">
         A berth reservation system for a marine research facility, built for a take-home brief. The facility ran its waterfront from a spreadsheet for 23 years, and two checks were done by eye:
         is this berth already taken, and is this vessel too long for it. Here both are guarantees rather than habits.
@@ -128,7 +127,7 @@ export default async function AboutPage() {
               Of the {n(report.fit.resolvableReservations)} stays that can be checked, <span className="font-semibold">{report.fit.violations} ({fitPct}%) do not fit their berth</span>
               {topMisfit && <>, led by {topMisfit.vessel} at {topMisfit.vesselFt} ft on the {topMisfit.berthFt} ft {topMisfit.berth} ({topMisfit.count} times)</>}. They are listed on the <Link className="link" href="/review?show=misfits">Review</Link> page.
             </P>
-            <h3 className="t-caption mt-2">Left out on purpose, and counted</h3>
+            <h3 className="mt-2 text-[0.875rem] font-semibold">Left out on purpose, and counted</h3>
             <ul className="prose-measure flex list-disc flex-col gap-1.5 pl-5 text-[0.9375rem] leading-relaxed text-ink-2">
               <li>The first block of the 2002, 2003 and 2004 sheets: a copy of the previous December that disagrees with that year&apos;s own sheet (shifted a day, different berths) and whose weekday row matches the wrong year. The year&apos;s own sheet is treated as authoritative.</li>
               <li>{report.notImported.areas.entries.length} entries in two rows with no length (small craft slips, finger piers). They hold several boats at once, so the one-occupant rule and the fit check do not apply to them.</li>
@@ -150,7 +149,7 @@ export default async function AboutPage() {
           <Section id="built" title="How it is built">
             <ul className="prose-measure flex list-disc flex-col gap-2 pl-5 text-[1rem] leading-relaxed">
               <li><span className="font-semibold">A pure domain layer</span> (dates, inclusive ranges, fit, vessel identity, berth classification, timeline lanes) shared by the importer, the services and the screens, so there is one definition of &ldquo;overlap&rdquo; and one of &ldquo;fits&rdquo;.</li>
-              <li><span className="font-semibold">Dates are plain text</span> like 2019-07-01 from the database to the screen, with arithmetic on whole-day numbers. A stay is a set of calendar days, not instants, so no time zone can shift it. The tests run under three time zones.</li>
+              <li><span className="font-semibold">Dates are plain text</span> like 2019-07-01 from the database to the screen, with arithmetic on whole-day numbers. A stay is a set of calendar days, not instants, so no time zone can shift it. The test suite is run under three time zones (npm run test:tz).</li>
               <li><span className="font-semibold">Services own the transactions</span> and return refusals as values with a sentence a coordinator can act on; they are tested against a real Postgres engine. Server actions are thin wrappers around them.</li>
               <li><span className="font-semibold">Every view is a link.</span> The month and the selected stay live in the URL and pages render on the server, so the back button works and a finding can be pointed at.</li>
               <li><span className="font-semibold">Editing is optimistic-locked</span> with a version number, so two people changing the same stay cannot silently overwrite each other.</li>

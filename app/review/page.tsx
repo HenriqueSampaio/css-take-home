@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { redirect } from "next/navigation";
 import { RevisionTriangle } from "@/components/revision-triangle";
 import { LengthStatusTag, ReservationStatusTag } from "@/components/status-tags";
 import { getFitViolations, getIssueSummary, getOpenIssues } from "@/lib/db/queries/issues";
@@ -15,10 +16,10 @@ const PAGE = 50;
 
 const SECTIONS: { key: SectionKey; title: string; meaning: string; action: string; blocking: boolean }[] = [
   { key: "overlap", title: "Double-bookings", meaning: "Two stays on the same berth on the same days. The old grid could only record this by adding a second row for the berth.", action: "Decide which stay is real: move or cancel one, then confirm the other.", blocking: true },
-  { key: "unlabelled", title: "Stays with no name", meaning: "A coloured run in the workbook with no vessel or event written in it.", action: "Give it a name by editing it, or cancel it if nothing was there.", blocking: true },
-  { key: "calendar_defect", title: "Impossible calendar", meaning: "The workbook's month had days that do not exist, or its header rows were scrambled, so the dates are a best reading.", action: "Check the dates against another record, then save to confirm.", blocking: true },
+  { key: "unlabelled", title: "No name on the stay", meaning: "A coloured run in the workbook with no vessel or event written in it.", action: "Give it a name by editing it, or cancel it if nothing was there.", blocking: true },
+  { key: "calendar_defect", title: "Impossible calendar in the workbook", meaning: "The workbook's month had days that do not exist, or its header rows were scrambled, so the dates are a best reading.", action: "Check the dates against another record, then save to confirm.", blocking: true },
   { key: "misfits", title: "Vessels too long for their berth", meaning: "The vessel's length on file is greater than the berth's. Computed live from current lengths, so correcting a length updates this list.", action: "Move the stay, or correct the vessel's length if it is wrong.", blocking: false },
-  { key: "ambiguous_extent", title: "Uncertain dates or occupant", meaning: "The stay was imported, but its extent or occupant could be read more than one way: a name on an uncoloured cell, two names in one bar, a bar running past the month.", action: "Glance at each; they stay confirmed unless you change them.", blocking: false },
+  { key: "ambiguous_extent", title: "Uncertain dates or occupant", meaning: "The stay was imported, but its extent or occupant could be read more than one way: a name on an uncoloured cell, two names in one bar, a bar painted over at the month edge.", action: "Open each one. If it looks right, close the finding; otherwise edit the stay.", blocking: false },
   { key: "length_conflict", title: "Two lengths on file", meaning: "The registry lists the same vessel with two different lengths, so neither is used.", action: "Pick the right length on the Vessels page.", blocking: false },
 ];
 
@@ -30,18 +31,22 @@ export default async function ReviewPage(props: PageProps<"/review">) {
 
   const requested = firstParam(sp.show) as SectionKey | undefined;
   const active = SECTIONS.find((s) => s.key === requested) ?? SECTIONS.find((s) => countOf(s.key) > 0) ?? SECTIONS[0];
-  const offset = Math.max(0, Number(firstParam(sp.offset)) || 0);
+  const rawOffset = Number(firstParam(sp.offset));
+  const requestedOffset = Number.isSafeInteger(rawOffset) && rawOffset > 0 ? rawOffset : 0;
+  // Never page past the end: an out-of-range offset shows the last page, not an empty list.
+  const offset = Math.min(requestedOffset, Math.max(0, Math.floor((countOf(active.key) - 1) / PAGE) * PAGE));
 
   const issues = active.key === "misfits" ? null : await getOpenIssues(db, { type: active.key, limit: PAGE, offset });
   const misfits = active.key === "misfits" ? await getFitViolations(db, { limit: PAGE, offset }) : null;
   const total = issues?.total ?? misfits?.totalGroups ?? 0;
   const hrefFor = (key: SectionKey, at = 0) => `/review?show=${key}${at > 0 ? `&offset=${at}` : ""}`;
+  // Misfits page by vessel-and-berth group, not by stay, so the clamp above can still overshoot: fall back to page one.
+  if (offset > 0 && total > 0 && (issues?.rows.length ?? misfits?.groups.length ?? 0) === 0) redirect(hrefFor(active.key));
 
   return (
     <div className="mx-auto flex max-w-[72rem] flex-col gap-6">
       <div>
-        <p className="t-caption">Review</p>
-        <h1 className="t-headline">What the import could not settle</h1>
+        <h1 className="t-headline">Review: what the import could not settle</h1>
         <p className="prose-measure mt-1 text-ink-2">
           Twenty-three years of spreadsheet were imported without guessing. Anything that could not be read with certainty is listed here for a person to decide.
           None of it blocks new bookings: only <span className="font-semibold text-ink">confirmed</span> stays can refuse a berth, and these wait outside that rule until resolved.
@@ -53,7 +58,7 @@ export default async function ReviewPage(props: PageProps<"/review">) {
       </div>
 
       <div className="sheet overflow-x-auto">
-        <table className="table">
+        <table className="table min-w-[46rem]">
           <caption className="sr-only">Review findings by kind</caption>
           <thead>
             <tr>
@@ -68,8 +73,8 @@ export default async function ReviewPage(props: PageProps<"/review">) {
               const count = countOf(s.key);
               const current = s.key === active.key;
               return (
-                <tr key={s.key} className={current ? "[&>*]:!bg-prussian-tone" : ""}>
-                  <th scope="row" className="!border-b !border-line !bg-transparent text-left align-top">
+                <tr key={s.key} aria-current={current ? "true" : undefined}>
+                  <th scope="row" className="text-left">
                     <Link href={hrefFor(s.key)} scroll={false} aria-current={current ? "true" : undefined} className="link font-semibold">{s.title}</Link>
                     <span className="mt-1 block">{s.blocking ? <span className="tag tag-caution">Needs review</span> : <span className="tag">Note only</span>}</span>
                   </th>
@@ -86,7 +91,7 @@ export default async function ReviewPage(props: PageProps<"/review">) {
       <section aria-labelledby="findings-heading">
         <h2 id="findings-heading" className="t-title">{active.title} <span className="t-num font-normal text-ink-2">({total})</span></h2>
 
-        {total === 0 && <p className="mt-2 text-ink-2">Nothing open here. {active.blocking ? "Every stay of this kind has been resolved." : ""}</p>}
+        {total === 0 && <p className="prose-measure mt-2 text-ink-2">No open findings of this kind. Findings close when a stay is confirmed, edited or cancelled, and this list refills only if the demo data is reset.</p>}
 
         {issues && issues.rows.length > 0 && (
           <ol className="mt-3 divide-y divide-line border-y-[1.5px] border-ink">
@@ -134,7 +139,7 @@ export default async function ReviewPage(props: PageProps<"/review">) {
               <tbody>
                 {misfits.groups.map((g) => (
                   <tr key={`${g.vesselId}-${g.berthId}`}>
-                    <th scope="row" className="!border-b !border-line !bg-transparent text-left">
+                    <th scope="row" className="text-left">
                       <Link className="link font-semibold" href={scheduleHref(yearMonthOf(g.lastDate), g.sampleReservationId)}>{g.vesselName}</Link>
                       <span className="ml-1.5 align-middle"><LengthStatusTag status={g.lengthStatus} /></span>
                     </th>

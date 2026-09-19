@@ -143,7 +143,7 @@ export function toSeed(stays: readonly Stay[], vessels: readonly LinkedVessel[])
     } else {
       title = notes.length > 0 ? notes.join("; ") : UNLABELLED_TITLE;
       labels.set(id, "an unlabelled bar");
-      issues.unshift({ type: "unlabelled", reason: notes.length > 0 ? "notes_only" : "no_label", detail: `The coloured bar at ${sourceRef} (${startDate} to ${endDate}) names no vessel or event; identify the occupant or delete the row.`, sourceRef, related: [] });
+      issues.unshift({ type: "unlabelled", reason: notes.length > 0 ? "notes_only" : "no_label", detail: `The coloured bar at ${sourceRef} (${startDate} to ${endDate}) names no vessel or event. Edit the stay to name its occupant, or cancel it if nothing was there.`, sourceRef, related: [] });
     }
 
     reservations.push({

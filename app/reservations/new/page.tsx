@@ -65,7 +65,6 @@ export default async function NewReservationPage(props: PageProps<"/reservations
   return (
     <div className="mx-auto flex max-w-[72rem] flex-col gap-6">
       <div>
-        <p className="t-caption">New reservation</p>
         <h1 className="t-headline">Find a berth</h1>
         <p className="prose-measure mt-1 text-ink-2">
           Say what needs a berth and when. Every berth is then checked two ways: is it free on those days, and is the vessel short enough to fit.
@@ -76,14 +75,15 @@ export default async function NewReservationPage(props: PageProps<"/reservations
       <div className="grid items-start gap-x-10 gap-y-8 lg:grid-cols-[22rem_minmax(0,1fr)]">
         <section aria-labelledby="stay-heading" className="sheet px-4 py-4">
           <h2 id="stay-heading" className="t-title mb-3">The stay</h2>
-          <ReservationForm key={JSON.stringify(initial)} basePath="/reservations/new" vessels={vessels} initial={initial} />
+          <ReservationForm key={JSON.stringify(initial)} basePath="/reservations/new" vessels={vessels} initial={initial} hasResults={options !== null} />
         </section>
 
-        <section aria-labelledby="berths-heading" aria-live="polite">
+        <section aria-labelledby="berths-heading">
           <h2 id="berths-heading" className="t-title">Berths for this stay</h2>
           {options && range ? (
             <>
-              <p className="mb-3 mt-1 text-ink-2">
+              {/* Announce the one-sentence answer, not all six berths, after each search. */}
+              <p className="mb-3 mt-1 text-ink-2" role="status">
                 <span className="font-semibold text-ink">{subject}</span>, <span className="t-num">{formatDate(range.start)}{range.end !== range.start && <> to {formatDate(range.end)}</>}</span> ({days} {days === 1 ? "day" : "days"}).{" "}
                 {usable === 0 ? <span className="font-semibold text-revision">No berth can take this stay as entered.</span> : <>{usable} of {options.length} berths can take it.</>}
               </p>

@@ -194,7 +194,7 @@ A full-width sheet. The header is the drawing's title block: bordered fields (fa
 
 The schedule is a fixed berth column plus one column per day, and it owns the full viewport width. Every other page is capped at 72rem. Spacing is a 4px base (4, 8, 12, 16, 24, 40); groups are tight, separation is generous, and a heading has more space above than below.
 
-Responsive behaviour is structural. Under 64rem the schedule scrolls horizontally inside its sheet with the berth column sticky; the title block's navigation becomes a single scrolling row; side-by-side panels stack. Type does not scale fluidly.
+Responsive behaviour is structural. Under 64rem the schedule scrolls horizontally inside its sheet with the berth column sticky; the title block's fields stack and its navigation wraps onto a second line so every destination stays visible; side-by-side panels stack. Type does not scale fluidly.
 
 ## Elevation & Depth
 

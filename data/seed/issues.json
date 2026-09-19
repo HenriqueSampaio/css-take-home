@@ -31,7 +31,7 @@
     "reservationId": "r_681d42e06f",
     "vesselId": null,
     "relatedReservationIds": [],
-    "detail": "The coloured bar at 2017!Q110:V110 (2017-09-15 to 2017-09-20) names no vessel or event; identify the occupant or delete the row.",
+    "detail": "The coloured bar at 2017!Q110:V110 (2017-09-15 to 2017-09-20) names no vessel or event. Edit the stay to name its occupant, or cancel it if nothing was there.",
     "sourceRef": "2017!Q110:V110"
   },
   {
@@ -97,7 +97,7 @@
     "reservationId": "r_6f8a66e91d",
     "vesselId": null,
     "relatedReservationIds": [],
-    "detail": "The coloured bar at 2015!S93 (2015-08-12 to 2015-08-12) names no vessel or event; identify the occupant or delete the row.",
+    "detail": "The coloured bar at 2015!S93 (2015-08-12 to 2015-08-12) names no vessel or event. Edit the stay to name its occupant, or cancel it if nothing was there.",
     "sourceRef": "2015!S93"
   },
   {
@@ -121,7 +121,7 @@
     "reservationId": "r_21da07fe37",
     "vesselId": null,
     "relatedReservationIds": [],
-    "detail": "The coloured bar at 2014!K20:N20 (2014-02-05 to 2014-02-08) names no vessel or event; identify the occupant or delete the row.",
+    "detail": "The coloured bar at 2014!K20:N20 (2014-02-05 to 2014-02-08) names no vessel or event. Edit the stay to name its occupant, or cancel it if nothing was there.",
     "sourceRef": "2014!K20:N20"
   },
   {
@@ -132,7 +132,7 @@
     "reservationId": "r_1ee1532038",
     "vesselId": null,
     "relatedReservationIds": [],
-    "detail": "The coloured bar at 2016!V98 (2016-08-20 to 2016-08-20) names no vessel or event; identify the occupant or delete the row.",
+    "detail": "The coloured bar at 2016!V98 (2016-08-20 to 2016-08-20) names no vessel or event. Edit the stay to name its occupant, or cancel it if nothing was there.",
     "sourceRef": "2016!V98"
   },
   {
@@ -143,7 +143,7 @@
     "reservationId": "r_48f6120b30",
     "vesselId": null,
     "relatedReservationIds": [],
-    "detail": "The coloured bar at 2017!AA20:AB20 (2017-02-25 to 2017-02-26) names no vessel or event; identify the occupant or delete the row.",
+    "detail": "The coloured bar at 2017!AA20:AB20 (2017-02-25 to 2017-02-26) names no vessel or event. Edit the stay to name its occupant, or cancel it if nothing was there.",
     "sourceRef": "2017!AA20:AB20"
   },
   {
@@ -154,7 +154,7 @@
     "reservationId": "r_d9e424bc02",
     "vesselId": null,
     "relatedReservationIds": [],
-    "detail": "The coloured bar at 2009!V110:AD110 (2009-10-21 to 2009-10-29) names no vessel or event; identify the occupant or delete the row.",
+    "detail": "The coloured bar at 2009!V110:AD110 (2009-10-21 to 2009-10-29) names no vessel or event. Edit the stay to name its occupant, or cancel it if nothing was there.",
     "sourceRef": "2009!V110:AD110"
   },
   {
@@ -187,7 +187,7 @@
     "reservationId": "r_600d4a7f54",
     "vesselId": null,
     "relatedReservationIds": [],
-    "detail": "The coloured bar at 2008!B46:AE46 (2008-04-01 to 2008-04-30) names no vessel or event; identify the occupant or delete the row.",
+    "detail": "The coloured bar at 2008!B46:AE46 (2008-04-01 to 2008-04-30) names no vessel or event. Edit the stay to name its occupant, or cancel it if nothing was there.",
     "sourceRef": "2008!B46:AE46"
   },
   {
@@ -242,7 +242,7 @@
     "reservationId": "r_ecf371ce07",
     "vesselId": null,
     "relatedReservationIds": [],
-    "detail": "The coloured bar at 2011!H98 (2011-09-06 to 2011-09-06) names no vessel or event; identify the occupant or delete the row.",
+    "detail": "The coloured bar at 2011!H98 (2011-09-06 to 2011-09-06) names no vessel or event. Edit the stay to name its occupant, or cancel it if nothing was there.",
     "sourceRef": "2011!H98"
   },
   {
@@ -345,7 +345,7 @@
     "reservationId": "r_8dd88474dd",
     "vesselId": null,
     "relatedReservationIds": [],
-    "detail": "The coloured bar at 2015!P97 (2015-08-09 to 2015-08-09) names no vessel or event; identify the occupant or delete the row.",
+    "detail": "The coloured bar at 2015!P97 (2015-08-09 to 2015-08-09) names no vessel or event. Edit the stay to name its occupant, or cancel it if nothing was there.",
     "sourceRef": "2015!P97"
   },
   {
@@ -415,7 +415,7 @@
     "reservationId": "r_fe0d667146",
     "vesselId": null,
     "relatedReservationIds": [],
-    "detail": "The coloured bar at 2003!U47 (2003-04-20 to 2003-04-20) names no vessel or event; identify the occupant or delete the row.",
+    "detail": "The coloured bar at 2003!U47 (2003-04-20 to 2003-04-20) names no vessel or event. Edit the stay to name its occupant, or cancel it if nothing was there.",
     "sourceRef": "2003!U47"
   },
   {
@@ -485,7 +485,7 @@
     "reservationId": "r_dbbfa61aa0",
     "vesselId": null,
     "relatedReservationIds": [],
-    "detail": "The coloured bar at 2012!G103 (2012-09-03 to 2012-09-03) names no vessel or event; identify the occupant or delete the row.",
+    "detail": "The coloured bar at 2012!G103 (2012-09-03 to 2012-09-03) names no vessel or event. Edit the stay to name its occupant, or cancel it if nothing was there.",
     "sourceRef": "2012!G103"
   },
   {
@@ -542,7 +542,7 @@
     "reservationId": "r_34fa2dec38",
     "vesselId": null,
     "relatedReservationIds": [],
-    "detail": "The coloured bar at 2017!P110 (2017-09-14 to 2017-09-14) names no vessel or event; identify the occupant or delete the row.",
+    "detail": "The coloured bar at 2017!P110 (2017-09-14 to 2017-09-14) names no vessel or event. Edit the stay to name its occupant, or cancel it if nothing was there.",
     "sourceRef": "2017!P110"
   },
   {
@@ -610,7 +610,7 @@
     "reservationId": "r_f9810bf10a",
     "vesselId": null,
     "relatedReservationIds": [],
-    "detail": "The coloured bar at 2013!F113:P113 (2013-10-01 to 2013-10-11) names no vessel or event; identify the occupant or delete the row.",
+    "detail": "The coloured bar at 2013!F113:P113 (2013-10-01 to 2013-10-11) names no vessel or event. Edit the stay to name its occupant, or cancel it if nothing was there.",
     "sourceRef": "2013!F113:P113"
   },
   {
@@ -621,7 +621,7 @@
     "reservationId": "r_922f3c58f2",
     "vesselId": null,
     "relatedReservationIds": [],
-    "detail": "The coloured bar at 1999!F82:G82 (1999-08-05 to 1999-08-06) names no vessel or event; identify the occupant or delete the row.",
+    "detail": "The coloured bar at 1999!F82:G82 (1999-08-05 to 1999-08-06) names no vessel or event. Edit the stay to name its occupant, or cancel it if nothing was there.",
     "sourceRef": "1999!F82:G82"
   },
   {
@@ -654,7 +654,7 @@
     "reservationId": "r_1a4d5ac4d5",
     "vesselId": null,
     "relatedReservationIds": [],
-    "detail": "The coloured bar at 2016!T94 (2016-08-18 to 2016-08-18) names no vessel or event; identify the occupant or delete the row.",
+    "detail": "The coloured bar at 2016!T94 (2016-08-18 to 2016-08-18) names no vessel or event. Edit the stay to name its occupant, or cancel it if nothing was there.",
     "sourceRef": "2016!T94"
   },
   {
@@ -665,7 +665,7 @@
     "reservationId": "r_e9e2d98538",
     "vesselId": null,
     "relatedReservationIds": [],
-    "detail": "The coloured bar at 2011!F101 (2011-09-04 to 2011-09-04) names no vessel or event; identify the occupant or delete the row.",
+    "detail": "The coloured bar at 2011!F101 (2011-09-04 to 2011-09-04) names no vessel or event. Edit the stay to name its occupant, or cancel it if nothing was there.",
     "sourceRef": "2011!F101"
   },
   {
@@ -761,7 +761,7 @@
     "reservationId": "r_a94db7a027",
     "vesselId": null,
     "relatedReservationIds": [],
-    "detail": "The coloured bar at 2011!J85 (2011-08-08 to 2011-08-08) names no vessel or event; identify the occupant or delete the row.",
+    "detail": "The coloured bar at 2011!J85 (2011-08-08 to 2011-08-08) names no vessel or event. Edit the stay to name its occupant, or cancel it if nothing was there.",
     "sourceRef": "2011!J85"
   },
   {
@@ -796,7 +796,7 @@
     "reservationId": "r_37b7b3d777",
     "vesselId": null,
     "relatedReservationIds": [],
-    "detail": "The coloured bar at 2001!J74 (2001-07-09 to 2001-07-09) names no vessel or event; identify the occupant or delete the row.",
+    "detail": "The coloured bar at 2001!J74 (2001-07-09 to 2001-07-09) names no vessel or event. Edit the stay to name its occupant, or cancel it if nothing was there.",
     "sourceRef": "2001!J74"
   },
   {
@@ -807,7 +807,7 @@
     "reservationId": "r_e767b9f1d9",
     "vesselId": null,
     "relatedReservationIds": [],
-    "detail": "The coloured bar at 2010!T130:AB130 (2010-12-19 to 2010-12-27) names no vessel or event; identify the occupant or delete the row.",
+    "detail": "The coloured bar at 2010!T130:AB130 (2010-12-19 to 2010-12-27) names no vessel or event. Edit the stay to name its occupant, or cancel it if nothing was there.",
     "sourceRef": "2010!T130:AB130"
   },
   {
@@ -875,7 +875,7 @@
     "reservationId": "r_078f0f818d",
     "vesselId": null,
     "relatedReservationIds": [],
-    "detail": "The coloured bar at 1999!V70:Y70 (1999-07-21 to 1999-07-24) names no vessel or event; identify the occupant or delete the row.",
+    "detail": "The coloured bar at 1999!V70:Y70 (1999-07-21 to 1999-07-24) names no vessel or event. Edit the stay to name its occupant, or cancel it if nothing was there.",
     "sourceRef": "1999!V70:Y70"
   },
   {
@@ -897,7 +897,7 @@
     "reservationId": "r_7410de38c5",
     "vesselId": null,
     "relatedReservationIds": [],
-    "detail": "The coloured bar at 2017!N119:T119 (2017-10-12 to 2017-10-18) names no vessel or event; identify the occupant or delete the row.",
+    "detail": "The coloured bar at 2017!N119:T119 (2017-10-12 to 2017-10-18) names no vessel or event. Edit the stay to name its occupant, or cancel it if nothing was there.",
     "sourceRef": "2017!N119:T119"
   },
   {
@@ -934,7 +934,7 @@
     "reservationId": "r_103f63c9a8",
     "vesselId": null,
     "relatedReservationIds": [],
-    "detail": "The coloured bar at 1999!H82 (1999-08-07 to 1999-08-07) names no vessel or event; identify the occupant or delete the row.",
+    "detail": "The coloured bar at 1999!H82 (1999-08-07 to 1999-08-07) names no vessel or event. Edit the stay to name its occupant, or cancel it if nothing was there.",
     "sourceRef": "1999!H82"
   },
   {
@@ -1094,7 +1094,7 @@
     "reservationId": "r_c48dff28b9",
     "vesselId": null,
     "relatedReservationIds": [],
-    "detail": "The coloured bar at 2001!D61:E61 (2001-06-03 to 2001-06-04) names no vessel or event; identify the occupant or delete the row.",
+    "detail": "The coloured bar at 2001!D61:E61 (2001-06-03 to 2001-06-04) names no vessel or event. Edit the stay to name its occupant, or cancel it if nothing was there.",
     "sourceRef": "2001!D61:E61"
   },
   {
@@ -1105,7 +1105,7 @@
     "reservationId": "r_33fd693514",
     "vesselId": null,
     "relatedReservationIds": [],
-    "detail": "The coloured bar at 2016!W95 (2016-08-21 to 2016-08-21) names no vessel or event; identify the occupant or delete the row.",
+    "detail": "The coloured bar at 2016!W95 (2016-08-21 to 2016-08-21) names no vessel or event. Edit the stay to name its occupant, or cancel it if nothing was there.",
     "sourceRef": "2016!W95"
   },
   {
@@ -1206,7 +1206,7 @@
     "reservationId": "r_bc9955cfe5",
     "vesselId": null,
     "relatedReservationIds": [],
-    "detail": "The coloured bar at 2014!AH73:AJ73 (2014-06-28 to 2014-06-30) names no vessel or event; identify the occupant or delete the row.",
+    "detail": "The coloured bar at 2014!AH73:AJ73 (2014-06-28 to 2014-06-30) names no vessel or event. Edit the stay to name its occupant, or cancel it if nothing was there.",
     "sourceRef": "2014!AH73:AJ73"
   },
   {
@@ -1261,7 +1261,7 @@
     "reservationId": "r_c85c801d1e",
     "vesselId": null,
     "relatedReservationIds": [],
-    "detail": "The coloured bar at 2017!P105 (2017-09-14 to 2017-09-14) names no vessel or event; identify the occupant or delete the row.",
+    "detail": "The coloured bar at 2017!P105 (2017-09-14 to 2017-09-14) names no vessel or event. Edit the stay to name its occupant, or cancel it if nothing was there.",
     "sourceRef": "2017!P105"
   },
   {
@@ -1272,7 +1272,7 @@
     "reservationId": "r_5a47cb68ee",
     "vesselId": null,
     "relatedReservationIds": [],
-    "detail": "The coloured bar at 2017!K113:L113 (2017-09-09 to 2017-09-10) names no vessel or event; identify the occupant or delete the row.",
+    "detail": "The coloured bar at 2017!K113:L113 (2017-09-09 to 2017-09-10) names no vessel or event. Edit the stay to name its occupant, or cancel it if nothing was there.",
     "sourceRef": "2017!K113:L113"
   },
   {
@@ -1316,7 +1316,7 @@
     "reservationId": "r_f5dce0aab7",
     "vesselId": null,
     "relatedReservationIds": [],
-    "detail": "The coloured bar at 2010!S87:X87 (2010-08-18 to 2010-08-23) names no vessel or event; identify the occupant or delete the row.",
+    "detail": "The coloured bar at 2010!S87:X87 (2010-08-18 to 2010-08-23) names no vessel or event. Edit the stay to name its occupant, or cancel it if nothing was there.",
     "sourceRef": "2010!S87:X87"
   },
   {
@@ -1371,7 +1371,7 @@
     "reservationId": "r_c04a971b73",
     "vesselId": null,
     "relatedReservationIds": [],
-    "detail": "The coloured bar at 1999!I82 (1999-08-08 to 1999-08-08) names no vessel or event; identify the occupant or delete the row.",
+    "detail": "The coloured bar at 1999!I82 (1999-08-08 to 1999-08-08) names no vessel or event. Edit the stay to name its occupant, or cancel it if nothing was there.",
     "sourceRef": "1999!I82"
   },
   {
@@ -1382,7 +1382,7 @@
     "reservationId": "r_32e77dcdd3",
     "vesselId": null,
     "relatedReservationIds": [],
-    "detail": "The coloured bar at 2015!AJ81 (2015-07-29 to 2015-07-29) names no vessel or event; identify the occupant or delete the row.",
+    "detail": "The coloured bar at 2015!AJ81 (2015-07-29 to 2015-07-29) names no vessel or event. Edit the stay to name its occupant, or cancel it if nothing was there.",
     "sourceRef": "2015!AJ81"
   },
   {
@@ -1393,7 +1393,7 @@
     "reservationId": "r_ff19f49084",
     "vesselId": null,
     "relatedReservationIds": [],
-    "detail": "The coloured bar at 2003!X47:AC47 (2003-04-23 to 2003-04-28) names no vessel or event; identify the occupant or delete the row.",
+    "detail": "The coloured bar at 2003!X47:AC47 (2003-04-23 to 2003-04-28) names no vessel or event. Edit the stay to name its occupant, or cancel it if nothing was there.",
     "sourceRef": "2003!X47:AC47"
   },
   {
@@ -1430,7 +1430,7 @@
     "reservationId": "r_ef354e883f",
     "vesselId": null,
     "relatedReservationIds": [],
-    "detail": "The coloured bar at 2013!K89 (2013-08-06 to 2013-08-06) names no vessel or event; identify the occupant or delete the row.",
+    "detail": "The coloured bar at 2013!K89 (2013-08-06 to 2013-08-06) names no vessel or event. Edit the stay to name its occupant, or cancel it if nothing was there.",
     "sourceRef": "2013!K89"
   },
   {
@@ -1441,7 +1441,7 @@
     "reservationId": "r_12c43075f3",
     "vesselId": null,
     "relatedReservationIds": [],
-    "detail": "The coloured bar at 2011!H100 (2011-09-06 to 2011-09-06) names no vessel or event; identify the occupant or delete the row.",
+    "detail": "The coloured bar at 2011!H100 (2011-09-06 to 2011-09-06) names no vessel or event. Edit the stay to name its occupant, or cancel it if nothing was there.",
     "sourceRef": "2011!H100"
   },
   {
@@ -1485,7 +1485,7 @@
     "reservationId": "r_4a26e13ccd",
     "vesselId": null,
     "relatedReservationIds": [],
-    "detail": "The coloured bar at 2006!Q100:AE100 (2006-09-16 to 2006-09-30) names no vessel or event; identify the occupant or delete the row.",
+    "detail": "The coloured bar at 2006!Q100:AE100 (2006-09-16 to 2006-09-30) names no vessel or event. Edit the stay to name its occupant, or cancel it if nothing was there.",
     "sourceRef": "2006!Q100:AE100"
   },
   {
@@ -1564,7 +1564,7 @@
     "reservationId": "r_7166a7f54f",
     "vesselId": null,
     "relatedReservationIds": [],
-    "detail": "The coloured bar at 2011!O74:P74 (2011-07-13 to 2011-07-14) names no vessel or event; identify the occupant or delete the row.",
+    "detail": "The coloured bar at 2011!O74:P74 (2011-07-13 to 2011-07-14) names no vessel or event. Edit the stay to name its occupant, or cancel it if nothing was there.",
     "sourceRef": "2011!O74:P74"
   },
   {
@@ -1619,7 +1619,7 @@
     "reservationId": "r_a792c33d10",
     "vesselId": null,
     "relatedReservationIds": [],
-    "detail": "The coloured bar at 2008!B13:AF13 (2008-01-01 to 2008-01-31) names no vessel or event; identify the occupant or delete the row.",
+    "detail": "The coloured bar at 2008!B13:AF13 (2008-01-01 to 2008-01-31) names no vessel or event. Edit the stay to name its occupant, or cancel it if nothing was there.",
     "sourceRef": "2008!B13:AF13"
   },
   {
@@ -1641,7 +1641,7 @@
     "reservationId": "r_cbe69d3edb",
     "vesselId": null,
     "relatedReservationIds": [],
-    "detail": "The coloured bar at 2016!L93 (2016-08-10 to 2016-08-10) names no vessel or event; identify the occupant or delete the row.",
+    "detail": "The coloured bar at 2016!L93 (2016-08-10 to 2016-08-10) names no vessel or event. Edit the stay to name its occupant, or cancel it if nothing was there.",
     "sourceRef": "2016!L93"
   },
   {
@@ -1689,7 +1689,7 @@
     "reservationId": "r_5efb130808",
     "vesselId": null,
     "relatedReservationIds": [],
-    "detail": "The coloured bar at 2001!AB28 (2001-03-27 to 2001-03-27) names no vessel or event; identify the occupant or delete the row.",
+    "detail": "The coloured bar at 2001!AB28 (2001-03-27 to 2001-03-27) names no vessel or event. Edit the stay to name its occupant, or cancel it if nothing was there.",
     "sourceRef": "2001!AB28"
   },
   {
@@ -1711,7 +1711,7 @@
     "reservationId": "r_4e1c66b1ba",
     "vesselId": null,
     "relatedReservationIds": [],
-    "detail": "The coloured bar at 2016!V57:W57 (2016-05-20 to 2016-05-21) names no vessel or event; identify the occupant or delete the row.",
+    "detail": "The coloured bar at 2016!V57:W57 (2016-05-20 to 2016-05-21) names no vessel or event. Edit the stay to name its occupant, or cancel it if nothing was there.",
     "sourceRef": "2016!V57:W57"
   },
   {
@@ -1744,7 +1744,7 @@
     "reservationId": "r_740dbebbf6",
     "vesselId": null,
     "relatedReservationIds": [],
-    "detail": "The coloured bar at 2011!V99 (2011-09-20 to 2011-09-20) names no vessel or event; identify the occupant or delete the row.",
+    "detail": "The coloured bar at 2011!V99 (2011-09-20 to 2011-09-20) names no vessel or event. Edit the stay to name its occupant, or cancel it if nothing was there.",
     "sourceRef": "2011!V99"
   },
   {
@@ -1777,7 +1777,7 @@
     "reservationId": "r_4e2a9aa08e",
     "vesselId": null,
     "relatedReservationIds": [],
-    "detail": "The coloured bar at 2015!U95 (2015-08-14 to 2015-08-14) names no vessel or event; identify the occupant or delete the row.",
+    "detail": "The coloured bar at 2015!U95 (2015-08-14 to 2015-08-14) names no vessel or event. Edit the stay to name its occupant, or cancel it if nothing was there.",
     "sourceRef": "2015!U95"
   },
   {
@@ -1856,7 +1856,7 @@
     "reservationId": "r_37cd7e7d23",
     "vesselId": null,
     "relatedReservationIds": [],
-    "detail": "The coloured bar at 2015!AL85 (2015-07-31 to 2015-07-31) names no vessel or event; identify the occupant or delete the row.",
+    "detail": "The coloured bar at 2015!AL85 (2015-07-31 to 2015-07-31) names no vessel or event. Edit the stay to name its occupant, or cancel it if nothing was there.",
     "sourceRef": "2015!AL85"
   },
   {
@@ -2005,7 +2005,7 @@
     "reservationId": "r_9c62524532",
     "vesselId": null,
     "relatedReservationIds": [],
-    "detail": "The coloured bar at 2010!L43 (2010-04-11 to 2010-04-11) names no vessel or event; identify the occupant or delete the row.",
+    "detail": "The coloured bar at 2010!L43 (2010-04-11 to 2010-04-11) names no vessel or event. Edit the stay to name its occupant, or cancel it if nothing was there.",
     "sourceRef": "2010!L43"
   },
   {
@@ -2016,7 +2016,7 @@
     "reservationId": "r_8ea752ecdf",
     "vesselId": null,
     "relatedReservationIds": [],
-    "detail": "The coloured bar at 2016!L94 (2016-08-10 to 2016-08-10) names no vessel or event; identify the occupant or delete the row.",
+    "detail": "The coloured bar at 2016!L94 (2016-08-10 to 2016-08-10) names no vessel or event. Edit the stay to name its occupant, or cancel it if nothing was there.",
     "sourceRef": "2016!L94"
   },
   {
@@ -2027,7 +2027,7 @@
     "reservationId": "r_b751453991",
     "vesselId": null,
     "relatedReservationIds": [],
-    "detail": "The coloured bar at 2000!AE60 (2000-06-30 to 2000-06-30) names no vessel or event; identify the occupant or delete the row.",
+    "detail": "The coloured bar at 2000!AE60 (2000-06-30 to 2000-06-30) names no vessel or event. Edit the stay to name its occupant, or cancel it if nothing was there.",
     "sourceRef": "2000!AE60"
   },
   {
@@ -2095,7 +2095,7 @@
     "reservationId": "r_38077530a8",
     "vesselId": null,
     "relatedReservationIds": [],
-    "detail": "The coloured bar at 2010!T64:U64 (2010-06-19 to 2010-06-20) names no vessel or event; identify the occupant or delete the row.",
+    "detail": "The coloured bar at 2010!T64:U64 (2010-06-19 to 2010-06-20) names no vessel or event. Edit the stay to name its occupant, or cancel it if nothing was there.",
     "sourceRef": "2010!T64:U64"
   },
   {
@@ -2152,7 +2152,7 @@
     "reservationId": "r_cc7c55df74",
     "vesselId": null,
     "relatedReservationIds": [],
-    "detail": "The coloured bar at 2010!G41:I41 (2010-04-06 to 2010-04-08) names no vessel or event; identify the occupant or delete the row.",
+    "detail": "The coloured bar at 2010!G41:I41 (2010-04-06 to 2010-04-08) names no vessel or event. Edit the stay to name its occupant, or cancel it if nothing was there.",
     "sourceRef": "2010!G41:I41"
   },
   {
@@ -2163,7 +2163,7 @@
     "reservationId": "r_8ae97d78ae",
     "vesselId": null,
     "relatedReservationIds": [],
-    "detail": "The coloured bar at 2007!B135:AF135 (2007-12-01 to 2007-12-31) names no vessel or event; identify the occupant or delete the row.",
+    "detail": "The coloured bar at 2007!B135:AF135 (2007-12-01 to 2007-12-31) names no vessel or event. Edit the stay to name its occupant, or cancel it if nothing was there.",
     "sourceRef": "2007!B135:AF135"
   },
   {
@@ -2196,7 +2196,7 @@
     "reservationId": "r_4d62f066c2",
     "vesselId": null,
     "relatedReservationIds": [],
-    "detail": "The coloured bar at 2006!O110 (2006-10-14 to 2006-10-14) names no vessel or event; identify the occupant or delete the row.",
+    "detail": "The coloured bar at 2006!O110 (2006-10-14 to 2006-10-14) names no vessel or event. Edit the stay to name its occupant, or cancel it if nothing was there.",
     "sourceRef": "2006!O110"
   },
   {
@@ -2207,7 +2207,7 @@
     "reservationId": "r_042ffeb2da",
     "vesselId": null,
     "relatedReservationIds": [],
-    "detail": "The coloured bar at 2003!L69:P69 (2003-06-11 to 2003-06-15) names no vessel or event; identify the occupant or delete the row.",
+    "detail": "The coloured bar at 2003!L69:P69 (2003-06-11 to 2003-06-15) names no vessel or event. Edit the stay to name its occupant, or cancel it if nothing was there.",
     "sourceRef": "2003!L69:P69"
   },
   {
@@ -2240,7 +2240,7 @@
     "reservationId": "r_145fe59a25",
     "vesselId": null,
     "relatedReservationIds": [],
-    "detail": "The coloured bar at 2016!N96 (2016-08-12 to 2016-08-12) names no vessel or event; identify the occupant or delete the row.",
+    "detail": "The coloured bar at 2016!N96 (2016-08-12 to 2016-08-12) names no vessel or event. Edit the stay to name its occupant, or cancel it if nothing was there.",
     "sourceRef": "2016!N96"
   },
   {
@@ -2251,7 +2251,7 @@
     "reservationId": "r_f0f76b1d6b",
     "vesselId": null,
     "relatedReservationIds": [],
-    "detail": "The coloured bar at 2016!V69 (2016-06-20 to 2016-06-20) names no vessel or event; identify the occupant or delete the row.",
+    "detail": "The coloured bar at 2016!V69 (2016-06-20 to 2016-06-20) names no vessel or event. Edit the stay to name its occupant, or cancel it if nothing was there.",
     "sourceRef": "2016!V69"
   },
   {
@@ -2297,7 +2297,7 @@
     "reservationId": "r_d3795cd119",
     "vesselId": null,
     "relatedReservationIds": [],
-    "detail": "The coloured bar at 2016!V96 (2016-08-20 to 2016-08-20) names no vessel or event; identify the occupant or delete the row.",
+    "detail": "The coloured bar at 2016!V96 (2016-08-20 to 2016-08-20) names no vessel or event. Edit the stay to name its occupant, or cancel it if nothing was there.",
     "sourceRef": "2016!V96"
   },
   {
@@ -2321,7 +2321,7 @@
     "reservationId": "r_a0d895087f",
     "vesselId": null,
     "relatedReservationIds": [],
-    "detail": "The coloured bar at 2016!J69 (2016-06-08 to 2016-06-08) names no vessel or event; identify the occupant or delete the row.",
+    "detail": "The coloured bar at 2016!J69 (2016-06-08 to 2016-06-08) names no vessel or event. Edit the stay to name its occupant, or cancel it if nothing was there.",
     "sourceRef": "2016!J69"
   },
   {
@@ -2402,7 +2402,7 @@
     "reservationId": "r_68dde0eedc",
     "vesselId": null,
     "relatedReservationIds": [],
-    "detail": "The coloured bar at 2001!AD28:AF28 (2001-03-29 to 2001-03-31) names no vessel or event; identify the occupant or delete the row.",
+    "detail": "The coloured bar at 2001!AD28:AF28 (2001-03-29 to 2001-03-31) names no vessel or event. Edit the stay to name its occupant, or cancel it if nothing was there.",
     "sourceRef": "2001!AD28:AF28"
   },
   {
@@ -2459,7 +2459,7 @@
     "reservationId": "r_80e14f02af",
     "vesselId": null,
     "relatedReservationIds": [],
-    "detail": "The coloured bar at 2016!T97 (2016-08-18 to 2016-08-18) names no vessel or event; identify the occupant or delete the row.",
+    "detail": "The coloured bar at 2016!T97 (2016-08-18 to 2016-08-18) names no vessel or event. Edit the stay to name its occupant, or cancel it if nothing was there.",
     "sourceRef": "2016!T97"
   },
   {
@@ -2483,7 +2483,7 @@
     "reservationId": "r_ecfd3871bf",
     "vesselId": null,
     "relatedReservationIds": [],
-    "detail": "The coloured bar at 2012!T64:U64 (2012-06-16 to 2012-06-17) names no vessel or event; identify the occupant or delete the row.",
+    "detail": "The coloured bar at 2012!T64:U64 (2012-06-16 to 2012-06-17) names no vessel or event. Edit the stay to name its occupant, or cancel it if nothing was there.",
     "sourceRef": "2012!T64:U64"
   },
   {
@@ -2494,7 +2494,7 @@
     "reservationId": "r_f31ef9fe26",
     "vesselId": null,
     "relatedReservationIds": [],
-    "detail": "The coloured bar at 2011!S102:T102 (2011-09-17 to 2011-09-18) names no vessel or event; identify the occupant or delete the row.",
+    "detail": "The coloured bar at 2011!S102:T102 (2011-09-17 to 2011-09-18) names no vessel or event. Edit the stay to name its occupant, or cancel it if nothing was there.",
     "sourceRef": "2011!S102:T102"
   },
   {
@@ -2538,7 +2538,7 @@
     "reservationId": "r_589bc39937",
     "vesselId": null,
     "relatedReservationIds": [],
-    "detail": "The coloured bar at 2016!T93 (2016-08-18 to 2016-08-18) names no vessel or event; identify the occupant or delete the row.",
+    "detail": "The coloured bar at 2016!T93 (2016-08-18 to 2016-08-18) names no vessel or event. Edit the stay to name its occupant, or cancel it if nothing was there.",
     "sourceRef": "2016!T93"
   },
   {
@@ -2571,7 +2571,7 @@
     "reservationId": "r_d41d4abfff",
     "vesselId": null,
     "relatedReservationIds": [],
-    "detail": "The coloured bar at 2013!W54:AA54 (2013-05-18 to 2013-05-22) names no vessel or event; identify the occupant or delete the row.",
+    "detail": "The coloured bar at 2013!W54:AA54 (2013-05-18 to 2013-05-22) names no vessel or event. Edit the stay to name its occupant, or cancel it if nothing was there.",
     "sourceRef": "2013!W54:AA54"
   },
   {
@@ -2713,7 +2713,7 @@
     "reservationId": "r_94e8f33020",
     "vesselId": null,
     "relatedReservationIds": [],
-    "detail": "The coloured bar at 2011!H99 (2011-09-06 to 2011-09-06) names no vessel or event; identify the occupant or delete the row.",
+    "detail": "The coloured bar at 2011!H99 (2011-09-06 to 2011-09-06) names no vessel or event. Edit the stay to name its occupant, or cancel it if nothing was there.",
     "sourceRef": "2011!H99"
   },
   {
@@ -2724,7 +2724,7 @@
     "reservationId": "r_abed5a556b",
     "vesselId": null,
     "relatedReservationIds": [],
-    "detail": "The coloured bar at 2016!G70 (2016-06-05 to 2016-06-05) names no vessel or event; identify the occupant or delete the row.",
+    "detail": "The coloured bar at 2016!G70 (2016-06-05 to 2016-06-05) names no vessel or event. Edit the stay to name its occupant, or cancel it if nothing was there.",
     "sourceRef": "2016!G70"
   },
   {
@@ -2803,7 +2803,7 @@
     "reservationId": "r_e6a38659c0",
     "vesselId": null,
     "relatedReservationIds": [],
-    "detail": "The coloured bar at 2015!AH69:AI69 (2015-06-27 to 2015-06-28) names no vessel or event; identify the occupant or delete the row.",
+    "detail": "The coloured bar at 2015!AH69:AI69 (2015-06-27 to 2015-06-28) names no vessel or event. Edit the stay to name its occupant, or cancel it if nothing was there.",
     "sourceRef": "2015!AH69:AI69"
   },
   {
@@ -2908,7 +2908,7 @@
     "reservationId": "r_ab9f5a6c50",
     "vesselId": null,
     "relatedReservationIds": [],
-    "detail": "The coloured bar at 2017!X20:Z20 (2017-02-22 to 2017-02-24) names no vessel or event; identify the occupant or delete the row.",
+    "detail": "The coloured bar at 2017!X20:Z20 (2017-02-22 to 2017-02-24) names no vessel or event. Edit the stay to name its occupant, or cancel it if nothing was there.",
     "sourceRef": "2017!X20:Z20"
   },
   {
@@ -3066,7 +3066,7 @@
     "reservationId": "r_04003d3ebd",
     "vesselId": null,
     "relatedReservationIds": [],
-    "detail": "The coloured bar at 2003!S110:X110 (2003-09-18 to 2003-09-23) names no vessel or event; identify the occupant or delete the row.",
+    "detail": "The coloured bar at 2003!S110:X110 (2003-09-18 to 2003-09-23) names no vessel or event. Edit the stay to name its occupant, or cancel it if nothing was there.",
     "sourceRef": "2003!S110:X110"
   },
   {
@@ -3090,7 +3090,7 @@
     "reservationId": "r_e74bab6a1e",
     "vesselId": null,
     "relatedReservationIds": [],
-    "detail": "The coloured bar at 2011!J90 (2011-08-08 to 2011-08-08) names no vessel or event; identify the occupant or delete the row.",
+    "detail": "The coloured bar at 2011!J90 (2011-08-08 to 2011-08-08) names no vessel or event. Edit the stay to name its occupant, or cancel it if nothing was there.",
     "sourceRef": "2011!J90"
   },
   {
@@ -3101,7 +3101,7 @@
     "reservationId": "r_9fbfa2639c",
     "vesselId": null,
     "relatedReservationIds": [],
-    "detail": "The coloured bar at 2018!G73 (2018-06-05 to 2018-06-05) names no vessel or event; identify the occupant or delete the row.",
+    "detail": "The coloured bar at 2018!G73 (2018-06-05 to 2018-06-05) names no vessel or event. Edit the stay to name its occupant, or cancel it if nothing was there.",
     "sourceRef": "2018!G73"
   },
   {
@@ -3112,7 +3112,7 @@
     "reservationId": "r_6d1d29dde4",
     "vesselId": null,
     "relatedReservationIds": [],
-    "detail": "The coloured bar at 2009!B121:U121 (2009-11-01 to 2009-11-20) names no vessel or event; identify the occupant or delete the row.",
+    "detail": "The coloured bar at 2009!B121:U121 (2009-11-01 to 2009-11-20) names no vessel or event. Edit the stay to name its occupant, or cancel it if nothing was there.",
     "sourceRef": "2009!B121:U121"
   },
   {
@@ -3195,7 +3195,7 @@
     "reservationId": "r_c013782580",
     "vesselId": null,
     "relatedReservationIds": [],
-    "detail": "The coloured bar at 2010!R119 (2010-11-16 to 2010-11-16) names no vessel or event; identify the occupant or delete the row.",
+    "detail": "The coloured bar at 2010!R119 (2010-11-16 to 2010-11-16) names no vessel or event. Edit the stay to name its occupant, or cancel it if nothing was there.",
     "sourceRef": "2010!R119"
   },
   {
@@ -3243,7 +3243,7 @@
     "reservationId": "r_7c4f9cac6f",
     "vesselId": null,
     "relatedReservationIds": [],
-    "detail": "The coloured bar at 2015!T96 (2015-08-13 to 2015-08-13) names no vessel or event; identify the occupant or delete the row.",
+    "detail": "The coloured bar at 2015!T96 (2015-08-13 to 2015-08-13) names no vessel or event. Edit the stay to name its occupant, or cancel it if nothing was there.",
     "sourceRef": "2015!T96"
   },
   {
@@ -3320,7 +3320,7 @@
     "reservationId": "r_4dd7e5edbb",
     "vesselId": null,
     "relatedReservationIds": [],
-    "detail": "The coloured bar at 2013!AI79:AJ79 (2013-07-30 to 2013-07-31) names no vessel or event; identify the occupant or delete the row.",
+    "detail": "The coloured bar at 2013!AI79:AJ79 (2013-07-30 to 2013-07-31) names no vessel or event. Edit the stay to name its occupant, or cancel it if nothing was there.",
     "sourceRef": "2013!AI79:AJ79"
   },
   {
@@ -3342,7 +3342,7 @@
     "reservationId": "r_ad306bc8bc",
     "vesselId": null,
     "relatedReservationIds": [],
-    "detail": "The coloured bar at 2017!N109 (2017-09-12 to 2017-09-12) names no vessel or event; identify the occupant or delete the row.",
+    "detail": "The coloured bar at 2017!N109 (2017-09-12 to 2017-09-12) names no vessel or event. Edit the stay to name its occupant, or cancel it if nothing was there.",
     "sourceRef": "2017!N109"
   },
   {
@@ -3353,7 +3353,7 @@
     "reservationId": "r_a08117fb05",
     "vesselId": null,
     "relatedReservationIds": [],
-    "detail": "The coloured bar at 2011!H102 (2011-09-06 to 2011-09-06) names no vessel or event; identify the occupant or delete the row.",
+    "detail": "The coloured bar at 2011!H102 (2011-09-06 to 2011-09-06) names no vessel or event. Edit the stay to name its occupant, or cancel it if nothing was there.",
     "sourceRef": "2011!H102"
   },
   {
@@ -3386,7 +3386,7 @@
     "reservationId": "r_b232b24f12",
     "vesselId": null,
     "relatedReservationIds": [],
-    "detail": "The coloured bar at 2017!V22:Z22 (2017-02-20 to 2017-02-24) names no vessel or event; identify the occupant or delete the row.",
+    "detail": "The coloured bar at 2017!V22:Z22 (2017-02-20 to 2017-02-24) names no vessel or event. Edit the stay to name its occupant, or cancel it if nothing was there.",
     "sourceRef": "2017!V22:Z22"
   },
   {
@@ -3533,7 +3533,7 @@
     "reservationId": "r_8e46a85d1a",
     "vesselId": null,
     "relatedReservationIds": [],
-    "detail": "The coloured bar at 1999!J82:L82 (1999-08-09 to 1999-08-11) names no vessel or event; identify the occupant or delete the row.",
+    "detail": "The coloured bar at 1999!J82:L82 (1999-08-09 to 1999-08-11) names no vessel or event. Edit the stay to name its occupant, or cancel it if nothing was there.",
     "sourceRef": "1999!J82:L82"
   },
   {
@@ -3590,7 +3590,7 @@
     "reservationId": "r_09840f87b7",
     "vesselId": null,
     "relatedReservationIds": [],
-    "detail": "The coloured bar at 2013!U112 (2013-10-16 to 2013-10-16) names no vessel or event; identify the occupant or delete the row.",
+    "detail": "The coloured bar at 2013!U112 (2013-10-16 to 2013-10-16) names no vessel or event. Edit the stay to name its occupant, or cancel it if nothing was there.",
     "sourceRef": "2013!U112"
   },
   {
@@ -3686,7 +3686,7 @@
     "reservationId": "r_b71e0d3387",
     "vesselId": null,
     "relatedReservationIds": [],
-    "detail": "The coloured bar at 2003!K49:L49 (2003-04-10 to 2003-04-11) names no vessel or event; identify the occupant or delete the row.",
+    "detail": "The coloured bar at 2003!K49:L49 (2003-04-10 to 2003-04-11) names no vessel or event. Edit the stay to name its occupant, or cancel it if nothing was there.",
     "sourceRef": "2003!K49:L49"
   },
   {
@@ -3859,7 +3859,7 @@
     "reservationId": "r_6fbe306660",
     "vesselId": null,
     "relatedReservationIds": [],
-    "detail": "The coloured bar at 2013!AF41:AH41 (2013-04-27 to 2013-04-29) names no vessel or event; identify the occupant or delete the row.",
+    "detail": "The coloured bar at 2013!AF41:AH41 (2013-04-27 to 2013-04-29) names no vessel or event. Edit the stay to name its occupant, or cancel it if nothing was there.",
     "sourceRef": "2013!AF41:AH41"
   },
   {
@@ -3914,7 +3914,7 @@
     "reservationId": "r_fffd5aa4b0",
     "vesselId": null,
     "relatedReservationIds": [],
-    "detail": "The coloured bar at 2011!T99:U99 (2011-09-18 to 2011-09-19) names no vessel or event; identify the occupant or delete the row.",
+    "detail": "The coloured bar at 2011!T99:U99 (2011-09-18 to 2011-09-19) names no vessel or event. Edit the stay to name its occupant, or cancel it if nothing was there.",
     "sourceRef": "2011!T99:U99"
   },
   {
@@ -3925,7 +3925,7 @@
     "reservationId": "r_2ee67f36e3",
     "vesselId": null,
     "relatedReservationIds": [],
-    "detail": "The coloured bar at 1998!B128:C128 (1998-12-01 to 1998-12-02) names no vessel or event; identify the occupant or delete the row.",
+    "detail": "The coloured bar at 1998!B128:C128 (1998-12-01 to 1998-12-02) names no vessel or event. Edit the stay to name its occupant, or cancel it if nothing was there.",
     "sourceRef": "1998!B128:C128"
   },
   {
@@ -4043,7 +4043,7 @@
     "reservationId": "r_088bf7f358",
     "vesselId": null,
     "relatedReservationIds": [],
-    "detail": "The coloured bar at 2003!J69 (2003-06-09 to 2003-06-09) names no vessel or event; identify the occupant or delete the row.",
+    "detail": "The coloured bar at 2003!J69 (2003-06-09 to 2003-06-09) names no vessel or event. Edit the stay to name its occupant, or cancel it if nothing was there.",
     "sourceRef": "2003!J69"
   },
   {
@@ -4067,7 +4067,7 @@
     "reservationId": "r_fb55dbe201",
     "vesselId": null,
     "relatedReservationIds": [],
-    "detail": "The coloured bar at 2010!S130 (2010-12-18 to 2010-12-18) names no vessel or event; identify the occupant or delete the row.",
+    "detail": "The coloured bar at 2010!S130 (2010-12-18 to 2010-12-18) names no vessel or event. Edit the stay to name its occupant, or cancel it if nothing was there.",
     "sourceRef": "2010!S130"
   },
   {
@@ -4146,7 +4146,7 @@
     "reservationId": "r_f9bfccc5fc",
     "vesselId": null,
     "relatedReservationIds": [],
-    "detail": "The coloured bar at 2016!J110:N110 (2016-09-08 to 2016-09-12) names no vessel or event; identify the occupant or delete the row.",
+    "detail": "The coloured bar at 2016!J110:N110 (2016-09-08 to 2016-09-12) names no vessel or event. Edit the stay to name its occupant, or cancel it if nothing was there.",
     "sourceRef": "2016!J110:N110"
   },
   {
@@ -4157,7 +4157,7 @@
     "reservationId": "r_cc11297aab",
     "vesselId": null,
     "relatedReservationIds": [],
-    "detail": "The coloured bar at 1999!F39:M39 (1999-04-05 to 1999-04-12) names no vessel or event; identify the occupant or delete the row.",
+    "detail": "The coloured bar at 1999!F39:M39 (1999-04-05 to 1999-04-12) names no vessel or event. Edit the stay to name its occupant, or cancel it if nothing was there.",
     "sourceRef": "1999!F39:M39"
   },
   {
@@ -4245,7 +4245,7 @@
     "reservationId": "r_2f887ac38c",
     "vesselId": null,
     "relatedReservationIds": [],
-    "detail": "The coloured bar at 2013!T64:U64 (2013-06-15 to 2013-06-16) names no vessel or event; identify the occupant or delete the row.",
+    "detail": "The coloured bar at 2013!T64:U64 (2013-06-15 to 2013-06-16) names no vessel or event. Edit the stay to name its occupant, or cancel it if nothing was there.",
     "sourceRef": "2013!T64:U64"
   },
   {
@@ -4256,7 +4256,7 @@
     "reservationId": "r_a6f6465c14",
     "vesselId": null,
     "relatedReservationIds": [],
-    "detail": "The coloured bar at 2017!O110 (2017-09-13 to 2017-09-13) names no vessel or event; identify the occupant or delete the row.",
+    "detail": "The coloured bar at 2017!O110 (2017-09-13 to 2017-09-13) names no vessel or event. Edit the stay to name its occupant, or cancel it if nothing was there.",
     "sourceRef": "2017!O110"
   },
   {
@@ -4300,7 +4300,7 @@
     "reservationId": "r_db349b7be1",
     "vesselId": null,
     "relatedReservationIds": [],
-    "detail": "The coloured bar at 2017!Z21:AD21 (2017-02-24 to 2017-02-28) names no vessel or event; identify the occupant or delete the row.",
+    "detail": "The coloured bar at 2017!Z21:AD21 (2017-02-24 to 2017-02-28) names no vessel or event. Edit the stay to name its occupant, or cancel it if nothing was there.",
     "sourceRef": "2017!Z21:AD21"
   },
   {
@@ -4447,7 +4447,7 @@
     "reservationId": "r_7725b8cf55",
     "vesselId": null,
     "relatedReservationIds": [],
-    "detail": "The coloured bar at 2010!B129:G129;2010!H130:R130 (2010-12-01 to 2010-12-17) names no vessel or event; identify the occupant or delete the row.",
+    "detail": "The coloured bar at 2010!B129:G129;2010!H130:R130 (2010-12-01 to 2010-12-17) names no vessel or event. Edit the stay to name its occupant, or cancel it if nothing was there.",
     "sourceRef": "2010!B129:G129;2010!H130:R130"
   },
   {
@@ -4458,7 +4458,7 @@
     "reservationId": "r_4b00d5a626",
     "vesselId": null,
     "relatedReservationIds": [],
-    "detail": "The coloured bar at 2008!B35:AF35 (2008-03-01 to 2008-03-31) names no vessel or event; identify the occupant or delete the row.",
+    "detail": "The coloured bar at 2008!B35:AF35 (2008-03-01 to 2008-03-31) names no vessel or event. Edit the stay to name its occupant, or cancel it if nothing was there.",
     "sourceRef": "2008!B35:AF35"
   },
   {

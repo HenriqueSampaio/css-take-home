@@ -66,6 +66,7 @@
   @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after {
       animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
       transition-duration: 0.01ms !important;
     }
   }
@@ -99,7 +100,7 @@
   .btn-primary:hover:not(:disabled) { background: var(--color-prussian-deep); }
   .btn-primary:active:not(:disabled) { background: var(--color-ink); }
   .btn-secondary { background: var(--color-sheet-raised); color: var(--color-ink); border-color: var(--color-line-strong); }
-  .btn-secondary:hover:not(:disabled) { background: var(--color-sheet-sunk); border-color: var(--color-ink-2); }
+  .btn-secondary:hover:not(:disabled):not([aria-disabled="true"]) { background: var(--color-sheet-sunk); border-color: var(--color-ink-2); }
   .btn-secondary:active:not(:disabled) { background: var(--color-line); }
   .btn-danger { background: var(--color-sheet-raised); color: var(--color-revision); border-color: var(--color-revision); }
   .btn-danger:hover:not(:disabled) { background: var(--color-revision-tone); }
@@ -113,13 +114,13 @@
   .input {
     display: block; width: 100%; height: 2.25rem; padding: 0 0.625rem;
     background: var(--color-sheet-raised); color: var(--color-ink);
-    border: 1px solid var(--color-line-strong); border-radius: var(--radius-control);
+    border: 1px solid var(--color-ink-3); border-radius: var(--radius-control);
     font: inherit; font-size: 0.9375rem;
     transition: border-color 150ms var(--ease-out-expo);
   }
   textarea.input { height: auto; min-height: 4.5rem; padding: 0.5rem 0.625rem; line-height: 1.4; }
   .input::placeholder { color: var(--color-ink-3); }
-  .input:hover:not(:disabled) { border-color: var(--color-ink-2); }
+  .input:hover:not(:disabled) { border-color: var(--color-ink); }
   .input:focus-visible { border-color: var(--color-prussian); }
   .input:disabled { background: var(--color-sheet-sunk); color: var(--color-ink-3); cursor: not-allowed; }
   .input[aria-invalid="true"] { border-color: var(--color-revision); }
@@ -143,7 +144,9 @@
   .table { width: 100%; border-collapse: collapse; font-size: 0.875rem; }
   .table th { text-align: left; padding: 0.5rem 0.75rem; border-bottom: 1.5px solid var(--color-ink); background: var(--color-sheet-sunk); vertical-align: bottom; }
   .table td { padding: 0.5rem 0.75rem; border-bottom: 1px solid var(--color-line); vertical-align: top; }
-  .table tbody tr:hover td { background: color-mix(in srgb, var(--color-prussian-tone) 45%, transparent); }
+  .table tbody th { background: transparent; border-bottom: 1px solid var(--color-line); vertical-align: top; font-weight: 600; }
+  .table tbody tr:hover > * { background: color-mix(in srgb, var(--color-prussian-tone) 45%, transparent); }
+  .table tbody tr[aria-current="true"] > * { background: var(--color-prussian-tone); }
   .table .num { text-align: right; font-variant-numeric: tabular-nums lining-nums; }
 
   /* ---- Hatch vocabulary: STATUS IS PATTERN ------------------------------- */
@@ -169,7 +172,7 @@
   .fill-event .stay-label, .fill-closure .stay-label, .fill-review .stay-label { background: color-mix(in srgb, var(--color-sheet-raised) 88%, transparent); padding: 0 0.1875rem; }
 
   /* ---- Schedule grid ------------------------------------------------------ */
-  .schedule { --berth-col: 13.5rem; --day-min: 1.6rem; --lane-h: 1.75rem; min-width: calc(var(--berth-col) + var(--days) * var(--day-min)); }
+  .schedule { --berth-col: 13.5rem; --day-min: 1.5rem; --lane-h: 1.75rem; min-width: calc(var(--berth-col) + var(--days) * var(--day-min)); }
   /* On a phone the pinned berth column must not eat the screen: keep the name and length, drop the extras. */
   @media (max-width: 40rem) {
     .schedule { --berth-col: 8.25rem; }
@@ -192,7 +195,8 @@
     transition: filter 150ms var(--ease-out-expo);
   }
   .stay:hover { filter: brightness(0.93) saturate(1.1); z-index: 2; }
-  .stay.is-selected { outline: 2px solid var(--color-ink); outline-offset: 1px; z-index: 2; }
+  .stay.is-selected { box-shadow: 0 0 0 1.5px var(--color-sheet-raised), 0 0 0 3.5px var(--color-ink); z-index: 2; }
+  .stay:focus-visible { outline: 2px solid var(--color-prussian); outline-offset: 3px; z-index: 3; }
   .stay.continues-before { border-left: 0; padding-left: 0.125rem; }
   .stay.continues-after { border-right: 0; padding-right: 0.125rem; }
   .stay-label { overflow: hidden; text-overflow: ellipsis; min-width: 0; }

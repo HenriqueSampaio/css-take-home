@@ -40,7 +40,8 @@ export default async function EditReservationPage(props: PageProps<"/reservation
   const end = edits.start ? edits.end ?? edits.start : detail.endDate;
   const range = { start, end };
   const title = detail.kind === "vessel" ? null : edits.title ?? detail.title;
-  const notes = sp.start !== undefined ? edits.notes : detail.notes;
+  // Only a real submission (it always carries a valid first day) may replace the saved notes; a mangled URL must not blank them.
+  const notes = edits.start !== null ? edits.notes : detail.notes;
   const vesselLengthFt = detail.kind === "vessel" ? detail.vessel?.lengthFt ?? edits.lengthFt : null;
 
   const occupancy = await getOccupancy(db, range);
@@ -78,8 +79,7 @@ export default async function EditReservationPage(props: PageProps<"/reservation
   return (
     <div className="mx-auto flex max-w-[72rem] flex-col gap-6">
       <div>
-        <p className="t-caption">Edit reservation</p>
-        <h1 className="t-headline">{detail.label}</h1>
+        <h1 className="t-headline">Edit {detail.label}</h1>
         <p className="mt-1 flex flex-wrap items-center gap-2 text-ink-2">
           <ReservationStatusTag status={detail.status} />
           <span>Currently {detail.berth.name}, <span className="t-num">{formatDate(detail.startDate)} to {formatDate(detail.endDate)}</span>.</span>
@@ -91,10 +91,10 @@ export default async function EditReservationPage(props: PageProps<"/reservation
       <div className="grid items-start gap-x-10 gap-y-8 lg:grid-cols-[22rem_minmax(0,1fr)]">
         <section aria-labelledby="stay-heading" className="sheet px-4 py-4">
           <h2 id="stay-heading" className="t-title mb-3">Dates and details</h2>
-          <ReservationForm key={JSON.stringify(initial)} basePath={editReservationHref(detail.id)} vessels={vesselOption} initial={initial} fixedSubject={detail.label} />
+          <ReservationForm key={JSON.stringify(initial)} basePath={editReservationHref(detail.id)} vessels={vesselOption} initial={initial} fixedSubject={detail.label} hasResults />
         </section>
 
-        <section aria-labelledby="berths-heading" aria-live="polite">
+        <section aria-labelledby="berths-heading">
           <h2 id="berths-heading" className="t-title">Where it can go</h2>
           <p className="mb-3 mt-1 text-ink-2">
             <span className="t-num">{formatDate(start)}{end !== start && <> to {formatDate(end)}</>}</span>
@@ -112,6 +112,11 @@ export default async function EditReservationPage(props: PageProps<"/reservation
               // A legacy stay may keep a berth it never fitted: fixing its dates must not require fixing history first.
               if (option.verdict === "too_short" && current && detail.source === "legacy" && option.conflicts.length === 0) {
                 return <BookBerthButton mode="update" input={inputFor(option.berth.id)} label={`Keep on ${option.berth.name} (known misfit)`} />;
+              }
+              // Most legacy vessels have no length on file. Their dates and notes must still be fixable without inventing
+              // one: the service lets a legacy stay keep its berth and vessel with the fit left unchecked.
+              if (option.verdict === "length_needed" && current && detail.source === "legacy" && option.conflicts.length === 0) {
+                return <BookBerthButton mode="update" input={inputFor(option.berth.id)} label={`${detail.status === "needs_review" ? "Save and confirm" : "Save"} on ${option.berth.name} (length not checked)`} primary />;
               }
               return null;
             }}

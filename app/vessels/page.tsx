@@ -31,8 +31,7 @@ export default async function VesselsPage(props: PageProps<"/vessels">) {
   return (
     <div className="mx-auto flex max-w-[72rem] flex-col gap-5">
       <div>
-        <p className="t-caption">Vessels</p>
-        <h1 className="t-headline">Registry and lengths</h1>
+        <h1 className="t-headline">Vessels and their lengths</h1>
         <p className="prose-measure mt-1 text-ink-2">
           A vessel&apos;s length decides where it can berth. Lengths came from the workbook&apos;s Science and Yachts lists, which cover only part of the fleet, so each length carries a status. Entering a length here saves it as verified and immediately re-checks every stay that vessel has ever had.
         </p>
@@ -70,7 +69,7 @@ export default async function VesselsPage(props: PageProps<"/vessels">) {
           <tbody>
             {shown.map((v) => (
               <tr key={v.id}>
-                <th scope="row" className="!border-b !border-line !bg-transparent !py-2 text-left font-semibold">
+                <th scope="row" className="text-left">
                   {v.displayName}
                   {v.lengthEvidence && <span className="mt-0.5 block text-[0.8125rem] font-normal text-ink-2">{v.lengthEvidence}</span>}
                 </th>
@@ -78,7 +77,7 @@ export default async function VesselsPage(props: PageProps<"/vessels">) {
                 <td><LengthStatusTag status={v.lengthStatus} /></td>
                 <td className="num t-num">{v.bookingCount}</td>
                 <td className="num t-num">{v.misfitCount > 0 ? <span className="font-semibold text-revision">{v.misfitCount}</span> : <span className="text-ink-3">0</span>}</td>
-                <td><SetLengthForm key={`${v.id}-${v.version}`} vesselId={v.id} version={v.version} name={v.displayName} current={v.lengthFt} candidates={v.lengthStatus === "conflict" ? v.lengthCandidates : []} /></td>
+                <td><SetLengthForm key={v.id} vesselId={v.id} version={v.version} name={v.displayName} current={v.lengthFt} candidates={v.lengthStatus === "conflict" ? v.lengthCandidates : []} /></td>
               </tr>
             ))}
           </tbody>
@@ -88,7 +87,7 @@ export default async function VesselsPage(props: PageProps<"/vessels">) {
       {vessels.length > PAGE && <p className="text-ink-2">Showing the {PAGE} busiest of {vessels.length}. Filter by name or status to narrow the list.</p>}
 
       <section aria-labelledby="status-key">
-        <h2 id="status-key" className="t-caption mb-2">Length statuses</h2>
+        <h2 id="status-key" className="mb-2 text-[0.875rem] font-semibold">What each length status means</h2>
         <dl className="grid gap-x-8 gap-y-2 text-[0.875rem] sm:grid-cols-2">
           {STATUSES.map((s) => (
             <div key={s.value} className="flex items-start gap-2">

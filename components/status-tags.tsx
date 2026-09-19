@@ -1,5 +1,5 @@
 import type { LengthStatus } from "@/lib/domain/fit";
-import { Check, Cross, Overrun, TriangleMark } from "./icons";
+import { Check, Cross, Info, Overrun, TriangleMark } from "./icons";
 
 /** Every status is a glyph plus a word; colour only reinforces. */
 export function ReservationStatusTag({ status }: { status: "confirmed" | "needs_review" | "cancelled" }) {
@@ -22,7 +22,8 @@ const LENGTH_COPY: Record<LengthStatus, { label: string; className: string; titl
 
 export function LengthStatusTag({ status }: { status: LengthStatus }) {
   const copy = LENGTH_COPY[status];
-  return <span className={copy.className} title={copy.title}>{copy.label}</span>;
+  const glyph = status === "verified" ? <Check size={12} /> : status === "probable" ? <Info size={12} /> : <TriangleMark size={12} />;
+  return <span className={copy.className} title={copy.title}>{glyph}{copy.label}</span>;
 }
 
 export function TooLongTag({ overByFt }: { overByFt: number }) {

@@ -12,7 +12,11 @@ import { addMonths, formatDate, formatYearMonth, isYearMonth, todayIn, yearMonth
 import { requestDb } from "@/lib/ui/data";
 import { FIRST_MONTH, firstParam, lastAllowedMonth, newReservationHref, parseIdParam, parseMonthParam, scheduleHref } from "@/lib/ui/params";
 
-export const metadata: Metadata = { title: "Schedule" };
+/** The month belongs in the tab title: a coordinator often has two months open side by side. */
+export async function generateMetadata(props: PageProps<"/schedule">): Promise<Metadata> {
+  const month = parseMonthParam((await props.searchParams).m, todayIn());
+  return { title: month ? `${formatYearMonth(month)} schedule` : "Schedule" };
+}
 
 const MONTH_NAMES = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
@@ -22,7 +26,7 @@ export default async function SchedulePage(props: PageProps<"/schedule">) {
 
   // The month jump is a plain GET form with two selects; fold it into the canonical ?m=.
   const jumped = `${firstParam(sp.y) ?? ""}-${firstParam(sp.mo) ?? ""}`;
-  if (isYearMonth(jumped)) redirect(scheduleHref(parseMonthParam(jumped, today) ?? jumped));
+  if (isYearMonth(jumped)) redirect(scheduleHref(parseMonthParam(jumped, today) ?? jumped, null, { showCancelled: firstParam(sp.cancelled) === "1" }));
 
   const db = await requestDb();
   const requested = parseMonthParam(sp.m, today);
@@ -48,14 +52,14 @@ export default async function SchedulePage(props: PageProps<"/schedule">) {
   const [year, monthNumber] = month.split("-");
   const years = Array.from({ length: Number(lastMonth.slice(0, 4)) - 1997 + 1 }, (_, i) => 1997 + i);
   const archiveEnd = stats.lastReservationDate ? yearMonthOf(stats.lastReservationDate) : null;
-  const showArchiveNote = (requested === null || live.length === 0) && stats.firstReservationDate !== null && stats.lastReservationDate !== null;
+  // Only on arrival: someone planning ahead does not need reminding where the archive ends on every empty month.
+  const showArchiveNote = requested === null && stats.firstReservationDate !== null && stats.lastReservationDate !== null;
 
   return (
     <div className="mx-auto flex max-w-[120rem] flex-col gap-4">
       <div className="flex flex-wrap items-end justify-between gap-x-6 gap-y-3">
         <div>
-          <p className="t-caption">Schedule</p>
-          <h1 className="t-headline">{formatYearMonth(month)}</h1>
+          <h1 className="t-headline"><span className="sr-only">Schedule, </span>{formatYearMonth(month)}</h1>
           <p className="t-data mt-1 text-ink-2">
             {live.length} {live.length === 1 ? "stay" : "stays"}
             {needsReview > 0 && <> · <span className="font-semibold text-caution">{needsReview} need review</span></>}
@@ -91,7 +95,8 @@ export default async function SchedulePage(props: PageProps<"/schedule">) {
                 {years.map((y) => <option key={y} value={y}>{y}</option>)}
               </select>
             </div>
-            <button type="submit" className="btn btn-secondary">Go</button>
+            {showCancelled && <input type="hidden" name="cancelled" value="1" />}
+            <button type="submit" className="btn btn-secondary">Go to month</button>
           </form>
 
           <Link href={newReservationHref()} className="btn btn-primary"><Plus size={14} />New reservation</Link>
@@ -113,7 +118,7 @@ export default async function SchedulePage(props: PageProps<"/schedule">) {
       <div className={`grid items-start gap-4 ${selectedId ? "2xl:grid-cols-[minmax(0,1fr)_26rem]" : ""}`}>
         <div className="flex min-w-0 flex-col gap-3">
           <div className="sheet">
-            <ScheduleGrid month={month} berths={berths} reservations={reservations} selectedId={selectedId} today={today} />
+            <ScheduleGrid month={month} berths={berths} reservations={reservations} selectedId={selectedId} today={today} showCancelled={showCancelled} />
           </div>
           <div className="flex flex-wrap items-center justify-between gap-x-6 gap-y-2">
             <ScheduleKey />
@@ -123,12 +128,12 @@ export default async function SchedulePage(props: PageProps<"/schedule">) {
           </div>
           {live.length === 0 && (
             <p className="prose-measure text-ink-2">
-              Nothing is booked in {formatYearMonth(month)}. Pick an empty day on a berth to start a reservation there, or use New reservation to see which berths a vessel fits and which are free.
+              Nothing is booked in {formatYearMonth(month)}. Choose Reserve this berth (or click an empty day) to start a reservation there, or use New reservation to see which berths a vessel fits and which are free.
             </p>
           )}
         </div>
 
-        {selectedId && detail && <ReservationPanel key={detail.id + detail.version} detail={detail} month={month} maxBerthFt={maxBerthFt} showCancelled={showCancelled} />}
+        {selectedId && detail && <ReservationPanel key={detail.id} detail={detail} month={month} maxBerthFt={maxBerthFt} showCancelled={showCancelled} />}
         {selectedId && !detail && (
           <aside className="sheet px-4 py-4" role="alert">
             <h2 className="t-title">That reservation no longer exists</h2>

@@ -31,13 +31,13 @@ export function SetLengthForm({ vesselId, version, name, current, candidates }: 
     <div className="flex flex-col gap-1">
       <div className="flex flex-wrap items-center gap-1.5">
         <label htmlFor={uid} className="sr-only">Length of {name} in feet</label>
-        <input id={uid} className="input input-sm t-num !h-[1.875rem] !w-20" inputMode="numeric" placeholder="ft" value={value} onChange={(e) => setValue(e.target.value)} onKeyDown={(e) => { if (e.key === "Enter") { e.preventDefault(); submit(); } }} disabled={pending} autoComplete="off" />
-        <button type="button" className="btn btn-secondary btn-sm" onClick={submit} disabled={pending}>{pending ? "Saving..." : current === null ? "Set length" : "Update"}</button>
+        <input id={uid} className="input t-num !h-[1.875rem] !w-20" inputMode="numeric" placeholder="ft" aria-invalid={note?.tone === "error" ? true : undefined} aria-describedby={`${uid}-note`} value={value} onChange={(e) => setValue(e.target.value)} onKeyDown={(e) => { if (e.key === "Enter") { e.preventDefault(); submit(); } }} disabled={pending} autoComplete="off" />
+        <button type="button" className="btn btn-secondary btn-sm" onClick={submit} disabled={pending}>{pending ? "Saving..." : current === null ? "Set length" : "Update length"}</button>
         {candidates.length > 1 && candidates.map((ft) => (
           <button key={ft} type="button" className="btn btn-secondary btn-sm" onClick={() => { setValue(String(ft)); save(ft); }} disabled={pending}>Use {ft} ft</button>
         ))}
       </div>
-      <p aria-live="polite" className={`text-[0.8125rem] ${note ? (note.tone === "ok" ? "text-clear" : "font-medium text-revision") : "sr-only"}`}>{note?.text ?? ""}</p>
+      <p id={`${uid}-note`} aria-live="polite" className={`text-[0.8125rem] ${note ? (note.tone === "ok" ? "text-clear" : "font-medium text-revision") : "sr-only"}`}>{note?.text ?? ""}</p>
     </div>
   );
 }

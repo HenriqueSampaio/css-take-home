@@ -28,7 +28,8 @@ export async function TitleBlock() {
 
   const items: NavItem[] = [
     { href: "/schedule", match: "/schedule", label: "Schedule" },
-    { href: "/reservations/new", match: "/reservations", label: "New reservation" },
+    // Exact match only: editing an existing stay lives under /reservations too, and is not "New reservation".
+    { href: "/reservations/new", match: "/reservations/new", matchPrefix: false, label: "New reservation" },
     {
       href: "/review", match: "/review", label: "Review",
       badge: needsReview > 0 ? <RevisionTriangle count={needsReview} size={20} label={`${needsReview} reservations need review`} /> : undefined,

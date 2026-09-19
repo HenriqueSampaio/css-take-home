@@ -1,16 +1,11 @@
-/** A skeleton of the sheet, not a spinner: the page keeps its shape while the data arrives. */
+/** A still outline of the page while the data arrives: no spinner, no endless pulse. */
 export default function Loading() {
   return (
-    <div className="mx-auto flex max-w-[120rem] flex-col gap-4" role="status" aria-label="Loading">
-      <div className="h-14 w-64 animate-pulse bg-sheet-sunk" />
-      <div className="sheet">
-        {Array.from({ length: 7 }, (_, i) => (
-          <div key={i} className="flex border-b border-line last:border-b-0">
-            <div className="h-14 w-[13.5rem] shrink-0 border-r-[1.5px] border-ink bg-sheet-sunk" />
-            <div className="h-14 flex-1 animate-pulse bg-sheet-raised" />
-          </div>
-        ))}
-      </div>
+    <div className="mx-auto flex max-w-[72rem] flex-col gap-4" role="status">
+      <span className="sr-only">Loading</span>
+      <div className="h-9 w-72 bg-sheet-sunk" aria-hidden />
+      <div className="h-4 w-[28rem] max-w-full bg-sheet-sunk" aria-hidden />
+      <div className="sheet h-64" aria-hidden />
     </div>
   );
 }

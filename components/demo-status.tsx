@@ -37,7 +37,7 @@ export function DemoStatus({ changes, lastReset }: { changes: number; lastReset:
           <>
             <span className="text-[0.8125rem] font-medium">Discard everyone&apos;s changes?</span>
             <button type="button" className="btn btn-danger btn-sm" onClick={reset} disabled={pending}>{pending ? "Resetting..." : "Yes, reset"}</button>
-            <button type="button" className="btn btn-secondary btn-sm" onClick={() => setConfirming(false)} disabled={pending}>Keep</button>
+            <button type="button" className="btn btn-secondary btn-sm" onClick={() => setConfirming(false)} disabled={pending} autoFocus>Do not reset</button>
           </>
         ) : (
           <button type="button" className="btn btn-secondary btn-sm" onClick={() => { setMessage(null); setConfirming(true); }}>Reset demo data</button>

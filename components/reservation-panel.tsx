@@ -5,15 +5,16 @@ import { lengthInDays } from "@/lib/domain/ranges";
 import { scheduleHref, vesselsHref } from "@/lib/ui/params";
 import { FitGauge } from "./fit-gauge";
 import { Cross } from "./icons";
+import { PanelFocus } from "./panel-focus";
 import { ReservationActions } from "./reservation-actions";
 import { RevisionTriangle } from "./revision-triangle";
 import { KindTag, LengthStatusTag, ReservationStatusTag, TooLongTag } from "./status-tags";
 
 const ISSUE_TITLES: Record<string, string> = {
   overlap: "Double-booking in the legacy data",
-  unlabelled: "No name on this booking in the workbook",
-  calendar_defect: "The workbook's calendar is wrong here",
-  ambiguous_extent: "Dates could not be read with certainty",
+  unlabelled: "No name on this stay in the workbook",
+  calendar_defect: "Impossible calendar in the workbook",
+  ambiguous_extent: "Uncertain dates or occupant",
   length_conflict: "The registry lists two lengths",
 };
 
@@ -25,10 +26,9 @@ export function ReservationPanel({ detail, month, maxBerthFt, showCancelled }: {
   const closeHref = scheduleHref(month, null, { showCancelled });
 
   return (
-    <aside className="sheet panel-in" aria-labelledby="panel-title">
+    <PanelFocus className="sheet panel-in outline-none" labelledBy="panel-title">
       <div className="flex items-start justify-between gap-3 border-b border-line-strong bg-sheet-sunk px-4 py-3">
         <div className="min-w-0">
-          <p className="t-caption">Reservation</p>
           <h2 id="panel-title" className="t-title truncate">{detail.label}</h2>
         </div>
         <Link href={closeHref} scroll={false} className="btn btn-secondary btn-sm shrink-0" aria-label="Close reservation details"><Cross size={12} />Close</Link>
@@ -82,7 +82,7 @@ export function ReservationPanel({ detail, month, maxBerthFt, showCancelled }: {
         <div className="flex flex-col gap-4">
           {open.length > 0 && (
             <section aria-labelledby="panel-findings">
-              <h3 id="panel-findings" className="t-caption mb-2">Open review findings</h3>
+              <h3 id="panel-findings" className="mb-2 text-[0.875rem] font-semibold">Open review findings</h3>
               <ul className="flex flex-col gap-2.5">
                 {open.map((issue, index) => (
                   <li key={issue.id} className="flex gap-2.5">
@@ -99,7 +99,7 @@ export function ReservationPanel({ detail, month, maxBerthFt, showCancelled }: {
 
           {detail.overlaps.length > 0 && (
             <section aria-labelledby="panel-overlaps">
-              <h3 id="panel-overlaps" className="t-caption mb-2">On this berth at the same time</h3>
+              <h3 id="panel-overlaps" className="mb-2 text-[0.875rem] font-semibold">On this berth at the same time</h3>
               <ul className="flex flex-col gap-1.5 text-[0.875rem]">
                 {detail.overlaps.map((o) => (
                   <li key={o.id} className="flex flex-wrap items-center gap-1.5">
@@ -115,7 +115,7 @@ export function ReservationPanel({ detail, month, maxBerthFt, showCancelled }: {
             </section>
           )}
 
-          <ReservationActions id={detail.id} version={detail.version} status={detail.status} conflictHrefBase={scheduleHref(month, null, { showCancelled })} />
+          <ReservationActions id={detail.id} version={detail.version} status={detail.status} openFindings={open.length} showCancelled={showCancelled} />
 
           {resolved.length > 0 && (
             <details className="text-[0.8125rem] text-ink-2">
@@ -127,6 +127,6 @@ export function ReservationPanel({ detail, month, maxBerthFt, showCancelled }: {
           )}
         </div>
       </div>
-    </aside>
+    </PanelFocus>
   );
 }

@@ -1,7 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { useId, useState, type FormEvent } from "react";
+import { useId, useRef, useState, useTransition, type FormEvent } from "react";
 import type { VesselOption } from "@/lib/db/queries/vessels";
 import { VESSEL_PREFIXES } from "@/lib/domain/names";
 import { VesselCombobox } from "./vessel-combobox";
@@ -28,11 +28,13 @@ const TITLE_SUGGESTIONS = ["Community sail day", "Student tour", "Public open ho
  * server answers with every berth classified (fits and free, too short, occupied). Booking
  * happens from that list, so the coordinator always sees why a berth can or cannot be used.
  */
-export function ReservationForm({ basePath, vessels, initial, fixedSubject }: { basePath: string; vessels: VesselOption[]; initial: StayDraft; fixedSubject?: string }) {
+export function ReservationForm({ basePath, vessels, initial, fixedSubject, hasResults = false }: { basePath: string; vessels: VesselOption[]; initial: StayDraft; fixedSubject?: string; hasResults?: boolean }) {
   const router = useRouter();
   const uid = useId();
   const [draft, setDraft] = useState<StayDraft>(initial);
   const [errors, setErrors] = useState<Record<string, string>>({});
+  const [pending, startTransition] = useTransition();
+  const formRef = useRef<HTMLFormElement>(null);
   const set = <K extends keyof StayDraft>(key: K, value: StayDraft[K]) => setDraft((d) => ({ ...d, [key]: value }));
 
   const selected = vessels.find((v) => v.id === draft.vesselId) ?? null;
@@ -47,16 +49,21 @@ export function ReservationForm({ basePath, vessels, initial, fixedSubject }: { 
         if (draft.vesselName.trim() === "") problems.vesselName = "Enter the vessel's name.";
       } else if (!draft.vesselId) problems.vessel = "Pick a vessel from the list, or add a new one.";
     }
-    if (needsLength) {
+    const lengthGiven = draft.lengthFt.trim() !== "";
+    if (needsLength && (lengthGiven || !editing)) {
       const n = Number(draft.lengthFt);
-      if (draft.lengthFt.trim() === "" || !Number.isInteger(n) || n < 1 || n > 1500) problems.lengthFt = "Enter the length overall in whole feet, e.g. 120.";
+      if (!lengthGiven || !Number.isInteger(n) || n < 1 || n > 1500) problems.lengthFt = "Enter the length overall in whole feet, e.g. 120.";
     }
     if (draft.kind !== "vessel" && draft.title.trim() === "") problems.title = draft.kind === "event" ? "Name the event, e.g. Community sail day." : "Say what closes the berth, e.g. Pier repair.";
     if (draft.start === "") problems.start = "Choose the first day.";
     if (draft.end === "") problems.end = "Choose the last day.";
     if (draft.start !== "" && draft.end !== "" && draft.end < draft.start) problems.end = "The last day is before the first day.";
     setErrors(problems);
-    if (Object.keys(problems).length > 0) return;
+    if (Object.keys(problems).length > 0) {
+      // Move focus to the first problem so it is read out and the coordinator lands where the fix is.
+      requestAnimationFrame(() => formRef.current?.querySelector<HTMLElement>('[aria-invalid="true"]')?.focus());
+      return;
+    }
 
     const q = new URLSearchParams();
     if (!editing) {
@@ -66,19 +73,19 @@ export function ReservationForm({ basePath, vessels, initial, fixedSubject }: { 
         else if (draft.vesselId) q.set("vessel", draft.vesselId);
       }
     }
-    if (needsLength) q.set("len", String(Number(draft.lengthFt)));
+    if (needsLength && lengthGiven) q.set("len", String(Number(draft.lengthFt)));
     if (draft.kind !== "vessel") q.set("title", draft.title.trim());
     q.set("start", draft.start);
     q.set("end", draft.end);
     if (draft.notes.trim() !== "") q.set("notes", draft.notes.trim());
     if (draft.berthId) q.set("berth", draft.berthId);
-    router.push(`${basePath}?${q.toString()}`, { scroll: false });
+    startTransition(() => router.push(`${basePath}?${q.toString()}`, { scroll: false }));
   };
 
-  const err = (key: string) => (errors[key] ? <p id={`${uid}-${key}-err`} className="field-error">{errors[key]}</p> : null);
+  const err = (key: string) => (errors[key] ? <p id={`${uid}-${key}-err`} className="field-error" role="alert">{errors[key]}</p> : null);
 
   return (
-    <form onSubmit={submit} noValidate className="flex flex-col gap-4">
+    <form ref={formRef} onSubmit={submit} noValidate className="flex flex-col gap-4">
       {editing ? (
         <div>
           <p className="t-caption field-label">Reservation</p>
@@ -102,8 +109,8 @@ export function ReservationForm({ basePath, vessels, initial, fixedSubject }: { 
       {!editing && draft.kind === "vessel" && !draft.newVessel && (
         <div>
           <label className="t-caption field-label" htmlFor={`${uid}-vessel`}>Vessel</label>
-          <div id={`${uid}-vessel`}>
-            <VesselCombobox vessels={vessels} value={draft.vesselId} onChange={(id) => set("vesselId", id)} invalid={Boolean(errors.vessel)} describedBy={errors.vessel ? `${uid}-vessel-err` : undefined} />
+          <div>
+            <VesselCombobox id={`${uid}-vessel`} vessels={vessels} value={draft.vesselId} onChange={(id) => set("vesselId", id)} invalid={Boolean(errors.vessel)} describedBy={errors.vessel ? `${uid}-vessel-err` : undefined} />
           </div>
           {err("vessel")}
           <button type="button" className="link mt-1.5 text-[0.875rem]" onClick={() => setDraft((d) => ({ ...d, newVessel: true, vesselId: null }))}>Not in the list? Add a new vessel</button>
@@ -121,7 +128,7 @@ export function ReservationForm({ basePath, vessels, initial, fixedSubject }: { 
           </div>
           <div>
             <label className="t-caption field-label" htmlFor={`${uid}-vname`}>New vessel name</label>
-            <input id={`${uid}-vname`} className="input" value={draft.vesselName} onChange={(e) => set("vesselName", e.target.value)} aria-invalid={errors.vesselName ? true : undefined} aria-describedby={errors.vesselName ? `${uid}-vesselName-err` : undefined} placeholder="e.g. Northern Star" autoComplete="off" />
+            <input id={`${uid}-vname`} className="input" value={draft.vesselName} onChange={(e) => set("vesselName", e.target.value)} aria-invalid={errors.vesselName ? true : undefined} aria-describedby={errors.vesselName ? `${uid}-vesselName-err` : undefined} placeholder="e.g. Northern Star" autoComplete="off" maxLength={80} />
           </div>
           <div className="col-span-2">
             {err("vesselName")}
@@ -135,7 +142,13 @@ export function ReservationForm({ basePath, vessels, initial, fixedSubject }: { 
           <label className="t-caption field-label" htmlFor={`${uid}-len`}>Length overall (ft)</label>
           <input id={`${uid}-len`} className="input t-num !w-32" inputMode="numeric" value={draft.lengthFt} onChange={(e) => set("lengthFt", e.target.value)} aria-invalid={errors.lengthFt ? true : undefined} aria-describedby={`${uid}-len-hint${errors.lengthFt ? ` ${uid}-lengthFt-err` : ""}`} placeholder="e.g. 120" autoComplete="off" />
           <p id={`${uid}-len-hint`} className="field-hint">
-            {draft.newVessel ? "Needed to check which berths the vessel fits." : selected?.lengthStatus === "conflict" ? `The registry lists two lengths for ${selected.displayName}. Enter the right one; it is saved as verified.` : `There is no length on file for ${selected?.displayName ?? "this vessel"}. Enter it once; it is saved to the registry as verified.`}
+            {draft.newVessel
+              ? "Needed to check which berths the vessel fits."
+              : editing
+                ? `Optional here. ${selected?.displayName ?? "This vessel"} has no length on file, so its fit cannot be checked. It can stay on its current berth unchecked; enter a length to check every berth, and it is saved to the registry as verified.`
+                : selected?.lengthStatus === "conflict"
+                  ? `The registry lists two lengths for ${selected.displayName}. Enter the right one; it is saved as verified.`
+                  : `There is no length on file for ${selected?.displayName ?? "this vessel"}. Enter it once; it is saved to the registry as verified.`}
           </p>
           {err("lengthFt")}
         </div>
@@ -144,7 +157,7 @@ export function ReservationForm({ basePath, vessels, initial, fixedSubject }: { 
       {draft.kind !== "vessel" && (
         <div>
           <label className="t-caption field-label" htmlFor={`${uid}-title`}>{draft.kind === "event" ? "Event name" : "Reason for the closure"}</label>
-          <input id={`${uid}-title`} className="input" list={`${uid}-titles`} value={draft.title} onChange={(e) => set("title", e.target.value)} aria-invalid={errors.title ? true : undefined} aria-describedby={errors.title ? `${uid}-title-err` : undefined} autoComplete="off" />
+          <input id={`${uid}-title`} className="input" list={`${uid}-titles`} value={draft.title} onChange={(e) => set("title", e.target.value)} aria-invalid={errors.title ? true : undefined} aria-describedby={errors.title ? `${uid}-title-err` : undefined} autoComplete="off" maxLength={120} />
           <datalist id={`${uid}-titles`}>{TITLE_SUGGESTIONS.map((t) => <option key={t} value={t} />)}</datalist>
           {err("title")}
         </div>
@@ -165,11 +178,13 @@ export function ReservationForm({ basePath, vessels, initial, fixedSubject }: { 
 
       <div>
         <label className="t-caption field-label" htmlFor={`${uid}-notes`}>Notes (optional)</label>
-        <textarea id={`${uid}-notes`} className="input" rows={2} value={draft.notes} onChange={(e) => set("notes", e.target.value)} placeholder="e.g. ETA 1200, fueling at 0800" />
+        <textarea id={`${uid}-notes`} className="input" rows={2} value={draft.notes} onChange={(e) => set("notes", e.target.value)} placeholder="e.g. ETA 1200, fueling at 0800" maxLength={1000} />
       </div>
 
       <div>
-        <button type="submit" className="btn btn-primary">{editing ? "Check berths for these dates" : "Find a berth"}</button>
+        <button type="submit" className={`btn ${hasResults ? "btn-secondary" : "btn-primary"}`} disabled={pending}>
+          {pending ? "Checking berths..." : editing ? "Check berths for these dates" : hasResults ? "Check again" : "Find a berth"}
+        </button>
       </div>
     </form>
   );

@@ -1,4 +1,4 @@
-import { isISODate, type ISODate } from "../domain/dates";
+import type { ISODate } from "../domain/dates";
 import { firstParam, parseDateParam, parseIdParam, type SearchParams } from "./params";
 
 export type StayParams = {
@@ -33,7 +33,8 @@ export function parseStayParams(sp: SearchParams): StayParams {
     lengthFt: Number.isInteger(len) && len >= 1 && len <= 1500 ? len : null,
     title: text(sp.title, 120),
     start,
-    end: end && start && isISODate(end) && end >= start ? end : start && !end ? null : end,
+    // A last day before the first day is dropped, so the page asks again instead of listing berths for a negative stay.
+    end: start && end && end < start ? null : end,
     notes: text(sp.notes, 1000) ?? "",
     berthId: parseIdParam(sp.berth),
   };

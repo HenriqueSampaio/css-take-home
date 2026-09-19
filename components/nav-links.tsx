@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import type { ReactNode } from "react";
 
-export type NavItem = { href: string; label: string; match: string; badge?: ReactNode };
+export type NavItem = { href: string; label: string; match: string; matchPrefix?: boolean; badge?: ReactNode };
 
 /** The title block's navigation field. Current page: ink text and a Prussian underline. */
 export function NavLinks({ items }: { items: NavItem[] }) {
@@ -12,7 +12,7 @@ export function NavLinks({ items }: { items: NavItem[] }) {
   return (
     <ul className="flex h-full flex-wrap items-stretch gap-x-1">
       {items.map((item) => {
-        const current = pathname === item.match || pathname.startsWith(item.match + "/");
+        const current = pathname === item.match || (item.matchPrefix !== false && pathname.startsWith(item.match + "/"));
         return (
           <li key={item.href} className="flex shrink-0">
             <Link

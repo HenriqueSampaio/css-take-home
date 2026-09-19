@@ -18,12 +18,16 @@ export function BookBerthButton(props: Props) {
   const router = useRouter();
   const [pending, startTransition] = useTransition();
   const [failure, setFailure] = useState<ServiceFailure | null>(null);
+  const [saved, setSaved] = useState<{ href: string; warning: string } | null>(null);
 
   const go = () =>
     startTransition(async () => {
       const result = props.mode === "create" ? await createReservationAction(props.input) : await updateReservationAction(props.input);
       if (result.ok) {
-        router.push(scheduleHref(yearMonthOf(props.input.startDate), result.data.id));
+        const href = scheduleHref(yearMonthOf(props.input.startDate), result.data.id);
+        // A warning (say, an unresolved legacy stay on the same days) must be read, so stay here and show it.
+        if (result.warning) return setSaved({ href, warning: result.warning });
+        router.push(href);
         router.refresh();
       } else {
         setFailure(result);
@@ -32,12 +36,20 @@ export function BookBerthButton(props: Props) {
 
   return (
     <div className="flex flex-col items-start gap-2">
-      <button type="button" className={`btn ${props.primary ? "btn-primary" : "btn-secondary"}`} onClick={go} disabled={pending}>
+      <button type="button" className={`btn ${props.primary ? "btn-primary" : "btn-secondary"}`} onClick={go} disabled={pending || saved !== null}>
         {pending ? (props.mode === "create" ? "Booking..." : "Saving...") : props.label}
       </button>
-      <div aria-live="polite">
+      {saved && (
+        <div className="notice notice-caution max-w-[22rem]" role="status">
+          <div>
+            <p><span className="font-semibold">{props.mode === "create" ? "Booked." : "Saved."}</span> {saved.warning}</p>
+            <Link className="link mt-1 inline-block" href={saved.href}>See it on the schedule</Link>
+          </div>
+        </div>
+      )}
+      <div>
         {failure && (
-          <div className="notice notice-danger" role="alert">
+          <div className="notice notice-danger max-w-[22rem]" role="alert">
             <div>
               <p className="font-semibold">{failure.message}</p>
               {failure.conflicts && failure.conflicts.length > 0 && (
@@ -50,7 +62,7 @@ export function BookBerthButton(props: Props) {
               {failure.fieldErrors && Object.keys(failure.fieldErrors).length > 0 && !failure.conflicts && (
                 <ul className="mt-1 list-disc pl-5">{Object.values(failure.fieldErrors).flat().filter((m) => m !== failure.message).map((m) => <li key={m}>{m}</li>)}</ul>
               )}
-              {failure.code === "STALE" && <p className="mt-1">Someone changed this reservation. Reload to see the latest version.</p>}
+              {failure.code === "STALE" && <button type="button" className="btn btn-secondary btn-sm mt-2" onClick={() => { setFailure(null); router.refresh(); }}>Load the latest version</button>}
             </div>
           </div>
         )}

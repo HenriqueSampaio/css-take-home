@@ -10,13 +10,14 @@ const MAX_SHOWN = 8;
  * Standard ARIA combobox: arrows move, Enter picks, Escape closes. Each option shows the
  * length on file, because that is what decides where the vessel can go.
  */
-export function VesselCombobox({ vessels, value, onChange, invalid, describedBy }: { vessels: VesselOption[]; value: string | null; onChange: (id: string | null) => void; invalid?: boolean; describedBy?: string }) {
+export function VesselCombobox({ id, vessels, value, onChange, invalid, describedBy }: { id: string; vessels: VesselOption[]; value: string | null; onChange: (id: string | null) => void; invalid?: boolean; describedBy?: string }) {
   const listId = useId();
   const inputRef = useRef<HTMLInputElement>(null);
   const selected = useMemo(() => vessels.find((v) => v.id === value) ?? null, [vessels, value]);
   const [query, setQuery] = useState(selected?.displayName ?? "");
   const [open, setOpen] = useState(false);
-  const [active, setActive] = useState(0);
+  // -1 = nothing highlighted: Enter then submits the form instead of picking a row the user never chose.
+  const [active, setActive] = useState(-1);
 
   const matches = useMemo(() => {
     const q = query.trim().toLowerCase();
@@ -26,6 +27,7 @@ export function VesselCombobox({ vessels, value, onChange, invalid, describedBy 
     return [...starts, ...contains];
   }, [vessels, query, selected]);
   const shown = matches.slice(0, MAX_SHOWN);
+  const openList = () => { setOpen(true); setActive(selected ? shown.findIndex((v) => v.id === selected.id) : -1); };
 
   const pick = (v: VesselOption) => {
     onChange(v.id);
@@ -37,12 +39,13 @@ export function VesselCombobox({ vessels, value, onChange, invalid, describedBy 
     <div className="relative">
       <input
         ref={inputRef}
+        id={id}
         type="text"
         role="combobox"
         aria-expanded={open}
-        aria-controls={listId}
+        aria-controls={open ? listId : undefined}
         aria-autocomplete="list"
-        aria-activedescendant={open && shown[active] ? `${listId}-${shown[active].id}` : undefined}
+        aria-activedescendant={open && active >= 0 && shown[active] ? `${listId}-${shown[active].id}` : undefined}
         aria-invalid={invalid || undefined}
         aria-describedby={describedBy}
         autoComplete="off"
@@ -50,13 +53,13 @@ export function VesselCombobox({ vessels, value, onChange, invalid, describedBy 
         placeholder="Type a vessel name, e.g. Golden Compass"
         className="input"
         value={query}
-        onChange={(e) => { setQuery(e.target.value); setOpen(true); setActive(0); if (value) onChange(null); }}
-        onFocus={() => setOpen(true)}
+        onChange={(e) => { setQuery(e.target.value); setOpen(true); setActive(e.target.value.trim() === "" ? -1 : 0); if (value) onChange(null); }}
+        onFocus={openList}
         onBlur={() => setOpen(false)}
         onKeyDown={(e) => {
-          if (e.key === "ArrowDown") { e.preventDefault(); setOpen(true); setActive((i) => Math.min(i + 1, shown.length - 1)); }
-          else if (e.key === "ArrowUp") { e.preventDefault(); setActive((i) => Math.max(i - 1, 0)); }
-          else if (e.key === "Enter" && open && shown[active]) { e.preventDefault(); pick(shown[active]); }
+          if (e.key === "ArrowDown") { e.preventDefault(); if (!open) return openList(); setActive((i) => Math.min(i + 1, shown.length - 1)); }
+          else if (e.key === "ArrowUp") { e.preventDefault(); if (!open) return openList(); setActive((i) => Math.max(i - 1, 0)); }
+          else if (e.key === "Enter" && open && active >= 0 && shown[active]) { e.preventDefault(); pick(shown[active]); }
           else if (e.key === "Escape") { setOpen(false); }
         }}
       />
@@ -71,7 +74,7 @@ export function VesselCombobox({ vessels, value, onChange, invalid, describedBy 
               // mousedown, not click: it fires before the input's blur closes the list
               onMouseDown={(e) => { e.preventDefault(); pick(v); }}
               onMouseEnter={() => setActive(i)}
-              className={`flex cursor-pointer items-baseline justify-between gap-3 px-2.5 py-1.5 ${i === active ? "bg-prussian-tone" : ""}`}
+              className={`flex cursor-pointer items-baseline justify-between gap-3 px-2.5 py-1.5 ${i === active ? "bg-prussian-tone" : ""} ${v.id === value ? "font-semibold" : ""}`}
             >
               <span className="truncate">{v.displayName}</span>
               <span className="t-data shrink-0 text-ink-2">
@@ -81,9 +84,10 @@ export function VesselCombobox({ vessels, value, onChange, invalid, describedBy 
             </li>
           ))}
           {matches.length > MAX_SHOWN && <li className="t-data border-t border-line px-2.5 py-1.5 text-ink-2" aria-hidden>{matches.length - MAX_SHOWN} more. Keep typing to narrow the list.</li>}
-          {matches.length === 0 && <li className="px-2.5 py-2 text-[0.875rem] text-ink-2">No vessel by that name. Use &ldquo;Add a new vessel&rdquo; below.</li>}
+          {matches.length === 0 && <li role="presentation" className="px-2.5 py-2 text-[0.875rem] text-ink-2">No vessel by that name. Use &ldquo;Add a new vessel&rdquo; below.</li>}
         </ul>
       )}
+      <p className="sr-only" role="status">{open ? (matches.length === 0 ? "No vessel by that name." : `${matches.length} ${matches.length === 1 ? "vessel matches" : "vessels match"}.`) : ""}</p>
     </div>
   );
 }
