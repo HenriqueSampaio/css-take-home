@@ -1,6 +1,6 @@
 {
-  "id": "6e196d2d-717c-42ce-a6b9-b9805fd9f3d8",
-  "prevId": "4f5846ab-d552-459f-a89d-e0a54b843639",
+  "id": "485b2bf8-8fe3-4616-9158-8dcd94e79d5e",
+  "prevId": "4bfd7ed1-a91b-4bd8-8931-cd9527792da1",
   "version": "7",
   "dialect": "postgresql",
   "tables": {
@@ -14,12 +14,6 @@
           "primaryKey": true,
           "notNull": true,
           "default": true
-        },
-        "seed_version": {
-          "name": "seed_version",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": false
         },
         "last_reset_at": {
           "name": "last_reset_at",
@@ -75,6 +69,33 @@
           "type": "integer",
           "primaryKey": false,
           "notNull": true
+        },
+        "retired_at": {
+          "name": "retired_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "version": {
+          "name": "version",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "default": 1
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        },
+        "updated_at": {
+          "name": "updated_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
         }
       },
       "indexes": {},
@@ -93,169 +114,9 @@
       "checkConstraints": {
         "berths_length_ck": {
           "name": "berths_length_ck",
-          "value": "\"berths\".\"length_ft\" > 0"
+          "value": "\"berths\".\"length_ft\" BETWEEN 1 AND 2000"
         }
       },
-      "isRLSEnabled": false
-    },
-    "public.issues": {
-      "name": "issues",
-      "schema": "",
-      "columns": {
-        "id": {
-          "name": "id",
-          "type": "text",
-          "primaryKey": true,
-          "notNull": true
-        },
-        "reservation_id": {
-          "name": "reservation_id",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": false
-        },
-        "vessel_id": {
-          "name": "vessel_id",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": false
-        },
-        "type": {
-          "name": "type",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": true
-        },
-        "severity": {
-          "name": "severity",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": true
-        },
-        "reason": {
-          "name": "reason",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": false
-        },
-        "detail": {
-          "name": "detail",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": true
-        },
-        "related_reservation_ids": {
-          "name": "related_reservation_ids",
-          "type": "text[]",
-          "primaryKey": false,
-          "notNull": true,
-          "default": "'{}'::text[]"
-        },
-        "data": {
-          "name": "data",
-          "type": "jsonb",
-          "primaryKey": false,
-          "notNull": false
-        },
-        "source_ref": {
-          "name": "source_ref",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": false
-        },
-        "resolved_at": {
-          "name": "resolved_at",
-          "type": "timestamp with time zone",
-          "primaryKey": false,
-          "notNull": false
-        },
-        "resolution": {
-          "name": "resolution",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": false
-        }
-      },
-      "indexes": {
-        "issues_open_type_idx": {
-          "name": "issues_open_type_idx",
-          "columns": [
-            {
-              "expression": "type",
-              "isExpression": false,
-              "asc": true,
-              "nulls": "last"
-            }
-          ],
-          "isUnique": false,
-          "with": {},
-          "method": "btree",
-          "where": "\"issues\".\"resolved_at\" IS NULL",
-          "concurrently": false
-        },
-        "issues_reservation_idx": {
-          "name": "issues_reservation_idx",
-          "columns": [
-            {
-              "expression": "reservation_id",
-              "isExpression": false,
-              "asc": true,
-              "nulls": "last"
-            }
-          ],
-          "isUnique": false,
-          "with": {},
-          "method": "btree",
-          "concurrently": false
-        },
-        "issues_vessel_idx": {
-          "name": "issues_vessel_idx",
-          "columns": [
-            {
-              "expression": "vessel_id",
-              "isExpression": false,
-              "asc": true,
-              "nulls": "last"
-            }
-          ],
-          "isUnique": false,
-          "with": {},
-          "method": "btree",
-          "concurrently": false
-        }
-      },
-      "foreignKeys": {
-        "issues_reservation_id_reservations_id_fk": {
-          "name": "issues_reservation_id_reservations_id_fk",
-          "tableFrom": "issues",
-          "columnsFrom": [
-            "reservation_id"
-          ],
-          "tableTo": "reservations",
-          "columnsTo": [
-            "id"
-          ],
-          "onUpdate": "no action",
-          "onDelete": "cascade"
-        },
-        "issues_vessel_id_vessels_id_fk": {
-          "name": "issues_vessel_id_vessels_id_fk",
-          "tableFrom": "issues",
-          "columnsFrom": [
-            "vessel_id"
-          ],
-          "tableTo": "vessels",
-          "columnsTo": [
-            "id"
-          ],
-          "onUpdate": "no action",
-          "onDelete": "cascade"
-        }
-      },
-      "compositePrimaryKeys": {},
-      "uniqueConstraints": {},
-      "policies": {},
-      "checkConstraints": {},
       "isRLSEnabled": false
     },
     "public.reservations": {
@@ -319,26 +180,6 @@
           "primaryKey": false,
           "notNull": true,
           "default": "''"
-        },
-        "source": {
-          "name": "source",
-          "type": "record_source",
-          "typeSchema": "public",
-          "primaryKey": false,
-          "notNull": true,
-          "default": "'app'"
-        },
-        "source_ref": {
-          "name": "source_ref",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": false
-        },
-        "raw_label": {
-          "name": "raw_label",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": false
         },
         "version": {
           "name": "version",
@@ -426,22 +267,6 @@
           "method": "btree",
           "where": "\"reservations\".\"vessel_id\" IS NOT NULL",
           "concurrently": false
-        },
-        "reservations_review_idx": {
-          "name": "reservations_review_idx",
-          "columns": [
-            {
-              "expression": "start_date",
-              "isExpression": false,
-              "asc": true,
-              "nulls": "last"
-            }
-          ],
-          "isUnique": false,
-          "with": {},
-          "method": "btree",
-          "where": "\"reservations\".\"status\" = 'needs_review'",
-          "concurrently": false
         }
       },
       "foreignKeys": {
@@ -483,10 +308,6 @@
         "reservations_subject_ck": {
           "name": "reservations_subject_ck",
           "value": "(\"reservations\".\"kind\" = 'vessel' AND \"reservations\".\"vessel_id\" IS NOT NULL) OR (\"reservations\".\"kind\" <> 'vessel' AND \"reservations\".\"vessel_id\" IS NULL AND \"reservations\".\"title\" IS NOT NULL)"
-        },
-        "reservations_legacy_ref_ck": {
-          "name": "reservations_legacy_ref_ck",
-          "value": "\"reservations\".\"source\" <> 'legacy' OR \"reservations\".\"source_ref\" IS NOT NULL"
         }
       },
       "isRLSEnabled": false
@@ -523,36 +344,7 @@
           "name": "length_ft",
           "type": "integer",
           "primaryKey": false,
-          "notNull": false
-        },
-        "length_status": {
-          "name": "length_status",
-          "type": "length_status",
-          "typeSchema": "public",
-          "primaryKey": false,
-          "notNull": true,
-          "default": "'unknown'"
-        },
-        "length_candidates": {
-          "name": "length_candidates",
-          "type": "integer[]",
-          "primaryKey": false,
-          "notNull": true,
-          "default": "'{}'::integer[]"
-        },
-        "length_evidence": {
-          "name": "length_evidence",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": false
-        },
-        "origin": {
-          "name": "origin",
-          "type": "vessel_origin",
-          "typeSchema": "public",
-          "primaryKey": false,
-          "notNull": true,
-          "default": "'app'"
+          "notNull": true
         },
         "version": {
           "name": "version",
@@ -592,35 +384,13 @@
       "checkConstraints": {
         "vessels_length_ck": {
           "name": "vessels_length_ck",
-          "value": "\"vessels\".\"length_ft\" IS NULL OR \"vessels\".\"length_ft\" BETWEEN 1 AND 1500"
-        },
-        "vessels_length_state_ck": {
-          "name": "vessels_length_state_ck",
-          "value": "(\"vessels\".\"length_ft\" IS NOT NULL) = (\"vessels\".\"length_status\" IN ('verified', 'probable'))"
+          "value": "\"vessels\".\"length_ft\" BETWEEN 1 AND 1500"
         }
       },
       "isRLSEnabled": false
     }
   },
   "enums": {
-    "public.length_status": {
-      "name": "length_status",
-      "schema": "public",
-      "values": [
-        "verified",
-        "probable",
-        "conflict",
-        "unknown"
-      ]
-    },
-    "public.record_source": {
-      "name": "record_source",
-      "schema": "public",
-      "values": [
-        "legacy",
-        "app"
-      ]
-    },
     "public.reservation_kind": {
       "name": "reservation_kind",
       "schema": "public",
@@ -635,17 +405,7 @@
       "schema": "public",
       "values": [
         "confirmed",
-        "needs_review",
         "cancelled"
-      ]
-    },
-    "public.vessel_origin": {
-      "name": "vessel_origin",
-      "schema": "public",
-      "values": [
-        "grid",
-        "registry",
-        "app"
       ]
     }
   },

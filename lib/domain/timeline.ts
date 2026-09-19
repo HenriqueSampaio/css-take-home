@@ -5,11 +5,11 @@ import { clip, overlaps, type DateRange } from "./ranges";
  * Lays reservations out on a month grid: one row per berth, one column per day.
  *
  * Confirmed reservations can never overlap (the database forbids it), so they
- * always share lane 0. Unresolved legacy reservations CAN collide; those are
- * pushed into extra lanes beneath, which makes a double-booking visible as a
- * stack instead of one bar hiding another.
+ * always share lane 0. A cancelled reservation can sit on the same days as the one
+ * that replaced it; when cancelled stays are shown they drop to a lane beneath
+ * instead of being drawn over a live bar.
  */
-export type TimelineItem = DateRange & { id: string; berthId: string; status: "confirmed" | "needs_review" | "cancelled" };
+export type TimelineItem = DateRange & { id: string; berthId: string; status: "confirmed" | "cancelled" };
 
 export type TimelineBar<T> = {
   item: T;
@@ -25,7 +25,7 @@ export type TimelineBar<T> = {
 
 export type TimelineRow<T> = { berthId: string; laneCount: number; bars: TimelineBar<T>[] };
 
-const STATUS_ORDER: Record<TimelineItem["status"], number> = { confirmed: 0, needs_review: 1, cancelled: 2 };
+const STATUS_ORDER: Record<TimelineItem["status"], number> = { confirmed: 0, cancelled: 1 };
 
 export function buildTimeline<T extends TimelineItem>(month: YearMonth, berthIds: readonly string[], items: readonly T[]): TimelineRow<T>[] {
   const bounds = monthBounds(month);

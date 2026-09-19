@@ -1,8 +1,8 @@
 /**
- * Vessel naming. The legacy grid writes the same hull as `S/V IRON PETREL` and
- * `S/V Iron Petrel`, and the length registry often lists it under a different
- * type prefix (`M/Y Iron Petrel 120'`). Identity is therefore the NAME without
- * its prefix, case-folded; the prefix is kept for display only.
+ * Vessel naming. The same hull gets written as `S/V IRON PETREL`, `S/V Iron Petrel`
+ * and `M/Y Iron Petrel`, so identity is the NAME without its type prefix, case-folded.
+ * The prefix is kept for display only. This is what stops a coordinator registering
+ * the same vessel twice under two spellings.
  */
 const PREFIXES = ["R/V", "M/V", "M/Y", "S/V", "S/Y", "F/V", "OS/V", "OSV", "TUG", "BARGE"] as const;
 
@@ -51,3 +51,7 @@ export const displayVesselName = (prefix: string | null, name: string): string =
 /** Stable vessel id derived from its identity key: `GOLDEN COMPASS` -> `v_golden-compass`. */
 export const vesselIdFromKey = (nameKey: string): string =>
   "v_" + nameKey.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+
+/** Stable berth id from its name: `North Pier West` -> `north-pier-west`. */
+export const berthIdFromName = (name: string): string =>
+  collapseWhitespace(name).toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");

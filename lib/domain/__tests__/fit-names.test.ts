@@ -1,18 +1,16 @@
 import { describe, expect, it } from "vitest";
-import { describeFit, fitVerdict, hasUsableLength } from "../fit";
-import { displayVesselName, looksLikeVessel, parseVesselName, toDisplayCase, vesselIdFromKey } from "../names";
+import { describeFit, fitVerdict } from "../fit";
+import { berthIdFromName, displayVesselName, looksLikeVessel, parseVesselName, toDisplayCase, vesselIdFromKey } from "../names";
 
 describe("fit", () => {
-  it("flags the seeded legacy problem: a 170 ft yacht on a 90 ft float", () => {
+  it("refuses a 170 ft yacht on a 90 ft float, and says by how much", () => {
     const v = fitVerdict(170, 90);
     expect(v).toEqual({ kind: "too_long", vesselFt: 170, berthFt: 90, overByFt: 80 });
     expect(describeFit(v)).toContain("80 ft too long");
   });
-  it("allows an exact fit and never passes an unknown length", () => {
-    expect(fitVerdict(90, 90)).toEqual({ kind: "fits", marginFt: 0 });
-    expect(fitVerdict(null, 410)).toEqual({ kind: "unknown" });
-    expect(hasUsableLength("probable")).toBe(true);
-    expect(hasUsableLength("conflict")).toBe(false);
+  it("allows an exact fit", () => {
+    expect(fitVerdict(90, 90)).toEqual({ kind: "fits", vesselFt: 90, berthFt: 90, marginFt: 0 });
+    expect(describeFit(fitVerdict(60, 90))).toBe("Fits with 30 ft to spare");
   });
 });
 
@@ -37,5 +35,7 @@ describe("vessel names", () => {
     expect(toDisplayCase("Iron Petrel")).toBe("Iron Petrel");
     expect(displayVesselName("R/V", "Long Ketch")).toBe("R/V Long Ketch");
     expect(vesselIdFromKey("GOLDEN COMPASS")).toBe("v_golden-compass");
+    expect(berthIdFromName("  North Pier  West ")).toBe("north-pier-west");
+    expect(berthIdFromName("Pier 4 (East)")).toBe("pier-4-east");
   });
 });

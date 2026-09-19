@@ -17,7 +17,7 @@ beforeAll(async () => {
   await migrate(drizzle(pg, { schema }), { migrationsFolder: "./drizzle" });
   await pg.exec(`
     INSERT INTO berths (id, name, length_ft, sort_order) VALUES ('sfe', 'South Float East', 90, 1), ('npw', 'North Pier West', 410, 2);
-    INSERT INTO vessels (id, name, name_key, prefix, length_ft, length_status) VALUES ('v_a', 'Alpha', 'ALPHA', 'R/V', 60, 'verified'), ('v_b', 'Bravo', 'BRAVO', 'M/V', NULL, 'unknown');
+    INSERT INTO vessels (id, name, name_key, prefix, length_ft) VALUES ('v_a', 'Alpha', 'ALPHA', 'R/V', 60), ('v_b', 'Bravo', 'BRAVO', 'M/V', 120);
   `);
 }, 60_000);
 
@@ -44,20 +44,18 @@ describe("reservations_no_double_booking", () => {
     expect(await codeOf(book("r5", "npw", "2019-07-01", "2019-07-05"))).toBeNull();
   });
 
-  it("lets unresolved legacy rows overlap, but not be confirmed while they collide", async () => {
-    expect(await codeOf(book("legacy1", "sfe", "2019-07-02", "2019-07-04", "needs_review"))).toBeNull();
-    expect(await codeOf(pg.query(`UPDATE reservations SET status = 'confirmed' WHERE id = 'legacy1'`))).toBe("23P01");
-  });
-
-  it("frees the slot when a stay is cancelled", async () => {
+  it("frees the days when a stay is cancelled, and refuses to restore it over a new booking", async () => {
     await pg.query(`UPDATE reservations SET status = 'cancelled' WHERE id = 'r1'`);
-    expect(await codeOf(pg.query(`UPDATE reservations SET status = 'confirmed' WHERE id = 'legacy1'`))).toBeNull();
+    expect(await codeOf(book("r6", "sfe", "2019-07-02", "2019-07-04"))).toBeNull();
+    expect(await codeOf(pg.query(`UPDATE reservations SET status = 'confirmed' WHERE id = 'r1'`))).toBe("23P01");
   });
 
   it("enforces the supporting CHECKs", async () => {
     expect(await codeOf(book("bad-dates", "npw", "2019-08-10", "2019-08-01"))).toBe("23514");
     expect(await codeOf(pg.query(`INSERT INTO reservations (id, berth_id, kind, start_date, end_date) VALUES ('no-subject', 'npw', 'event', '2019-09-01', '2019-09-02')`))).toBe("23514");
-    expect(await codeOf(pg.query(`UPDATE vessels SET length_ft = 80 WHERE id = 'v_b'`))).toBe("23514"); // a length needs a status that vouches for it
+    expect(await codeOf(pg.query(`UPDATE vessels SET length_ft = 0 WHERE id = 'v_b'`))).toBe("23514");
+    expect(await codeOf(pg.query(`UPDATE vessels SET length_ft = NULL WHERE id = 'v_b'`))).toBe("23502"); // every vessel has a length
+    expect(await codeOf(pg.query(`INSERT INTO vessels (id, name, name_key, length_ft) VALUES ('v_dupe', 'alpha', 'ALPHA', 50)`))).toBe("23505"); // one hull, one record
   });
 
   it("returns dates as plain strings", async () => {
