@@ -6,8 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint",
-    "import:parity": "tsx scripts/parity-spike.ts"
+    "lint": "eslint .",
+    "import:parity": "tsx scripts/parity-spike.ts",
+    "test": "vitest run",
+    "typecheck": "next typegen && tsc --noEmit"
   },
   "dependencies": {
     "@vercel/functions": "^3.9.8",
