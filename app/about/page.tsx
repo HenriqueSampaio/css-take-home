@@ -16,7 +16,7 @@ const n = (value: number) => value.toLocaleString("en-US");
 function Section({ id, title, children }: { id: string; title: string; children: ReactNode }) {
   return (
     <section aria-labelledby={id} className="mt-12 first:mt-0">
-      <h2 id={id} className="t-title mb-3 border-b-[1.5px] border-ink pb-1.5 text-[1.1875rem]">{title}</h2>
+      <h2 id={id} className="t-title mb-3 border-b-[1.5px] border-ink pb-1.5 text-[1.25rem]">{title}</h2>
       <div className="flex flex-col gap-3">{children}</div>
     </section>
   );

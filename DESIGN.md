@@ -43,6 +43,26 @@ typography:
     fontWeight: 500
     lineHeight: 1.25
     fontFeature: "'tnum' 1, 'lnum' 1"
+  heading:
+    fontFamily: "Barlow, 'Helvetica Neue', Arial, sans-serif"
+    fontSize: "1.25rem"
+    fontWeight: 600
+    lineHeight: 1.25
+  prose:
+    fontFamily: "Barlow, 'Helvetica Neue', Arial, sans-serif"
+    fontSize: "1rem"
+    fontWeight: 400
+    lineHeight: 1.625
+  small:
+    fontFamily: "Barlow, 'Helvetica Neue', Arial, sans-serif"
+    fontSize: "0.875rem"
+    fontWeight: 400
+    lineHeight: 1.45
+  tag:
+    fontFamily: "'Barlow Semi Condensed', 'Arial Narrow', Arial, sans-serif"
+    fontSize: "0.75rem"
+    fontWeight: 600
+    lineHeight: 1
   caption:
     fontFamily: "'Barlow Semi Condensed', 'Arial Narrow', Arial, sans-serif"
     fontSize: "0.6875rem"
@@ -152,10 +172,15 @@ A restrained strategy: cool neutrals, one Prussian blue, and three semantic inks
 **Character:** One superfamily in two widths. Barlow comes from plate and signage lettering, monoline and slightly squared, which sits naturally beside dimension numerals; the semi-condensed width lets vessel names and day numbers fit a 31-column grid without shrinking below legibility.
 
 ### Hierarchy
+Nine fixed steps, each with one job. Nothing sits between them.
 - **Headline** (600, 1.4375rem, 1.2): one per page: the page name.
-- **Title** (600, 1.0625rem, 1.3): section headings, panel titles.
-- **Body** (400, 0.9375rem, 1.5): forms, descriptions, the About page (measure capped at 70ch).
-- **Data** (500, 0.8125rem, tabular lining figures): stay labels, table cells, day numbers, lengths.
+- **Heading** (600, 1.25rem, 1.25): the product name in the title block; section headings on the About page.
+- **Title** (600, 1.0625rem, 1.3): section headings, panel titles, a page's lead sentence.
+- **Prose** (400, 1rem, 1.625): long-form reading on the About page only (measure capped at 70ch).
+- **Body** (400, 0.9375rem, 1.5): forms, descriptions, navigation.
+- **Small** (400 to 600, 0.875rem): buttons, tables, notices, secondary explanations.
+- **Data** (500, 0.8125rem, tabular lining figures): stay labels, day numbers, lengths, hints.
+- **Tag** (600, 0.75rem): status tags.
 - **Caption** (600, 0.6875rem, uppercase, 0.07em tracking): title-block captions and table column heads only.
 
 ### Named Rules

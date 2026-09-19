@@ -10,7 +10,7 @@ export type NavItem = { href: string; label: string; match: string; badge?: Reac
 export function NavLinks({ items }: { items: NavItem[] }) {
   const pathname = usePathname();
   return (
-    <ul className="flex h-full items-stretch gap-1 overflow-x-auto">
+    <ul className="flex h-full flex-wrap items-stretch gap-x-1">
       {items.map((item) => {
         const current = pathname === item.match || pathname.startsWith(item.match + "/");
         return (
@@ -18,7 +18,7 @@ export function NavLinks({ items }: { items: NavItem[] }) {
             <Link
               href={item.href}
               aria-current={current ? "page" : undefined}
-              className={`relative flex items-center gap-1.5 px-3 text-[0.9375rem] font-medium transition-colors duration-150 hover:text-ink ${current ? "text-ink" : "text-ink-2"}`}
+              className={`relative flex min-h-11 items-center gap-1.5 px-3 text-[0.9375rem] font-medium transition-colors duration-150 hover:text-ink ${current ? "text-ink" : "text-ink-2"}`}
             >
               {item.label}
               {item.badge}

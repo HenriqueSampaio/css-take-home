@@ -170,6 +170,11 @@
 
   /* ---- Schedule grid ------------------------------------------------------ */
   .schedule { --berth-col: 13.5rem; --day-min: 1.6rem; --lane-h: 1.75rem; min-width: calc(var(--berth-col) + var(--days) * var(--day-min)); }
+  /* On a phone the pinned berth column must not eat the screen: keep the name and length, drop the extras. */
+  @media (max-width: 40rem) {
+    .schedule { --berth-col: 8.25rem; }
+    .schedule .berth-extra { display: none; }
+  }
   .schedule-row { display: grid; grid-template-columns: var(--berth-col) minmax(0, 1fr); }
   .schedule-days { display: grid; grid-template-columns: repeat(var(--days), minmax(var(--day-min), 1fr)); }
   /* Lanes are centred in the row; the row is as tall as its berth header or its lanes, whichever is more. */

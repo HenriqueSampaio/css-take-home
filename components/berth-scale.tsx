@@ -7,8 +7,8 @@ export function BerthScale({ name, lengthFt, maxFt }: { name: string; lengthFt: 
   const pct = Math.max(4, Math.round((lengthFt / maxFt) * 100));
   return (
     <div className="min-w-0">
-      <div className="flex items-baseline justify-between gap-2">
-        <span className="truncate text-[0.875rem] font-semibold leading-tight">{name}</span>
+      <div className="flex flex-wrap items-baseline justify-between gap-x-2">
+        <span className="text-[0.875rem] font-semibold leading-tight">{name}</span>
         <span className="t-data shrink-0 text-ink-2">{lengthFt} ft</span>
       </div>
       <div className="dim mt-1" aria-hidden>

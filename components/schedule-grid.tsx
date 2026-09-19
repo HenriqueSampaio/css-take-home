@@ -50,7 +50,7 @@ export function ScheduleGrid({ month, berths, reservations, selectedId, today }:
             <section key={berth.id} className="schedule-row border-b border-line-strong last:border-b-0" aria-label={`${berth.name}, ${berth.lengthFt} feet`}>
               <div className="schedule-berth flex flex-col justify-center gap-1 px-3 py-2">
                 <BerthScale name={berth.name} lengthFt={berth.lengthFt} maxFt={maxFt} />
-                <Link href={newReservationHref({ berthId: berth.id })} className="t-data inline-flex w-fit items-center gap-1 text-ink-2 transition-colors duration-150 hover:text-prussian hover:underline">
+                <Link href={newReservationHref({ berthId: berth.id })} className="berth-extra t-data inline-flex w-fit items-center gap-1 text-ink-2 transition-colors duration-150 hover:text-prussian hover:underline">
                   <Plus size={11} />Reserve this berth
                 </Link>
               </div>
