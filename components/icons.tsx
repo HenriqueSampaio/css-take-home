@@ -1,6 +1,7 @@
 /**
- * One icon family: 1.75px rounded strokes on a 20px grid. Icons are decorative; the word
- * next to them (or an aria-label on the control) carries the meaning.
+ * One icon family, drawn in the sheet's own grammar: a 1.5px pen with square caps and mitred
+ * joins on a 20px grid. Icons are decorative; the word next to them (or an aria-label on the
+ * control) carries the meaning.
  */
 import type { ReactNode } from "react";
 
@@ -8,7 +9,7 @@ type IconProps = { size?: number; className?: string };
 
 function Icon({ size = 18, className, children }: IconProps & { children: ReactNode }) {
   return (
-    <svg width={size} height={size} viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round" aria-hidden focusable={false} className={className}>
+    <svg width={size} height={size} viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="square" strokeLinejoin="miter" aria-hidden focusable={false} className={className}>
       {children}
     </svg>
   );
@@ -29,6 +30,8 @@ export const Undo = (p: IconProps) => <Icon {...p}><path d="M7.5 5 4 8.5 7.5 12"
 export const Alert = (p: IconProps) => <Icon {...p}><path d="M10 3.5 17.5 16h-15z" /><path d="M10 8.5v3.5M10 14.2v.1" /></Icon>;
 export const Info = (p: IconProps) => <Icon {...p}><circle cx="10" cy="10" r="7" /><path d="M10 9.2v4.3M10 6.6v.1" /></Icon>;
 export const Ruler = (p: IconProps) => <Icon {...p}><rect x="2.5" y="6.5" width="15" height="7" rx="1.5" /><path d="M6 6.5v3M9 6.5v2M12 6.5v3M15 6.5v2" /></Icon>;
+/** A dimension line overshooting its end tick: "longer than the berth". */
+export const Overrun = (p: IconProps) => <Icon {...p}><path d="M3 5.5v9M11.5 5.5v9M3 10h14.5" /><path d="m14.5 7 3 3-3 3" /></Icon>;
 export const NoteLines = (p: IconProps) => <Icon {...p}><path d="M5 6h10M5 10h10M5 14h6" /></Icon>;
 
 /** Vessel. */

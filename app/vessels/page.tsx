@@ -22,7 +22,7 @@ export default async function VesselsPage(props: PageProps<"/vessels">) {
   return (
     <div className="mx-auto flex max-w-[64rem] flex-col gap-6">
       <div>
-        <h1 className="t-display">Vessels</h1>
+        <h1 className="t-headline">Vessels</h1>
         <p className="mt-1.5 text-ink-2"><strong className="t-num">{all.length}</strong> {q ? "matching" : "registered"}. A vessel&apos;s <strong>length</strong> decides which berths it can take.</p>
       </div>
 
@@ -36,12 +36,12 @@ export default async function VesselsPage(props: PageProps<"/vessels">) {
       </div>
 
       {shown.length > 0 ? (
-        <ul className="surface rows overflow-hidden">
+        <ul className="sheet rows overflow-hidden">
           {shown.map((v) => (
             <li key={v.id} className="row-hover flex flex-wrap items-center justify-between gap-x-6 gap-y-2 px-5 py-3">
               <p className="flex min-w-0 flex-1 basis-56 flex-wrap items-baseline gap-x-2.5">
                 <span className="t-title truncate">{v.displayName}</span>
-                {v.upcomingCount > 0 && <span className="pill pill-brand">{v.upcomingCount} upcoming</span>}
+                {v.upcomingCount > 0 && <span className="tag tag-accent">{v.upcomingCount} upcoming</span>}
               </p>
               <div className="flex items-center gap-3">
                 <strong className="t-num text-[1.0625rem]">{v.lengthFt} ft</strong>
@@ -51,7 +51,7 @@ export default async function VesselsPage(props: PageProps<"/vessels">) {
           ))}
         </ul>
       ) : (
-        <div className="surface p-6 text-ink-2">
+        <div className="sheet p-6 text-ink-2">
           <p><strong>No vessel matches &ldquo;{q}&rdquo;.</strong> Check the spelling, <Link className="link" href="/vessels">show all vessels</Link>, or add it with the button above.</p>
         </div>
       )}

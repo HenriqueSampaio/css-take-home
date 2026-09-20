@@ -30,7 +30,7 @@ export default async function EditReservationPage(props: PageProps<"/reservation
   if (locked) {
     return (
       <div className="mx-auto max-w-[64rem]">
-        <h1 className="t-display">{detail.label}</h1>
+        <h1 className="t-headline">{detail.label}</h1>
         <p className="mt-2 text-ink-2">{locked}</p>
         <Link href={backHref} className="btn btn-secondary mt-5"><ChevronLeft size={16} />Back to the schedule</Link>
       </div>
@@ -59,12 +59,12 @@ export default async function EditReservationPage(props: PageProps<"/reservation
     <div className="mx-auto flex max-w-[64rem] flex-col gap-6">
       <div>
         <Link href={backHref} className="link inline-flex items-center gap-1 text-[0.875rem]"><ChevronLeft size={14} />Back to the schedule</Link>
-        <h1 className="t-display mt-2">Edit {detail.label}</h1>
+        <h1 className="t-headline mt-2">Edit {detail.label}</h1>
         <p className="mt-1.5 text-ink-2">Now at <strong>{detail.berth.name}</strong>, <strong className="t-num">{formatDate(detail.startDate)}</strong> to <strong className="t-num">{formatDate(detail.endDate)}</strong>.</p>
       </div>
 
       <div className="grid items-start gap-6 lg:grid-cols-[22rem_minmax(0,1fr)] lg:gap-8">
-        <section aria-label="Dates and details" className="surface p-5 lg:sticky lg:top-24">
+        <section aria-label="Dates and details" className="sheet p-5 lg:sticky lg:top-24">
           <ReservationForm key={JSON.stringify(initial)} basePath={editReservationHref(detail.id)} vessels={[]} initial={initial} today={today} fixedSubject={detail.label} lockStart={started} hasResults />
         </section>
 
@@ -73,7 +73,7 @@ export default async function EditReservationPage(props: PageProps<"/reservation
             <h2 id="results-heading" className="t-heading">Choose where to save it</h2>
             <p className="mt-1 text-ink-2">
               <strong className="t-num">{formatDate(start)}</strong>{end !== start && <> to <strong className="t-num">{formatDate(end)}</strong></>}
-              {changed && <span className="pill pill-warn ml-2">New dates, not saved yet</span>}
+              {changed && <span className="tag tag-caution ml-2">New dates, not saved yet</span>}
             </p>
           </div>
           <BerthResults

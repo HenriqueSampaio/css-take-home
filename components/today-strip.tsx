@@ -11,7 +11,7 @@ export function TodayStrip({ dock }: { dock: DockToday }) {
   return (
     <p className="flex flex-wrap items-center gap-x-5 gap-y-1 text-[0.9375rem] text-ink-2">
       <span><strong className="t-num text-[1.0625rem]">{dock.berthsOccupied}</strong> of {dock.berthsTotal} berths in use today</span>
-      <span><strong className="t-num text-[1.0625rem] text-ok">{free}</strong> free</span>
+      <span><strong className="t-num text-[1.0625rem] text-clear">{free}</strong> free</span>
       {dock.arrivingToday.length > 0 && <span><strong className="t-num text-[1.0625rem]">{dock.arrivingToday.length}</strong> arriving today</span>}
       {dock.departingToday.length > 0 && <span><strong className="t-num text-[1.0625rem]">{dock.departingToday.length}</strong> leaving today</span>}
       {next && (

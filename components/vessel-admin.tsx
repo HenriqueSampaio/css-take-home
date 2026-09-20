@@ -46,29 +46,29 @@ export function AddVesselForm() {
     return (
       <div className="flex flex-wrap items-center gap-3">
         <button type="button" className="btn btn-primary" onClick={() => { setAdded(null); setOpen(true); }}><Plus size={16} />Add a vessel</button>
-        {added && <p className="notice notice-ok !py-2 font-semibold" role="status">Added {added}.</p>}
+        {added && <p className="notice notice-clear !py-2 font-semibold" role="status">Added {added}.</p>}
       </div>
     );
   }
 
   return (
-    <form onSubmit={submit} noValidate className="surface rise-in flex flex-col gap-4 p-5">
+    <form onSubmit={submit} noValidate className="sheet rise-in flex flex-col gap-4 p-5">
       <h2 className="t-heading">New vessel</h2>
       <div className="grid gap-3 sm:grid-cols-[6.5rem_minmax(0,1fr)_8rem]">
         <div>
-          <label className="label" htmlFor={`${uid}-prefix`}>Type</label>
+          <label className="t-caption field-label" htmlFor={`${uid}-prefix`}>Type</label>
           <select id={`${uid}-prefix`} className="input" value={prefix} onChange={(e) => setPrefix(e.target.value)}>
             <option value="">None</option>
             {VESSEL_PREFIXES.map((p) => <option key={p} value={p}>{p}</option>)}
           </select>
         </div>
         <div>
-          <label className="label" htmlFor={`${uid}-name`}>Name</label>
+          <label className="t-caption field-label" htmlFor={`${uid}-name`}>Name</label>
           <input id={`${uid}-name`} className="input" value={name} onChange={(e) => setName(e.target.value)} placeholder="e.g. Northern Star" maxLength={80} autoFocus autoComplete="off" aria-invalid={errors.name ? true : undefined} aria-describedby={errors.name ? `${uid}-name-err` : undefined} />
           {errors.name && <p id={`${uid}-name-err`} className="field-error" role="alert">{errors.name}</p>}
         </div>
         <div>
-          <label className="label" htmlFor={`${uid}-len`}>Length (ft)</label>
+          <label className="t-caption field-label" htmlFor={`${uid}-len`}>Length (ft)</label>
           <input id={`${uid}-len`} className="input t-num" inputMode="numeric" value={length} onChange={(e) => setLength(e.target.value)} placeholder="e.g. 120" autoComplete="off" aria-invalid={errors.length ? true : undefined} aria-describedby={errors.length ? `${uid}-len-err` : undefined} />
           {errors.length && <p id={`${uid}-len-err`} className="field-error" role="alert">{errors.length}</p>}
         </div>
@@ -119,7 +119,7 @@ export function VesselLengthEdit({ vesselId, version, name, lengthFt }: { vessel
       <div className="flex items-center gap-2">
         <label htmlFor={uid} className="sr-only">Length of {name} in feet</label>
         <input id={uid} className="input t-num !h-8 !w-24" inputMode="numeric" value={value} onChange={(e) => setValue(e.target.value)} autoFocus autoComplete="off" aria-invalid={error ? true : undefined} />
-        <span className="t-small text-ink-3">ft</span>
+        <span className="t-data text-ink-3">ft</span>
         <button type="submit" className="btn btn-primary btn-sm" disabled={pending}>{pending ? "Saving..." : "Save"}</button>
         <button type="button" className="btn btn-ghost btn-sm" disabled={pending} onClick={() => setEditing(false)}>Discard</button>
       </div>

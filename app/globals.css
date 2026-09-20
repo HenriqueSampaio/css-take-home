@@ -1,62 +1,52 @@
 /*
- * DIRECTION CONTRACT: "The Calendar You Already Know"
- * THESIS: the modern calendar, played straight (the owner's pick, alongside Notion Calendar
- *   and Google Calendar). Refuses the dense, ruled, uppercase "legacy system" look it replaces.
- * OWN-WORLD: white rounded surfaces on a soft grey canvas; reservations as solid colour chips
- *   (blue vessels, violet events, striped amber closures); one blue for actions; Figtree with
- *   real weight contrast; soft shadows only on what floats.
- * STORY: the coordinator sees this month and right now at a glance, books in one step, and is
- *   told in a sentence when something cannot be done.
- * FIRST VIEWPORT: sticky top bar (brand, 3 destinations, live date and time, New reservation);
- *   the month in bold with arrows; a one-line "today" summary; the grid with a live now-line.
- * FORM: category canon chosen by the owner; month-grid staging.
+ * DIRECTION CONTRACT: "The Berthing Plan"
+ * THESIS: a dock schedule drawn as a marine engineer's berthing plan. Every borrowed drafting
+ *   device carries data or is cut. Refuses the white-card SaaS dashboard. (The owner tried a
+ *   calendar-style replacement and came back to this, keeping its motion, bold emphasis and
+ *   lighter layouts.)
+ * OWN-WORLD: cool drafting-film white, blue-black plot ink, three pen weights, one Prussian
+ *   blue; revision red only for what is wrong. Kind is a fill pattern plus an icon plus words.
+ *   Square, flat, no cards. Barlow in two widths, bold on the facts that matter.
+ * STORY: the coordinator sees the month and right now at a glance, gets "where can this vessel
+ *   go?" answered with lengths drawn to scale, and is refused in a sentence when it cannot be done.
+ * FIRST VIEWPORT: title block (facility, 3 destinations, live date and time, New reservation);
+ *   the month in bold; a one-line today summary; one sheet: days across the top border, berths
+ *   down the side with to-scale length bars, stays inked in, a live now marker.
+ * FORM: candidate 6 of 7 (pier general-arrangement drawing), month-grid staging, seed 3798d8a4.
  */
 @import "tailwindcss";
 
 @theme {
-  --color-canvas: #f5f6f8;
-  --color-surface: #ffffff;
-  --color-fill: #eef1f5;
-  --color-line: #e4e7ec;
-  --color-line-strong: #cdd3dc;
-  --color-control: #7c8798;
-  --color-ink: #0f172a;
-  --color-ink-2: #475569;
-  --color-ink-3: #5b6678;
-  --color-brand: #2563eb;
-  --color-brand-deep: #1d4ed8;
-  --color-brand-tint: #eaf1ff;
-  --color-vessel: #2563eb;
-  --color-event: #7c3aed;
-  --color-event-tint: #f1eafe;
-  --color-closure: #f59e0b;
-  --color-closure-tint: #fef3c7;
-  --color-closure-ink: #92400e;
-  --color-ok: #15803d;
-  --color-ok-tint: #dcfce7;
-  --color-danger: #dc2626;
-  --color-danger-ink: #b91c1c;
-  --color-danger-tint: #fee2e2;
-  --color-warn-ink: #9a4a06;
-  --color-warn-tint: #fef3c7;
-  --color-now: #e11d48;
+  --color-sheet: #f3f5f7;
+  --color-sheet-raised: #fcfdfe;
+  --color-sheet-sunk: #e8ecf0;
+  --color-ink: #0f1c2b;
+  --color-ink-2: #43536a;
+  --color-ink-3: #566577;
+  --color-line: #cbd3dc;
+  --color-line-strong: #8a98a8;
+  --color-prussian: #14508f;
+  --color-prussian-deep: #0e3f73;
+  --color-prussian-tone: #dce8f5;
+  --color-revision: #b3261e;
+  --color-revision-tone: #fbe9e7;
+  --color-caution: #855600;
+  --color-caution-line: #b7791f;
+  --color-caution-tone: #fff3d6;
+  --color-clear: #1b6541;
+  --color-clear-tone: #e2f2e9;
 
-  --font-sans: var(--font-figtree), system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-sans: var(--font-barlow), "Helvetica Neue", Arial, sans-serif;
+  --font-data: var(--font-barlow-semi), "Arial Narrow", Arial, sans-serif;
 
-  --radius-chip: 6px;
-  --radius-control: 10px;
-  --radius-surface: 16px;
-
-  --shadow-surface: 0 1px 2px rgb(15 23 42 / 0.04), 0 1px 1px rgb(15 23 42 / 0.03);
-  --shadow-lift: 0 6px 16px -4px rgb(15 23 42 / 0.16);
-  --shadow-float: 0 24px 48px -12px rgb(15 23 42 / 0.24), 0 0 0 1px rgb(15 23 42 / 0.05);
-
+  --radius-control: 2px;
+  --shadow-float: 0 8px 20px -6px rgb(15 28 43 / 0.22);
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 @layer base {
   html {
-    background: var(--color-canvas);
+    background: var(--color-sheet);
     color: var(--color-ink);
     font-family: var(--font-sans);
     -webkit-text-size-adjust: 100%;
@@ -65,14 +55,15 @@
     min-height: 100dvh;
     font-size: 0.9375rem;
     line-height: 1.5;
-    -webkit-font-smoothing: antialiased;
+    font-variant-numeric: lining-nums;
   }
   h1, h2, h3 { text-wrap: balance; }
   p { text-wrap: pretty; }
   a { color: inherit; }
-  :focus-visible { outline: 2px solid var(--color-brand); outline-offset: 2px; border-radius: 4px; }
-  ::selection { background: var(--color-brand-tint); }
-  strong, b { font-weight: 700; color: var(--color-ink); }
+  /* The Bold Rule: the facts a coordinator scans for carry the weight; the rest recedes. */
+  strong, b { font-weight: 600; color: var(--color-ink); }
+  :focus-visible { outline: 2px solid var(--color-prussian); outline-offset: 2px; }
+  ::selection { background: var(--color-prussian-tone); }
 
   /* All motion is optional. With it off, nothing is hidden and nothing waits. */
   @media (prefers-reduced-motion: reduce) {
@@ -87,151 +78,167 @@
 
 @layer components {
   /* ---- Type roles ---------------------------------------------------------- */
-  .t-display { font-size: 1.875rem; font-weight: 800; line-height: 1.15; letter-spacing: -0.02em; }
-  .t-heading { font-size: 1.25rem; font-weight: 700; line-height: 1.25; letter-spacing: -0.01em; }
-  .t-title { font-size: 1rem; font-weight: 700; line-height: 1.35; }
-  .t-small { font-size: 0.8125rem; font-weight: 500; line-height: 1.4; }
-  .t-micro { font-size: 0.75rem; font-weight: 600; line-height: 1.2; }
-  .t-num { font-variant-numeric: tabular-nums; }
-  .measure { max-width: 60ch; }
+  .t-headline { font-size: 1.4375rem; font-weight: 700; line-height: 1.2; letter-spacing: -0.005em; }
+  .t-heading { font-size: 1.25rem; font-weight: 600; line-height: 1.25; }
+  .t-title { font-size: 1.0625rem; font-weight: 600; line-height: 1.3; }
+  .t-data { font-family: var(--font-data); font-size: 0.8125rem; font-weight: 500; line-height: 1.25; font-variant-numeric: tabular-nums lining-nums; }
+  /* Title-block captions: table heads and field labels only, never a section eyebrow. */
+  .t-caption { font-family: var(--font-data); font-size: 0.6875rem; font-weight: 600; line-height: 1.2; letter-spacing: 0.07em; text-transform: uppercase; color: var(--color-ink-3); }
+  .t-num { font-variant-numeric: tabular-nums lining-nums; }
+  .prose-measure { max-width: 70ch; }
 
-  /* ---- Surfaces ------------------------------------------------------------ */
-  .surface { background: var(--color-surface); border: 1px solid var(--color-line); border-radius: var(--radius-surface); box-shadow: var(--shadow-surface); }
+  /* ---- The sheet: a region bounded by a heavy ink border, not a card --------- */
+  .sheet { background: var(--color-sheet-raised); border: 1.5px solid var(--color-ink); }
 
-  /* ---- Controls ------------------------------------------------------------ */
+  /* ---- Controls ---------------------------------------------------------------- */
   .btn {
     display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
-    height: 2.5rem; padding: 0 1rem; border-radius: var(--radius-control);
+    height: 2.25rem; padding: 0 1rem; border-radius: var(--radius-control);
     font-size: 0.875rem; font-weight: 600; line-height: 1; white-space: nowrap;
     border: 1px solid transparent; cursor: pointer; text-decoration: none; user-select: none;
-    transition: background-color 150ms var(--ease-out), border-color 150ms var(--ease-out), color 150ms var(--ease-out), box-shadow 150ms var(--ease-out), transform 100ms var(--ease-out);
+    transition: background-color 150ms var(--ease-out), border-color 150ms var(--ease-out), color 150ms var(--ease-out), transform 100ms var(--ease-out);
   }
-  .btn:active:not(:disabled):not([aria-disabled="true"]) { transform: scale(0.98); }
-  .btn:disabled, .btn[aria-disabled="true"] { opacity: 0.5; cursor: not-allowed; }
-  .btn-primary { background: var(--color-brand); color: var(--color-surface); box-shadow: 0 1px 2px rgb(37 99 235 / 0.3); }
-  .btn-primary:hover:not(:disabled) { background: var(--color-brand-deep); box-shadow: 0 4px 12px -2px rgb(37 99 235 / 0.4); }
-  .btn-secondary { background: var(--color-surface); color: var(--color-ink); border-color: var(--color-line-strong); }
-  .btn-secondary:hover:not(:disabled):not([aria-disabled="true"]) { background: var(--color-fill); border-color: var(--color-control); }
+  .btn:active:not(:disabled):not([aria-disabled="true"]) { transform: translateY(1px); }
+  .btn:disabled, .btn[aria-disabled="true"] { opacity: 0.45; cursor: not-allowed; }
+  .btn-primary { background: var(--color-prussian); color: var(--color-sheet-raised); }
+  .btn-primary:hover:not(:disabled) { background: var(--color-prussian-deep); }
+  .btn-primary:active:not(:disabled) { background: var(--color-ink); }
+  .btn-secondary { background: var(--color-sheet-raised); color: var(--color-ink); border-color: var(--color-line-strong); }
+  .btn-secondary:hover:not(:disabled):not([aria-disabled="true"]) { background: var(--color-sheet-sunk); border-color: var(--color-ink-2); }
+  .btn-secondary:active:not(:disabled) { background: var(--color-line); }
   .btn-ghost { background: transparent; color: var(--color-ink-2); }
-  .btn-ghost:hover:not(:disabled) { background: var(--color-fill); color: var(--color-ink); }
-  .btn-danger { background: var(--color-surface); color: var(--color-danger-ink); border-color: color-mix(in srgb, var(--color-danger) 45%, white); }
-  .btn-danger:hover:not(:disabled) { background: var(--color-danger-tint); border-color: var(--color-danger); }
-  .btn-danger-solid { background: var(--color-danger); color: var(--color-surface); }
-  .btn-danger-solid:hover:not(:disabled) { background: var(--color-danger-ink); }
-  .btn-sm { height: 2rem; padding: 0 0.75rem; font-size: 0.8125rem; border-radius: 8px; }
-  .btn-icon { width: 2.5rem; padding: 0; }
-  .btn-icon.btn-sm { width: 2rem; }
+  .btn-ghost:hover:not(:disabled) { background: var(--color-sheet-sunk); color: var(--color-ink); }
+  .btn-danger { background: var(--color-sheet-raised); color: var(--color-revision); border-color: var(--color-revision); }
+  .btn-danger:hover:not(:disabled) { background: var(--color-revision-tone); }
+  .btn-danger:active:not(:disabled), .btn-danger-solid { background: var(--color-revision); color: var(--color-sheet-raised); }
+  .btn-danger-solid:hover:not(:disabled) { background: color-mix(in srgb, var(--color-revision) 85%, black); }
+  .btn-sm { height: 1.875rem; padding: 0 0.625rem; font-size: 0.8125rem; }
+  .btn-icon { width: 2.25rem; padding: 0; }
+  .btn-icon.btn-sm { width: 1.875rem; }
 
-  .link { color: var(--color-brand); font-weight: 600; text-decoration: none; border-radius: 4px; }
-  .link:hover { color: var(--color-brand-deep); text-decoration: underline; text-underline-offset: 3px; }
+  .link { color: var(--color-prussian); font-weight: 500; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 2px; }
+  .link:hover { color: var(--color-prussian-deep); text-decoration-thickness: 2px; }
 
-  .label { display: block; margin-bottom: 0.375rem; font-size: 0.8125rem; font-weight: 600; color: var(--color-ink-2); }
+  .field-label { display: block; margin-bottom: 0.25rem; }
   .input {
-    display: block; width: 100%; height: 2.5rem; padding: 0 0.75rem;
-    background: var(--color-surface); color: var(--color-ink);
-    border: 1px solid var(--color-control); border-radius: var(--radius-control);
+    display: block; width: 100%; height: 2.25rem; padding: 0 0.625rem;
+    background: var(--color-sheet-raised); color: var(--color-ink);
+    /* WCAG 1.4.11: a control's boundary needs 3:1. ink-3 is over 5:1 on Bond. */
+    border: 1px solid var(--color-ink-3); border-radius: var(--radius-control);
     font: inherit; font-size: 0.9375rem;
-    transition: border-color 150ms var(--ease-out), box-shadow 150ms var(--ease-out);
+    transition: border-color 150ms var(--ease-out);
   }
-  textarea.input { height: auto; min-height: 4.75rem; padding: 0.5rem 0.75rem; line-height: 1.45; resize: vertical; }
+  textarea.input { height: auto; min-height: 4.5rem; padding: 0.5rem 0.625rem; line-height: 1.4; resize: vertical; }
   .input::placeholder { color: var(--color-ink-3); }
-  .input:hover:not(:disabled) { border-color: var(--color-ink-2); }
-  .input:focus-visible { outline: none; border-color: var(--color-brand); box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-brand) 25%, transparent); }
-  .input:disabled { background: var(--color-fill); color: var(--color-ink-3); cursor: not-allowed; }
-  .input[aria-invalid="true"] { border-color: var(--color-danger); }
-  .input[aria-invalid="true"]:focus-visible { box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-danger) 22%, transparent); }
-  .hint { margin-top: 0.375rem; font-size: 0.8125rem; color: var(--color-ink-3); }
-  .field-error { margin-top: 0.375rem; font-size: 0.8125rem; font-weight: 600; color: var(--color-danger-ink); }
+  .input:hover:not(:disabled) { border-color: var(--color-ink); }
+  .input:focus-visible { border-color: var(--color-prussian); }
+  .input:disabled { background: var(--color-sheet-sunk); color: var(--color-ink-3); cursor: not-allowed; }
+  .input[aria-invalid="true"] { border-color: var(--color-revision); }
+  .field-hint { margin-top: 0.25rem; font-size: 0.8125rem; color: var(--color-ink-2); }
+  .field-error { margin-top: 0.25rem; font-size: 0.8125rem; color: var(--color-revision); font-weight: 600; }
 
-  /* Segmented control: one choice of a few, shown all at once. */
-  .segmented { display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap: 4px; padding: 4px; background: var(--color-fill); border-radius: 12px; }
-  .segmented label { position: relative; display: flex; align-items: center; justify-content: center; gap: 0.375rem; height: 2.25rem; border-radius: 8px; font-size: 0.875rem; font-weight: 600; color: var(--color-ink-2); cursor: pointer; transition: background-color 150ms var(--ease-out), color 150ms var(--ease-out), box-shadow 150ms var(--ease-out); }
-  .segmented label:hover { color: var(--color-ink); }
+  /* Segmented choice, drawn as one ruled strip of cells. */
+  .segmented { display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; border: 1px solid var(--color-ink-3); border-radius: var(--radius-control); overflow: hidden; background: var(--color-sheet-raised); }
+  .segmented label { position: relative; display: flex; align-items: center; justify-content: center; gap: 0.375rem; height: 2.25rem; font-size: 0.875rem; font-weight: 600; color: var(--color-ink-2); cursor: pointer; border-left: 1px solid var(--color-line-strong); transition: background-color 150ms var(--ease-out), color 150ms var(--ease-out); }
+  .segmented label:first-child { border-left: 0; }
+  .segmented label:hover { background: var(--color-sheet-sunk); color: var(--color-ink); }
   .segmented input { position: absolute; opacity: 0; inset: 0; cursor: pointer; }
-  .segmented label:has(input:checked) { background: var(--color-surface); color: var(--color-ink); box-shadow: var(--shadow-surface), 0 0 0 1px var(--color-line); }
-  .segmented label:has(input:focus-visible) { outline: 2px solid var(--color-brand); outline-offset: 2px; }
+  .segmented label:has(input:checked) { background: var(--color-prussian); color: var(--color-sheet-raised); }
+  .segmented label:has(input:focus-visible) { outline: 2px solid var(--color-prussian); outline-offset: 2px; z-index: 1; }
 
-  /* ---- Pills: icon + word, never colour alone ------------------------------- */
-  .pill { display: inline-flex; align-items: center; gap: 0.3125rem; height: 1.5rem; padding: 0 0.625rem; border-radius: 999px; font-size: 0.75rem; font-weight: 600; line-height: 1; white-space: nowrap; background: var(--color-fill); color: var(--color-ink-2); }
-  .pill-ok { background: var(--color-ok-tint); color: var(--color-ok); }
-  .pill-danger { background: var(--color-danger-tint); color: var(--color-danger-ink); }
-  .pill-warn { background: var(--color-warn-tint); color: var(--color-warn-ink); }
-  .pill-brand { background: var(--color-brand-tint); color: var(--color-brand-deep); }
-  .pill-event { background: var(--color-event-tint); color: var(--color-event); }
-  .pill-closure { background: var(--color-closure-tint); color: var(--color-closure-ink); }
+  /* ---- Notices: a ruled note on the sheet, glyph + words, never colour alone ---- */
+  .notice { display: flex; gap: 0.625rem; padding: 0.625rem 0.75rem; border: 1px solid var(--color-line-strong); background: var(--color-sheet-raised); font-size: 0.875rem; animation: rise-in 240ms var(--ease-out) both; }
+  .notice-danger { border-color: var(--color-revision); background: var(--color-revision-tone); color: var(--color-revision); }
+  .notice-danger strong { color: var(--color-revision); }
+  .notice-caution { border-color: var(--color-caution-line); background: var(--color-caution-tone); color: var(--color-caution); }
+  .notice-clear { border-color: var(--color-clear); background: var(--color-clear-tone); color: var(--color-clear); }
 
-  /* ---- Notices ---------------------------------------------------------------- */
-  .notice { display: flex; gap: 0.625rem; padding: 0.75rem 0.875rem; border-radius: 12px; font-size: 0.875rem; background: var(--color-fill); color: var(--color-ink-2); animation: rise-in 240ms var(--ease-out) both; }
-  .notice-danger { background: var(--color-danger-tint); color: var(--color-danger-ink); }
-  .notice-danger strong { color: var(--color-danger-ink); }
-  .notice-ok { background: var(--color-ok-tint); color: var(--color-ok); }
-  .notice-warn { background: var(--color-warn-tint); color: var(--color-warn-ink); }
+  /* ---- Tags: small status words with a glyph ------------------------------------- */
+  .tag { display: inline-flex; align-items: center; gap: 0.25rem; height: 1.25rem; padding: 0 0.375rem; border: 1px solid var(--color-line-strong); font-family: var(--font-data); font-size: 0.75rem; font-weight: 600; line-height: 1; white-space: nowrap; color: var(--color-ink-2); background: var(--color-sheet-raised); }
+  .tag-danger { color: var(--color-revision); border-color: var(--color-revision); background: var(--color-revision-tone); }
+  .tag-caution { color: var(--color-caution); border-color: var(--color-caution-line); background: var(--color-caution-tone); }
+  .tag-clear { color: var(--color-clear); border-color: var(--color-clear); background: var(--color-clear-tone); }
+  .tag-accent { color: var(--color-prussian); border-color: var(--color-prussian); background: var(--color-prussian-tone); }
 
-  /* ---- Rows: a list is a list, not a stack of cards ---------------------------- */
+  /* ---- Ruled lists: a list is a list, not a stack of cards -------------------------- */
   .rows > * + * { border-top: 1px solid var(--color-line); }
   .row-hover { transition: background-color 150ms var(--ease-out); }
-  .row-hover:hover { background: color-mix(in srgb, var(--color-fill) 55%, transparent); }
+  .row-hover:hover { background: color-mix(in srgb, var(--color-prussian-tone) 40%, transparent); }
 
-  /* ---- Stay chips --------------------------------------------------------------- */
-  .chip-vessel { background: var(--color-vessel); color: #fff; }
-  .chip-event { background: var(--color-event); color: #fff; }
-  .chip-closure {
-    color: var(--color-closure-ink);
-    background: repeating-linear-gradient(135deg, color-mix(in srgb, var(--color-closure) 38%, transparent) 0 6px, transparent 6px 12px), var(--color-closure-tint);
-    box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--color-closure) 65%, transparent);
+  /* ---- Fill vocabulary: WHAT OCCUPIES A BERTH IS A PATTERN ---------------------------- */
+  .fill-vessel { background: var(--color-prussian); color: var(--color-sheet-raised); border: 1px solid var(--color-prussian-deep); }
+  .fill-event {
+    color: var(--color-ink); border: 1px solid var(--color-prussian);
+    background: radial-gradient(circle at 1.5px 1.5px, color-mix(in srgb, var(--color-prussian) 55%, transparent) 1px, transparent 1.3px) 0 0 / 6px 6px, var(--color-prussian-tone);
   }
-  .chip-cancelled { background: transparent; color: var(--color-ink-3); box-shadow: inset 0 0 0 1px var(--color-line-strong); text-decoration: line-through; }
-  .chip-closure .stay-label { background: color-mix(in srgb, var(--color-closure-tint) 90%, transparent); border-radius: 4px; padding: 0 0.25rem; }
-  .chip-past { opacity: 0.55; }
+  .fill-closure {
+    color: var(--color-ink); border: 1px solid var(--color-ink);
+    background:
+      repeating-linear-gradient(45deg, color-mix(in srgb, var(--color-ink-2) 45%, transparent) 0 1px, transparent 1px 6px),
+      repeating-linear-gradient(135deg, color-mix(in srgb, var(--color-ink-2) 45%, transparent) 0 1px, transparent 1px 6px),
+      var(--color-sheet-sunk);
+  }
+  .fill-cancelled { color: var(--color-ink-3); border: 1px dashed var(--color-line-strong); background: transparent; text-decoration: line-through; }
+  .fill-past { opacity: 0.55; }
+  /* Labels sit on a solid chip so text never fights a pattern. */
+  .fill-event .stay-label, .fill-closure .stay-label { background: color-mix(in srgb, var(--color-sheet-raised) 88%, transparent); padding: 0 0.1875rem; }
 
-  /* ---- Schedule grid --------------------------------------------------------------- */
-  .schedule { --berth-col: 12.5rem; --day-min: 1.625rem; --lane-h: 1.75rem; min-width: calc(var(--berth-col) + var(--days) * var(--day-min)); }
-  @media (max-width: 40rem) { .schedule { --berth-col: 7.5rem; } }
+  /* ---- Schedule grid ---------------------------------------------------------------------- */
+  .schedule { --berth-col: 13.5rem; --day-min: 1.5rem; --lane-h: 1.75rem; min-width: calc(var(--berth-col) + var(--days) * var(--day-min)); }
+  /* On a phone the pinned berth column must not eat the screen: keep the name and length, drop the scale bar. */
+  @media (max-width: 40rem) {
+    .schedule { --berth-col: 8.25rem; }
+    .schedule .berth-extra { display: none; }
+  }
   .schedule-row { display: grid; grid-template-columns: var(--berth-col) minmax(0, 1fr); }
   .schedule-days { display: grid; grid-template-columns: repeat(var(--days), minmax(var(--day-min), 1fr)); }
-  .schedule-lanes { position: relative; display: grid; grid-template-columns: repeat(var(--days), minmax(var(--day-min), 1fr)); grid-auto-rows: var(--lane-h); row-gap: 4px; padding-block: 10px; align-content: center; min-height: 3.5rem; }
-  .schedule-berth { position: sticky; left: 0; z-index: 4; background: var(--color-surface); border-right: 1px solid var(--color-line); }
+  .schedule-lanes { position: relative; display: grid; grid-template-columns: repeat(var(--days), minmax(var(--day-min), 1fr)); grid-auto-rows: var(--lane-h); row-gap: 3px; padding-block: 6px; align-content: center; min-height: 3.25rem; }
+  .schedule-berth { position: sticky; left: 0; z-index: 4; background: var(--color-sheet-sunk); border-right: 1.5px solid var(--color-ink); }
 
-  .day-cell { position: absolute; inset-block: 0; left: calc((var(--d) - 1) * 100% / var(--days)); width: calc(100% / var(--days)); display: block; z-index: 0; border-left: 1px solid color-mix(in srgb, var(--color-line) 70%, transparent); transition: background-color 120ms var(--ease-out); }
+  /* Day cells are positioned, not placed in the grid, so their rules run the full height of the row. */
+  .day-cell { position: absolute; inset-block: 0; left: calc((var(--d) - 1) * 100% / var(--days)); width: calc(100% / var(--days)); display: block; z-index: 0; border-left: 1px solid var(--color-line); transition: background-color 120ms var(--ease-out); }
   .day-cell:first-child { border-left: 0; }
-  .day-cell.is-weekend { background: color-mix(in srgb, var(--color-fill) 55%, transparent); }
-  .day-cell.is-today { background: color-mix(in srgb, var(--color-brand-tint) 70%, transparent); }
-  a.day-cell:hover { background: var(--color-brand-tint); }
-  a.day-cell:hover::after { content: "+"; position: absolute; inset: 0; display: grid; place-items: center; font-weight: 700; color: var(--color-brand); }
-  /* Days that are gone: dimmed and not bookable. */
-  .day-cell.is-past { background: repeating-linear-gradient(135deg, color-mix(in srgb, var(--color-line) 55%, transparent) 0 1px, transparent 1px 7px); }
+  .day-cell.is-weekend { background: color-mix(in srgb, var(--color-sheet-sunk) 60%, transparent); }
+  .day-cell.is-today { background: color-mix(in srgb, var(--color-prussian-tone) 65%, transparent); }
+  a.day-cell:hover { background: var(--color-prussian-tone); }
+  a.day-cell:hover::after { content: "+"; position: absolute; inset: 0; display: grid; place-items: center; font-weight: 700; color: var(--color-prussian); }
+  /* Days that are gone: hatched out, the way a drawing voids an area, and not bookable. */
+  .day-cell.is-past { background: repeating-linear-gradient(135deg, color-mix(in srgb, var(--color-line) 75%, transparent) 0 1px, transparent 1px 9px), color-mix(in srgb, var(--color-sheet-sunk) 35%, transparent); border-left-color: color-mix(in srgb, var(--color-line) 55%, transparent); }
 
   .stay {
-    position: relative; z-index: 2; display: flex; align-items: center; gap: 0.3125rem; min-width: 0; height: var(--lane-h);
-    padding: 0 0.5rem; border-radius: var(--radius-chip); font-size: 0.8125rem; font-weight: 600; line-height: 1; white-space: nowrap; overflow: hidden; text-decoration: none;
-    transition: transform 150ms var(--ease-out), box-shadow 150ms var(--ease-out), filter 150ms var(--ease-out);
-    /* The schedule arrives: each stay grows along the timeline from its first day. */
+    position: relative; z-index: 2; display: flex; align-items: center; gap: 0.25rem; min-width: 0; height: var(--lane-h);
+    padding: 0 0.3125rem; font-family: var(--font-data); font-size: 0.8125rem; font-weight: 600; line-height: 1; white-space: nowrap; overflow: hidden; text-decoration: none;
+    transition: filter 150ms var(--ease-out);
+    /* The sheet is inked in: each stay is drawn along the timeline from its first day. */
     animation: stay-in 420ms var(--ease-out) both; animation-delay: calc(var(--i, 0) * 28ms);
   }
-  .stay:hover { transform: translateY(-1px); box-shadow: var(--shadow-lift); filter: saturate(1.08); z-index: 3; }
-  .stay:active { transform: translateY(0) scale(0.995); }
-  .stay.is-selected { box-shadow: 0 0 0 2px var(--color-surface), 0 0 0 4px var(--color-ink); z-index: 3; }
-  .stay:focus-visible { outline: 2px solid var(--color-brand); outline-offset: 3px; z-index: 4; }
-  .stay.continues-before { border-top-left-radius: 0; border-bottom-left-radius: 0; }
-  .stay.continues-after { border-top-right-radius: 0; border-bottom-right-radius: 0; }
+  .stay:hover { filter: brightness(0.92) saturate(1.1); z-index: 3; }
+  /* Selection is a box-shadow so it never competes with the keyboard focus outline: they are different facts. */
+  .stay.is-selected { box-shadow: 0 0 0 1.5px var(--color-sheet-raised), 0 0 0 3.5px var(--color-ink); z-index: 3; }
+  .stay:focus-visible { outline: 2px solid var(--color-prussian); outline-offset: 3px; z-index: 4; }
+  .stay.continues-before { border-left: 0; padding-left: 0.125rem; }
+  .stay.continues-after { border-right: 0; padding-right: 0.125rem; }
   /* A stay that was just booked lands with a glow that fades. */
   .stay.is-new { animation: stay-in 420ms var(--ease-out) both, stay-land 1600ms 380ms var(--ease-out) both; }
   .stay-label { overflow: hidden; text-overflow: ellipsis; min-width: 0; }
 
-  /* The live now-line: set by one small client component through --now-frac (0..1 of today). */
-  .now-line { position: absolute; inset-block: 0; z-index: 3; width: 2px; margin-left: -1px; background: var(--color-now); pointer-events: none; left: calc((var(--today-d) - 1 + var(--now-frac, 0.5)) * 100% / var(--days)); transition: left 600ms var(--ease-out); }
-  .now-dot { position: absolute; top: -5px; left: 50%; width: 10px; height: 10px; margin-left: -5px; border-radius: 999px; background: var(--color-now); box-shadow: 0 0 0 3px var(--color-surface); }
-  .now-dot::after { content: ""; position: absolute; inset: 0; border-radius: inherit; background: var(--color-now); animation: now-pulse 2400ms ease-out infinite; }
+  /* The live now marker: one small client component sets --now-frac (0..1 of the facility's day). */
+  .now-line { position: absolute; inset-block: 0; z-index: 3; width: 1.5px; margin-left: -0.75px; background: var(--color-prussian); pointer-events: none; left: calc((var(--today-d) - 1 + var(--now-frac, 0.5)) * 100% / var(--days)); transition: left 600ms var(--ease-out); }
+  .now-mark { position: absolute; top: -1px; left: 50%; width: 0; height: 0; margin-left: -5px; border-left: 5px solid transparent; border-right: 5px solid transparent; border-top: 7px solid var(--color-prussian); }
 
-  /* The month slides in from the side you travelled to. */
+  /* The month sheet slides in from the side you travelled to. */
   .month-slide[data-dir="next"] { animation: slide-from-right 360ms var(--ease-out) both; }
   .month-slide[data-dir="prev"] { animation: slide-from-left 360ms var(--ease-out) both; }
 
-  /* ---- Fit bar: vessel against berth, one scale --------------------------------------- */
-  .fitbar { position: relative; height: 0.625rem; border-radius: 999px; background: var(--color-fill); overflow: hidden; }
-  .fitbar > * { position: absolute; inset-block: 0; left: 0; border-radius: 999px; transform-origin: left; animation: grow-x 520ms var(--ease-out) both; }
+  /* ---- Dimension bars (Berth Scale, Fit Gauge): struck out from their origin -------------- */
+  .dim { position: relative; height: 0.5rem; }
+  .dim-line { position: absolute; top: 50%; left: 0; height: 1.5px; background: var(--color-ink); transform: translateY(-50%) scaleX(1); transform-origin: left; animation: strike-x 520ms var(--ease-out) both; }
+  .dim-line::before, .dim-line::after { content: ""; position: absolute; top: -3px; width: 1.5px; height: 7.5px; background: inherit; }
+  .dim-line::before { left: 0; }
+  .dim-line::after { right: 0; }
+  .gauge-bar { position: absolute; left: 0; height: 0.625rem; transform-origin: left; animation: grow-x 520ms 120ms var(--ease-out) both; }
 
-  /* ---- Drawer, toast, cascades --------------------------------------------------------- */
+  /* ---- Drawer, toast, cascades -------------------------------------------------------------- */
   .drawer { animation: drawer-in 320ms var(--ease-out) both; }
   @media (max-width: 64rem) { .drawer { animation-name: sheet-in; } }
   .toast { animation: toast-in 360ms var(--ease-out) both, toast-out 300ms 4200ms ease-in forwards; }
@@ -240,9 +247,8 @@
   .rise-in { animation: rise-in 300ms var(--ease-out) both; }
 }
 
-@keyframes stay-in { from { clip-path: inset(0 100% 0 0 round 6px); opacity: 0.4; } to { clip-path: inset(0 0 0 0 round 6px); opacity: 1; } }
-@keyframes stay-land { 0% { box-shadow: 0 0 0 0 rgb(37 99 235 / 0.55); } 35% { box-shadow: 0 0 0 10px rgb(37 99 235 / 0.18); } 100% { box-shadow: 0 0 0 16px rgb(37 99 235 / 0); } }
-@keyframes now-pulse { 0% { transform: scale(1); opacity: 0.55; } 70%, 100% { transform: scale(2.8); opacity: 0; } }
+@keyframes stay-in { from { clip-path: inset(-16px 100% -16px -16px); opacity: 0.4; } to { clip-path: inset(-16px); opacity: 1; } }
+@keyframes stay-land { 0% { box-shadow: 0 0 0 0 rgb(20 80 143 / 0.55); } 35% { box-shadow: 0 0 0 9px rgb(20 80 143 / 0.18); } 100% { box-shadow: 0 0 0 15px rgb(20 80 143 / 0); } }
 @keyframes slide-from-right { from { opacity: 0; transform: translateX(28px); } to { opacity: 1; transform: none; } }
 @keyframes slide-from-left { from { opacity: 0; transform: translateX(-28px); } to { opacity: 1; transform: none; } }
 @keyframes drawer-in { from { opacity: 0; transform: translateX(32px); } to { opacity: 1; transform: none; } }
@@ -250,5 +256,6 @@
 @keyframes rise-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
 @keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
 @keyframes grow-x { from { transform: scaleX(0); } to { transform: scaleX(1); } }
-@keyframes toast-in { from { opacity: 0; transform: translateY(16px) scale(0.98); } to { opacity: 1; transform: none; } }
+@keyframes strike-x { from { transform: translateY(-50%) scaleX(0); } to { transform: translateY(-50%) scaleX(1); } }
+@keyframes toast-in { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
 @keyframes toast-out { to { opacity: 0; transform: translateY(8px); visibility: hidden; } }

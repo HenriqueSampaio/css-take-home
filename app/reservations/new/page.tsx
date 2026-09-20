@@ -64,14 +64,14 @@ export default async function NewReservationPage(props: PageProps<"/reservations
   return (
     <div className="mx-auto flex max-w-[64rem] flex-col gap-6">
       <div>
-        <h1 className="t-display">Find a berth</h1>
+        <h1 className="t-headline">Find a berth</h1>
         <p className="mt-1.5 text-ink-2">
           Say what needs a berth and when. {picked ? <>You started from <strong>{picked.name}</strong>.</> : "Every berth is checked for you."}
         </p>
       </div>
 
       <div className="grid items-start gap-6 lg:grid-cols-[22rem_minmax(0,1fr)] lg:gap-8">
-        <section aria-label="The stay" className="surface p-5 lg:sticky lg:top-24">
+        <section aria-label="The stay" className="sheet p-5 lg:sticky lg:top-24">
           <ReservationForm key={JSON.stringify(initial)} basePath="/reservations/new" vessels={vessels} initial={initial} today={today} hasResults={options !== null} />
         </section>
 
@@ -80,7 +80,7 @@ export default async function NewReservationPage(props: PageProps<"/reservations
             <div className="flex flex-col gap-4">
               <div role="status">
                 <h2 id="results-heading" className="t-heading">
-                  {usable === 0 ? <span className="text-danger-ink">No berth can take this stay</span> : <>{usable} of {options.length} berths can take it</>}
+                  {usable === 0 ? <span className="text-revision">No berth can take this stay</span> : <>{usable} of {options.length} berths can take it</>}
                 </h2>
                 <p className="mt-1 text-ink-2">
                   <strong>{subject}</strong>, <strong className="t-num">{formatDate(range.start)}</strong>{range.end !== range.start && <> to <strong className="t-num">{formatDate(range.end)}</strong></>} ({days} {days === 1 ? "day" : "days"})
@@ -95,9 +95,9 @@ export default async function NewReservationPage(props: PageProps<"/reservations
               {usable === 0 && <p className="text-ink-2">Try different dates, or open the <Link className="link" href="/schedule">schedule</Link> to see what is in the way.</p>}
             </div>
           ) : (
-            <div className="surface flex flex-col gap-3 p-6 text-ink-2">
+            <div className="sheet flex flex-col gap-3 p-6 text-ink-2">
               <h2 id="results-heading" className="t-heading text-ink">Berths will appear here</h2>
-              <p className="measure">Fill in the stay and choose <strong>Find a berth</strong>. Each berth is checked two ways: is it <strong>free</strong> on those days, and is the vessel <strong>short enough</strong> to fit. You book with one click from the ones that pass.</p>
+              <p className="prose-measure">Fill in the stay and choose <strong>Find a berth</strong>. Each berth is checked two ways: is it <strong>free</strong> on those days, and is the vessel <strong>short enough</strong> to fit. You book with one click from the ones that pass.</p>
             </div>
           )}
         </section>

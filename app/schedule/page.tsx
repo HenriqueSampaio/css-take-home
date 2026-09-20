@@ -20,7 +20,7 @@ export async function generateMetadata(props: PageProps<"/schedule">): Promise<M
 }
 
 const LEGEND = ["vessel", "event", "closure"] as const;
-const LEGEND_CHIP = { vessel: "chip-vessel", event: "chip-event", closure: "chip-closure" } as const;
+const LEGEND_CHIP = { vessel: "fill-vessel", event: "fill-event", closure: "fill-closure" } as const;
 
 export default async function SchedulePage(props: PageProps<"/schedule">) {
   const sp = await props.searchParams;
@@ -55,7 +55,7 @@ export default async function SchedulePage(props: PageProps<"/schedule">) {
       <div className="flex flex-wrap items-end justify-between gap-x-8 gap-y-4">
         <div className="flex flex-col gap-2">
           <div className="flex items-center gap-3">
-            <h1 className="t-display"><span className="sr-only">Schedule for </span>{monthName} <span className="font-medium text-ink-3">{year}</span></h1>
+            <h1 className="t-headline"><span className="sr-only">Schedule for </span>{monthName} <span className="font-medium text-ink-3">{year}</span></h1>
             <nav aria-label="Change month" className="flex items-center gap-1">
               {canGoBack ? (
                 <Link href={scheduleHref(addMonths(month, -1), null, { showCancelled })} scroll={false} className="btn btn-secondary btn-icon btn-sm" aria-label={`Previous month, ${formatYearMonth(addMonths(month, -1))}`}><ChevronLeft /></Link>
@@ -78,7 +78,7 @@ export default async function SchedulePage(props: PageProps<"/schedule">) {
             const KindIcon = KIND_ICON[kind];
             return (
               <li key={kind} className="flex items-center gap-1.5">
-                <span aria-hidden className={`grid h-5 w-7 place-items-center rounded-[5px] ${LEGEND_CHIP[kind]}`}><KindIcon size={12} /></span>
+                <span aria-hidden className={`grid h-5 w-7 place-items-center ${LEGEND_CHIP[kind]}`}><KindIcon size={12} /></span>
                 {KIND_LABEL[kind]}
               </li>
             );
@@ -87,14 +87,14 @@ export default async function SchedulePage(props: PageProps<"/schedule">) {
       </div>
 
       <MonthSlide month={month}>
-        <div className="surface overflow-hidden">
+        <div className="sheet overflow-hidden">
           <ScheduleGrid month={month} berths={berths} reservations={reservations} selectedId={selectedId} newId={flash ? selectedId : null} today={today} showCancelled={showCancelled} />
         </div>
       </MonthSlide>
 
       <div className="flex flex-wrap items-center justify-between gap-x-6 gap-y-2 text-[0.875rem] text-ink-2">
         {live.length === 0 ? (
-          <p className="measure">
+          <p className="prose-measure">
             <strong>Nothing is booked in {formatYearMonth(month)} yet.</strong> Click any free day on a berth to start a reservation there, or{" "}
             <Link className="link" href={newReservationHref()}>find a berth</Link> for a vessel and dates.
           </p>
@@ -106,7 +106,7 @@ export default async function SchedulePage(props: PageProps<"/schedule">) {
 
       {selectedId && detail && <ReservationDrawer detail={detail} month={month} today={today} maxBerthFt={maxBerthFt} showCancelled={showCancelled} />}
       {selectedId && !detail && (
-        <div className="notice notice-warn measure" role="alert">
+        <div className="notice notice-caution prose-measure" role="alert">
           <p><strong>That reservation no longer exists.</strong> The demo data may have been reset. <Link className="link" href={scheduleHref(month)}>Back to the schedule</Link></p>
         </div>
       )}

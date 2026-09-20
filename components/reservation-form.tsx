@@ -91,7 +91,7 @@ export function ReservationForm({ basePath, vessels, initial, today, fixedSubjec
         <p className="text-[1.0625rem] font-bold">{fixedSubject}</p>
       ) : (
         <fieldset>
-          <legend className="label">What needs a berth?</legend>
+          <legend className="t-caption field-label">What needs a berth?</legend>
           <div className="segmented">
             {KINDS.map(([kind, label]) => {
               const KindIcon = KIND_ICON[kind];
@@ -103,13 +103,13 @@ export function ReservationForm({ basePath, vessels, initial, today, fixedSubjec
               );
             })}
           </div>
-          <p className="hint">{KIND_HINT[draft.kind]}</p>
+          <p className="field-hint">{KIND_HINT[draft.kind]}</p>
         </fieldset>
       )}
 
       {!editing && draft.kind === "vessel" && !draft.newVessel && (
         <div>
-          <label className="label" htmlFor={`${uid}-vessel`}>Vessel</label>
+          <label className="t-caption field-label" htmlFor={`${uid}-vessel`}>Vessel</label>
           <VesselCombobox id={`${uid}-vessel`} vessels={vessels} value={draft.vesselId} onChange={(id) => set("vesselId", id)} invalid={Boolean(errors.vessel)} describedBy={errors.vessel ? `${uid}-vessel-err` : undefined} />
           {err("vessel")}
           <button type="button" className="link mt-2 inline-flex items-center gap-1 text-[0.875rem]" onClick={() => setDraft((d) => ({ ...d, newVessel: true, vesselId: null }))}><Plus size={14} />Add a new vessel</button>
@@ -117,25 +117,25 @@ export function ReservationForm({ basePath, vessels, initial, today, fixedSubjec
       )}
 
       {!editing && draft.kind === "vessel" && draft.newVessel && (
-        <div className="rise-in flex flex-col gap-3 rounded-xl bg-fill p-3.5">
+        <div className="rise-in flex flex-col gap-3 bg-sheet-sunk p-3.5">
           <div className="grid grid-cols-[6rem_minmax(0,1fr)] gap-2.5">
             <div>
-              <label className="label" htmlFor={`${uid}-vprefix`}>Type</label>
+              <label className="t-caption field-label" htmlFor={`${uid}-vprefix`}>Type</label>
               <select id={`${uid}-vprefix`} className="input" value={draft.vesselPrefix} onChange={(e) => set("vesselPrefix", e.target.value)}>
                 <option value="">None</option>
                 {VESSEL_PREFIXES.map((p) => <option key={p} value={p}>{p}</option>)}
               </select>
             </div>
             <div>
-              <label className="label" htmlFor={`${uid}-vname`}>New vessel name</label>
+              <label className="t-caption field-label" htmlFor={`${uid}-vname`}>New vessel name</label>
               <input id={`${uid}-vname`} className="input" value={draft.vesselName} onChange={(e) => set("vesselName", e.target.value)} aria-invalid={errors.vesselName ? true : undefined} aria-describedby={errors.vesselName ? `${uid}-vesselName-err` : undefined} placeholder="e.g. Northern Star" autoComplete="off" maxLength={80} />
             </div>
           </div>
           {err("vesselName")}
           <div>
-            <label className="label" htmlFor={`${uid}-vlen`}>Length (ft)</label>
+            <label className="t-caption field-label" htmlFor={`${uid}-vlen`}>Length (ft)</label>
             <input id={`${uid}-vlen`} className="input t-num !w-32" inputMode="numeric" value={draft.vesselLengthFt} onChange={(e) => set("vesselLengthFt", e.target.value)} aria-invalid={errors.vesselLengthFt ? true : undefined} aria-describedby={`${uid}-vlen-hint${errors.vesselLengthFt ? ` ${uid}-vesselLengthFt-err` : ""}`} placeholder="e.g. 120" autoComplete="off" />
-            <p id={`${uid}-vlen-hint`} className="hint">Needed to check which berths it fits. Saved to the vessel list.</p>
+            <p id={`${uid}-vlen-hint`} className="field-hint">Needed to check which berths it fits. Saved to the vessel list.</p>
             {err("vesselLengthFt")}
           </div>
           <button type="button" className="link self-start text-[0.875rem]" onClick={() => set("newVessel", false)}>Pick an existing vessel instead</button>
@@ -144,7 +144,7 @@ export function ReservationForm({ basePath, vessels, initial, today, fixedSubjec
 
       {draft.kind !== "vessel" && (
         <div>
-          <label className="label" htmlFor={`${uid}-title`}>{draft.kind === "event" ? "Event name" : "Reason for the closure"}</label>
+          <label className="t-caption field-label" htmlFor={`${uid}-title`}>{draft.kind === "event" ? "Event name" : "Reason for the closure"}</label>
           <input id={`${uid}-title`} className="input" list={`${uid}-titles`} value={draft.title} onChange={(e) => set("title", e.target.value)} aria-invalid={errors.title ? true : undefined} aria-describedby={errors.title ? `${uid}-title-err` : undefined} autoComplete="off" maxLength={120} />
           <datalist id={`${uid}-titles`}>{TITLE_SUGGESTIONS.map((t) => <option key={t} value={t} />)}</datalist>
           {err("title")}
@@ -153,13 +153,13 @@ export function ReservationForm({ basePath, vessels, initial, today, fixedSubjec
 
       <div className="grid grid-cols-2 gap-2.5">
         <div>
-          <label className="label" htmlFor={`${uid}-start`}>First day</label>
+          <label className="t-caption field-label" htmlFor={`${uid}-start`}>First day</label>
           <input id={`${uid}-start`} type="date" className="input t-num" min={lockStart ? undefined : today} disabled={lockStart} value={draft.start} onChange={(e) => setDraft((d) => ({ ...d, start: e.target.value, end: d.end === "" || d.end < e.target.value ? e.target.value : d.end }))} aria-invalid={errors.start ? true : undefined} aria-describedby={errors.start ? `${uid}-start-err` : lockStart ? `${uid}-start-hint` : undefined} />
-          {lockStart && <p id={`${uid}-start-hint`} className="hint">Already started, so this cannot move.</p>}
+          {lockStart && <p id={`${uid}-start-hint`} className="field-hint">Already started, so this cannot move.</p>}
           {err("start")}
         </div>
         <div>
-          <label className="label" htmlFor={`${uid}-end`}>Last day</label>
+          <label className="t-caption field-label" htmlFor={`${uid}-end`}>Last day</label>
           <input id={`${uid}-end`} type="date" className="input t-num" min={draft.start > today ? draft.start : today} value={draft.end} onChange={(e) => set("end", e.target.value)} aria-invalid={errors.end ? true : undefined} aria-describedby={errors.end ? `${uid}-end-err` : undefined} />
           {err("end")}
         </div>
@@ -167,7 +167,7 @@ export function ReservationForm({ basePath, vessels, initial, today, fixedSubjec
 
       {showNotes ? (
         <div className="rise-in">
-          <label className="label" htmlFor={`${uid}-notes`}>Notes</label>
+          <label className="t-caption field-label" htmlFor={`${uid}-notes`}>Notes</label>
           <textarea id={`${uid}-notes`} className="input" rows={2} value={draft.notes} onChange={(e) => set("notes", e.target.value)} placeholder="e.g. ETA 1200, fueling at 0800" maxLength={1000} autoFocus={initial.notes === ""} />
         </div>
       ) : (

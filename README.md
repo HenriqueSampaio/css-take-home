@@ -58,7 +58,7 @@ data/seed/      six berths and 156 vessels (every vessel the sample lists with o
 data/source/    the sample workbook from the brief, kept for reference only
 ```
 
-`PRODUCT.md` and `DESIGN.md` record the product decisions and the design system. An earlier version of this project imported the workbook's 23 years of bookings and had a review queue for what could not be read with certainty; it is preserved at the git tag `legacy-import-v1`.
+`PRODUCT.md` and `DESIGN.md` record the product decisions and the design system. An earlier version of this project imported the workbook's 23 years of bookings and had a review queue for what could not be read with certainty; it is preserved at the git tag `legacy-import-v1`. A calendar-style visual design was also tried and set aside; it is at the tag `calendar-design-v2`.
 
 ## Deployment
 

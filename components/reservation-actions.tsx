@@ -30,7 +30,7 @@ export function ReservationActions({ id, version, status, ended, showCancelled }
       }
     });
 
-  if (ended) return <p className="t-small text-ink-3">This stay has ended, so it can no longer be changed.</p>;
+  if (ended) return <p className="t-data text-ink-3">This stay has ended, so it can no longer be changed.</p>;
 
   return (
     <div className="flex flex-col gap-3">
@@ -42,8 +42,8 @@ export function ReservationActions({ id, version, status, ended, showCancelled }
           </>
         )}
         {status === "confirmed" && confirmingCancel && (
-          <div className="rise-in flex w-full flex-col gap-2 rounded-xl bg-danger-tint p-3">
-            <p className="text-[0.875rem] font-semibold text-danger-ink">Cancel this reservation? Its days become free to book.</p>
+          <div className="rise-in flex w-full flex-col gap-2 bg-revision-tone p-3">
+            <p className="text-[0.875rem] font-semibold text-revision">Cancel this reservation? Its days become free to book.</p>
             <div className="flex gap-2">
               <button type="button" className="btn btn-danger-solid btn-sm" disabled={pending} onClick={() => run(cancelReservationAction, "Cancelled. Turn on Show cancelled to find and restore it.")}>{pending ? "Cancelling..." : "Yes, cancel it"}</button>
               <button type="button" className="btn btn-secondary btn-sm" disabled={pending} autoFocus onClick={() => { setConfirmingCancel(false); requestAnimationFrame(() => cancelTrigger.current?.focus()); }}>Keep it</button>
@@ -70,7 +70,7 @@ export function ReservationActions({ id, version, status, ended, showCancelled }
           </div>
         </div>
       )}
-      {result?.ok && done && <p className="notice notice-ok font-semibold" role="status">{done}</p>}
+      {result?.ok && done && <p className="notice notice-clear font-semibold" role="status">{done}</p>}
     </div>
   );
 }

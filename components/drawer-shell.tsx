@@ -28,7 +28,7 @@ export function DrawerShell({ children, closeHref, returnFocusId, labelledBy }: 
       ref={ref}
       tabIndex={-1}
       aria-labelledby={labelledBy}
-      className="drawer fixed inset-x-0 bottom-0 z-40 max-h-[85dvh] overflow-y-auto rounded-t-[20px] bg-surface shadow-[var(--shadow-float)] outline-none lg:inset-x-auto lg:bottom-4 lg:right-4 lg:top-[4.75rem] lg:max-h-none lg:w-[26rem] lg:rounded-[20px]"
+      className="drawer fixed inset-x-0 bottom-0 z-40 max-h-[85dvh] overflow-y-auto border-t-[1.5px] border-ink bg-sheet-raised shadow-[var(--shadow-float)] outline-none lg:inset-x-auto lg:bottom-4 lg:right-4 lg:top-[5.5rem] lg:max-h-none lg:w-[26rem] lg:border-[1.5px]"
     >
       {children}
     </aside>

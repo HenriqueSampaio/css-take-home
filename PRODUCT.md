@@ -47,7 +47,7 @@ The guarantees are structural, not procedural. Double-booking is prevented by a 
 ## Brand Commitments
 
 - Name: **Harborview Dock Schedule** (facility: Harborview Marine Research Center, the placeholder name printed in the sample workbook). No affiliation with, or branding of, any real institution.
-- **Look: the modern calendar, played straight.** The owner rejected an earlier engineering-drawing look as legacy-feeling and too dense, and chose a light, colourful, calendar-style interface that sits alongside Notion Calendar and Google Calendar, with clean purposeful animation. That is a standing preference, and those products set the craft bar.
+- **Look: the Berthing Plan.** The interface is drawn like a marine engineer's berthing plan: a title-block header, ink-bordered sheets, berth lengths drawn to scale, fill patterns for what occupies a berth, Barlow type. The owner tried a light, colourful calendar-style replacement and chose to come back to this look, keeping three things from that round as standing preferences: purposeful animation, bold type on the facts that matter, and less on screen at once. (The calendar version is preserved at git tag `calendar-design-v2`.)
 - Voice: plain, specific, friendly without being chatty. Refusals name the berth, the vessel, the dates and the number of feet. No jargon, no exclamation marks, no marketing tone.
 
 ## Evidence on Hand
@@ -62,7 +62,7 @@ The guarantees are structural, not procedural. Double-booking is prevented by a 
 1. **Glanceable first.** One thing per screen is obvious at a glance; the rest is one click away. When in doubt, show less.
 2. **Bold what matters.** Names, dates, numbers and verdicts carry weight; everything else recedes.
 3. **A refusal is a sentence, not a colour.** Say exactly what is in the way and what to do. Status is never carried by colour alone.
-4. **The month grid is home.** Familiar calendar behaviour beats invention.
+4. **The month grid is home.** Berths down the side, days across the top, as the coordinator has always read it.
 5. **Motion explains.** Animation shows where something came from, what changed, or that the system heard you. Never decoration, never a wait.
 
 ## Accessibility & Inclusion

@@ -3,6 +3,7 @@ import type { MonthReservation } from "@/lib/db/queries/reservations";
 import { addDays, formatDate, monthBounds, weekdayIndex, type ISODate, type YearMonth } from "@/lib/domain/dates";
 import { buildTimeline, type TimelineBar } from "@/lib/domain/timeline";
 import { newReservationHref, scheduleHref } from "@/lib/ui/params";
+import { BerthScale } from "./berth-scale";
 import { ChevronLeft, ChevronRight, KIND_ICON, KIND_LABEL, NoteLines } from "./icons";
 import { NowLineClock } from "./now-line";
 
@@ -25,20 +26,22 @@ export function ScheduleGrid({ month, berths, reservations, selectedId, newId, t
     return { day: i + 1, date, weekday, isWeekend: weekday >= 5, isToday: date === today, isPast: date < today };
   });
   const todayDay = dayList.find((d) => d.isToday)?.day ?? null;
+  const maxFt = Math.max(...berths.map((b) => b.lengthFt), 1);
 
   return (
-    <div className="overflow-x-auto rounded-[inherit]" tabIndex={0} role="region" aria-label="Berth schedule. Scrolls sideways on narrow screens.">
+    <div className="overflow-x-auto" tabIndex={0} role="region" aria-label="Berth schedule. Scrolls sideways on narrow screens.">
       {todayDay !== null && <NowLineClock targetId={GRID_ID} />}
       <div id={GRID_ID} className="schedule" style={{ ["--days" as string]: days, ["--today-d" as string]: todayDay ?? 0 }}>
-        <div className="schedule-row border-b border-line">
-          <div className="schedule-berth flex items-end px-4 pb-2.5 pt-3">
-            <span className="t-small text-ink-3">Berth</span>
+        {/* Top border of the sheet: day references */}
+        <div className="schedule-row border-b-[1.5px] border-ink">
+          <div className="schedule-berth flex items-end px-3 pb-1.5 pt-2">
+            <span className="t-caption">Berth and length</span>
           </div>
-          <div className="schedule-days" aria-hidden>
+          <div className="schedule-days bg-sheet-sunk" aria-hidden>
             {dayList.map((d) => (
-              <div key={d.day} className={`flex flex-col items-center gap-0.5 pb-2 pt-2.5 ${d.isPast ? "opacity-50" : ""}`}>
-                <span className={`t-micro ${d.isWeekend ? "text-ink-3" : "text-ink-2"}`}>{WEEKDAY_LETTERS[d.weekday]}</span>
-                <span className={`t-num grid h-6 w-6 place-items-center rounded-full text-[0.8125rem] ${d.isToday ? "bg-brand font-bold text-surface" : "font-semibold text-ink"}`}>{d.day}</span>
+              <div key={d.day} className={`flex flex-col items-center gap-0.5 border-l border-line py-1 first:border-l-0 ${d.isWeekend ? "bg-line/50" : ""} ${d.isPast ? "opacity-55" : ""}`}>
+                <span className="t-caption !tracking-normal">{WEEKDAY_LETTERS[d.weekday]}</span>
+                <span className={`t-data grid h-5 min-w-5 place-items-center px-0.5 ${d.isToday ? "bg-prussian font-bold text-sheet-raised" : "font-semibold text-ink"}`}>{d.day}</span>
               </div>
             ))}
           </div>
@@ -47,11 +50,14 @@ export function ScheduleGrid({ month, berths, reservations, selectedId, newId, t
         {rows.map((row, rowIndex) => {
           const berth = berths[rowIndex];
           return (
-            <div key={berth.id} role="group" aria-label={`${berth.name}, ${berth.lengthFt} feet`} className="schedule-row border-b border-line last:border-b-0">
-              <div className="schedule-berth flex flex-col justify-center px-4 py-2.5">
-                <span className="text-[0.9375rem] font-bold leading-tight [overflow-wrap:anywhere]">{berth.name}</span>
-                <span className="t-small t-num text-ink-3">{berth.lengthFt} ft</span>
-                <Link href={newReservationHref({ berthId: berth.id })} prefetch={false} className="sr-only focus:not-sr-only focus:mt-1 focus:text-[0.8125rem] focus:font-semibold focus:text-brand">
+            <div key={berth.id} role="group" aria-label={`${berth.name}, ${berth.lengthFt} feet`} className="schedule-row border-b border-line-strong last:border-b-0">
+              <div className="schedule-berth flex flex-col justify-center px-3 py-2">
+                <span className="flex flex-wrap items-baseline justify-between gap-x-2">
+                  <span className="text-[0.875rem] font-bold leading-tight [overflow-wrap:anywhere]">{berth.name}</span>
+                  <span className="t-data shrink-0 text-ink-2">{berth.lengthFt} ft</span>
+                </span>
+                <BerthScale lengthFt={berth.lengthFt} maxFt={maxFt} className="berth-extra mt-1" />
+                <Link href={newReservationHref({ berthId: berth.id })} prefetch={false} className="sr-only focus:not-sr-only focus:mt-1 focus:text-[0.8125rem] focus:font-semibold focus:text-prussian">
                   Reserve {berth.name}
                 </Link>
               </div>
@@ -74,7 +80,7 @@ export function ScheduleGrid({ month, berths, reservations, selectedId, newId, t
                     />
                   ),
                 )}
-                {todayDay !== null && <span aria-hidden className="now-line">{rowIndex === 0 && <span className="now-dot" />}</span>}
+                {todayDay !== null && <span aria-hidden className="now-line">{rowIndex === 0 && <span className="now-mark" />}</span>}
                 {row.bars.length === 0 && <span className="sr-only">Nothing booked this month.</span>}
                 <ol className="contents">
                   {[...row.bars].sort((a, b) => a.startDay - b.startDay || a.lane - b.lane).map((bar) => (
@@ -93,7 +99,7 @@ export function ScheduleGrid({ month, berths, reservations, selectedId, newId, t
 function StayChip({ bar, month, order, selected, isNew, today, showCancelled }: { bar: TimelineBar<MonthReservation>; month: YearMonth; order: number; selected: boolean; isNew: boolean; today: ISODate; showCancelled: boolean }) {
   const r = bar.item;
   const KindIcon = KIND_ICON[r.kind];
-  const fill = r.status === "cancelled" ? "chip-cancelled" : r.kind === "vessel" ? "chip-vessel" : r.kind === "event" ? "chip-event" : "chip-closure";
+  const fill = r.status === "cancelled" ? "fill-cancelled" : r.kind === "vessel" ? "fill-vessel" : r.kind === "event" ? "fill-event" : "fill-closure";
   const ended = r.endDate < today;
   const spoken = [r.label, KIND_LABEL[r.kind].toLowerCase(), `${formatDate(r.startDate)} to ${formatDate(r.endDate)}`, r.status === "cancelled" ? "cancelled" : ended ? "ended" : null].filter(Boolean).join(", ");
 
@@ -107,7 +113,7 @@ function StayChip({ bar, month, order, selected, isNew, today, showCancelled }: 
         aria-label={spoken}
         aria-current={selected ? "true" : undefined}
         title={`${r.label} · ${formatDate(r.startDate)} to ${formatDate(r.endDate)}`}
-        className={`stay ${fill} ${ended && r.status !== "cancelled" ? "chip-past" : ""} ${selected ? "is-selected" : ""} ${isNew ? "is-new" : ""} ${bar.continuesBefore ? "continues-before" : ""} ${bar.continuesAfter ? "continues-after" : ""}`}
+        className={`stay ${fill} ${ended && r.status !== "cancelled" ? "fill-past" : ""} ${selected ? "is-selected" : ""} ${isNew ? "is-new" : ""} ${bar.continuesBefore ? "continues-before" : ""} ${bar.continuesAfter ? "continues-after" : ""}`}
         style={{ gridColumn: `${bar.startDay} / span ${bar.span}`, gridRow: bar.lane + 1, ["--i" as string]: Math.min(order, 12) }}
       >
         {bar.continuesBefore && <ChevronLeft size={12} className="-ml-1 shrink-0 opacity-80" />}

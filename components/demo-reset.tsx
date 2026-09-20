@@ -31,7 +31,7 @@ export function DemoReset({ changes }: { changes: number }) {
       ) : (
         <button type="button" className="link" onClick={() => { setNote(null); setConfirming(true); }}>Reset demo data</button>
       )}
-      {note && !confirming && <span className={`font-semibold ${note.ok ? "text-ok" : "text-danger-ink"}`}>{note.text}</span>}
+      {note && !confirming && <span className={`font-semibold ${note.ok ? "text-clear" : "text-revision"}`}>{note.text}</span>}
     </span>
   );
 }

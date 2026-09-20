@@ -59,7 +59,7 @@ export function VesselCombobox({ id, vessels, value, onChange, invalid, describe
         }}
       />
       {open && (
-        <ul id={listId} role="listbox" aria-label="Vessels" className="fade-in absolute inset-x-0 top-full z-20 mt-1.5 max-h-80 overflow-auto rounded-xl bg-surface p-1 shadow-[var(--shadow-float)]">
+        <ul id={listId} role="listbox" aria-label="Vessels" className="fade-in absolute inset-x-0 top-full z-20 mt-1.5 max-h-80 overflow-auto bg-sheet-raised p-1 shadow-[var(--shadow-float)]">
           {shown.map((v, i) => (
             <li
               key={v.id}
@@ -69,13 +69,13 @@ export function VesselCombobox({ id, vessels, value, onChange, invalid, describe
               // mousedown, not click: it fires before the input's blur closes the list
               onMouseDown={(e) => { e.preventDefault(); pick(v); }}
               onMouseEnter={() => setActive(i)}
-              className={`flex cursor-pointer items-baseline justify-between gap-3 rounded-lg px-2.5 py-2 ${i === active ? "bg-brand-tint" : ""}`}
+              className={`flex cursor-pointer items-baseline justify-between gap-3 px-2.5 py-2 ${i === active ? "bg-prussian-tone" : ""}`}
             >
               <span className={`truncate ${v.id === value ? "font-bold" : "font-medium"}`}>{v.displayName}</span>
-              <span className="t-small t-num shrink-0 font-semibold text-ink-2">{v.lengthFt} ft</span>
+              <span className="t-data t-num shrink-0 font-semibold text-ink-2">{v.lengthFt} ft</span>
             </li>
           ))}
-          {matches.length > MAX_SHOWN && <li role="presentation" className="t-small px-2.5 py-2 text-ink-3">{matches.length - MAX_SHOWN} more. Keep typing to narrow it down.</li>}
+          {matches.length > MAX_SHOWN && <li role="presentation" className="t-data px-2.5 py-2 text-ink-3">{matches.length - MAX_SHOWN} more. Keep typing to narrow it down.</li>}
           {matches.length === 0 && <li role="presentation" className="px-2.5 py-2 text-[0.875rem] text-ink-2">No vessel by that name. Add it as a new vessel below.</li>}
         </ul>
       )}

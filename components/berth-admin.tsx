@@ -44,27 +44,27 @@ export function AddBerthForm() {
     return (
       <div className="flex flex-wrap items-center gap-3">
         <button type="button" className="btn btn-primary" onClick={() => { setAdded(null); setOpen(true); }}><Plus size={16} />Add a berth</button>
-        {added && <p className="notice notice-ok !py-2 font-semibold" role="status">Added {added}. It is on the schedule now.</p>}
+        {added && <p className="notice notice-clear !py-2 font-semibold" role="status">Added {added}. It is on the schedule now.</p>}
       </div>
     );
   }
 
   return (
-    <form onSubmit={submit} noValidate className="surface rise-in flex flex-col gap-4 p-5">
+    <form onSubmit={submit} noValidate className="sheet rise-in flex flex-col gap-4 p-5">
       <h2 className="t-heading">New berth</h2>
       <div className="grid gap-3 sm:grid-cols-[minmax(0,1fr)_9rem]">
         <div>
-          <label className="label" htmlFor={`${uid}-name`}>Name</label>
+          <label className="t-caption field-label" htmlFor={`${uid}-name`}>Name</label>
           <input id={`${uid}-name`} className="input" value={name} onChange={(e) => setName(e.target.value)} placeholder="e.g. East Pier" maxLength={60} autoFocus autoComplete="off" aria-invalid={errors.name ? true : undefined} aria-describedby={errors.name ? `${uid}-name-err` : undefined} />
           {errors.name && <p id={`${uid}-name-err`} className="field-error" role="alert">{errors.name}</p>}
         </div>
         <div>
-          <label className="label" htmlFor={`${uid}-len`}>Length (ft)</label>
+          <label className="t-caption field-label" htmlFor={`${uid}-len`}>Length (ft)</label>
           <input id={`${uid}-len`} className="input t-num" inputMode="numeric" value={length} onChange={(e) => setLength(e.target.value)} placeholder="e.g. 120" autoComplete="off" aria-invalid={errors.length ? true : undefined} aria-describedby={errors.length ? `${uid}-len-err` : undefined} />
           {errors.length && <p id={`${uid}-len-err`} className="field-error" role="alert">{errors.length}</p>}
         </div>
       </div>
-      <p className="hint !mt-0">Only vessels this long or shorter can be booked on it.</p>
+      <p className="field-hint !mt-0">Only vessels this long or shorter can be booked on it.</p>
       {failure && <Refusal failure={failure} />}
       <div className="flex gap-2">
         <button type="submit" className="btn btn-primary" disabled={pending}>{pending ? "Adding..." : "Add berth"}</button>
@@ -120,7 +120,7 @@ export function BerthRowActions({ berthId, version, name, lengthFt, canRetire }:
 
   if (mode === "retire") {
     return (
-      <div className="rise-in flex w-full flex-col gap-2 rounded-xl bg-fill p-3.5 sm:max-w-md">
+      <div className="rise-in flex w-full flex-col gap-2 bg-sheet-sunk p-3.5 sm:max-w-md">
         <p className="text-[0.875rem]"><strong>Retire {name}?</strong> It comes off the schedule and can no longer be booked. You can bring it back later.</p>
         {failure && <Refusal failure={failure} />}
         <div className="flex gap-2">
@@ -132,14 +132,14 @@ export function BerthRowActions({ berthId, version, name, lengthFt, canRetire }:
   }
 
   return (
-    <form onSubmit={save} noValidate className="rise-in flex w-full flex-col gap-3 rounded-xl bg-fill p-3.5 sm:max-w-md">
+    <form onSubmit={save} noValidate className="rise-in flex w-full flex-col gap-3 bg-sheet-sunk p-3.5 sm:max-w-md">
       <div className="grid grid-cols-[minmax(0,1fr)_7rem] gap-2.5">
         <div>
-          <label className="label" htmlFor={`${uid}-name`}>Name</label>
+          <label className="t-caption field-label" htmlFor={`${uid}-name`}>Name</label>
           <input id={`${uid}-name`} className="input" value={draftName} onChange={(e) => setDraftName(e.target.value)} maxLength={60} autoFocus autoComplete="off" />
         </div>
         <div>
-          <label className="label" htmlFor={`${uid}-len`}>Length (ft)</label>
+          <label className="t-caption field-label" htmlFor={`${uid}-len`}>Length (ft)</label>
           <input id={`${uid}-len`} className="input t-num" inputMode="numeric" value={draftLength} onChange={(e) => setDraftLength(e.target.value)} autoComplete="off" />
         </div>
       </div>
