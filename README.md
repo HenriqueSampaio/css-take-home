@@ -2,6 +2,8 @@
 
 A berth reservation system for a marine research facility, built for the Columbia Software Solutions take-home (option 1, Dock Scheduling System).
 
+**Live:** https://harborview-dock-schedule.vercel.app (open demo, shared synthetic data, no sign-in)
+
 The facility used to run its waterfront from a spreadsheet, and two checks were done by eye: is this berth already taken, and is this vessel too long for it. Here both are guarantees. A reservation is either valid and confirmed, or refused on the spot with the reason.
 
 The system is **forward-only**: it starts with an empty schedule and books from today onwards. The sample workbook that came with the brief was used to learn how the dock works and which berths and vessels exist; none of its historical bookings are loaded.
